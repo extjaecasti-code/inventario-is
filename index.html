@@ -136,10 +136,95 @@ tbody tr:hover .row-actions{opacity:1;}
 .toast.success{background:var(--green);}.toast.error{background:var(--red);}.toast.info{background:var(--ml-blue);}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}}
 .spinner-sm{width:13px;height:13px;border:2px solid rgba(255,255,255,0.4);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;flex-shrink:0;}
+/* ── DARK MODE ── */
+body.dark{--bg:#0F1117;--surface:#1A1D27;--surface2:#22263A;--border:#2E3347;--border2:#3A3F55;--text:#E8EAF0;--text2:#9BA3B8;--text3:#5A6278;--green-bg:rgba(0,166,80,0.12);--yellow-bg:rgba(245,166,35,0.12);--red-bg:rgba(224,32,32,0.1);--purple-bg:rgba(155,81,224,0.1);--ml-blue-light:rgba(52,131,250,0.12);}
+body.dark #loadingOverlay{background:rgba(15,17,23,0.92);}
+body.dark header{background:#1A1D27;border-bottom:2px solid var(--ml-yellow);}
+body.dark .logo-text{color:#E8EAF0;}
+body.dark .logo-text span{color:var(--ml-blue);}
+body.dark .user-pill{background:rgba(255,255,255,0.08);color:#E8EAF0;}
+body.dark .logout-btn{background:rgba(255,255,255,0.08);color:#9BA3B8;}
+body.dark .logout-btn:hover{background:rgba(255,255,255,0.15);}
+body.dark .header-stats{color:#9BA3B8;}
+body.dark .header-stats strong{color:#E8EAF0;}
+body.dark input[type="text"],body.dark select{background:var(--surface2);color:var(--text);}
+body.dark input[type="text"]:focus,body.dark select:focus{background:var(--surface);}
+body.dark .pager{background:var(--surface);border-top:2px solid var(--ml-yellow);}
+body.dark .stat-card.active-instock{background:rgba(90,98,120,0.2);}
+body.dark thead th:hover{background:#2A2F42;}
+body.dark tbody tr:hover{background:rgba(52,131,250,0.06);}
+body.dark .login-card,.body.dark .token-card{background:var(--surface);}
+body.dark #loginScreen,body.dark #tokenScreen{background:linear-gradient(135deg,#0d0f17 0%,#0f1420 100%);}
+/* dark mode toggle button */
+.dark-toggle{background:rgba(255,255,255,0.3);border:none;cursor:pointer;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;transition:background .2s;flex-shrink:0;}
+.dark-toggle:hover{background:rgba(255,255,255,0.55);}
+body.dark .dark-toggle{background:rgba(255,255,255,0.1);}
+body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
+
+/* ── RESPONSIVE MOBILE ── */
+@media(max-width:768px){
+  header{padding:0 14px;height:52px;}
+  .logo-text{font-size:13px;}
+  .header-stats{display:none;}
+  .toolbar{padding:10px 14px;gap:8px;}
+  .search-wrap{min-width:0;max-width:100%;flex:1 1 100%;}
+  select{min-width:0;flex:1;}
+  .btn span.btn-label{display:none;}
+  .btn{padding:8px 10px;}
+  .stats-strip{padding:10px 14px;gap:8px;}
+  .stat-card{min-width:80px;padding:10px 12px;}
+  .stat-val{font-size:20px;}
+  .stat-label{font-size:9px;}
+  .table-container{padding:0 14px 80px;}
+  .pager{padding:8px 14px;}
+  .pager-btns button{padding:4px 8px;font-size:11px;}
+  .modal{padding:20px 16px;}
+  .form-grid{grid-template-columns:1fr;}
+  .form-group.full{grid-column:1;}
+  .login-card,.token-card{width:95vw;padding:28px 20px;}
+  .row-actions{opacity:1;}
+  tbody td{padding:8px 10px;font-size:12px;}
+  thead th{padding:8px 10px;font-size:10px;}
+}
+@media(max-width:480px){
+  .stats-strip{flex-wrap:wrap;}
+  .stat-card{min-width:calc(33% - 8px);flex:0 0 calc(33% - 8px);}
+  .toolbar .btn-export{display:none;}
+}
+
+#tokenScreen{position:fixed;inset:0;background:linear-gradient(135deg,#f5f5f5 0%,#e8f0fe 100%);display:flex;align-items:center;justify-content:center;z-index:9998;}
+.token-card{background:#fff;border-radius:16px;padding:40px 36px;width:420px;box-shadow:0 12px 48px rgba(52,131,250,0.15);display:flex;flex-direction:column;align-items:center;gap:20px;}
+.token-card h2{font-size:16px;font-weight:700;color:#333;text-align:center;}
+.token-card p{font-size:13px;color:#666;text-align:center;line-height:1.6;}
+.token-input-wrap{width:100%;display:flex;flex-direction:column;gap:8px;}
+.token-input-wrap label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#999;}
+.token-input-wrap input{width:100%;background:#f7f7f7;border:1px solid #e0e0e0;color:#333;font-family:monospace;font-size:13px;border-radius:8px;padding:10px 14px;outline:none;transition:border-color .2s;}
+.token-input-wrap input:focus{border-color:#3483FA;background:#fff;}
+.token-hint{font-size:11px;color:#999;text-align:center;line-height:1.5;}
+.token-hint a{color:#3483FA;text-decoration:none;}
+
 </style>
 </head>
 <body>
 <div id="loadingOverlay"><div class="big-spin"></div><p>Conectando con GitHub...</p></div>
+
+<div id="tokenScreen" style="display:none">
+  <div class="token-card">
+    <div class="login-logo">
+      <svg width="40" height="40" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="8" fill="#3483FA"/><path d="M8 18C8 12.477 12.477 8 18 8s10 4.477 10 10-4.477 10-10 10S8 23.523 8 18z" fill="#FFE600"/><path d="M14 18l3 3 6-6" stroke="#3483FA" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="login-logo-text">Mercado Libre <b>IS</b></span>
+    </div>
+    <h2>Configuración inicial</h2>
+    <p>Para sincronizar con GitHub necesitas ingresar el token de acceso.<br>Solo se pide <strong>una vez</strong> y se guarda en tu navegador.</p>
+    <div class="token-input-wrap">
+      <label>GitHub Personal Access Token</label>
+      <input type="password" id="tokenInput" placeholder="ghp_..." autocomplete="off">
+    </div>
+    <p class="token-hint">Tu token no se sube a ningún servidor.<br>Se guarda solo en este navegador.</p>
+    <button class="btn btn-primary" style="width:100%;justify-content:center;padding:11px" onclick="saveToken()">Guardar y continuar</button>
+  </div>
+</div>
+
 <div id="loginScreen" style="display:none">
   <div class="login-card">
     <div class="login-logo">
@@ -165,6 +250,7 @@ tbody tr:hover .row-actions{opacity:1;}
       <div class="header-stats"><div>Total <strong id="hTotal">—</strong></div><div>Filtrados <strong id="hFiltered">—</strong></div></div>
       <div class="user-pill"><div class="av-sm" id="headerAvatar">?</div><span id="headerUser">—</span></div>
       <button class="logout-btn" onclick="logout()">Salir</button>
+      <button class="dark-toggle" id="darkToggle" onclick="toggleDark()" title="Modo oscuro">🌙</button>
     </div>
   </header>
   <div class="toolbar">
@@ -279,9 +365,9 @@ tbody tr:hover .row-actions{opacity:1;}
 <script>
 const GITHUB_USER='extjaecasti-code';
 const GITHUB_REPO='inventario-is';
-const GITHUB_TOKEN='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';
 const GITHUB_FILE='inventario.json';
 const WEBHOOK='https://chat.googleapis.com/v1/spaces/AAQA7botEQo/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=HZm7YOTGUKs84kZHiY4A0_UF1GdzrNe964GK8OYTYmQ';
+let GITHUB_TOKEN=localStorage.getItem('gh_token')||'';
 const RAW_URL=`https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${GITHUB_FILE}`;
 const API_URL=`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${GITHUB_FILE}`;
 const PRESET_USERS=[{"id": "u1", "name": "André Jael Castillo Diaz", "role": "Admin", "os": "Windows"}, {"id": "u2", "name": "Luis Eduardo Avalos Garcia", "role": "Editor", "os": "Windows"}, {"id": "u3", "name": "Erick Agustín Crisóstomo Sanchez", "role": "Editor", "os": "macOS"}, {"id": "u4", "name": "Erick Avisai Núñez Loza", "role": "Admin", "os": "macOS"}];
@@ -638,11 +724,36 @@ document.getElementById('filterStatus').addEventListener('change',applyFilters);
 document.getElementById('filterCat').addEventListener('change',applyFilters);
 document.getElementById('filterArea').addEventListener('change',applyFilters);
 document.getElementById('rowsPerPage').addEventListener('change',function(){rowsPerPage=parseInt(this.value);page=0;render();});
+function saveToken(){
+  const t=document.getElementById('tokenInput').value.trim();
+  if(!t||!t.startsWith('ghp_')){showTokenError('Token inválido. Debe comenzar con ghp_');return;}
+  localStorage.setItem('gh_token',t);
+  GITHUB_TOKEN=t;
+  document.getElementById('tokenScreen').style.display='none';
+  document.getElementById('loadingOverlay').style.display='flex';
+  loadFromGitHub(false).then(()=>{
+    document.getElementById('loadingOverlay').style.display='none';
+    document.getElementById('loginScreen').style.display='flex';
+  });
+}
+function showTokenError(msg){
+  const inp=document.getElementById('tokenInput');
+  inp.style.borderColor='var(--red)';
+  setTimeout(()=>inp.style.borderColor='',2000);
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('tokenInput')?.addEventListener('keydown',e=>{if(e.key==='Enter')saveToken();});
+});
 (async()=>{
   initLogin();
-  await loadFromGitHub(false);
-  document.getElementById('loadingOverlay').style.display='none';
-  document.getElementById('loginScreen').style.display='flex';
+  if(!GITHUB_TOKEN){
+    document.getElementById('loadingOverlay').style.display='none';
+    document.getElementById('tokenScreen').style.display='flex';
+  } else {
+    await loadFromGitHub(false);
+    document.getElementById('loadingOverlay').style.display='none';
+    document.getElementById('loginScreen').style.display='flex';
+  }
 })();
 
 function filterByStat(status){
@@ -664,6 +775,20 @@ function filterByStat(status){
   setTimeout(()=>{
     document.querySelector('.table-container').scrollIntoView({behavior:'smooth',block:'start'});
   },100);
+}
+
+function toggleDark(){
+  const isDark=document.body.classList.toggle('dark');
+  localStorage.setItem('darkMode',isDark?'1':'0');
+  document.getElementById('darkToggle').textContent=isDark?'☀️':'🌙';
+}
+// Apply saved dark mode on load
+if(localStorage.getItem('darkMode')==='1'){
+  document.body.classList.add('dark');
+  document.addEventListener('DOMContentLoaded',()=>{
+    const btn=document.getElementById('darkToggle');
+    if(btn)btn.textContent='☀️';
+  });
 }
 
 </script>
