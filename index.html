@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventario IS — 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ml-yellow:#FFE600;--ml-blue:#3483FA;--ml-blue-dark:#2968C8;--ml-blue-light:#E8F0FE;--bg:#EEEEEE;--surface:#FFFFFF;--surface2:#F7F7F7;--border:#E0E0E0;--border2:#D0D0D0;--text:#333333;--text2:#666666;--text3:#999999;--green:#00A650;--green-bg:#E6F7EE;--yellow-s:#F5A623;--yellow-bg:#FEF3E2;--red:#E02020;--red-bg:#FDECEA;--purple:#9B51E0;--purple-bg:#F3EAFD;--sans:"Inter",-apple-system,sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;}
+#loginScreen{position:fixed;inset:0;background:linear-gradient(135deg,#f5f5f5 0%,#e8f0fe 100%);display:flex;align-items:center;justify-content:center;z-index:9999;}
+.login-card{background:var(--surface);border-radius:16px;padding:40px 36px;width:400px;box-shadow:0 12px 48px rgba(52,131,250,0.15);display:flex;flex-direction:column;align-items:center;gap:24px;}
+.login-logo{display:flex;align-items:center;gap:12px;border-bottom:3px solid var(--ml-yellow);padding-bottom:20px;width:100%;justify-content:center;}
+.login-logo-text{font-size:18px;font-weight:700;color:var(--text);}
+.login-logo-text b{color:var(--ml-blue);}
+.login-subtitle{font-size:13px;color:var(--text3);text-align:center;}
+.login-users{display:flex;flex-direction:column;gap:10px;width:100%;}
+.user-btn{display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:10px;border:2px solid var(--border);background:var(--surface2);cursor:pointer;transition:all .2s;width:100%;font-family:var(--sans);font-size:14px;font-weight:600;color:var(--text);text-align:left;}
+.user-btn:hover{border-color:var(--ml-blue);background:var(--ml-blue-light);color:var(--ml-blue);}
+.user-btn:hover .avatar{background:var(--ml-blue);color:#fff;}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--ml-yellow);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#333;flex-shrink:0;transition:all .2s;}
+.user-info{flex:1;}
+.user-info .uname{font-size:13px;font-weight:600;}
+.user-info small{font-size:11px;color:var(--text3);font-weight:400;display:block;margin-top:2px;}
+.login-divider{display:flex;align-items:center;gap:10px;width:100%;color:var(--text3);font-size:12px;}
+.login-divider::before,.login-divider::after{content:'';flex:1;height:1px;background:var(--border);}
+.custom-login{display:flex;gap:8px;width:100%;}
+.custom-login input{flex:1;background:var(--surface2);border:1px solid var(--border);color:var(--text);font-family:var(--sans);font-size:13px;border-radius:8px;padding:9px 12px;outline:none;transition:border-color .2s;}
+.custom-login input:focus{border-color:var(--ml-blue);background:#fff;}
+.custom-login button{background:var(--ml-blue);color:#fff;border:none;border-radius:8px;padding:9px 14px;cursor:pointer;font-family:var(--sans);font-size:13px;font-weight:600;transition:background .15s;white-space:nowrap;}
+.custom-login button:hover{background:var(--ml-blue-dark);}
+#loadingOverlay{position:fixed;inset:0;background:rgba(255,255,255,0.92);z-index:8888;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;}
+.big-spin{width:44px;height:44px;border:4px solid var(--border2);border-top-color:var(--ml-blue);border-radius:50%;animation:spin .8s linear infinite;}
+#loadingOverlay p{font-size:14px;color:var(--text2);font-weight:500;}
+@keyframes spin{to{transform:rotate(360deg);}}
+header{background:var(--ml-yellow);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.12);}
+.logo-area{display:flex;align-items:center;gap:12px;}
+.logo-text{font-size:15px;font-weight:700;color:#333;}
+.logo-text span{color:var(--ml-blue);}
+.header-right{display:flex;align-items:center;gap:10px;}
+.header-stats{display:flex;gap:16px;font-size:12px;color:#555;}
+.header-stats strong{color:#222;font-weight:700;}
+.user-pill{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,0.55);border-radius:20px;padding:4px 12px 4px 5px;font-size:12px;font-weight:600;color:#333;}
+.av-sm{width:26px;height:26px;border-radius:50%;background:var(--ml-blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;}
+.logout-btn{background:rgba(255,255,255,0.4);border:none;cursor:pointer;font-size:11px;color:#555;padding:5px 10px;border-radius:20px;font-family:var(--sans);font-weight:600;transition:background .15s;}
+.logout-btn:hover{background:rgba(255,255,255,0.75);}
+.toolbar{background:var(--surface);border-bottom:1px solid var(--border);padding:12px 24px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+.search-wrap{position:relative;flex:1;min-width:200px;max-width:360px;}
+.search-wrap svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--text3);pointer-events:none;}
+input[type="text"],select{background:var(--surface2);border:1px solid var(--border);color:var(--text);font-family:var(--sans);font-size:13px;border-radius:6px;padding:8px 12px;outline:none;transition:border-color .2s,box-shadow .2s;}
+input[type="text"]:focus,select:focus{border-color:var(--ml-blue);box-shadow:0 0 0 3px rgba(52,131,250,0.12);background:#fff;}
+input[type="text"].search{padding-left:36px;width:100%;}
+select{cursor:pointer;min-width:140px;}
+.btn{padding:8px 16px;border-radius:6px;border:none;cursor:pointer;font-family:var(--sans);font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px;transition:all .15s;white-space:nowrap;}
+.btn-primary{background:var(--ml-blue);color:#fff;}.btn-primary:hover{background:var(--ml-blue-dark);}
+.btn-ghost{background:var(--surface2);color:var(--text2);border:1px solid var(--border2);}.btn-ghost:hover{border-color:var(--ml-blue);color:var(--ml-blue);background:var(--ml-blue-light);}
+.btn-export{background:#fff;color:var(--green);border:1px solid var(--border2);}.btn-export:hover{border-color:var(--green);background:var(--green-bg);}
+.btn-refresh{background:#fff;color:var(--ml-blue);border:1px solid var(--border2);}.btn-refresh:hover{border-color:var(--ml-blue);background:var(--ml-blue-light);}
+.stats-strip{display:flex;gap:12px;padding:14px 24px;background:var(--bg);overflow-x:auto;}
+.stat-card{flex:1;background:var(--surface);border:2px solid transparent;border-radius:8px;padding:14px 18px;display:flex;flex-direction:column;gap:4px;min-width:110px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:all .2s;cursor:pointer;user-select:none;}
+.stat-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.12);transform:translateY(-2px);}
+.stat-card.active{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,0.12);}
+.stat-card.active-total{border-color:var(--ml-blue);background:var(--ml-blue-light);}
+.stat-card.active-inuse{border-color:var(--green);background:var(--green-bg);}
+.stat-card.active-instock{border-color:var(--border2);background:#e8e8e8;}
+.stat-card.active-repair{border-color:var(--yellow-s);background:var(--yellow-bg);}
+.stat-card.active-retired{border-color:var(--red);background:var(--red-bg);}
+.stat-card.active-missed{border-color:var(--purple);background:var(--purple-bg);}
+.stat-label{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.8px;font-weight:600;}
+.stat-val{font-size:24px;font-weight:700;}
+.stat-val.blue{color:var(--ml-blue);}.stat-val.green{color:var(--green);}.stat-val.yellow{color:var(--yellow-s);}.stat-val.red{color:var(--red);}.stat-val.purple{color:var(--purple);}.stat-val.gray{color:var(--text2);}
+.table-container{padding:0 24px 90px;}
+.table-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+.result-count{font-size:12px;color:var(--text3);padding:9px 16px;border-bottom:1px solid var(--border);background:var(--surface2);display:flex;align-items:center;gap:8px;}
+.sync-indicator{margin-left:auto;display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text3);}
+.sync-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;}
+.sync-dot.syncing{background:var(--yellow-s);animation:pulse .8s infinite;}
+.sync-dot.error{background:var(--red);}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+.table-wrap{overflow-x:auto;}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:900px;}
+thead th{background:var(--surface2);padding:10px 14px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);letter-spacing:0.5px;text-transform:uppercase;border-bottom:2px solid var(--border);white-space:nowrap;cursor:pointer;user-select:none;transition:background .15s;}
+thead th:hover{background:#EBEBEB;color:var(--ml-blue);}
+thead th.sort-asc::after{content:" ↑";color:var(--ml-blue);}
+thead th.sort-desc::after{content:" ↓";color:var(--ml-blue);}
+tbody tr{border-bottom:1px solid var(--border);transition:background .1s;}
+tbody tr:hover{background:#F5F9FF;}
+tbody tr:last-child{border-bottom:none;}
+tbody td{padding:10px 14px;vertical-align:middle;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text2);font-size:13px;}
+tbody td.sn{font-family:monospace;font-size:12px;color:var(--ml-blue);font-weight:700;}
+tbody td.name{color:var(--text);font-weight:600;}
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;transition:opacity .15s,transform .1s;white-space:nowrap;}
+.badge:hover{opacity:.85;transform:scale(1.03);}
+.badge.in-use{background:var(--green-bg);color:var(--green);}
+.badge.in-stock{background:var(--ml-blue-light);color:var(--ml-blue);}
+.badge.in-repair{background:var(--yellow-bg);color:var(--yellow-s);}
+.badge.retired{background:var(--red-bg);color:var(--red);}
+.badge.missed{background:var(--purple-bg);color:var(--purple);}
+.badge.unknown{background:#F0F0F0;color:var(--text3);}
+.row-actions{display:flex;gap:4px;opacity:0;transition:opacity .15s;}
+tbody tr:hover .row-actions{opacity:1;}
+.row-btn{background:none;border:none;cursor:pointer;padding:4px 7px;border-radius:5px;font-size:13px;transition:background .15s;}
+.row-btn.edit:hover{background:var(--ml-blue-light);}
+.row-btn.del:hover{background:var(--red-bg);}
+.pager{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:2px solid var(--ml-yellow);padding:10px 24px;display:flex;align-items:center;gap:10px;font-size:12px;z-index:50;box-shadow:0 -2px 12px rgba(0,0,0,0.08);}
+.page-info{font-size:12px;color:var(--text2);font-weight:500;}
+.pager-btns{display:flex;gap:4px;}
+.pager-btns button{background:var(--surface2);border:1px solid var(--border);color:var(--text2);border-radius:5px;padding:5px 11px;cursor:pointer;font-size:12px;font-weight:600;transition:all .15s;}
+.pager-btns button:hover:not(:disabled){border-color:var(--ml-blue);color:var(--ml-blue);background:var(--ml-blue-light);}
+.pager-btns button:disabled{opacity:.4;cursor:default;}
+.pager-btns button.active{background:var(--ml-blue);border-color:var(--ml-blue);color:#fff;}
+.pager-right{margin-left:auto;display:flex;align-items:center;gap:8px;color:var(--text2);}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);backdrop-filter:blur(3px);z-index:200;display:none;align-items:center;justify-content:center;}
+.overlay.open{display:flex;}
+.modal{background:var(--surface);border-radius:10px;width:600px;max-width:95vw;max-height:90vh;overflow-y:auto;padding:28px;animation:slideUp .2s ease;box-shadow:0 20px 60px rgba(0,0,0,0.2);}
+@keyframes slideUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.modal-header{display:flex;align-items:center;gap:10px;margin-bottom:22px;padding-bottom:16px;border-bottom:2px solid var(--ml-yellow);}
+.modal-header h2{font-size:17px;font-weight:700;color:var(--text);}
+.modal-header h2 span{color:var(--ml-blue);font-size:14px;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.form-group{display:flex;flex-direction:column;gap:5px;}
+.form-group.full{grid-column:1/-1;}
+.form-group label{font-size:11px;text-transform:uppercase;letter-spacing:0.7px;color:var(--text3);font-weight:700;}
+.form-group input,.form-group select,.form-group textarea{background:var(--surface2);border:1px solid var(--border);color:var(--text);font-family:var(--sans);font-size:13px;border-radius:6px;padding:9px 12px;outline:none;transition:border-color .2s,box-shadow .2s;width:100%;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--ml-blue);box-shadow:0 0 0 3px rgba(52,131,250,0.12);background:#fff;}
+.form-group textarea{resize:vertical;min-height:64px;}
+.modal-footer{margin-top:20px;display:flex;justify-content:flex-end;gap:8px;}
+.confirm-modal{max-width:400px;}
+.confirm-modal p{color:var(--text2);font-size:14px;line-height:1.6;margin-bottom:20px;}
+.sn-hi{color:var(--red);font-weight:700;font-family:monospace;}
+.empty-state{text-align:center;padding:80px 20px;color:var(--text3);}
+.empty-state .icon{font-size:48px;margin-bottom:14px;}
+.toast{position:fixed;bottom:68px;right:24px;border-radius:8px;padding:12px 18px;font-size:13px;color:#fff;z-index:9999;display:none;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,0.2);font-weight:500;max-width:380px;}
+.toast.show{display:flex;animation:fadeIn .2s ease;}
+.toast.success{background:var(--green);}.toast.error{background:var(--red);}.toast.info{background:var(--ml-blue);}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}}
+.spinner-sm{width:13px;height:13px;border:2px solid rgba(255,255,255,0.4);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;flex-shrink:0;}
+#tokenScreen{position:fixed;inset:0;background:linear-gradient(135deg,#f5f5f5 0%,#e8f0fe 100%);display:flex;align-items:center;justify-content:center;z-index:9998;}
+.token-card{background:#fff;border-radius:16px;padding:40px 36px;width:420px;box-shadow:0 12px 48px rgba(52,131,250,0.15);display:flex;flex-direction:column;align-items:center;gap:20px;}
+.token-card h2{font-size:16px;font-weight:700;color:#333;text-align:center;}
+.token-card p{font-size:13px;color:#666;text-align:center;line-height:1.6;}
+.token-input-wrap{width:100%;display:flex;flex-direction:column;gap:8px;}
+.token-input-wrap label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#999;}
+.token-input-wrap input{width:100%;background:#f7f7f7;border:1px solid #e0e0e0;color:#333;font-family:monospace;font-size:13px;border-radius:8px;padding:10px 14px;outline:none;transition:border-color .2s;}
+.token-input-wrap input:focus{border-color:#3483FA;background:#fff;}
+.token-hint{font-size:11px;color:#999;text-align:center;line-height:1.5;}
+.token-hint a{color:#3483FA;text-decoration:none;}
+
+</style>
+</head>
+<body>
+<div id="loadingOverlay"><div class="big-spin"></div><p>Conectando con GitHub...</p></div>
+
+<div id="tokenScreen" style="display:none">
+  <div class="token-card">
+    <div class="login-logo">
+      <svg width="40" height="40" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="8" fill="#3483FA"/><path d="M8 18C8 12.477 12.477 8 18 8s10 4.477 10 10-4.477 10-10 10S8 23.523 8 18z" fill="#FFE600"/><path d="M14 18l3 3 6-6" stroke="#3483FA" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="login-logo-text">Mercado Libre <b>IS</b></span>
+    </div>
+    <h2>Configuración inicial</h2>
+    <p>Para sincronizar con GitHub necesitas ingresar el token de acceso.<br>Solo se pide <strong>una vez</strong> y se guarda en tu navegador.</p>
+    <div class="token-input-wrap">
+      <label>GitHub Personal Access Token</label>
+      <input type="password" id="tokenInput" placeholder="ghp_..." autocomplete="off">
+    </div>
+    <p class="token-hint">Tu token no se sube a ningún servidor.<br>Se guarda solo en este navegador.</p>
+    <button class="btn btn-primary" style="width:100%;justify-content:center;padding:11px" onclick="saveToken()">Guardar y continuar</button>
+  </div>
+</div>
+
+<div id="loginScreen" style="display:none">
+  <div class="login-card">
+    <div class="login-logo">
+      <svg width="40" height="40" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="8" fill="#3483FA"/><path d="M8 18C8 12.477 12.477 8 18 8s10 4.477 10 10-4.477 10-10 10S8 23.523 8 18z" fill="#FFE600"/><path d="M14 18l3 3 6-6" stroke="#3483FA" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="login-logo-text">Mercado Libre <b>IS</b></span>
+    </div>
+    <p class="login-subtitle">Selecciona tu nombre para continuar</p>
+    <div class="login-users" id="userList"></div>
+    <div class="login-divider">o ingresa tu nombre</div>
+    <div class="custom-login">
+      <input type="text" id="customName" placeholder="Tu nombre completo..." maxlength="60">
+      <button onclick="loginCustom()">Entrar</button>
+    </div>
+  </div>
+</div>
+<div id="app" style="display:none">
+  <header>
+    <div class="logo-area">
+      <svg width="34" height="34" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="8" fill="#3483FA"/><path d="M8 18C8 12.477 12.477 8 18 8s10 4.477 10 10-4.477 10-10 10S8 23.523 8 18z" fill="#FFE600"/><path d="M14 18l3 3 6-6" stroke="#3483FA" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="logo-text">Mercado Libre <span>— Inventario IS</span></div>
+    </div>
+    <div class="header-right">
+      <div class="header-stats"><div>Total <strong id="hTotal">—</strong></div><div>Filtrados <strong id="hFiltered">—</strong></div></div>
+      <div class="user-pill"><div class="av-sm" id="headerAvatar">?</div><span id="headerUser">—</span></div>
+      <button class="logout-btn" onclick="logout()">Salir</button>
+    </div>
+  </header>
+  <div class="toolbar">
+    <div class="search-wrap">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" class="search" id="searchInput" placeholder="Buscar por S/N, nombre, modelo, IP...">
+    </div>
+    <select id="filterStatus"><option value="">Todos los status</option><option value="In Use">In Use</option><option value="In Stock">In Stock</option><option value="In repair">In Repair</option><option value="Retired">Retired</option><option value="Missed">Missed</option></select>
+    <select id="filterCat"><option value="">Todas las categorías</option></select>
+    <select id="filterArea"><option value="">Todas las áreas</option></select>
+    <button class="btn btn-primary" onclick="openAdd()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Agregar</button>
+    <button class="btn btn-refresh" onclick="loadFromGitHub(true)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>Sincronizar</button>
+    <button class="btn btn-export" onclick="exportCSV()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Exportar CSV</button>
+  </div>
+  <div class="stats-strip">
+    <div class="stat-card" id="sc-total" onclick="filterByStat('')"><div class="stat-label">Total</div><div class="stat-val blue" id="sTotal">—</div></div>
+    <div class="stat-card" id="sc-inuse" onclick="filterByStat('In Use')"><div class="stat-label">In Use</div><div class="stat-val green" id="sInUse">—</div></div>
+    <div class="stat-card" id="sc-instock" onclick="filterByStat('In Stock')"><div class="stat-label">In Stock</div><div class="stat-val gray" id="sInStock">—</div></div>
+    <div class="stat-card" id="sc-repair" onclick="filterByStat('In repair')"><div class="stat-label">In Repair</div><div class="stat-val yellow" id="sRepair">—</div></div>
+    <div class="stat-card" id="sc-retired" onclick="filterByStat('Retired')"><div class="stat-label">Retired</div><div class="stat-val red" id="sRetired">—</div></div>
+    <div class="stat-card" id="sc-missed" onclick="filterByStat('Missed')"><div class="stat-label">Missed</div><div class="stat-val purple" id="sMissed">—</div></div>
+  </div>
+  <div class="table-container">
+    <div class="table-card">
+      <div class="result-count"><span id="resultText">—</span><div class="sync-indicator"><div class="sync-dot" id="syncDot"></div><span id="syncLabel">Sincronizado</span></div></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th onclick="sortBy('S/N')" id="th-sn">S/N</th>
+            <th onclick="sortBy('ESTATUS FISICO')" id="th-est">Status</th>
+            <th onclick="sortBy('Categoría')" id="th-cat">Categoría</th>
+            <th onclick="sortBy('DISPOSITIVO')" id="th-dev">Dispositivo</th>
+            <th onclick="sortBy('MARCA')" id="th-marca">Marca</th>
+            <th onclick="sortBy('MODELO')" id="th-mod">Modelo</th>
+            <th onclick="sortBy('AREA')" id="th-area">Área</th>
+            <th onclick="sortBy('ASIGNACIÓN')" id="th-asig">Asignación</th>
+            <th onclick="sortBy('IP')" id="th-ip">IP</th>
+            <th onclick="sortBy('O.S.')" id="th-os">O.S.</th>
+            <th>Acciones</th>
+          </tr></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+        <div id="emptyState" class="empty-state" style="display:none"><div class="icon">🔍</div><p>No se encontraron dispositivos.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="pager">
+    <span class="page-info" id="pageInfo">—</span>
+    <div class="pager-btns" id="pagerBtns"></div>
+    <div class="pager-right"><span>Filas:</span><select id="rowsPerPage" style="padding:5px 8px;font-size:12px;min-width:auto"><option value="25">25</option><option value="50" selected>50</option><option value="100">100</option><option value="200">200</option></select></div>
+  </div>
+</div>
+<div class="overlay" id="formOverlay" onclick="closeModal(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3483FA" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <h2 id="modalTitle">Agregar Dispositivo</h2>
+    </div>
+    <div class="form-grid">
+      <div class="form-group"><label>S/N *</label><input id="f_sn" placeholder="Serial Number"></div>
+      <div class="form-group"><label>Estatus *</label><select id="f_status"><option value="In Use">In Use</option><option value="In Stock">In Stock</option><option value="In repair">In Repair</option><option value="Retired">Retired</option><option value="Missed">Missed</option></select></div>
+      <div class="form-group"><label>Categoría</label><select id="f_cat"><option value="Notebook">Notebook</option><option value="Desktop">Desktop</option><option value="Handheld">Handheld</option><option value="Mobile">Mobile</option><option value="Tablet">Tablet</option><option value="Scanner">Scanner</option><option value="Printer">Printer</option><option value="Display">Display</option><option value="TV">TV</option><option value="Accesorio">Accesorio</option><option value="UPS">UPS</option><option value="Videoconferences">Videoconferences</option><option value="Access Control">Access Control</option><option value="Otro">Otro</option></select></div>
+      <div class="form-group"><label>Dispositivo</label><input id="f_dev" placeholder="Ej: Laptop, HH..."></div>
+      <div class="form-group"><label>Marca</label><input id="f_marca" placeholder="Ej: DELL, ZEBRA..."></div>
+      <div class="form-group"><label>Modelo</label><input id="f_model" placeholder="Ej: 5450, TC51..."></div>
+      <div class="form-group"><label>Área</label><input id="f_area" placeholder="Ej: LI, ACTIVO FIJO..."></div>
+      <div class="form-group"><label>Asignación</label><input id="f_asig" placeholder="Nombre del responsable"></div>
+      <div class="form-group"><label>IP</label><input id="f_ip" placeholder="10.x.x.x"></div>
+      <div class="form-group"><label>MAC</label><input id="f_mac" placeholder="XX:XX:XX:XX:XX:XX"></div>
+      <div class="form-group"><label>SSID</label><input id="f_ssid" placeholder="Red WiFi"></div>
+      <div class="form-group"><label>O.S.</label><input id="f_os" placeholder="Ej: W11, Android..."></div>
+      <div class="form-group"><label>Deploy</label><input id="f_deploy" placeholder="Ej: PSGAC"></div>
+      <div class="form-group"><label>Fulfillment</label><input id="f_full" placeholder="Ej: MXCD11"></div>
+      <div class="form-group full"><label>Comentarios</label><textarea id="f_comment" placeholder="Notas adicionales..."></textarea></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="document.getElementById('formOverlay').classList.remove('open')">Cancelar</button>
+      <button class="btn btn-primary" id="saveBtn" onclick="saveDevice()">Guardar</button>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="confirmOverlay" onclick="closeModal(event)">
+  <div class="modal confirm-modal">
+    <div class="modal-header">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E02020" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+      <h2>Eliminar Dispositivo</h2>
+    </div>
+    <p>¿Seguro que deseas eliminar <span class="sn-hi" id="confirmSN"></span>? Esta acción no se puede deshacer.</p>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="document.getElementById('confirmOverlay').classList.remove('open')">Cancelar</button>
+      <button class="btn" style="background:var(--red);color:#fff" onclick="confirmDelete()">Eliminar</button>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="statusOverlay" onclick="closeModal(event)">
+  <div class="modal" style="max-width:320px;padding:24px">
+    <div class="modal-header">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3483FA" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <h2>Cambiar Status &mdash; <span id="statusSN"></span></h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <button class="btn" style="background:var(--green-bg);color:var(--green);justify-content:center;border:1px solid rgba(0,166,80,.2)" onclick="setStatus('In Use')">&#10003; In Use</button>
+      <button class="btn" style="background:var(--ml-blue-light);color:var(--ml-blue);justify-content:center;border:1px solid rgba(52,131,250,.2)" onclick="setStatus('In Stock')">&#128230; In Stock</button>
+      <button class="btn" style="background:var(--yellow-bg);color:var(--yellow-s);justify-content:center;border:1px solid rgba(245,166,35,.2)" onclick="setStatus('In repair')">&#128295; In Repair</button>
+      <button class="btn" style="background:var(--red-bg);color:var(--red);justify-content:center;border:1px solid rgba(224,32,32,.15)" onclick="setStatus('Retired')">&#128683; Retired</button>
+      <button class="btn" style="background:var(--purple-bg);color:var(--purple);justify-content:center;border:1px solid rgba(155,81,224,.15)" onclick="setStatus('Missed')">&#10067; Missed</button>
+    </div>
+    <div class="modal-footer"><button class="btn btn-ghost" onclick="document.getElementById('statusOverlay').classList.remove('open')">Cancelar</button></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const GITHUB_USER='extjaecasti-code';
+const GITHUB_REPO='inventario-is';
+const GITHUB_FILE='inventario.json';
+const WEBHOOK='https://chat.googleapis.com/v1/spaces/AAQA7botEQo/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=HZm7YOTGUKs84kZHiY4A0_UF1GdzrNe964GK8OYTYmQ';
+let GITHUB_TOKEN=localStorage.getItem('gh_token')||'';
+const RAW_URL=`https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${GITHUB_FILE}`;
+const API_URL=`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${GITHUB_FILE}`;
+const PRESET_USERS=[{"id": "u1", "name": "André Jael Castillo Diaz", "role": "Admin", "os": "Windows"}, {"id": "u2", "name": "Luis Eduardo Avalos Garcia", "role": "Editor", "os": "Windows"}, {"id": "u3", "name": "Erick Agustín Crisóstomo Sanchez", "role": "Editor", "os": "macOS"}, {"id": "u4", "name": "Erick Avisai Núñez Loza", "role": "Admin", "os": "macOS"}];
+
+const FIELD_LABELS={
+  'ESTATUS FISICO':'Estatus Físico','Categoría':'Categoría','DISPOSITIVO':'Dispositivo',
+  'MARCA':'Marca','MODELO':'Modelo','AREA':'Área','ASIGNACIÓN':'Asignación',
+  'IP':'IP','MAC':'MAC','SSID':'SSID','O.S.':'Sistema Operativo',
+  'DEPLOY':'Deploy','Fullfiment':'Fulfillment','Comentarios':'Comentarios'
+};
+let data=[],filtered=[],currentSHA='';
+let sortCol='S/N',sortDir=1,page=0,rowsPerPage=50;
+let editingId=null,deletingId=null,statusId=null,snapshotBeforeEdit=null;
+let currentUser=null;
+
+function initLogin(){
+  const ul=document.getElementById('userList');
+  PRESET_USERS.forEach(u=>{
+    const btn=document.createElement('button');
+    btn.className='user-btn';
+    const ini=u.name.split(' ').map(w=>w[0]).slice(0,2).join('').toUpperCase();
+    btn.innerHTML='<div class="avatar">'+ini+'</div><div class="user-info"><div>'+u.name+'</div><small>'+u.role+' &middot; '+u.os+'</small></div>';
+    btn.onclick=()=>loginAs(u.name);
+    ul.appendChild(btn);
+  });
+  document.getElementById('customName').addEventListener('keydown',e=>{if(e.key==='Enter')loginCustom();});
+}
+function loginAs(name){
+  currentUser=name;
+  const ini=name.split(' ').map(w=>w[0]).slice(0,2).join('').toUpperCase();
+  document.getElementById('headerAvatar').textContent=ini;
+  document.getElementById('headerUser').textContent=name;
+  document.getElementById('loginScreen').style.display='none';
+  document.getElementById('app').style.display='';
+}
+function loginCustom(){
+  const name=document.getElementById('customName').value.trim();
+  if(!name)return;
+  loginAs(name);
+}
+function logout(){
+  currentUser=null;
+  document.getElementById('app').style.display='none';
+  document.getElementById('loginScreen').style.display='flex';
+  document.getElementById('customName').value='';
+}
+
+function setSyncState(state,msg){
+  const dot=document.getElementById('syncDot');
+  const lbl=document.getElementById('syncLabel');
+  dot.className='sync-dot'+(state==='syncing'?' syncing':state==='error'?' error':'');
+  lbl.textContent=msg||(state==='syncing'?'Guardando...':state==='error'?'Error de sync':'Sincronizado');
+}
+async function loadFromGitHub(showMsg){
+  setSyncState('syncing','Cargando...');
+  try{
+    const res=await fetch(RAW_URL+'?t='+Date.now());
+    if(!res.ok)throw new Error('HTTP '+res.status);
+    const json=await res.json();
+    const meta=await fetch(API_URL,{headers:{Authorization:'token '+GITHUB_TOKEN}});
+    if(meta.ok){const m=await meta.json();currentSHA=m.sha;}
+    data=json.map((r,i)=>({...r,_id:i,'ESTATUS FISICO':normalizeStatus(r['ESTATUS FISICO'])}));
+    populateFilters();applyFilters();
+    setSyncState('ok','Sincronizado');
+    if(showMsg)showToast('Datos actualizados desde GitHub','success');
+  }catch(e){
+    setSyncState('error','Error de conexion');
+    showToast('No se pudo cargar desde GitHub: '+e.message,'error');
+  }
+}
+async function saveToGitHub(commitMsg){
+  setSyncState('syncing','Guardando...');
+  try{
+    const clean=data.map(r=>{const c={...r};delete c._id;return c;});
+    const content=btoa(unescape(encodeURIComponent(JSON.stringify(clean,null,2))));
+    const res=await fetch(API_URL,{
+      method:'PUT',
+      headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'},
+      body:JSON.stringify({message:commitMsg,content,sha:currentSHA})
+    });
+    if(!res.ok){const err=await res.json();throw new Error(err.message||'HTTP '+res.status);}
+    const result=await res.json();
+    currentSHA=result.content.sha;
+    setSyncState('ok','Sincronizado');
+    return true;
+  }catch(e){
+    setSyncState('error','Error al guardar');
+    showToast('Error al guardar en GitHub: '+e.message,'error');
+    return false;
+  }
+}
+
+async function notifyChat(device,changes,action){
+  const now=new Date().toLocaleString('es-MX',{dateStyle:'medium',timeStyle:'short',timeZone:'America/Mexico_City'});
+  const sep='━'.repeat(24);
+  const devInfo=device['S/N']+' — '+(device['DISPOSITIVO']||'')+' '+(device['MARCA']||'')+' '+(device['MODELO']||'');
+  let text='';
+  if(action==='edit'){
+    const cLines=changes.map(c=>'  • *'+c.label+':* ~~'+(c.before||'(vacío)')+'~~ → *'+(c.after||'(vacío)')+'*').join('\n');
+    text='✏️ *Actualización de Inventario IS*\n'+sep+'\n'
+      +'👤 *Editado por:* '+currentUser+'\n'
+      +'📋 *Dispositivo:* '+devInfo+'\n'
+      +'🏢 *Área:* '+(device['AREA']||'—')+' | *Asignado a:* '+(device['ASIGNACIÓN']||'—')+'\n'+sep+'\n'
+      +'📝 *Cambios ('+changes.length+'):*\n'+cLines+'\n'+sep+'\n'
+      +'🕐 '+now;
+  }else if(action==='add'){
+    text='➕ *Nuevo Dispositivo en Inventario IS*\n'+sep+'\n'
+      +'👤 *Agregado por:* '+currentUser+'\n'
+      +'📋 *S/N:* '+devInfo+'\n'
+      +'🏢 *Área:* '+(device['AREA']||'—')+' | *Asignado a:* '+(device['ASIGNACIÓN']||'—')+'\n'
+      +'🔖 *Status:* '+device['ESTATUS FISICO']+'\n'+sep+'\n'
+      +'🕐 '+now;
+  }else if(action==='delete'){
+    text='🗑️ *Dispositivo Eliminado del Inventario IS*\n'+sep+'\n'
+      +'👤 *Eliminado por:* '+currentUser+'\n'
+      +'📋 *S/N:* '+devInfo+'\n'
+      +'🏢 *Área:* '+(device['AREA']||'—')+'\n'+sep+'\n'
+      +'🕐 '+now;
+  }else if(action==='status'){
+    text='🔄 *Cambio de Status — Inventario IS*\n'+sep+'\n'
+      +'👤 *Modificado por:* '+currentUser+'\n'
+      +'📋 *Dispositivo:* '+devInfo+'\n'
+      +'🔖 *Status:* ~~'+changes[0].before+'~~ → *'+changes[0].after+'*\n'
+      +'🏢 *Área:* '+(device['AREA']||'—')+' | *Asignado a:* '+(device['ASIGNACIÓN']||'—')+'\n'+sep+'\n'
+      +'🕐 '+now;
+  }
+  try{await fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text})});}
+  catch(e){console.warn('Chat error',e);}
+}
+
+function normalizeStatus(s){
+  if(!s)return'';
+  const l=s.trim().toLowerCase();
+  if(l==='in use'||l==='in use ')return'In Use';
+  if(l==='in stock')return'In Stock';
+  if(l==='in repair')return'In repair';
+  if(l==='retired')return'Retired';
+  if(l==='missed')return'Missed';
+  if(l==='accesorio')return'In Use';
+  return s.trim();
+}
+function getStatusClass(s){
+  const l=(s||'').toLowerCase().trim();
+  if(l==='in use')return'in-use';
+  if(l==='in stock')return'in-stock';
+  if(l==='in repair')return'in-repair';
+  if(l==='retired')return'retired';
+  if(l==='missed')return'missed';
+  return'unknown';
+}
+function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+function populateFilters(){
+  const cats=[...new Set(data.map(r=>r['Categoría']).filter(Boolean))].sort();
+  const areas=[...new Set(data.map(r=>r['AREA']).filter(Boolean))].sort();
+  const cs=document.getElementById('filterCat'),as2=document.getElementById('filterArea');
+  const cv=cs.value,av=as2.value;
+  cs.innerHTML='<option value="">Todas las categorías</option>';
+  as2.innerHTML='<option value="">Todas las áreas</option>';
+  cats.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;cs.appendChild(o);});
+  areas.forEach(a=>{const o=document.createElement('option');o.value=a;o.textContent=a;as2.appendChild(o);});
+  cs.value=cv;as2.value=av;
+}
+function applyFilters(){
+  const q=document.getElementById('searchInput').value.toLowerCase();
+  const st=document.getElementById('filterStatus').value.toLowerCase();
+  const cat=document.getElementById('filterCat').value;
+  const area=document.getElementById('filterArea').value;
+  filtered=data.filter(r=>{
+    if(q){const h=[r['S/N'],r['ASIGNACIÓN'],r['MARCA'],r['MODELO'],r['IP'],r['DISPOSITIVO'],r['MAC'],r['SSID']].join(' ').toLowerCase();if(!h.includes(q))return false;}
+    if(st&&r['ESTATUS FISICO'].toLowerCase()!==st)return false;
+    if(cat&&r['Categoría']!==cat)return false;
+    if(area&&r['AREA']!==area)return false;
+    return true;
+  });
+  filtered.sort((a,b)=>{const av2=(a[sortCol]||'').toString().toLowerCase(),bv=(b[sortCol]||'').toString().toLowerCase();return av2<bv?-sortDir:av2>bv?sortDir:0;});
+  page=0;render();
+}
+function updateStats(){
+  document.getElementById('sTotal').textContent=data.length.toLocaleString();
+  document.getElementById('sInUse').textContent=data.filter(r=>r['ESTATUS FISICO']==='In Use').length.toLocaleString();
+  document.getElementById('sInStock').textContent=data.filter(r=>r['ESTATUS FISICO']==='In Stock').length.toLocaleString();
+  document.getElementById('sRepair').textContent=data.filter(r=>r['ESTATUS FISICO']==='In repair').length.toLocaleString();
+  document.getElementById('sRetired').textContent=data.filter(r=>r['ESTATUS FISICO']==='Retired').length.toLocaleString();
+  document.getElementById('sMissed').textContent=data.filter(r=>r['ESTATUS FISICO']==='Missed').length.toLocaleString();
+  document.getElementById('hTotal').textContent=data.length.toLocaleString();
+  document.getElementById('hFiltered').textContent=filtered.length.toLocaleString();
+}
+function render(){
+  updateStats();
+  const start=page*rowsPerPage,pageData=filtered.slice(start,start+rowsPerPage);
+  const tbody=document.getElementById('tableBody'),empty=document.getElementById('emptyState');
+  document.getElementById('resultText').textContent=filtered.length!==data.length
+    ?`Mostrando ${filtered.length.toLocaleString()} de ${data.length.toLocaleString()} dispositivos`
+    :`${data.length.toLocaleString()} dispositivos en total`;
+  if(filtered.length===0){tbody.innerHTML='';empty.style.display='';}
+  else{
+    empty.style.display='none';
+    tbody.innerHTML=pageData.map(r=>`
+      <tr>
+        <td class="sn">${esc(r['S/N'])}</td>
+        <td><span class="badge ${getStatusClass(r['ESTATUS FISICO'])}" onclick="openStatus(${r._id})" title="Click para cambiar status">${esc(r['ESTATUS FISICO'])||'—'}</span></td>
+        <td>${esc(r['Categoría'])||'—'}</td>
+        <td class="name">${esc(r['DISPOSITIVO'])||'—'}</td>
+        <td>${esc(r['MARCA'])||'—'}</td>
+        <td style="font-family:monospace;font-size:12px">${esc(r['MODELO'])||'—'}</td>
+        <td>${esc(r['AREA'])||'—'}</td>
+        <td style="max-width:160px;overflow:hidden;text-overflow:ellipsis" title="${esc(r['ASIGNACIÓN'])}">${esc(r['ASIGNACIÓN'])||'—'}</td>
+        <td style="font-family:monospace;font-size:12px">${esc(r['IP'])||'—'}</td>
+        <td style="font-family:monospace;font-size:12px">${esc(r['O.S.'])||'—'}</td>
+        <td><div class="row-actions">
+          <button class="row-btn edit" onclick="openEdit(${r._id})" title="Editar">✏️</button>
+          <button class="row-btn del" onclick="openDelete(${r._id})" title="Eliminar">🗑️</button>
+        </div></td>
+      </tr>`).join('');
+  }
+  renderPager();updateSortHeaders();
+}
+function renderPager(){
+  const total=Math.ceil(filtered.length/rowsPerPage);
+  const s=page*rowsPerPage+1,e=Math.min((page+1)*rowsPerPage,filtered.length);
+  document.getElementById('pageInfo').textContent=filtered.length?`${s}–${e} de ${filtered.length}`:'0 resultados';
+  let h=`<button onclick="goPage(${page-1})" ${page===0?'disabled':''}>‹</button>`;
+  let lo=Math.max(0,page-2),hi=Math.min(total-1,page+2);
+  if(lo>0)h+=`<button onclick="goPage(0)">1</button>${lo>1?'<button disabled>…</button>':''}`;
+  for(let i=lo;i<=hi;i++)h+=`<button onclick="goPage(${i})" class="${i===page?'active':''}">${i+1}</button>`;
+  if(hi<total-1)h+=`${hi<total-2?'<button disabled>…</button>':''}<button onclick="goPage(${total-1})">${total}</button>`;
+  h+=`<button onclick="goPage(${page+1})" ${page>=total-1?'disabled':''}>›</button>`;
+  document.getElementById('pagerBtns').innerHTML=h;
+}
+function goPage(p){const t=Math.ceil(filtered.length/rowsPerPage);if(p<0||p>=t)return;page=p;render();window.scrollTo({top:0,behavior:'smooth'});}
+function sortBy(col){if(sortCol===col)sortDir*=-1;else{sortCol=col;sortDir=1;}applyFilters();}
+function updateSortHeaders(){
+  document.querySelectorAll('thead th').forEach(t=>t.classList.remove('sort-asc','sort-desc'));
+  const m={'S/N':'th-sn','ESTATUS FISICO':'th-est','Categoría':'th-cat','DISPOSITIVO':'th-dev','MARCA':'th-marca','MODELO':'th-mod','AREA':'th-area','ASIGNACIÓN':'th-asig','IP':'th-ip','O.S.':'th-os'};
+  if(m[sortCol])document.getElementById(m[sortCol]).classList.add(sortDir===1?'sort-asc':'sort-desc');
+}
+function closeModal(e){if(e.target.classList.contains('overlay'))e.target.classList.remove('open');}
+function openAdd(){
+  editingId=null;snapshotBeforeEdit=null;
+  document.getElementById('modalTitle').innerHTML='Agregar Dispositivo';
+  ['f_sn','f_dev','f_marca','f_model','f_area','f_asig','f_ip','f_mac','f_ssid','f_os','f_deploy','f_full','f_comment'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('f_status').value='In Use';
+  document.getElementById('f_cat').value='Notebook';
+  document.getElementById('f_sn').removeAttribute('readonly');
+  document.getElementById('formOverlay').classList.add('open');
+}
+function openEdit(id){
+  editingId=id;
+  const r=data.find(d=>d._id===id);if(!r)return;
+  snapshotBeforeEdit={...r};
+  document.getElementById('modalTitle').innerHTML='Editar Dispositivo <span>'+esc(r['S/N'])+'</span>';
+  document.getElementById('f_sn').value=r['S/N']||'';
+  document.getElementById('f_sn').setAttribute('readonly','true');
+  document.getElementById('f_status').value=r['ESTATUS FISICO']||'In Use';
+  document.getElementById('f_cat').value=r['Categoría']||'';
+  document.getElementById('f_dev').value=r['DISPOSITIVO']||'';
+  document.getElementById('f_marca').value=r['MARCA']||'';
+  document.getElementById('f_model').value=r['MODELO']||'';
+  document.getElementById('f_area').value=r['AREA']||'';
+  document.getElementById('f_asig').value=r['ASIGNACIÓN']||'';
+  document.getElementById('f_ip').value=r['IP']||'';
+  document.getElementById('f_mac').value=r['MAC']||'';
+  document.getElementById('f_ssid').value=r['SSID']||'';
+  document.getElementById('f_os').value=r['O.S.']||'';
+  document.getElementById('f_deploy').value=r['DEPLOY']||'';
+  document.getElementById('f_full').value=r['Fullfiment']||'';
+  document.getElementById('f_comment').value=r['Comentarios']||'';
+  document.getElementById('formOverlay').classList.add('open');
+}
+async function saveDevice(){
+  const sn=document.getElementById('f_sn').value.trim();
+  if(!sn){showToast('El S/N es requerido.','error');return;}
+  const rec={
+    'S/N':sn,'ESTATUS FISICO':document.getElementById('f_status').value,
+    'Categoría':document.getElementById('f_cat').value,'DISPOSITIVO':document.getElementById('f_dev').value,
+    'MARCA':document.getElementById('f_marca').value,'MODELO':document.getElementById('f_model').value,
+    'AREA':document.getElementById('f_area').value,'ASIGNACIÓN':document.getElementById('f_asig').value,
+    'IP':document.getElementById('f_ip').value,'MAC':document.getElementById('f_mac').value,
+    'SSID':document.getElementById('f_ssid').value,'O.S.':document.getElementById('f_os').value,
+    'DEPLOY':document.getElementById('f_deploy').value,'Fullfiment':document.getElementById('f_full').value,
+    'Comentarios':document.getElementById('f_comment').value,
+    'Status in Arturito':document.getElementById('f_status').value,
+  };
+  const btn=document.getElementById('saveBtn');
+  btn.disabled=true;btn.innerHTML='<span class="spinner-sm"></span> Guardando...';
+  if(editingId!==null){
+    const tf=['ESTATUS FISICO','Categoría','DISPOSITIVO','MARCA','MODELO','AREA','ASIGNACIÓN','IP','MAC','SSID','O.S.','DEPLOY','Fullfiment','Comentarios'];
+    const changes=tf.filter(f=>(snapshotBeforeEdit[f]||'').trim()!==(rec[f]||'').trim())
+      .map(f=>({label:FIELD_LABELS[f]||f,before:(snapshotBeforeEdit[f]||'').trim(),after:(rec[f]||'').trim()}));
+    const idx=data.findIndex(d=>d._id===editingId);
+    if(idx>=0)data[idx]={...data[idx],...rec};
+    document.getElementById('formOverlay').classList.remove('open');
+    if(changes.length>0){
+      const saved=await saveToGitHub('[edit] '+sn+' por '+currentUser);
+      if(saved){await notifyChat(rec,changes,'edit');showToast('Guardado · '+changes.length+' cambio(s) notificado(s)','success');}
+    }else{showToast('Sin cambios detectados.','info');}
+  }else{
+    if(data.find(d=>d['S/N']===sn)){showToast('Ya existe un dispositivo con ese S/N.','error');btn.disabled=false;btn.textContent='Guardar';return;}
+    const newId=Math.max(...data.map(d=>d._id),0)+1;
+    data.push({...rec,_id:newId});
+    document.getElementById('formOverlay').classList.remove('open');
+    const saved=await saveToGitHub('[add] '+sn+' por '+currentUser);
+    if(saved){await notifyChat(rec,[],'add');showToast('Dispositivo agregado y guardado','success');}
+  }
+  applyFilters();btn.disabled=false;btn.textContent='Guardar';
+}
+function openDelete(id){
+  deletingId=id;
+  const r=data.find(d=>d._id===id);
+  document.getElementById('confirmSN').textContent=r?r['S/N']:'';
+  document.getElementById('confirmOverlay').classList.add('open');
+}
+async function confirmDelete(){
+  const r=data.find(d=>d._id===deletingId);
+  data=data.filter(d=>d._id!==deletingId);
+  document.getElementById('confirmOverlay').classList.remove('open');
+  applyFilters();
+  const saved=await saveToGitHub('[delete] '+(r?.['S/N']||'?')+' por '+currentUser);
+  if(saved){await notifyChat(r,[],'delete');showToast('Dispositivo eliminado y guardado','success');}
+}
+function openStatus(id){
+  statusId=id;
+  const r=data.find(d=>d._id===id);
+  document.getElementById('statusSN').textContent=r?r['S/N']:'';
+  document.getElementById('statusOverlay').classList.add('open');
+}
+async function setStatus(val){
+  const idx=data.findIndex(d=>d._id===statusId);if(idx<0)return;
+  const before=data[idx]['ESTATUS FISICO'];
+  data[idx]['ESTATUS FISICO']=val;
+  document.getElementById('statusOverlay').classList.remove('open');
+  applyFilters();
+  if(before!==val){
+    const saved=await saveToGitHub('[status] '+data[idx]['S/N']+' -> '+val+' por '+currentUser);
+    if(saved){await notifyChat(data[idx],[{label:'Estatus Físico',before,after:val}],'status');showToast('Status "'+val+'" guardado y notificado','success');}
+  }
+}
+function exportCSV(){
+  const cols=['S/N','ESTATUS FISICO','Status in Arturito','AREA','ASIGNACIÓN','Categoría','DISPOSITIVO','MARCA','MODELO','IP','MAC','SSID','O.S.','DEPLOY','Fullfiment','Comentarios'];
+  const rows=[cols.join(',')];
+  filtered.forEach(r=>rows.push(cols.map(c=>{const v=String(r[c]||'').replace(/"/g,'""');return v.includes(',')||v.includes('"')?'"'+v+'"':v;}).join(',')));
+  const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='inventario_IS_export.csv';a.click();
+  showToast('CSV exportado ('+filtered.length+' registros)','success');
+}
+function showToast(msg,type='success'){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.className='toast show '+type;
+  clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),4500);
+}
+document.getElementById('searchInput').addEventListener('input',applyFilters);
+document.getElementById('filterStatus').addEventListener('change',applyFilters);
+document.getElementById('filterCat').addEventListener('change',applyFilters);
+document.getElementById('filterArea').addEventListener('change',applyFilters);
+document.getElementById('rowsPerPage').addEventListener('change',function(){rowsPerPage=parseInt(this.value);page=0;render();});
+function saveToken(){
+  const t=document.getElementById('tokenInput').value.trim();
+  if(!t||!t.startsWith('ghp_')){showTokenError('Token inválido. Debe comenzar con ghp_');return;}
+  localStorage.setItem('gh_token',t);
+  GITHUB_TOKEN=t;
+  document.getElementById('tokenScreen').style.display='none';
+  document.getElementById('loadingOverlay').style.display='flex';
+  loadFromGitHub(false).then(()=>{
+    document.getElementById('loadingOverlay').style.display='none';
+    document.getElementById('loginScreen').style.display='flex';
+  });
+}
+function showTokenError(msg){
+  const inp=document.getElementById('tokenInput');
+  inp.style.borderColor='var(--red)';
+  setTimeout(()=>inp.style.borderColor='',2000);
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('tokenInput')?.addEventListener('keydown',e=>{if(e.key==='Enter')saveToken();});
+});
+(async()=>{
+  initLogin();
+  if(!GITHUB_TOKEN){
+    document.getElementById('loadingOverlay').style.display='none';
+    document.getElementById('tokenScreen').style.display='flex';
+  } else {
+    await loadFromGitHub(false);
+    document.getElementById('loadingOverlay').style.display='none';
+    document.getElementById('loginScreen').style.display='flex';
+  }
+})();
+
+function filterByStat(status){
+  // Update select
+  document.getElementById('filterStatus').value = status;
+  // Clear active states on all cards
+  ['sc-total','sc-inuse','sc-instock','sc-repair','sc-retired','sc-missed'].forEach(id=>{
+    const el=document.getElementById(id);
+    el.classList.remove('active','active-total','active-inuse','active-instock','active-repair','active-retired','active-missed');
+  });
+  // Set active on clicked card
+  const map={'':'sc-total','In Use':'sc-inuse','In Stock':'sc-instock','In repair':'sc-repair','Retired':'sc-retired','Missed':'sc-missed'};
+  const activeClass={'':'active-total','In Use':'active-inuse','In Stock':'active-instock','In repair':'active-repair','Retired':'active-retired','Missed':'active-missed'};
+  const card=document.getElementById(map[status]);
+  if(card){card.classList.add('active',activeClass[status]);}
+  // Apply filter
+  applyFilters();
+  // Scroll to table
+  setTimeout(()=>{
+    document.querySelector('.table-container').scrollIntoView({behavior:'smooth',block:'start'});
+  },100);
+}
+
+</script>
+</body>
+</html>
