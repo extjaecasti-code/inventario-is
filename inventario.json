@@ -2629,7 +2629,7 @@
   },
   {
     "S/N": "410MXWE55945",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
     "AREA": "COMEDOR",
     "ASIGNACIÓN": "PEOPLE",
@@ -9883,7 +9883,7 @@
   },
   {
     "S/N": "24362010556562",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
     "AREA": "LI",
     "ASIGNACIÓN": "MESA 3",
@@ -9955,7 +9955,7 @@
   },
   {
     "S/N": "706ZRW3",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
     "AREA": "LI",
     "ASIGNACIÓN": "MESA 5",
@@ -10063,7 +10063,7 @@
   },
   {
     "S/N": "XXRBN244002979",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
     "AREA": "ICQA",
     "ASIGNACIÓN": "ICQA",
@@ -12223,7 +12223,7 @@
   },
   {
     "S/N": "24362010556556",
-    "ESTATUS FISICO": "In stock",
+    "ESTATUS FISICO": "In Stock",
     "Status in Arturito": "Reserved for expansion",
     "AREA": "INTERNAL SYSTEMS",
     "ASIGNACIÓN": "MDF",
@@ -13501,7 +13501,7 @@
   },
   {
     "S/N": "G04ZLY2",
-    "ESTATUS FISICO": "In stock",
+    "ESTATUS FISICO": "In Stock",
     "Status in Arturito": "In Stock",
     "AREA": "INTERNAL SYSTEMS",
     "ASIGNACIÓN": "",
@@ -22249,7 +22249,7 @@
   },
   {
     "S/N": "24340523022223",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
@@ -22429,7 +22429,7 @@
   },
   {
     "S/N": "25044523022489",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
@@ -22447,7 +22447,7 @@
   },
   {
     "S/N": "25044523022492",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
@@ -24049,7 +24049,7 @@
   },
   {
     "S/N": "XXRBN244001902",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
     "AREA": "INTERNAL SYSTEMS",
     "ASIGNACIÓN": "P2S",
@@ -26534,7 +26534,7 @@
   {
     "S/N": "DV90ZD3",
     "ESTATUS FISICO": "Missed",
-    "Status in Arturito": "-",
+    "Status in Arturito": "Missed",
     "AREA": "LOSS PREVENTION",
     "ASIGNACIÓN": "loos",
     "Categoría": "Notebook",
@@ -26547,7 +26547,7 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "No se ve en Arturito, y su ultimo registro fue en Recepcion"
+    "Comentarios": "No se ve en Arturito, y su ultimo registro fue en Recepcion. donde quedo?"
   },
   {
     "S/N": "DV80ZD3",
@@ -27721,7 +27721,7 @@
   },
   {
     "S/N": "9B2404A06789",
-    "ESTATUS FISICO": "In use ",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
     "AREA": "ENFERMERIA",
     "ASIGNACIÓN": "ENFERMERIA",
@@ -27757,7 +27757,7 @@
   },
   {
     "S/N": "9B2404A06825",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
     "AREA": "LI",
     "ASIGNACIÓN": "MESA 5",
@@ -28225,7 +28225,7 @@
   },
   {
     "S/N": "9B2348A31200",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
     "AREA": "COMEDOR",
     "ASIGNACIÓN": "IS",
@@ -31087,7 +31087,7 @@
   },
   {
     "S/N": "9B2348A33182",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Stock",
     "AREA": "LI",
     "ASIGNACIÓN": "MESA 1",
@@ -31105,7 +31105,7 @@
   },
   {
     "S/N": "1LT5301726",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "-",
     "AREA": "LI",
     "ASIGNACIÓN": "DOCKA 70",
@@ -31123,7 +31123,7 @@
   },
   {
     "S/N": "9B2348A33183",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "-",
     "AREA": "ENFERMERIA",
     "ASIGNACIÓN": "ENFERMERIA escritorio 1",
@@ -31915,7 +31915,7 @@
   },
   {
     "S/N": "9B2348A33181",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "#N/A",
     "AREA": "INBOUND",
     "ASIGNACIÓN": "ICQA",
@@ -31933,7 +31933,7 @@
   },
   {
     "S/N": "9B2348A33184",
-    "ESTATUS FISICO": "In use",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "#N/A",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "MESA 15",
