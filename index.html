@@ -136,39 +136,10 @@ tbody tr:hover .row-actions{opacity:1;}
 .toast.success{background:var(--green);}.toast.error{background:var(--red);}.toast.info{background:var(--ml-blue);}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}}
 .spinner-sm{width:13px;height:13px;border:2px solid rgba(255,255,255,0.4);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;flex-shrink:0;}
-#tokenScreen{position:fixed;inset:0;background:linear-gradient(135deg,#f5f5f5 0%,#e8f0fe 100%);display:flex;align-items:center;justify-content:center;z-index:9998;}
-.token-card{background:#fff;border-radius:16px;padding:40px 36px;width:420px;box-shadow:0 12px 48px rgba(52,131,250,0.15);display:flex;flex-direction:column;align-items:center;gap:20px;}
-.token-card h2{font-size:16px;font-weight:700;color:#333;text-align:center;}
-.token-card p{font-size:13px;color:#666;text-align:center;line-height:1.6;}
-.token-input-wrap{width:100%;display:flex;flex-direction:column;gap:8px;}
-.token-input-wrap label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:#999;}
-.token-input-wrap input{width:100%;background:#f7f7f7;border:1px solid #e0e0e0;color:#333;font-family:monospace;font-size:13px;border-radius:8px;padding:10px 14px;outline:none;transition:border-color .2s;}
-.token-input-wrap input:focus{border-color:#3483FA;background:#fff;}
-.token-hint{font-size:11px;color:#999;text-align:center;line-height:1.5;}
-.token-hint a{color:#3483FA;text-decoration:none;}
-
 </style>
 </head>
 <body>
 <div id="loadingOverlay"><div class="big-spin"></div><p>Conectando con GitHub...</p></div>
-
-<div id="tokenScreen" style="display:none">
-  <div class="token-card">
-    <div class="login-logo">
-      <svg width="40" height="40" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="8" fill="#3483FA"/><path d="M8 18C8 12.477 12.477 8 18 8s10 4.477 10 10-4.477 10-10 10S8 23.523 8 18z" fill="#FFE600"/><path d="M14 18l3 3 6-6" stroke="#3483FA" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span class="login-logo-text">Mercado Libre <b>IS</b></span>
-    </div>
-    <h2>Configuración inicial</h2>
-    <p>Para sincronizar con GitHub necesitas ingresar el token de acceso.<br>Solo se pide <strong>una vez</strong> y se guarda en tu navegador.</p>
-    <div class="token-input-wrap">
-      <label>GitHub Personal Access Token</label>
-      <input type="password" id="tokenInput" placeholder="ghp_..." autocomplete="off">
-    </div>
-    <p class="token-hint">Tu token no se sube a ningún servidor.<br>Se guarda solo en este navegador.</p>
-    <button class="btn btn-primary" style="width:100%;justify-content:center;padding:11px" onclick="saveToken()">Guardar y continuar</button>
-  </div>
-</div>
-
 <div id="loginScreen" style="display:none">
   <div class="login-card">
     <div class="login-logo">
@@ -308,9 +279,9 @@ tbody tr:hover .row-actions{opacity:1;}
 <script>
 const GITHUB_USER='extjaecasti-code';
 const GITHUB_REPO='inventario-is';
+const GITHUB_TOKEN='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';
 const GITHUB_FILE='inventario.json';
 const WEBHOOK='https://chat.googleapis.com/v1/spaces/AAQA7botEQo/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=HZm7YOTGUKs84kZHiY4A0_UF1GdzrNe964GK8OYTYmQ';
-let GITHUB_TOKEN=localStorage.getItem('gh_token')||'';
 const RAW_URL=`https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${GITHUB_FILE}`;
 const API_URL=`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${GITHUB_FILE}`;
 const PRESET_USERS=[{"id": "u1", "name": "André Jael Castillo Diaz", "role": "Admin", "os": "Windows"}, {"id": "u2", "name": "Luis Eduardo Avalos Garcia", "role": "Editor", "os": "Windows"}, {"id": "u3", "name": "Erick Agustín Crisóstomo Sanchez", "role": "Editor", "os": "macOS"}, {"id": "u4", "name": "Erick Avisai Núñez Loza", "role": "Admin", "os": "macOS"}];
@@ -667,36 +638,11 @@ document.getElementById('filterStatus').addEventListener('change',applyFilters);
 document.getElementById('filterCat').addEventListener('change',applyFilters);
 document.getElementById('filterArea').addEventListener('change',applyFilters);
 document.getElementById('rowsPerPage').addEventListener('change',function(){rowsPerPage=parseInt(this.value);page=0;render();});
-function saveToken(){
-  const t=document.getElementById('tokenInput').value.trim();
-  if(!t||!t.startsWith('ghp_')){showTokenError('Token inválido. Debe comenzar con ghp_');return;}
-  localStorage.setItem('gh_token',t);
-  GITHUB_TOKEN=t;
-  document.getElementById('tokenScreen').style.display='none';
-  document.getElementById('loadingOverlay').style.display='flex';
-  loadFromGitHub(false).then(()=>{
-    document.getElementById('loadingOverlay').style.display='none';
-    document.getElementById('loginScreen').style.display='flex';
-  });
-}
-function showTokenError(msg){
-  const inp=document.getElementById('tokenInput');
-  inp.style.borderColor='var(--red)';
-  setTimeout(()=>inp.style.borderColor='',2000);
-}
-document.addEventListener('DOMContentLoaded',()=>{
-  document.getElementById('tokenInput')?.addEventListener('keydown',e=>{if(e.key==='Enter')saveToken();});
-});
 (async()=>{
   initLogin();
-  if(!GITHUB_TOKEN){
-    document.getElementById('loadingOverlay').style.display='none';
-    document.getElementById('tokenScreen').style.display='flex';
-  } else {
-    await loadFromGitHub(false);
-    document.getElementById('loadingOverlay').style.display='none';
-    document.getElementById('loginScreen').style.display='flex';
-  }
+  await loadFromGitHub(false);
+  document.getElementById('loadingOverlay').style.display='none';
+  document.getElementById('loginScreen').style.display='flex';
 })();
 
 function filterByStat(status){
