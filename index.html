@@ -897,6 +897,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     await loadFromGitHub(false);
     document.getElementById('loadingOverlay').style.display='none';
     document.getElementById('loginScreen').style.display='flex';
+    loadAudits(); // non-blocking background load
   }
 })();
 
@@ -948,8 +949,9 @@ let auditSHA = '';
 async function loadAudits() {
   try {
     const res = await fetch(AUDIT_RAW + '?t=' + Date.now());
-    if (!res.ok) { audits = []; return; }
-    audits = await res.json();
+    if (!res.ok) { audits = []; renderAuditTab(); return; }
+    const text = await res.text();
+    try { audits = JSON.parse(text); } catch(e) { audits = []; }
     const meta = await fetch(AUDIT_API, { headers: { Authorization: 'token ' + GITHUB_TOKEN } });
     if (meta.ok) { const m = await meta.json(); auditSHA = m.sha; }
   } catch(e) { audits = []; }
@@ -1274,8 +1276,6 @@ document.getElementById('auditFilterStatus')?.addEventListener('change', renderA
 // Load audits after main data loads
 const _origLoad = loadFromGitHub;
 
-// Load audits on init
-loadAudits();
 </script>
 </body>
 </html>
