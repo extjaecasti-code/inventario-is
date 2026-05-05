@@ -395,6 +395,45 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
         Nueva Auditoria
       </button>
     </div>
+    <!-- CATEGORIAS INFO -->
+    <div style="padding:12px 24px 0">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;box-shadow:0 1px 4px rgba(0,0,0,0.06)">
+        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:12px;display:flex;align-items:center;gap:7px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3483FA" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Categorias incluidas en la Auditoria
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px;background:var(--ml-blue-light);border:1px solid rgba(52,131,250,.2);border-radius:8px;padding:8px 14px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3483FA" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <div>
+              <div style="font-size:12px;font-weight:700;color:var(--ml-blue)">Notebook</div>
+              <div style="font-size:11px;color:var(--text3)">136 equipos</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;background:var(--green-bg);border:1px solid rgba(0,166,80,.2);border-radius:8px;padding:8px 14px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A650" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            <div>
+              <div style="font-size:12px;font-weight:700;color:var(--green)">Printer</div>
+              <div style="font-size:11px;color:var(--text3)">306 equipos</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;background:var(--yellow-bg);border:1px solid rgba(245,166,35,.2);border-radius:8px;padding:8px 14px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="1"/><path d="M8 21h8m-4-4v4"/></svg>
+            <div>
+              <div style="font-size:12px;font-weight:700;color:var(--yellow-s)">Desktop</div>
+              <div style="font-size:11px;color:var(--text3)">23 equipos</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:8px 14px;margin-left:auto">
+            <div style="text-align:right">
+              <div style="font-size:20px;font-weight:700;color:var(--ml-blue)">465</div>
+              <div style="font-size:11px;color:var(--text3)">Total a auditar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- PROGRESS -->
     <div class="progress-section">
       <div class="progress-card">
@@ -403,8 +442,8 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
             <div class="progress-title">Progreso General del Mes</div>
             <div class="progress-stats">
               <span>Auditados: <strong id="auditDone">0</strong></span>
-              <span>Total: <strong id="auditTotal">451</strong></span>
-              <span>Pendientes: <strong id="auditPending">451</strong></span>
+              <span>Total: <strong id="auditTotal">465</strong></span>
+              <span>Pendientes: <strong id="auditPending">465</strong></span>
             </div>
           </div>
           <div class="progress-pct" id="auditPct">0%</div>
@@ -1195,7 +1234,7 @@ async function notifyAuditChat(rec) {
 function renderAuditTab() {
   const now = new Date();
   const thisMonth = audits.filter(a => isSameMonth(a.ts, now.toISOString()));
-  const total = 451;
+  const total = 465;
   const done = new Set(thisMonth.map(a => a.sn)).size;
   const pct = Math.round(done / total * 100);
 
@@ -1224,13 +1263,14 @@ function renderAuditTab() {
 
   // Area progress
   const AREAS = [
-    {name:'INTERNAL SYSTEMS', total:183},
-    {name:'OUTBOUND', total:64},
-    {name:'ACTIVO FIJO', total:86},
+    {name:'INTERNAL SYSTEMS', total:176},
+    {name:'OUTBOUND', total:65},
+    {name:'ACTIVO FIJO', total:90},
     {name:'INBOUND', total:30},
     {name:'LOSS PREVENTION', total:15},
     {name:'TRAINING', total:8},
-    {name:'LI/ICQA/OTRAS', total:65},
+    {name:'Z - SIN AREA / CCM', total:48},
+    {name:'OTRAS AREAS', total:33},
   ];
   const areaGrid = document.getElementById('areaProgressGrid');
   areaGrid.innerHTML = AREAS.map(a => {
