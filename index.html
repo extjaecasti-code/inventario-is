@@ -136,6 +136,78 @@ tbody tr:hover .row-actions{opacity:1;}
 .toast.success{background:var(--green);}.toast.error{background:var(--red);}.toast.info{background:var(--ml-blue);}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}}
 .spinner-sm{width:13px;height:13px;border:2px solid rgba(255,255,255,0.4);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;flex-shrink:0;}
+/* ── NAV TABS ── */
+.nav-tabs{background:var(--surface);border-bottom:1px solid var(--border);display:flex;gap:0;padding:0 24px;}
+.nav-tab{padding:12px 20px;font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;display:flex;align-items:center;gap:7px;user-select:none;}
+.nav-tab:hover{color:var(--ml-blue);background:var(--ml-blue-light);}
+.nav-tab.active{color:var(--ml-blue);border-bottom-color:var(--ml-blue);}
+.nav-tab .tab-badge{background:var(--ml-blue);color:#fff;font-size:10px;font-weight:700;padding:1px 6px;border-radius:10px;min-width:18px;text-align:center;}
+.tab-panel{display:none;}.tab-panel.active{display:block;}
+
+/* ── AUDIT PANEL ── */
+.audit-header{padding:20px 24px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.audit-header h2{font-size:18px;font-weight:700;color:var(--text);}
+.progress-section{padding:16px 24px;}
+.progress-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 24px;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+.progress-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.progress-title{font-size:14px;font-weight:600;color:var(--text);}
+.progress-pct{font-size:28px;font-weight:700;color:var(--ml-blue);}
+.progress-bar-wrap{background:var(--border);border-radius:20px;height:14px;overflow:hidden;margin-bottom:10px;}
+.progress-bar-fill{background:linear-gradient(90deg,var(--ml-blue),#56aeff);height:100%;border-radius:20px;transition:width .6s ease;}
+.progress-stats{display:flex;gap:20px;font-size:12px;color:var(--text3);}
+.progress-stats strong{color:var(--text);font-weight:600;}
+
+/* ── AREA PROGRESS ── */
+.area-progress-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;padding:0 24px 16px;}
+.area-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;box-shadow:0 1px 3px rgba(0,0,0,0.05);}
+.area-card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.area-card-name{font-size:12px;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.5px;}
+.area-card-count{font-size:11px;color:var(--text3);}
+.area-bar-wrap{background:var(--border);border-radius:10px;height:8px;overflow:hidden;}
+.area-bar-fill{height:100%;border-radius:10px;background:var(--green);transition:width .5s ease;}
+.area-bar-fill.mid{background:var(--yellow-s);}
+.area-bar-fill.low{background:var(--red);}
+
+/* ── AUDIT TABLE ── */
+.audit-toolbar{padding:12px 24px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:var(--surface);border-bottom:1px solid var(--border);}
+.audit-table-wrap{padding:0 24px 90px;}
+.audit-table-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+
+/* ── STATUS CHIPS ── */
+.chip{display:inline-block;padding:2px 8px;border-radius:12px;font-size:10px;font-weight:700;white-space:nowrap;}
+.chip.pass{background:var(--green-bg);color:var(--green);}
+.chip.fail{background:var(--red-bg);color:var(--red);}
+.chip.good{background:var(--green-bg);color:var(--green);}
+.chip.regular{background:var(--yellow-bg);color:var(--yellow-s);}
+.chip.bad{background:var(--red-bg);color:var(--red);}
+.chip.yes{background:var(--green-bg);color:var(--green);}
+.chip.no{background:var(--red-bg);color:var(--red);}
+.chip.pending{background:#F0F0F0;color:var(--text3);}
+
+/* ── CHART ── */
+.chart-section{padding:0 24px 16px;}
+.chart-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 24px;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+.chart-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:16px;}
+.chart-bars{display:flex;align-items:flex-end;gap:8px;height:120px;}
+.chart-bar-wrap{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;}
+.chart-bar{width:100%;border-radius:6px 6px 0 0;background:var(--ml-blue);min-height:4px;transition:height .4s ease;opacity:.85;}
+.chart-bar:hover{opacity:1;}
+.chart-label{font-size:10px;color:var(--text3);text-align:center;}
+.chart-val{font-size:11px;font-weight:700;color:var(--ml-blue);}
+
+/* AUDIT MODAL */
+.audit-photo-preview{width:100%;max-height:180px;object-fit:cover;border-radius:8px;margin-top:8px;display:none;}
+.photo-upload-btn{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:6px;border:1px dashed var(--border2);background:var(--surface2);cursor:pointer;font-size:13px;color:var(--text2);transition:all .2s;width:100%;}
+.photo-upload-btn:hover{border-color:var(--ml-blue);color:var(--ml-blue);}
+#photoFileInput{display:none;}
+
+@media(max-width:768px){
+  .nav-tab{padding:10px 14px;font-size:12px;}
+  .area-progress-grid{grid-template-columns:1fr 1fr;padding:0 14px 12px;}
+  .progress-section,.audit-toolbar,.audit-table-wrap{padding-left:14px;padding-right:14px;}
+  .chart-section{padding:0 14px 16px;}
+}
+
 /* ── DARK MODE ── */
 body.dark{--bg:#0F1117;--surface:#1A1D27;--surface2:#22263A;--border:#2E3347;--border2:#3A3F55;--text:#E8EAF0;--text2:#9BA3B8;--text3:#5A6278;--green-bg:rgba(0,166,80,0.12);--yellow-bg:rgba(245,166,35,0.12);--red-bg:rgba(224,32,32,0.1);--purple-bg:rgba(155,81,224,0.1);--ml-blue-light:rgba(52,131,250,0.12);}
 body.dark #loadingOverlay{background:rgba(15,17,23,0.92);}
@@ -253,6 +325,21 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
       <button class="dark-toggle" id="darkToggle" onclick="toggleDark()" title="Modo oscuro">🌙</button>
     </div>
   </header>
+  <!-- NAV TABS -->
+  <div class="nav-tabs">
+    <div class="nav-tab active" id="tab-inventory" onclick="switchTab('inventory')">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      Inventario
+    </div>
+    <div class="nav-tab" id="tab-audit" onclick="switchTab('audit')">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      Auditorías
+      <span class="tab-badge" id="auditBadge">0</span>
+    </div>
+  </div>
+
+  <!-- INVENTORY PANEL -->
+  <div class="tab-panel active" id="panel-inventory">
   <div class="toolbar">
     <div class="search-wrap">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -361,6 +448,63 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
     <div class="modal-footer"><button class="btn btn-ghost" onclick="document.getElementById('statusOverlay').classList.remove('open')">Cancelar</button></div>
   </div>
 </div>
+
+<!-- AUDIT MODAL -->
+<div class="overlay" id="auditOverlay" onclick="closeModal(event)">
+  <div class="modal" style="width:650px">
+    <div class="modal-header">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3483FA" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      <h2 id="auditModalTitle">Nueva Auditoría</h2>
+    </div>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>S/N del Equipo *</label>
+        <input id="a_sn" placeholder="Busca o escribe el S/N..." oninput="auditSnSearch(this.value)">
+        <div id="a_sn_hint" style="font-size:11px;color:var(--text3);margin-top:3px;"></div>
+      </div>
+      <div class="form-group">
+        <label>Estado Físico *</label>
+        <select id="a_estado">
+          <option value="Bueno">✅ Bueno</option>
+          <option value="Regular">⚠️ Regular</option>
+          <option value="Malo">❌ Malo</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Limpieza Realizada *</label>
+        <select id="a_limpieza">
+          <option value="Sí">✅ Sí</option>
+          <option value="No">❌ No</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Prueba de Funcionamiento *</label>
+        <select id="a_func">
+          <option value="Pasó">✅ Pasó</option>
+          <option value="Falló">❌ Falló</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label>Comentarios u Observaciones</label>
+        <textarea id="a_comment" placeholder="Notas sobre el estado del equipo, reparaciones necesarias, etc..." style="min-height:72px"></textarea>
+      </div>
+      <div class="form-group full">
+        <label>Foto del Equipo (opcional)</label>
+        <label class="photo-upload-btn" for="photoFileInput">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span id="photoLabel">Seleccionar foto</span>
+        </label>
+        <input type="file" id="photoFileInput" accept="image/*" onchange="handlePhoto(this)">
+        <img id="a_photo_preview" class="audit-photo-preview">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="document.getElementById('auditOverlay').classList.remove('open')">Cancelar</button>
+      <button class="btn btn-primary" id="auditSaveBtn" onclick="saveAudit()">Guardar Auditoría</button>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 <script>
 const GITHUB_USER='extjaecasti-code';
@@ -726,7 +870,7 @@ document.getElementById('filterArea').addEventListener('change',applyFilters);
 document.getElementById('rowsPerPage').addEventListener('change',function(){rowsPerPage=parseInt(this.value);page=0;render();});
 function saveToken(){
   const t=document.getElementById('tokenInput').value.trim();
-  if(!t||!t.startsWith('ghp_')){showTokenError('Token inválido. Debe comenzar con ghp_');return;}
+  if(!t){showTokenError('Token inválido.');return;}
   localStorage.setItem('gh_token',t);
   GITHUB_TOKEN=t;
   document.getElementById('tokenScreen').style.display='none';
@@ -791,6 +935,347 @@ if(localStorage.getItem('darkMode')==='1'){
   });
 }
 
+// ── AUDIT MODULE ──────────────────────────────────────────────────────────
+let audits = []; // {id, sn, device, area, estado, limpieza, func, comment, photo, auditor, fecha, ts}
+let auditEditId = null;
+let photoBase64 = '';
+
+const AUDIT_FILE = 'auditorias.json';
+const AUDIT_API = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${AUDIT_FILE}`;
+const AUDIT_RAW = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${AUDIT_FILE}`;
+let auditSHA = '';
+
+async function loadAudits() {
+  try {
+    const res = await fetch(AUDIT_RAW + '?t=' + Date.now());
+    if (!res.ok) { audits = []; return; }
+    audits = await res.json();
+    const meta = await fetch(AUDIT_API, { headers: { Authorization: 'token ' + GITHUB_TOKEN } });
+    if (meta.ok) { const m = await meta.json(); auditSHA = m.sha; }
+  } catch(e) { audits = []; }
+  renderAuditTab();
+}
+
+async function saveAudits(commitMsg) {
+  try {
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(audits, null, 2))));
+    const body = { message: commitMsg, content };
+    if (auditSHA) body.sha = auditSHA;
+    const res = await fetch(AUDIT_API, {
+      method: 'PUT',
+      headers: { Authorization: 'token ' + GITHUB_TOKEN, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const result = await res.json();
+    auditSHA = result.content.sha;
+    return true;
+  } catch(e) { showToast('Error al guardar auditoría: ' + e.message, 'error'); return false; }
+}
+
+function switchTab(tab) {
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  document.getElementById('panel-' + tab).classList.add('active');
+  if (tab === 'audit') renderAuditTab();
+  // hide/show pager
+  document.querySelector('.pager').style.display = tab === 'inventory' ? 'flex' : 'none';
+}
+
+function openAuditNew() {
+  auditEditId = null; photoBase64 = '';
+  document.getElementById('auditModalTitle').innerHTML = 'Nueva Auditoría';
+  document.getElementById('a_sn').value = '';
+  document.getElementById('a_sn').removeAttribute('readonly');
+  document.getElementById('a_sn_hint').textContent = '';
+  document.getElementById('a_estado').value = 'Bueno';
+  document.getElementById('a_limpieza').value = 'Sí';
+  document.getElementById('a_func').value = 'Pasó';
+  document.getElementById('a_comment').value = '';
+  document.getElementById('a_photo_preview').style.display = 'none';
+  document.getElementById('photoLabel').textContent = 'Seleccionar foto';
+  document.getElementById('photoFileInput').value = '';
+  document.getElementById('auditOverlay').classList.add('open');
+}
+
+function auditSnSearch(val) {
+  const hint = document.getElementById('a_sn_hint');
+  if (!val) { hint.textContent = ''; return; }
+  const found = data.find(d => d['S/N'] && d['S/N'].toLowerCase() === val.toLowerCase());
+  if (found) {
+    hint.textContent = '✓ ' + (found['DISPOSITIVO'] || '') + ' ' + (found['MARCA'] || '') + ' — ' + (found['AREA'] || '');
+    hint.style.color = 'var(--green)';
+  } else {
+    hint.textContent = 'S/N no encontrado en inventario';
+    hint.style.color = 'var(--text3)';
+  }
+}
+
+function handlePhoto(input) {
+  const file = input.files[0];
+  if (!file) return;
+  // Resize to max 800px to keep GitHub file small
+  const reader = new FileReader();
+  reader.onload = e => {
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      const MAX = 600;
+      let w = img.width, h = img.height;
+      if (w > MAX) { h = Math.round(h * MAX / w); w = MAX; }
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      photoBase64 = canvas.toDataURL('image/jpeg', 0.7);
+      const preview = document.getElementById('a_photo_preview');
+      preview.src = photoBase64; preview.style.display = 'block';
+      document.getElementById('photoLabel').textContent = file.name;
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+async function saveAudit() {
+  const sn = document.getElementById('a_sn').value.trim();
+  if (!sn) { showToast('El S/N es requerido.', 'error'); return; }
+  const btn = document.getElementById('auditSaveBtn');
+  btn.disabled = true; btn.innerHTML = '<span class="spinner-sm"></span> Guardando...';
+
+  const device = data.find(d => d['S/N'] && d['S/N'].toLowerCase() === sn.toLowerCase());
+  const now = new Date();
+  const fechaStr = now.toLocaleString('es-MX', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'America/Mexico_City' });
+
+  const rec = {
+    id: auditEditId || Date.now(),
+    sn: sn.toUpperCase(),
+    device: device ? ((device['DISPOSITIVO'] || '') + ' ' + (device['MARCA'] || '') + ' ' + (device['MODELO'] || '')).trim() : 'Desconocido',
+    area: device ? (device['AREA'] || '—') : '—',
+    estado: document.getElementById('a_estado').value,
+    limpieza: document.getElementById('a_limpieza').value,
+    func: document.getElementById('a_func').value,
+    comment: document.getElementById('a_comment').value,
+    photo: photoBase64 || '',
+    auditor: currentUser,
+    fecha: fechaStr,
+    ts: now.toISOString(),
+    week: getWeekOfMonth(now),
+  };
+
+  if (auditEditId) {
+    const idx = audits.findIndex(a => a.id === auditEditId);
+    if (idx >= 0) audits[idx] = rec;
+  } else {
+    // Remove previous audit of same SN this month
+    audits = audits.filter(a => !(a.sn === rec.sn && isSameMonth(a.ts, now.toISOString())));
+    audits.push(rec);
+  }
+
+  document.getElementById('auditOverlay').classList.remove('open');
+  const saved = await saveAudits('[auditoria] ' + sn + ' por ' + currentUser);
+  if (saved) {
+    await notifyAuditChat(rec);
+    showToast('Auditoría guardada y notificada ✓', 'success');
+  }
+  renderAuditTab();
+  btn.disabled = false; btn.textContent = 'Guardar Auditoría';
+}
+
+function getWeekOfMonth(date) {
+  const d = new Date(date.getFullYear(), date.getMonth(), 1);
+  return Math.ceil((date.getDate() + d.getDay()) / 7);
+}
+
+function isSameMonth(iso1, iso2) {
+  const a = new Date(iso1), b = new Date(iso2);
+  return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth();
+}
+
+async function notifyAuditChat(rec) {
+  const sep = '━'.repeat(24);
+  const estadoEmoji = rec.estado === 'Bueno' ? '✅' : rec.estado === 'Regular' ? '⚠️' : '❌';
+  const funcEmoji = rec.func === 'Pasó' ? '✅' : '❌';
+  const limpEmoji = rec.limpieza === 'Sí' ? '✅' : '❌';
+  const text =
+    '🔍 *Auditoría Completada — Inventario IS*
+' + sep + '
+' +
+    '👤 *Auditor:* ' + rec.auditor + '
+' +
+    '📋 *Equipo:* ' + rec.sn + ' — ' + rec.device + '
+' +
+    '🏢 *Área:* ' + rec.area + '
+' + sep + '
+' +
+    estadoEmoji + ' *Estado físico:* ' + rec.estado + '
+' +
+    limpEmoji + ' *Limpieza:* ' + rec.limpieza + '
+' +
+    funcEmoji + ' *Funcionamiento:* ' + rec.func + '
+' +
+    (rec.comment ? '💬 *Obs:* ' + rec.comment + '
+' : '') +
+    sep + '
+🕐 ' + rec.fecha;
+  try { await fetch(WEBHOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text }) }); }
+  catch(e) { console.warn('Chat error', e); }
+}
+
+function renderAuditTab() {
+  const now = new Date();
+  const thisMonth = audits.filter(a => isSameMonth(a.ts, now.toISOString()));
+  const total = 451;
+  const done = new Set(thisMonth.map(a => a.sn)).size;
+  const pct = Math.round(done / total * 100);
+
+  // Badge
+  document.getElementById('auditBadge').textContent = done;
+  // Progress
+  document.getElementById('auditDone').textContent = done.toLocaleString();
+  document.getElementById('auditTotal').textContent = total.toLocaleString();
+  document.getElementById('auditPending').textContent = (total - done).toLocaleString();
+  document.getElementById('auditPct').textContent = pct + '%';
+  document.getElementById('auditBar').style.width = pct + '%';
+
+  // Week chart
+  const weekCounts = [0,0,0,0,0];
+  thisMonth.forEach(a => { const w = Math.min((a.week||1)-1, 4); weekCounts[w]++; });
+  const maxW = Math.max(...weekCounts, 1);
+  const chartEl = document.getElementById('weekChart');
+  chartEl.innerHTML = weekCounts.map((c, i) => {
+    const h = Math.max(Math.round(c / maxW * 100), c > 0 ? 8 : 0);
+    return `<div class="chart-bar-wrap">
+      <div class="chart-val">${c}</div>
+      <div class="chart-bar" style="height:${h}px" title="Semana ${i+1}: ${c} auditorías"></div>
+      <div class="chart-label">Sem ${i+1}</div>
+    </div>`;
+  }).join('');
+
+  // Area progress
+  const AREAS = [
+    {name:'INTERNAL SYSTEMS', total:183},
+    {name:'OUTBOUND', total:64},
+    {name:'ACTIVO FIJO', total:86},
+    {name:'INBOUND', total:30},
+    {name:'LOSS PREVENTION', total:15},
+    {name:'TRAINING', total:8},
+    {name:'LI/ICQA/OTRAS', total:65},
+  ];
+  const areaGrid = document.getElementById('areaProgressGrid');
+  areaGrid.innerHTML = AREAS.map(a => {
+    const aDone = thisMonth.filter(au => {
+      const dev = data.find(d => d['S/N'] === au.sn);
+      const devArea = dev ? (dev['AREA'] || '') : au.area;
+      if (a.name === 'LI/ICQA/OTRAS') {
+        const mainAreas = ['INTERNAL SYSTEMS','OUTBOUND','ACTIVO FIJO','INBOUND','LOSS PREVENTION','TRAINING'];
+        return !mainAreas.includes(devArea);
+      }
+      return devArea === a.name;
+    }).length;
+    const aPct = Math.round(aDone / a.total * 100);
+    const cls = aPct >= 66 ? '' : aPct >= 33 ? ' mid' : ' low';
+    return `<div class="area-card">
+      <div class="area-card-header">
+        <div class="area-card-name">${a.name}</div>
+        <div class="area-card-count">${aDone}/${a.total} (${aPct}%)</div>
+      </div>
+      <div class="area-bar-wrap"><div class="area-bar-fill${cls}" style="width:${aPct}%"></div></div>
+    </div>`;
+  }).join('');
+
+  // Table
+  renderAuditTable();
+}
+
+function renderAuditTable() {
+  const q = (document.getElementById('auditSearch')?.value || '').toLowerCase();
+  const sf = document.getElementById('auditFilterStatus')?.value || '';
+  const now = new Date();
+  let rows = audits.filter(a => isSameMonth(a.ts, now.toISOString()));
+  if (q) rows = rows.filter(a => a.sn.toLowerCase().includes(q) || a.auditor.toLowerCase().includes(q) || a.device.toLowerCase().includes(q));
+  if (sf) rows = rows.filter(a => a.estado === sf);
+  rows.sort((a,b) => new Date(b.ts) - new Date(a.ts));
+  const tbody = document.getElementById('auditTableBody');
+  const empty = document.getElementById('auditEmpty');
+  if (!rows.length) { tbody.innerHTML = ''; empty.style.display = ''; return; }
+  empty.style.display = 'none';
+  const estadoMap = {'Bueno':'good','Regular':'regular','Malo':'bad'};
+  const funcMap = {'Pasó':'pass','Falló':'fail'};
+  const limpMap = {'Sí':'yes','No':'no'};
+  tbody.innerHTML = rows.map(a => `
+    <tr>
+      <td style="font-family:monospace;font-size:12px;color:var(--ml-blue);font-weight:700">${esc(a.sn)}</td>
+      <td class="name" style="max-width:140px">${esc(a.device)}</td>
+      <td>${esc(a.area)}</td>
+      <td><span class="chip ${estadoMap[a.estado]||'pending'}">${esc(a.estado)}</span></td>
+      <td><span class="chip ${limpMap[a.limpieza]||'pending'}">${esc(a.limpieza)}</span></td>
+      <td><span class="chip ${funcMap[a.func]||'pending'}">${esc(a.func)}</span></td>
+      <td style="font-size:12px">${esc(a.auditor)}</td>
+      <td style="font-size:11px;font-family:monospace">${esc(a.fecha)}</td>
+      <td>${a.photo ? `<img src="${a.photo}" style="width:36px;height:36px;object-fit:cover;border-radius:4px;cursor:pointer" onclick="showPhoto('${a.id}')">` : '—'}</td>
+      <td><div class="row-actions" style="opacity:1">
+        <button class="row-btn edit" onclick="editAudit(${a.id})" title="Editar">✏️</button>
+        <button class="row-btn del" onclick="deleteAudit(${a.id})" title="Eliminar">🗑️</button>
+      </div></td>
+    </tr>`).join('');
+}
+
+function showPhoto(id) {
+  const a = audits.find(x => x.id == id);
+  if (!a || !a.photo) return;
+  const w = window.open('');
+  w.document.write(`<img src="${a.photo}" style="max-width:100%;display:block;margin:auto">`);
+}
+
+function editAudit(id) {
+  const a = audits.find(x => x.id == id);
+  if (!a) return;
+  auditEditId = id; photoBase64 = a.photo || '';
+  document.getElementById('auditModalTitle').innerHTML = 'Editar Auditoría <span>' + esc(a.sn) + '</span>';
+  document.getElementById('a_sn').value = a.sn;
+  document.getElementById('a_sn').setAttribute('readonly','true');
+  document.getElementById('a_sn_hint').textContent = a.device + ' — ' + a.area;
+  document.getElementById('a_sn_hint').style.color = 'var(--green)';
+  document.getElementById('a_estado').value = a.estado;
+  document.getElementById('a_limpieza').value = a.limpieza;
+  document.getElementById('a_func').value = a.func;
+  document.getElementById('a_comment').value = a.comment || '';
+  const preview = document.getElementById('a_photo_preview');
+  if (a.photo) { preview.src = a.photo; preview.style.display = 'block'; }
+  else { preview.style.display = 'none'; }
+  document.getElementById('auditOverlay').classList.add('open');
+}
+
+async function deleteAudit(id) {
+  if (!confirm('¿Eliminar esta auditoría?')) return;
+  audits = audits.filter(a => a.id !== id);
+  const saved = await saveAudits('[delete-audit] por ' + currentUser);
+  if (saved) { showToast('Auditoría eliminada', 'success'); renderAuditTab(); }
+}
+
+function exportAuditCSV() {
+  const now = new Date();
+  const rows = audits.filter(a => isSameMonth(a.ts, now.toISOString()));
+  const cols = ['sn','device','area','estado','limpieza','func','comment','auditor','fecha'];
+  const headers = ['S/N','Dispositivo','Área','Estado Físico','Limpieza','Funcionamiento','Comentarios','Auditor','Fecha'];
+  const csv = [headers.join(','), ...rows.map(r => cols.map(c => {
+    const v = String(r[c] || '').replace(/"/g,'""');
+    return v.includes(',') || v.includes('"') ? '"' + v + '"' : v;
+  }).join(','))].join('\n');
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+  a.download = 'auditorias_IS_' + now.toISOString().slice(0,7) + '.csv'; a.click();
+  showToast('CSV de auditorías exportado (' + rows.length + ' registros)', 'success');
+}
+
+document.getElementById('auditSearch')?.addEventListener('input', renderAuditTable);
+document.getElementById('auditFilterStatus')?.addEventListener('change', renderAuditTable);
+
+// Load audits after main data loads
+const _origLoad = loadFromGitHub;
+
+// Load audits on init
+loadAudits();
 </script>
 </body>
 </html>
