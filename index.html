@@ -1094,31 +1094,25 @@ function isSameMonth(iso1, iso2) {
 }
 
 async function notifyAuditChat(rec) {
-  const sep = '━'.repeat(24);
-  const estadoEmoji = rec.estado === 'Bueno' ? '✅' : rec.estado === 'Regular' ? '⚠️' : '❌';
-  const funcEmoji = rec.func === 'Pasó' ? '✅' : '❌';
-  const limpEmoji = rec.limpieza === 'Sí' ? '✅' : '❌';
-  const text =
-    '🔍 *Auditoría Completada — Inventario IS*
-' + sep + '
-' +
-    '👤 *Auditor:* ' + rec.auditor + '
-' +
-    '📋 *Equipo:* ' + rec.sn + ' — ' + rec.device + '
-' +
-    '🏢 *Área:* ' + rec.area + '
-' + sep + '
-' +
-    estadoEmoji + ' *Estado físico:* ' + rec.estado + '
-' +
-    limpEmoji + ' *Limpieza:* ' + rec.limpieza + '
-' +
-    funcEmoji + ' *Funcionamiento:* ' + rec.func + '
-' +
-    (rec.comment ? '💬 *Obs:* ' + rec.comment + '
-' : '') +
-    sep + '
-🕐 ' + rec.fecha;
+  const sep = '========================';
+  const estadoEmoji = rec.estado === 'Bueno' ? '[OK]' : rec.estado === 'Regular' ? '[REG]' : '[MAL]';
+  const funcEmoji = rec.func === 'Paso' ? '[OK]' : '[FALLO]';
+  const limpEmoji = rec.limpieza === 'Si' ? '[OK]' : '[NO]';
+  const lines = [
+    '*Auditoria Completada - Inventario IS*',
+    sep,
+    '*Auditor:* ' + rec.auditor,
+    '*Equipo:* ' + rec.sn + ' - ' + rec.device,
+    '*Area:* ' + rec.area,
+    sep,
+    estadoEmoji + ' *Estado fisico:* ' + rec.estado,
+    limpEmoji + ' *Limpieza:* ' + rec.limpieza,
+    funcEmoji + ' *Funcionamiento:* ' + rec.func,
+    rec.comment ? '*Obs:* ' + rec.comment : null,
+    sep,
+    rec.fecha
+  ].filter(Boolean);
+  const text = lines.join('\n');
   try { await fetch(WEBHOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text }) }); }
   catch(e) { console.warn('Chat error', e); }
 }
