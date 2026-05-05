@@ -384,6 +384,81 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
       </div>
     </div>
   </div>
+  </div><!-- /panel-inventory -->
+
+  <!-- AUDIT PANEL -->
+  <div class="tab-panel" id="panel-audit">
+    <div class="audit-header">
+      <h2>Auditorias de Equipos</h2>
+      <button class="btn btn-primary" onclick="openAuditNew()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Nueva Auditoria
+      </button>
+    </div>
+    <!-- PROGRESS -->
+    <div class="progress-section">
+      <div class="progress-card">
+        <div class="progress-top">
+          <div>
+            <div class="progress-title">Progreso General del Mes</div>
+            <div class="progress-stats">
+              <span>Auditados: <strong id="auditDone">0</strong></span>
+              <span>Total: <strong id="auditTotal">451</strong></span>
+              <span>Pendientes: <strong id="auditPending">451</strong></span>
+            </div>
+          </div>
+          <div class="progress-pct" id="auditPct">0%</div>
+        </div>
+        <div class="progress-bar-wrap"><div class="progress-bar-fill" id="auditBar" style="width:0%"></div></div>
+      </div>
+    </div>
+    <!-- CHART -->
+    <div class="chart-section">
+      <div class="chart-card">
+        <div class="chart-title">Avance por Semana</div>
+        <div class="chart-bars" id="weekChart"></div>
+      </div>
+    </div>
+    <!-- AREA PROGRESS -->
+    <div class="area-progress-grid" id="areaProgressGrid"></div>
+    <!-- AUDIT TOOLBAR -->
+    <div class="audit-toolbar">
+      <div class="search-wrap" style="max-width:300px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="search" id="auditSearch" placeholder="Buscar por S/N o auditor...">
+      </div>
+      <select id="auditFilterStatus">
+        <option value="">Todos los resultados</option>
+        <option value="Bueno">Estado: Bueno</option>
+        <option value="Regular">Estado: Regular</option>
+        <option value="Malo">Estado: Malo</option>
+      </select>
+      <button class="btn btn-export" onclick="exportAuditCSV()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Exportar
+      </button>
+    </div>
+    <!-- AUDIT TABLE -->
+    <div class="audit-table-wrap">
+      <div class="audit-table-card">
+        <div class="table-wrap">
+          <table>
+            <thead><tr>
+              <th>S/N</th><th>Dispositivo</th><th>Area</th>
+              <th>Estado Fisico</th><th>Limpieza</th><th>Funcionamiento</th>
+              <th>Auditor</th><th>Fecha/Hora</th><th>Foto</th><th>Acciones</th>
+            </tr></thead>
+            <tbody id="auditTableBody"></tbody>
+          </table>
+          <div id="auditEmpty" class="empty-state" style="display:none">
+            <div class="icon">📋</div>
+            <p>No hay auditorias registradas.<br>Click en "Nueva Auditoria" para comenzar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /panel-audit -->
+
   <div class="pager">
     <span class="page-info" id="pageInfo">—</span>
     <div class="pager-btns" id="pagerBtns"></div>
