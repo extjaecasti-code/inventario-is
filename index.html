@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inventario IS — 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zxing-js/0.20.0/ZXingBrowser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
 <style>
 :root{--ml-yellow:#FFE600;--ml-blue:#3483FA;--ml-blue-dark:#2968C8;--ml-blue-light:#E8F0FE;--bg:#EEEEEE;--surface:#FFFFFF;--surface2:#F7F7F7;--border:#E0E0E0;--border2:#D0D0D0;--text:#333333;--text2:#666666;--text3:#999999;--green:#00A650;--green-bg:#E6F7EE;--yellow-s:#F5A623;--yellow-bg:#FEF3E2;--red:#E02020;--red-bg:#FDECEA;--purple:#9B51E0;--purple-bg:#F3EAFD;--sans:"Inter",-apple-system,sans-serif;}
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -136,6 +139,25 @@ tbody tr:hover .row-actions{opacity:1;}
 .toast.success{background:var(--green);}.toast.error{background:var(--red);}.toast.info{background:var(--ml-blue);}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}}
 .spinner-sm{width:13px;height:13px;border:2px solid rgba(255,255,255,0.4);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;flex-shrink:0;}
+/* ── SCANNER ── */
+.scan-btn{background:var(--surface2);border:1px dashed var(--border2);color:var(--ml-blue);border-radius:6px;padding:8px 12px;cursor:pointer;font-family:var(--sans);font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px;transition:all .2s;white-space:nowrap;}
+.scan-btn:hover{border-color:var(--ml-blue);background:var(--ml-blue-light);}
+#scannerModal .modal{max-width:380px;padding:20px;}
+#scannerVideo{width:100%;border-radius:8px;background:#000;max-height:260px;object-fit:cover;}
+.scanner-overlay{position:relative;}
+.scanner-crosshair{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:180px;height:180px;border:3px solid var(--ml-yellow);border-radius:8px;pointer-events:none;}
+.scanner-line{position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,transparent,var(--ml-yellow),transparent);animation:scanLine 1.5s linear infinite;}
+@keyframes scanLine{0%{top:0%;}100%{top:100%;}}
+
+/* ── OFFLINE BANNER ── */
+#offlineBanner{display:none;position:fixed;top:56px;left:0;right:0;z-index:99;background:#f97316;color:#fff;text-align:center;padding:8px 16px;font-size:13px;font-weight:600;}
+#offlineBanner.show{display:flex;align-items:center;justify-content:center;gap:8px;}
+.sync-pending-badge{background:rgba(255,255,255,0.25);border-radius:12px;padding:2px 8px;font-size:11px;}
+
+/* ── PDF BUTTON ── */
+.btn-pdf{background:#fff;color:#E02020;border:1px solid var(--border2);}
+.btn-pdf:hover{border-color:#E02020;background:var(--red-bg);}
+
 /* ── NAV TABS ── */
 .nav-tabs{background:var(--surface);border-bottom:1px solid var(--border);display:flex;gap:0;padding:0 24px;}
 .nav-tab{padding:12px 20px;font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;display:flex;align-items:center;gap:7px;user-select:none;}
@@ -278,6 +300,7 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
 </style>
 </head>
 <body>
+<div id="offlineBanner"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.56 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg> Sin conexión — <span id="pendingCount">0</span> auditorías pendientes de sincronizar <span class="sync-pending-badge" id="syncNowBtn" onclick="syncPendingAudits()" style="cursor:pointer">Sincronizar ahora</span></div>
 <div id="loadingOverlay"><div class="big-spin"></div><p>Conectando con GitHub...</p></div>
 
 <div id="tokenScreen" style="display:none">
@@ -476,6 +499,10 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
         <option value="Regular">Estado: Regular</option>
         <option value="Malo">Estado: Malo</option>
       </select>
+      <button class="btn btn-pdf" onclick="generatePDF()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        PDF
+      </button>
       <button class="btn btn-export" onclick="exportAuditCSV()">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Exportar
@@ -577,7 +604,13 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
     <div class="form-grid">
       <div class="form-group">
         <label>S/N del Equipo *</label>
-        <input id="a_sn" placeholder="Busca o escribe el S/N..." oninput="auditSnSearch(this.value)">
+        <div style="display:flex;gap:8px">
+          <input id="a_sn" placeholder="Busca o escribe el S/N..." oninput="auditSnSearch(this.value)" style="flex:1">
+          <button type="button" class="scan-btn" onclick="openScanner()" title="Escanear barcode">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="5" height="5"/><rect x="16" y="3" width="5" height="5"/><rect x="3" y="16" width="5" height="5"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><line x1="16" y1="21" x2="21" y2="21"/></svg>
+            Scan
+          </button>
+        </div>
         <div id="a_sn_hint" style="font-size:11px;color:var(--text3);margin-top:3px;"></div>
       </div>
       <div class="form-group">
@@ -619,6 +652,26 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
     <div class="modal-footer">
       <button class="btn btn-ghost" onclick="document.getElementById('auditOverlay').classList.remove('open')">Cancelar</button>
       <button class="btn btn-primary" id="auditSaveBtn" onclick="saveAudit()">Guardar Auditoría</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- SCANNER MODAL -->
+<div class="overlay" id="scannerModal" onclick="closeScannerModal(event)">
+  <div class="modal" style="max-width:380px;padding:20px">
+    <div class="modal-header">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3483FA" stroke-width="2"><rect x="3" y="3" width="5" height="5"/><rect x="16" y="3" width="5" height="5"/><rect x="3" y="16" width="5" height="5"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><line x1="16" y1="21" x2="21" y2="21"/></svg>
+      <h2>Escanear S/N</h2>
+    </div>
+    <p style="font-size:12px;color:var(--text3);margin-bottom:12px">Apunta la camara al codigo de barras del equipo</p>
+    <div class="scanner-overlay">
+      <video id="scannerVideo" autoplay playsinline muted></video>
+      <div class="scanner-crosshair"><div class="scanner-line"></div></div>
+    </div>
+    <div id="scanResult" style="margin-top:12px;font-size:13px;color:var(--text3);text-align:center;min-height:20px"></div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="stopScanner()">Cancelar</button>
     </div>
   </div>
 </div>
@@ -1389,6 +1442,313 @@ document.getElementById('auditFilterStatus')?.addEventListener('change', renderA
 
 // Load audits after main data loads
 const _origLoad = loadFromGitHub;
+
+// ── BARCODE SCANNER ──────────────────────────────────────────────────────
+let scannerStream = null;
+let scannerInterval = null;
+
+async function openScanner() {
+  document.getElementById('scannerModal').classList.add('open');
+  document.getElementById('scanResult').textContent = 'Iniciando camara...';
+  try {
+    const constraints = { video: { facingMode: 'environment', width: { ideal: 1280 }, height: { ideal: 720 } } };
+    scannerStream = await navigator.mediaDevices.getUserMedia(constraints);
+    const video = document.getElementById('scannerVideo');
+    video.srcObject = scannerStream;
+    await video.play();
+    document.getElementById('scanResult').textContent = 'Apunta al codigo de barras...';
+    startDecoding(video);
+  } catch(e) {
+    document.getElementById('scanResult').textContent = 'No se pudo acceder a la camara: ' + e.message;
+  }
+}
+
+function startDecoding(video) {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  let decoding = false;
+  scannerInterval = setInterval(async () => {
+    if (decoding || video.readyState !== 4) return;
+    decoding = true;
+    try {
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      ctx.drawImage(video, 0, 0);
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      // Try ZXing if available
+      if (window.ZXingBrowser) {
+        const hints = new Map();
+        const reader = new ZXingBrowser.BrowserMultiFormatReader();
+        const result = await reader.decodeFromImageData(imageData).catch(()=>null);
+        if (result) {
+          const sn = result.getText().trim().toUpperCase();
+          onScanResult(sn); return;
+        }
+      }
+    } catch(e) {}
+    decoding = false;
+  }, 400);
+}
+
+function onScanResult(sn) {
+  stopScanner();
+  document.getElementById('a_sn').value = sn;
+  auditSnSearch(sn);
+  showToast('S/N escaneado: ' + sn, 'success');
+}
+
+function stopScanner() {
+  clearInterval(scannerInterval);
+  if (scannerStream) { scannerStream.getTracks().forEach(t => t.stop()); scannerStream = null; }
+  document.getElementById('scannerModal').classList.remove('open');
+  document.getElementById('scanResult').textContent = '';
+}
+
+function closeScannerModal(e) {
+  if (e.target.classList.contains('overlay')) stopScanner();
+}
+
+// ── OFFLINE MODE ─────────────────────────────────────────────────────────
+const OFFLINE_KEY = 'pending_audits';
+
+function getPendingAudits() {
+  try { return JSON.parse(localStorage.getItem(OFFLINE_KEY) || '[]'); } catch(e) { return []; }
+}
+function savePendingAudits(list) {
+  localStorage.setItem(OFFLINE_KEY, JSON.stringify(list));
+  updateOfflineBanner();
+}
+function updateOfflineBanner() {
+  const pending = getPendingAudits();
+  const banner = document.getElementById('offlineBanner');
+  const countEl = document.getElementById('pendingCount');
+  if (!navigator.onLine && pending.length >= 0) {
+    banner.classList.add('show');
+    countEl.textContent = pending.length;
+  } else if (navigator.onLine && pending.length > 0) {
+    banner.classList.add('show');
+    banner.style.background = 'var(--ml-blue)';
+    countEl.textContent = pending.length;
+    // Auto sync
+    syncPendingAudits();
+  } else {
+    banner.classList.remove('show');
+  }
+}
+
+async function syncPendingAudits() {
+  const pending = getPendingAudits();
+  if (!pending.length) { updateOfflineBanner(); return; }
+  showToast('Sincronizando ' + pending.length + ' auditorias pendientes...', 'info');
+  for (const rec of pending) {
+    audits = audits.filter(a => !(a.sn === rec.sn && isSameMonth(a.ts, rec.ts)));
+    audits.push(rec);
+  }
+  const saved = await saveAudits('[sync-offline] ' + pending.length + ' auditorias por ' + currentUser);
+  if (saved) {
+    savePendingAudits([]);
+    showToast('Sincronizadas ' + pending.length + ' auditorias ✓', 'success');
+    renderAuditTab();
+  }
+}
+
+// Override saveAudit to handle offline
+const _origSaveAudits = saveAudits;
+async function saveAuditsWithOffline(commitMsg) {
+  if (!navigator.onLine) { return false; }
+  return _origSaveAudits(commitMsg);
+}
+
+// Patch saveAudit function to queue when offline
+const _origSaveAudit = saveAudit;
+window.saveAudit = async function() {
+  if (!navigator.onLine) {
+    // Save to pending queue
+    const sn = document.getElementById('a_sn').value.trim();
+    if (!sn) { showToast('El S/N es requerido.', 'error'); return; }
+    const device = data.find(d => d['S/N'] && d['S/N'].toLowerCase() === sn.toLowerCase());
+    const now = new Date();
+    const fechaStr = now.toLocaleString('es-MX', { dateStyle:'medium', timeStyle:'short', timeZone:'America/Mexico_City' });
+    const rec = {
+      id: Date.now(), sn: sn.toUpperCase(),
+      device: device ? ((device['DISPOSITIVO']||'')+' '+(device['MARCA']||'')+' '+(device['MODELO']||'')).trim() : 'Desconocido',
+      area: device ? (device['AREA']||'—') : '—',
+      estado: document.getElementById('a_estado').value,
+      limpieza: document.getElementById('a_limpieza').value,
+      func: document.getElementById('a_func').value,
+      comment: document.getElementById('a_comment').value,
+      photo: photoBase64 || '',
+      auditor: currentUser, fecha: fechaStr, ts: now.toISOString(),
+      week: getWeekOfMonth(now),
+    };
+    const pending = getPendingAudits();
+    pending.push(rec);
+    savePendingAudits(pending);
+    document.getElementById('auditOverlay').classList.remove('open');
+    showToast('Sin internet — auditoria guardada localmente (' + pending.length + ' pendiente(s))', 'info');
+    renderAuditTab();
+    return;
+  }
+  return _origSaveAudit();
+};
+
+window.addEventListener('online', updateOfflineBanner);
+window.addEventListener('offline', updateOfflineBanner);
+updateOfflineBanner();
+
+// ── PDF REPORT ────────────────────────────────────────────────────────────
+async function generatePDF() {
+  const { jsPDF } = window.jspdf;
+  if (!jsPDF) { showToast('Error: libreria PDF no disponible', 'error'); return; }
+  showToast('Generando PDF...', 'info');
+
+  const now = new Date();
+  const mes = now.toLocaleString('es-MX', { month:'long', year:'numeric' });
+  const thisMonth = audits.filter(a => isSameMonth(a.ts, now.toISOString()));
+  const total = 330;
+  const done = new Set(thisMonth.map(a => a.sn)).size;
+  const pct = Math.round(done / total * 100);
+
+  const doc = new jsPDF({ orientation:'portrait', unit:'mm', format:'a4' });
+  const W = doc.internal.pageSize.getWidth();
+  const H = doc.internal.pageSize.getHeight();
+
+  // ── HEADER ──
+  doc.setFillColor(255, 230, 0);
+  doc.rect(0, 0, W, 18, 'F');
+  doc.setFontSize(13); doc.setFont('helvetica','bold'); doc.setTextColor(52,131,250);
+  doc.text('MERCADO LIBRE', 14, 8);
+  doc.setFontSize(9); doc.setTextColor(100,100,100); doc.setFont('helvetica','normal');
+  doc.text('INFRAESTRUCTURA & SISTEMAS — Reporte de Auditoria', 14, 14);
+  doc.setFontSize(9); doc.setTextColor(100,100,100);
+  doc.text(mes.toUpperCase(), W-14, 14, { align:'right' });
+
+  // ── TITLE ──
+  doc.setFontSize(18); doc.setFont('helvetica','bold'); doc.setTextColor(51,51,51);
+  doc.text('Reporte Mensual de Auditorias IS', 14, 30);
+  doc.setFontSize(10); doc.setFont('helvetica','normal'); doc.setTextColor(100,100,100);
+  doc.text('Categorias: Notebook | Printer | Desktop   |   Estatus: In Use + In Stock', 14, 37);
+
+  // ── DIVIDER ──
+  doc.setDrawColor(255,230,0); doc.setLineWidth(1.5);
+  doc.line(14, 40, W-14, 40);
+
+  // ── SUMMARY CARDS ──
+  let y = 48;
+  const cards = [
+    { label:'Total a Auditar', val: total.toString(), color:[52,131,250] },
+    { label:'Auditados', val: done.toString(), color:[0,166,80] },
+    { label:'Pendientes', val: (total-done).toString(), color:[224,32,32] },
+    { label:'Avance', val: pct+'%', color:[245,166,35] },
+  ];
+  const cw = (W-28) / 4;
+  cards.forEach((c, i) => {
+    const cx = 14 + i*cw;
+    doc.setFillColor(247,247,247); doc.roundedRect(cx, y, cw-3, 22, 2, 2, 'F');
+    doc.setFontSize(18); doc.setFont('helvetica','bold'); doc.setTextColor(...c.color);
+    doc.text(c.val, cx + (cw-3)/2, y+13, { align:'center' });
+    doc.setFontSize(8); doc.setFont('helvetica','normal'); doc.setTextColor(150,150,150);
+    doc.text(c.label, cx + (cw-3)/2, y+19, { align:'center' });
+  });
+
+  // ── PROGRESS BAR ──
+  y += 28;
+  doc.setFontSize(10); doc.setFont('helvetica','bold'); doc.setTextColor(51,51,51);
+  doc.text('Progreso General del Mes', 14, y);
+  y += 5;
+  doc.setFillColor(224,224,224); doc.roundedRect(14, y, W-28, 8, 2, 2, 'F');
+  const barW = Math.max(((W-28) * pct / 100), 0);
+  doc.setFillColor(52,131,250); doc.roundedRect(14, y, barW, 8, 2, 2, 'F');
+  doc.setFontSize(8); doc.setTextColor(255,255,255);
+  if (pct > 5) doc.text(pct+'%', 14 + barW - 6, y+5.5);
+
+  // ── CATEGORY BREAKDOWN ──
+  y += 16;
+  doc.setFontSize(10); doc.setFont('helvetica','bold'); doc.setTextColor(51,51,51);
+  doc.text('Desglose por Categoria', 14, y);
+  y += 4;
+  const catData = [
+    ['Notebook', '129', thisMonth.filter(a=>{ const d=data.find(x=>x['S/N']===a.sn); return d&&d['Categoría']==='Notebook'; }).length.toString()],
+    ['Printer',  '186', thisMonth.filter(a=>{ const d=data.find(x=>x['S/N']===a.sn); return d&&d['Categoría']==='Printer'; }).length.toString()],
+    ['Desktop',  '15',  thisMonth.filter(a=>{ const d=data.find(x=>x['S/N']===a.sn); return d&&d['Categoría']==='Desktop'; }).length.toString()],
+  ];
+  doc.autoTable({
+    startY: y, margin:{ left:14, right:14 },
+    head:[['Categoria','Total','Auditados','% Completado']],
+    body: catData.map(r => [r[0], r[1], r[2], Math.round(parseInt(r[2])/parseInt(r[1])*100)+'%']),
+    styles:{ fontSize:9, cellPadding:3 },
+    headStyles:{ fillColor:[255,230,0], textColor:[51,51,51], fontStyle:'bold' },
+    alternateRowStyles:{ fillColor:[247,247,247] },
+    columnStyles:{ 3:{ halign:'center' } }
+  });
+
+  // ── WEEK CHART (simple bars as rects) ──
+  y = doc.lastAutoTable.finalY + 8;
+  if (y > H - 80) { doc.addPage(); y = 20; }
+  doc.setFontSize(10); doc.setFont('helvetica','bold'); doc.setTextColor(51,51,51);
+  doc.text('Avance por Semana', 14, y); y += 5;
+  const weekCounts = [0,0,0,0,0];
+  thisMonth.forEach(a => { const w = Math.min((a.week||1)-1,4); weekCounts[w]++; });
+  const maxW2 = Math.max(...weekCounts, 1);
+  const barAreaH = 35, barAreaW = (W-28)/5;
+  weekCounts.forEach((c, i) => {
+    const bx = 14 + i * barAreaW;
+    const bh = maxW2 > 0 ? (c/maxW2) * barAreaH : 0;
+    doc.setFillColor(224,224,224);
+    doc.rect(bx+5, y, barAreaW-10, barAreaH, 'F');
+    if (c > 0) {
+      doc.setFillColor(52,131,250);
+      doc.rect(bx+5, y + barAreaH - bh, barAreaW-10, bh, 'F');
+    }
+    doc.setFontSize(8); doc.setFont('helvetica','bold'); doc.setTextColor(52,131,250);
+    doc.text(c.toString(), bx + barAreaW/2, y + barAreaH - bh - 2, { align:'center' });
+    doc.setFontSize(7); doc.setFont('helvetica','normal'); doc.setTextColor(150,150,150);
+    doc.text('Sem '+( i+1), bx + barAreaW/2, y + barAreaH + 5, { align:'center' });
+  });
+
+  // ── FULL AUDIT TABLE ──
+  y += barAreaH + 14;
+  if (y > H - 60) { doc.addPage(); y = 20; }
+  doc.setFontSize(10); doc.setFont('helvetica','bold'); doc.setTextColor(51,51,51);
+  doc.text('Detalle de Auditorias del Mes (' + thisMonth.length + ' registros)', 14, y); y += 4;
+
+  const estadoColor = (e) => e==='Bueno' ? [0,166,80] : e==='Regular' ? [245,166,35] : [224,32,32];
+  doc.autoTable({
+    startY: y, margin:{ left:14, right:14 },
+    head:[['S/N','Dispositivo','Area','Estado','Limpieza','Funcionamiento','Auditor','Fecha']],
+    body: thisMonth.sort((a,b)=>new Date(b.ts)-new Date(a.ts)).map(a => [
+      a.sn, (a.device||'').slice(0,20), (a.area||'').slice(0,15),
+      a.estado, a.limpieza, a.func,
+      (a.auditor||'').split(' ').slice(0,2).join(' '),
+      a.fecha
+    ]),
+    styles:{ fontSize:7.5, cellPadding:2.5, overflow:'ellipsize' },
+    headStyles:{ fillColor:[255,230,0], textColor:[51,51,51], fontStyle:'bold', fontSize:8 },
+    alternateRowStyles:{ fillColor:[247,247,247] },
+    didParseCell: (data) => {
+      if (data.section==='body' && data.column.index===3) {
+        const v = data.cell.raw;
+        const c = estadoColor(v);
+        data.cell.styles.textColor = c;
+        data.cell.styles.fontStyle = 'bold';
+      }
+    }
+  });
+
+  // ── FOOTER ──
+  const pageCount = doc.internal.getNumberOfPages();
+  for (let i=1; i<=pageCount; i++) {
+    doc.setPage(i);
+    doc.setFillColor(255,230,0); doc.rect(0, H-10, W, 10, 'F');
+    doc.setFontSize(7); doc.setFont('helvetica','normal'); doc.setTextColor(100,100,100);
+    doc.text('Mercado Libre — Inventario IS 2026 — Confidencial', 14, H-4);
+    doc.text('Pagina '+i+' de '+pageCount, W-14, H-4, { align:'right' });
+  }
+
+  const fname = 'Reporte_Auditorias_IS_' + now.toISOString().slice(0,7) + '.pdf';
+  doc.save(fname);
+  showToast('PDF generado: ' + fname, 'success');
+}
 
 </script>
 </body>
