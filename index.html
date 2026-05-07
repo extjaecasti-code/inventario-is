@@ -950,15 +950,14 @@ async function loadFromGitHub(showMsg){
     if(!res.ok)throw new Error('HTTP '+res.status);
     const base=await res.json();
 
-    // Load changes file via API (bypasses GitHub cache)
+    // Load changes file via API with timestamp to bypass cache
     try{
-      const cMeta=await fetch(CHANGES_API,{
-        headers:{Authorization:'token '+GITHUB_TOKEN, 'Cache-Control':'no-cache'}
+      const cMeta=await fetch(CHANGES_API+'?t='+Date.now(),{
+        headers:{Authorization:'token '+GITHUB_TOKEN}
       });
       if(cMeta.ok){
         const m=await cMeta.json();
         changesSHA=m.sha;
-        // Decode base64 content directly from API response (no cache issues)
         if(m.content){
           const decoded=decodeURIComponent(escape(atob(m.content.replace(/\n/g,''))));
           try{ changes_db=JSON.parse(decoded); }catch(e){ changes_db={}; }
@@ -996,7 +995,7 @@ async function saveToGitHub(commitMsg){
   setSyncState('syncing','Guardando...');
   try{
     // Only save the small changes file (never the full 0.64MB inventory)
-    const metaRes=await fetch(CHANGES_API,{headers:{Authorization:'token '+GITHUB_TOKEN,'Cache-Control':'no-cache'}});
+    const metaRes=await fetch(CHANGES_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
     if(metaRes.ok){
       const m=await metaRes.json();
       changesSHA=m.sha;
@@ -2414,7 +2413,7 @@ async function consolidateInventory() {
   try {
     // Step 1: Get current SHA of base inventory
     setSyncState('syncing', 'Consolidando...');
-    const metaRes = await fetch(API_URL, { headers: { Authorization: 'token ' + GITHUB_TOKEN } });
+    const metaRes = await fetch(API_URL+'?t='+Date.now(), { headers: { Authorization: 'token ' + GITHUB_TOKEN } });
     if (!metaRes.ok) throw new Error('No se pudo obtener el inventario base');
     const meta = await metaRes.json();
     currentSHA = meta.sha;
@@ -2435,7 +2434,7 @@ async function consolidateInventory() {
     currentSHA = saveResult.content.sha;
 
     // Step 3: Clear changes file
-    const cMetaRes = await fetch(CHANGES_API, { headers: { Authorization: 'token ' + GITHUB_TOKEN } });
+    const cMetaRes = await fetch(CHANGES_API+'?t='+Date.now(), { headers: { Authorization: 'token ' + GITHUB_TOKEN } });
     if (cMetaRes.ok) {
       const cMeta = await cMetaRes.json();
       changesSHA = cMeta.sha;
