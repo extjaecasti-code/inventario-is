@@ -52,5 +52,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "GVCFSB4": {
+    "S/N": "GVCFSB4",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "pro 14",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Meca M9",
+    "IP": "10.9.112.61",
+    "MAC": "C0A8103006A1",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "Chrome Flex",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
