@@ -921,6 +921,10 @@ async function loadFromGitHub(showMsg){
 async function saveToGitHub(commitMsg){
   setSyncState('syncing','Guardando...');
   try{
+    // Always fetch fresh SHA before saving to avoid conflicts
+    const metaRes=await fetch(API_URL,{headers:{Authorization:'token '+GITHUB_TOKEN}});
+    if(metaRes.ok){const m=await metaRes.json();currentSHA=m.sha;}
+
     const clean=data.map(r=>{const c={...r};delete c._id;return c;});
     const content=btoa(unescape(encodeURIComponent(JSON.stringify(clean,null,2))));
     const res=await fetch(API_URL,{
