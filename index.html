@@ -950,14 +950,21 @@ async function loadFromGitHub(showMsg){
     if(!res.ok)throw new Error('HTTP '+res.status);
     const base=await res.json();
 
-    // Load changes file (small, fast)
+    // Load changes file via API (bypasses GitHub cache)
     try{
-      const cRes=await fetch(CHANGES_RAW+'?t='+Date.now());
-      if(cRes.ok){
-        const cText=await cRes.text();
-        try{ changes_db=JSON.parse(cText); }catch(e){ changes_db={}; }
-        const cMeta=await fetch(CHANGES_API,{headers:{Authorization:'token '+GITHUB_TOKEN}});
-        if(cMeta.ok){const m=await cMeta.json();changesSHA=m.sha;}
+      const cMeta=await fetch(CHANGES_API,{
+        headers:{Authorization:'token '+GITHUB_TOKEN, 'Cache-Control':'no-cache'}
+      });
+      if(cMeta.ok){
+        const m=await cMeta.json();
+        changesSHA=m.sha;
+        // Decode base64 content directly from API response (no cache issues)
+        if(m.content){
+          const decoded=decodeURIComponent(escape(atob(m.content.replace(/\n/g,''))));
+          try{ changes_db=JSON.parse(decoded); }catch(e){ changes_db={}; }
+        } else {
+          changes_db={};
+        }
       }
     }catch(e){ changes_db={}; }
 
@@ -989,7 +996,7 @@ async function saveToGitHub(commitMsg){
   setSyncState('syncing','Guardando...');
   try{
     // Only save the small changes file (never the full 0.64MB inventory)
-    const metaRes=await fetch(CHANGES_API,{headers:{Authorization:'token '+GITHUB_TOKEN}});
+    const metaRes=await fetch(CHANGES_API,{headers:{Authorization:'token '+GITHUB_TOKEN,'Cache-Control':'no-cache'}});
     if(metaRes.ok){
       const m=await metaRes.json();
       changesSHA=m.sha;
