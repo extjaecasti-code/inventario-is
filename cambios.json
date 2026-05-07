@@ -181,7 +181,7 @@
   },
   "FBCZRW3": {
     "S/N": "FBCZRW3",
-    "ESTATUS FISICO": "In Stock",
+    "ESTATUS FISICO": "In Use",
     "Categoría": "Notebook",
     "DISPOSITIVO": "Laptop",
     "MARCA": "DELL",
@@ -195,6 +195,6 @@
     "DEPLOY": "DRM",
     "Fullfiment": "MXCD11",
     "Comentarios": "",
-    "Status in Arturito": "In Stock"
+    "Status in Arturito": "In Use"
   }
 }
