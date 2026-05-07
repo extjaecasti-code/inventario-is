@@ -139,6 +139,25 @@ tbody tr:hover .row-actions{opacity:1;}
 .toast.success{background:var(--green);}.toast.error{background:var(--red);}.toast.info{background:var(--ml-blue);}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}}
 .spinner-sm{width:13px;height:13px;border:2px solid rgba(255,255,255,0.4);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;flex-shrink:0;}
+/* ── CONSOLIDATE BANNER ── */
+#consolidateBanner{display:none;padding:10px 24px;}
+#consolidateBanner.show{display:block;}
+.consolidate-bar-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:16px;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+.consolidate-bar-card.warn{border-color:rgba(245,166,35,.4);background:var(--yellow-bg);}
+.consolidate-bar-card.danger{border-color:rgba(224,32,32,.3);background:var(--red-bg);}
+.consolidate-info{flex:1;}
+.consolidate-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.consolidate-sub{font-size:11px;color:var(--text3);}
+.consolidate-track{background:var(--border);border-radius:20px;height:8px;overflow:hidden;margin-top:8px;}
+.consolidate-fill{height:100%;border-radius:20px;transition:width .5s ease;}
+.consolidate-fill.ok{background:var(--green);}
+.consolidate-fill.warn{background:var(--yellow-s);}
+.consolidate-fill.danger{background:var(--red);}
+.btn-consolidate{background:var(--ml-blue);color:#fff;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;white-space:nowrap;transition:all .15s;font-family:var(--sans);}
+.btn-consolidate:hover{background:var(--ml-blue-dark);}
+.btn-consolidate.danger{background:var(--red);}
+.btn-consolidate.danger:hover{background:#c01010;}
+
 /* ── BULK ADD ── */
 .sn-tag{display:inline-flex;align-items:center;gap:5px;background:var(--ml-blue-light);color:var(--ml-blue);border:1px solid rgba(52,131,250,.25);border-radius:16px;padding:3px 10px;font-size:12px;font-weight:600;font-family:monospace;margin:3px;}
 .sn-tag.dup{background:var(--red-bg);color:var(--red);border-color:rgba(224,32,32,.25);}
@@ -393,6 +412,23 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
       Auditorías
       <span class="tab-badge" id="auditBadge">0</span>
+    </div>
+  </div>
+
+  <!-- CONSOLIDATE BANNER -->
+  <div id="consolidateBanner">
+    <div class="consolidate-bar-card" id="consolidateCard">
+      <div class="consolidate-info">
+        <div class="consolidate-title" id="consolidateTitle">Archivo de cambios</div>
+        <div class="consolidate-sub" id="consolidateSub">Calculando...</div>
+        <div class="consolidate-track">
+          <div class="consolidate-fill ok" id="consolidateFill" style="width:0%"></div>
+        </div>
+      </div>
+      <button class="btn-consolidate" id="consolidateBtn" onclick="consolidateInventory()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+        Consolidar
+      </button>
     </div>
   </div>
 
@@ -846,6 +882,11 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
 const GITHUB_USER='extjaecasti-code';
 const GITHUB_REPO='inventario-is';
 const GITHUB_FILE='inventario.json';
+const CHANGES_FILE='cambios.json';
+const CHANGES_API=`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${CHANGES_FILE}`;
+const CHANGES_RAW=`https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${CHANGES_FILE}`;
+let changesSHA='';
+let changes_db={}; // {SN: {fields...}, '__deleted__SN': true, '__new__SN': {fields...}}
 const WEBHOOK='https://chat.googleapis.com/v1/spaces/AAQA7botEQo/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=HZm7YOTGUKs84kZHiY4A0_UF1GdzrNe964GK8OYTYmQ';
 let GITHUB_TOKEN=localStorage.getItem('gh_token')||'';
 const RAW_URL=`https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${GITHUB_FILE}`;
@@ -904,44 +945,93 @@ function setSyncState(state,msg){
 async function loadFromGitHub(showMsg){
   setSyncState('syncing','Cargando...');
   try{
+    // Load base inventory
     const res=await fetch(RAW_URL+'?t='+Date.now());
     if(!res.ok)throw new Error('HTTP '+res.status);
-    const json=await res.json();
-    const meta=await fetch(API_URL,{headers:{Authorization:'token '+GITHUB_TOKEN}});
-    if(meta.ok){const m=await meta.json();currentSHA=m.sha;}
-    data=json.map((r,i)=>({...r,_id:i,'ESTATUS FISICO':normalizeStatus(r['ESTATUS FISICO'])}));
+    const base=await res.json();
+
+    // Load changes file (small, fast)
+    try{
+      const cRes=await fetch(CHANGES_RAW+'?t='+Date.now());
+      if(cRes.ok){
+        const cText=await cRes.text();
+        try{ changes_db=JSON.parse(cText); }catch(e){ changes_db={}; }
+        const cMeta=await fetch(CHANGES_API,{headers:{Authorization:'token '+GITHUB_TOKEN}});
+        if(cMeta.ok){const m=await cMeta.json();changesSHA=m.sha;}
+      }
+    }catch(e){ changes_db={}; }
+
+    // Merge: apply changes on top of base
+    let merged = base.filter(r => !changes_db['__deleted__'+r['S/N']]);
+    // Apply edits
+    merged = merged.map(r => {
+      if(changes_db[r['S/N']]) return {...r, ...changes_db[r['S/N']]};
+      return r;
+    });
+    // Add new records
+    Object.keys(changes_db).forEach(k=>{
+      if(k.startsWith('__new__')){
+        merged.push(changes_db[k]);
+      }
+    });
+
+    data=merged.map((r,i)=>({...r,_id:i,'ESTATUS FISICO':normalizeStatus(r['ESTATUS FISICO'])}));
     populateFilters();applyFilters();
     setSyncState('ok','Sincronizado');
-    if(showMsg)showToast('Datos actualizados desde GitHub','success');
+    if(showMsg)showToast('Datos actualizados','success');
+    updateConsolidateBanner();
   }catch(e){
     setSyncState('error','Error de conexion');
-    showToast('No se pudo cargar desde GitHub: '+e.message,'error');
+    showToast('No se pudo cargar: '+e.message,'error');
   }
 }
 async function saveToGitHub(commitMsg){
   setSyncState('syncing','Guardando...');
   try{
-    // Always fetch fresh SHA before saving to avoid conflicts
-    const metaRes=await fetch(API_URL,{headers:{Authorization:'token '+GITHUB_TOKEN}});
-    if(metaRes.ok){const m=await metaRes.json();currentSHA=m.sha;}
+    // Only save the small changes file (never the full 0.64MB inventory)
+    const metaRes=await fetch(CHANGES_API,{headers:{Authorization:'token '+GITHUB_TOKEN}});
+    if(metaRes.ok){
+      const m=await metaRes.json();
+      changesSHA=m.sha;
+    } else {
+      changesSHA=''; // file doesn't exist yet
+    }
 
-    const clean=data.map(r=>{const c={...r};delete c._id;return c;});
-    const content=btoa(unescape(encodeURIComponent(JSON.stringify(clean,null,2))));
-    const res=await fetch(API_URL,{
+    const content=btoa(unescape(encodeURIComponent(JSON.stringify(changes_db,null,2))));
+    const body={message:commitMsg,content};
+    if(changesSHA) body.sha=changesSHA;
+
+    const res=await fetch(CHANGES_API,{
       method:'PUT',
       headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'},
-      body:JSON.stringify({message:commitMsg,content,sha:currentSHA})
+      body:JSON.stringify(body)
     });
     if(!res.ok){const err=await res.json();throw new Error(err.message||'HTTP '+res.status);}
     const result=await res.json();
-    currentSHA=result.content.sha;
+    changesSHA=result.content.sha;
     setSyncState('ok','Sincronizado');
+    updateConsolidateBanner();
     return true;
   }catch(e){
     setSyncState('error','Error al guardar');
-    showToast('Error al guardar en GitHub: '+e.message,'error');
+    showToast('Error al guardar: '+e.message,'error');
     return false;
   }
+}
+
+// Helper: record a change to the changes_db
+function recordChange(sn, fields){
+  if(!changes_db[sn]) changes_db[sn]={};
+  Object.assign(changes_db[sn], fields);
+}
+function recordNew(rec){
+  changes_db['__new__'+rec['S/N']]={...rec};
+}
+function recordDelete(sn){
+  changes_db['__deleted__'+sn]=true;
+  // Remove any edit record for this SN
+  delete changes_db[sn];
+  delete changes_db['__new__'+sn];
 }
 
 async function notifyChat(device,changes,action){
@@ -1146,6 +1236,10 @@ async function saveDevice(){
     if(idx>=0)data[idx]={...data[idx],...rec};
     document.getElementById('formOverlay').classList.remove('open');
     if(changes.length>0){
+      // Record only the changed fields
+      const changedFields={};
+      changes.forEach(c=>{ changedFields[c.field||c.label]=rec[c.field||c.label]; });
+      recordChange(sn, rec);
       const saved=await saveToGitHub('[edit] '+sn+' por '+currentUser);
       if(saved){await notifyChat(rec,changes,'edit');showToast('Guardado · '+changes.length+' cambio(s) notificado(s)','success');}
     }else{showToast('Sin cambios detectados.','info');}
@@ -1154,6 +1248,7 @@ async function saveDevice(){
     const newId=Math.max(...data.map(d=>d._id),0)+1;
     data.push({...rec,_id:newId});
     document.getElementById('formOverlay').classList.remove('open');
+    recordNew(rec);
     const saved=await saveToGitHub('[add] '+sn+' por '+currentUser);
     if(saved){await notifyChat(rec,[],'add');showToast('Dispositivo agregado y guardado','success');}
   }
@@ -1170,6 +1265,7 @@ async function confirmDelete(){
   data=data.filter(d=>d._id!==deletingId);
   document.getElementById('confirmOverlay').classList.remove('open');
   applyFilters();
+  if(r) recordDelete(r['S/N']);
   const saved=await saveToGitHub('[delete] '+(r?.['S/N']||'?')+' por '+currentUser);
   if(saved){await notifyChat(r,[],'delete');showToast('Dispositivo eliminado y guardado','success');}
 }
@@ -1186,6 +1282,7 @@ async function setStatus(val){
   document.getElementById('statusOverlay').classList.remove('open');
   applyFilters();
   if(before!==val){
+    recordChange(data[idx]['S/N'],{'ESTATUS FISICO':val,'Status in Arturito':val});
     const saved=await saveToGitHub('[status] '+data[idx]['S/N']+' -> '+val+' por '+currentUser);
     if(saved){await notifyChat(data[idx],[{label:'Estatus Físico',before,after:val}],'status');showToast('Status "'+val+'" guardado y notificado','success');}
   }
@@ -2209,6 +2306,7 @@ async function saveBulk() {
   let maxId = Math.max(...data.map(d=>d._id), 0);
   const newRecs = toAdd.map(sn => ({ ...shared, 'S/N': sn, _id: ++maxId }));
   data.push(...newRecs);
+  newRecs.forEach(r => recordNew(r));
 
   // Update progress bar
   document.getElementById('bulkProgressBar').style.width = '60%';
@@ -2241,6 +2339,123 @@ async function saveBulk() {
   btn.disabled = false;
   btn.innerHTML = 'Guardar Todos';
   document.getElementById('bulkProgressWrap').style.display = 'none';
+}
+
+// ── CONSOLIDATE MODULE ────────────────────────────────────────────────────
+const CHANGES_WARN_KB  = 200;  // show yellow warning
+const CHANGES_DANGER_KB = 500; // show red danger
+
+function updateConsolidateBanner() {
+  const changesStr = JSON.stringify(changes_db);
+  const sizeBytes = new TextEncoder().encode(changesStr).length;
+  const sizeKB = Math.round(sizeBytes / 1024);
+  const maxKB = 1000; // 1MB practical limit
+  const pct = Math.min(Math.round(sizeKB / maxKB * 100), 100);
+
+  const banner = document.getElementById('consolidateBanner');
+  const card = document.getElementById('consolidateCard');
+  const title = document.getElementById('consolidateTitle');
+  const sub = document.getElementById('consolidateSub');
+  const fill = document.getElementById('consolidateFill');
+  const btn = document.getElementById('consolidateBtn');
+
+  // Count changes
+  const editCount = Object.keys(changes_db).filter(k => !k.startsWith('__')).length;
+  const newCount = Object.keys(changes_db).filter(k => k.startsWith('__new__')).length;
+  const delCount = Object.keys(changes_db).filter(k => k.startsWith('__deleted__')).length;
+  const totalChanges = editCount + newCount + delCount;
+
+  // Always show banner
+  banner.classList.add('show');
+
+  if (sizeKB >= CHANGES_DANGER_KB) {
+    card.className = 'consolidate-bar-card danger';
+    title.textContent = '⚠️ Archivo de cambios casi lleno — Consolida ahora';
+    fill.className = 'consolidate-fill danger';
+    btn.className = 'btn-consolidate danger';
+  } else if (sizeKB >= CHANGES_WARN_KB) {
+    card.className = 'consolidate-bar-card warn';
+    title.textContent = '⚡ Archivo de cambios grande — Se recomienda consolidar';
+    fill.className = 'consolidate-fill warn';
+    btn.className = 'btn-consolidate';
+  } else {
+    card.className = 'consolidate-bar-card';
+    title.textContent = 'Archivo de cambios';
+    fill.className = 'consolidate-fill ok';
+    btn.className = 'btn-consolidate';
+  }
+
+  sub.textContent = sizeKB + ' KB de ~1,000 KB  |  ' + totalChanges + ' cambio(s): ' +
+    editCount + ' ediciones, ' + newCount + ' nuevos, ' + delCount + ' eliminados';
+  fill.style.width = pct + '%';
+}
+
+async function consolidateInventory() {
+  const totalChanges = Object.keys(changes_db).length;
+  if (totalChanges === 0) {
+    showToast('No hay cambios pendientes de consolidar.', 'info');
+    return;
+  }
+
+  if (!confirm('¿Consolidar el inventario? Esto fusionara todos los cambios en el archivo base y limpiara el archivo de cambios. La operacion puede tardar unos segundos.')) return;
+
+  const btn = document.getElementById('consolidateBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner-sm"></span> Consolidando...';
+  showToast('Consolidando inventario...', 'info');
+
+  try {
+    // Step 1: Get current SHA of base inventory
+    setSyncState('syncing', 'Consolidando...');
+    const metaRes = await fetch(API_URL, { headers: { Authorization: 'token ' + GITHUB_TOKEN } });
+    if (!metaRes.ok) throw new Error('No se pudo obtener el inventario base');
+    const meta = await metaRes.json();
+    currentSHA = meta.sha;
+
+    // Step 2: Save full merged inventory as new base
+    const clean = data.map(r => { const c = {...r}; delete c._id; return c; });
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(clean, null, 2))));
+    const saveRes = await fetch(API_URL, {
+      method: 'PUT',
+      headers: { Authorization: 'token ' + GITHUB_TOKEN, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: '[consolidate] Inventario consolidado por ' + currentUser, content, sha: currentSHA })
+    });
+    if (!saveRes.ok) {
+      const err = await saveRes.json();
+      throw new Error(err.message || 'Error al guardar base');
+    }
+    const saveResult = await saveRes.json();
+    currentSHA = saveResult.content.sha;
+
+    // Step 3: Clear changes file
+    const cMetaRes = await fetch(CHANGES_API, { headers: { Authorization: 'token ' + GITHUB_TOKEN } });
+    if (cMetaRes.ok) {
+      const cMeta = await cMetaRes.json();
+      changesSHA = cMeta.sha;
+    }
+    const emptyContent = btoa('{}');
+    const clearRes = await fetch(CHANGES_API, {
+      method: 'PUT',
+      headers: { Authorization: 'token ' + GITHUB_TOKEN, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: '[consolidate] Limpiar cambios', content: emptyContent, sha: changesSHA })
+    });
+    if (!clearRes.ok) throw new Error('Error al limpiar cambios');
+    const clearResult = await clearRes.json();
+    changesSHA = clearResult.content.sha;
+
+    // Step 4: Reset local changes_db
+    changes_db = {};
+    setSyncState('ok', 'Consolidado');
+    updateConsolidateBanner();
+    showToast('Inventario consolidado exitosamente ✓ (' + clean.length + ' equipos)', 'success');
+
+  } catch(e) {
+    setSyncState('error', 'Error al consolidar');
+    showToast('Error al consolidar: ' + e.message, 'error');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg> Consolidar';
+  }
 }
 
 </script>
