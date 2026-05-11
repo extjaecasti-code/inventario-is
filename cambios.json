@@ -196,5 +196,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "JFZR4D3": {
+    "S/N": "JFZR4D3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "7420",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "PROBLEM SOLVER",
+    "IP": "10.9.69.64",
+    "MAC": "D0:3C:1F:5F:8B:5B",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "W11",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
