@@ -448,5 +448,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Se manda a garantia",
     "Status in Arturito": "In repair"
+  },
+  "H6CTQW3": {
+    "S/N": "H6CTQW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "LOA",
+    "ASIGNACIÓN": "juaflores",
+    "IP": "192.168.1.107",
+    "MAC": "6C:2F:80:FA:0E:8D",
+    "SSID": "",
+    "O.S.": "W11",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "era de Silvia Garcia (BAJA), se le da a juanantonio.flores@mercadolibre.com.mx para proceso LOA",
+    "Status in Arturito": "In Use"
   }
 }
