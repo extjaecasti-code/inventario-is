@@ -235,7 +235,7 @@
   },
   "99J244400221": {
     "S/N": "99J244400221",
-    "ESTATUS FISICO": "In Stock",
+    "ESTATUS FISICO": "In Use",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -249,6 +249,6 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "",
-    "Status in Arturito": "In Stock"
+    "Status in Arturito": "In Use"
   }
 }
