@@ -232,5 +232,23 @@
     "Fullfiment": "MX_Oficina_Melitlan",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "99J244400221": {
+    "S/N": "99J244400221",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZT411",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Docka 45",
+    "IP": "10.9.124.200",
+    "MAC": "48A493EAC3E0",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Stock"
   }
 }
