@@ -268,5 +268,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "99J243804096": {
+    "S/N": "99J243804096",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZT411",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Docka 52",
+    "IP": "10.9.124.27",
+    "MAC": "48A493E12FD8",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
