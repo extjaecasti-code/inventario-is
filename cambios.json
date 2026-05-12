@@ -361,8 +361,8 @@
   },
   "24255524200527": {
     "S/N": "24255524200527",
-    "ESTATUS FISICO": "In repair",
-    "Categoría": "",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
@@ -373,9 +373,9 @@
     "SSID": "MELI-SHIPPING",
     "O.S.": "13.0.0",
     "DEPLOY": "",
-    "Fullfiment": "MXCD11",
-    "Comentarios": "REVISAR",
-    "Status in Arturito": "In repair"
+    "Fullfiment": "MXCD09",
+    "Comentarios": "El equipo se encuentra en MXCD09 a prestamo",
+    "Status in Arturito": "In Use"
   },
   "24320524202445": {
     "S/N": "24320524202445",
