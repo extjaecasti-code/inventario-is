@@ -304,5 +304,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "T3J243103086": {
+    "S/N": "T3J243103086",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZT231",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Docka 62",
+    "IP": "10.9.124.40",
+    "MAC": "8CD54A21F88A",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
