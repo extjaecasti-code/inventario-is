@@ -214,5 +214,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "6YX66F3": {
+    "S/N": "6YX66F3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "FLOW",
+    "ASIGNACIÓN": "BENJAMIN ALVAREZ",
+    "IP": "10.9.69.91",
+    "MAC": "E8C82989FD6E",
+    "SSID": "shipping-corp",
+    "O.S.": "W11",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MX_Oficina_Melitlan",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
