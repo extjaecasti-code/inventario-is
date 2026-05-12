@@ -430,5 +430,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Se manda a reparacion, se encuentra dañado la base",
     "Status in Arturito": "In repair"
+  },
+  "XXRBN244003748": {
+    "S/N": "XXRBN244003748",
+    "ESTATUS FISICO": "In repair",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "Zebra",
+    "MODELO": "ZQ521",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "P2S",
+    "IP": "10.9.124.122",
+    "MAC": "8CD54A1EDF4C",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se manda a garantia",
+    "Status in Arturito": "In repair"
   }
 }
