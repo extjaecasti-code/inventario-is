@@ -574,5 +574,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Stock"
+  },
+  "HVA7GMMN": {
+    "S/N": "HVA7GMMN",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Tablet",
+    "DISPOSITIVO": "Tablet",
+    "MARCA": "Lenovo",
+    "MODELO": "Lenovo TB330FU",
+    "AREA": "ICQA",
+    "ASIGNACIÓN": "Spotify",
+    "IP": "10.9.69.111",
+    "MAC": "E0:1F:FC:78:57:87",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
