@@ -294,8 +294,8 @@
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
     "MODELO": "ZT411",
-    "AREA": "INTERNAL SYSTEMS",
-    "ASIGNACIÓN": "MDF",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Docka 55",
     "IP": "10.9.124.199",
     "MAC": "9075DE06610A",
     "SSID": "MELI-IOT",
@@ -574,23 +574,5 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Stock"
-  },
-  "HVA7GMMN": {
-    "S/N": "HVA7GMMN",
-    "ESTATUS FISICO": "In Use",
-    "Categoría": "Tablet",
-    "DISPOSITIVO": "Tablet",
-    "MARCA": "Lenovo",
-    "MODELO": "Lenovo TB330FU",
-    "AREA": "ICQA",
-    "ASIGNACIÓN": "Spotify",
-    "IP": "10.9.69.111",
-    "MAC": "E0:1F:FC:78:57:87",
-    "SSID": "",
-    "O.S.": "",
-    "DEPLOY": "",
-    "Fullfiment": "MXCD11",
-    "Comentarios": "",
-    "Status in Arturito": "In Use"
   }
 }
