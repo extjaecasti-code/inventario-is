@@ -139,6 +139,25 @@ tbody tr:hover .row-actions{opacity:1;}
 .toast.success{background:var(--green);}.toast.error{background:var(--red);}.toast.info{background:var(--ml-blue);}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}}
 .spinner-sm{width:13px;height:13px;border:2px solid rgba(255,255,255,0.4);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;flex-shrink:0;}
+/* ── SPIDER COMPARATIVO ── */
+.spider-upload-zone{border:2px dashed var(--border2);border-radius:12px;padding:40px 24px;text-align:center;cursor:pointer;transition:all .2s;background:var(--surface2);}
+.spider-upload-zone:hover,.spider-upload-zone.drag{border-color:var(--ml-blue);background:var(--ml-blue-light);}
+.spider-upload-zone .icon{font-size:40px;margin-bottom:12px;}
+.spider-upload-zone p{font-size:14px;color:var(--text2);margin-bottom:6px;}
+.spider-upload-zone small{font-size:12px;color:var(--text3);}
+.diff-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;white-space:nowrap;}
+.diff-badge.match{background:var(--green-bg);color:var(--green);}
+.diff-badge.diff{background:var(--red-bg);color:var(--red);}
+.diff-badge.only-spider{background:var(--yellow-bg);color:var(--yellow-s);}
+.diff-badge.only-inv{background:var(--purple-bg);color:var(--purple);}
+.diff-field{display:inline-flex;flex-direction:column;font-size:11px;margin:1px 0;}
+.diff-field .old{color:var(--red);text-decoration:line-through;opacity:.8;}
+.diff-field .new{color:var(--green);font-weight:700;}
+.spider-stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;}
+.spider-stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;min-width:120px;flex:1;}
+.spider-stat .val{font-size:22px;font-weight:700;}
+.spider-stat .lbl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.8px;font-weight:600;margin-top:2px;}
+
 /* ── RECENTLY MODIFIED ── */
 .btn-recent{background:#fff;color:var(--purple);border:1px solid var(--border2);}
 .btn-recent:hover{border-color:var(--purple);background:var(--purple-bg);}
@@ -426,6 +445,11 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
       Auditorías
       <span class="tab-badge" id="auditBadge">0</span>
     </div>
+    <div class="nav-tab" id="tab-spider" onclick="switchTab('spider')">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      Spider
+      <span class="tab-badge" id="spiderBadge" style="background:var(--red)">0</span>
+    </div>
   </div>
 
   <!-- CONSOLIDATE BANNER -->
@@ -626,6 +650,79 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
       </div>
     </div>
   </div><!-- /panel-audit -->
+  <!-- SPIDER PANEL -->
+  <div class="tab-panel" id="panel-spider">
+    <div style="padding:20px 24px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <div>
+        <h2 style="font-size:18px;font-weight:700;color:var(--text)">Comparativo Spider vs Inventario IS</h2>
+        <p style="font-size:12px;color:var(--text3);margin-top:4px">Sube el CSV exportado de BigQuery para comparar con el inventario actual</p>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-ghost" id="spiderFilterAll" onclick="filterSpider('all')" style="font-size:12px">Todos</button>
+        <button class="btn btn-ghost" id="spiderFilterDiff" onclick="filterSpider('diff')" style="font-size:12px">Solo diferencias</button>
+        <button class="btn btn-ghost" id="spiderFilterOnly" onclick="filterSpider('only-spider')" style="font-size:12px">Solo en Spider</button>
+        <button class="btn btn-export" onclick="exportSpiderDiff()" style="font-size:12px">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Exportar diferencias
+        </button>
+      </div>
+    </div>
+
+    <!-- UPLOAD ZONE -->
+    <div style="padding:16px 24px" id="spiderUploadSection">
+      <div class="spider-upload-zone" id="spiderDropZone"
+           onclick="document.getElementById('spiderFileInput').click()"
+           ondragover="event.preventDefault();this.classList.add('drag')"
+           ondragleave="this.classList.remove('drag')"
+           ondrop="handleSpiderDrop(event)">
+        <div class="icon">📊</div>
+        <p>Arrastra el CSV de BigQuery aquí o haz click para seleccionarlo</p>
+        <small>Archivo CSV exportado de la consulta de Spider · MXCD11</small>
+      </div>
+      <input type="file" id="spiderFileInput" accept=".csv" style="display:none" onchange="loadSpiderCSV(this)">
+    </div>
+
+    <!-- STATS -->
+    <div style="padding:0 24px" id="spiderStatsSection" style="display:none">
+      <div class="spider-stats">
+        <div class="spider-stat"><div class="val" id="spSTotal" style="color:var(--ml-blue)">0</div><div class="lbl">Total Spider</div></div>
+        <div class="spider-stat"><div class="val" id="spSMatch" style="color:var(--green)">0</div><div class="lbl">Coinciden</div></div>
+        <div class="spider-stat"><div class="val" id="spSDiff" style="color:var(--red)">0</div><div class="lbl">Diferencias</div></div>
+        <div class="spider-stat"><div class="val" id="spSOnlySpider" style="color:var(--yellow-s)">0</div><div class="lbl">Solo en Spider</div></div>
+        <div class="spider-stat"><div class="val" id="spSOnlyInv" style="color:var(--purple)">0</div><div class="lbl">Solo en Inventario</div></div>
+      </div>
+    </div>
+
+    <!-- TABLE -->
+    <div style="padding:0 24px 90px" id="spiderTableSection" style="display:none">
+      <div class="table-card">
+        <div class="result-count" id="spiderResultCount">Sube un CSV para comenzar</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr>
+              <th>SERIAL / S/N</th>
+              <th>Estado</th>
+              <th>Status Spider</th>
+              <th>Status Inventario</th>
+              <th>Categoria</th>
+              <th>Modelo</th>
+              <th>Fabricante</th>
+              <th>Asignacion Spider</th>
+              <th>Asignacion Inventario</th>
+              <th>Diferencias</th>
+              <th>Accion</th>
+            </tr></thead>
+            <tbody id="spiderTableBody"></tbody>
+          </table>
+          <div id="spiderEmpty" class="empty-state" style="display:none">
+            <div class="icon">📊</div>
+            <p>Sube el CSV de BigQuery para ver el comparativo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /panel-spider -->
+
 
   <div class="pager">
     <span class="page-info" id="pageInfo">—</span>
@@ -1488,7 +1585,6 @@ function switchTab(tab) {
   document.getElementById('tab-' + tab).classList.add('active');
   document.getElementById('panel-' + tab).classList.add('active');
   if (tab === 'audit') renderAuditTab();
-  // hide/show pager
   document.querySelector('.pager').style.display = tab === 'inventory' ? 'flex' : 'none';
 }
 
@@ -2618,6 +2714,257 @@ function filterRecent(days) {
 }
 
 loadChangelog(); // async - loads from GitHub
+
+// ── SPIDER COMPARATIVO ────────────────────────────────────────────────────
+let spiderData = [];      // parsed CSV rows from BigQuery
+let spiderResults = [];   // comparison results
+
+// Map Spider columns to our inventory fields
+const SPIDER_MAP = {
+  serial:    'SERIAL',
+  status:    'STATUS',
+  categoria: 'CATEGORIA',
+  modelo:    'MODELO',
+  fabricante:'FABRICANTE',
+  location:  'LOCATION',
+  username:  'USERNAME',
+  name:      'NAME',
+  asset_tag: 'ASSET_TAG',
+  sublocation:'SUBLOCATION',
+  proveedor: 'PROVEEDOR',
+  updated:   'SNP_ASSET_UPDATED_AT'
+};
+
+// Spider status → our status mapping
+const STATUS_MAP = {
+  'ready to deploy': 'In Stock',
+  'deployed':        'In Use',
+  'in stock':        'In Stock',
+  'in use':          'In Use',
+  'out for repair':  'In repair',
+  'lost/missing':    'Missed',
+  'archived':        'Retired',
+};
+
+function normalizeSpiderStatus(s) {
+  if(!s) return '';
+  const l = s.trim().toLowerCase();
+  return STATUS_MAP[l] || s.trim();
+}
+
+function parseCSV(text) {
+  const lines = text.split(/\r?\n/).filter(Boolean);
+  if(!lines.length) return [];
+  // Detect delimiter
+  const delim = lines[0].includes('\t') ? '\t' : ',';
+  const headers = lines[0].split(delim).map(h => h.trim().replace(/^"|"$/g,'').toUpperCase());
+  return lines.slice(1).map(line => {
+    const vals = [];
+    let cur='', inQ=false;
+    for(let i=0;i<line.length;i++){
+      const ch=line[i];
+      if(ch==='"'){inQ=!inQ;}
+      else if(ch===delim&&!inQ){vals.push(cur.trim());cur='';}
+      else cur+=ch;
+    }
+    vals.push(cur.trim());
+    const obj={};
+    headers.forEach((h,i)=>{ obj[h]=(vals[i]||'').replace(/^"|"$/g,''); });
+    return obj;
+  }).filter(r => r['SERIAL'] || r['SERIAL ']);
+}
+
+function handleSpiderDrop(e) {
+  e.preventDefault();
+  document.getElementById('spiderDropZone').classList.remove('drag');
+  const file = e.dataTransfer.files[0];
+  if(file) processSpiderFile(file);
+}
+
+function loadSpiderCSV(input) {
+  const file = input.files[0];
+  if(file) processSpiderFile(file);
+}
+
+function processSpiderFile(file) {
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const text = e.target.result;
+    spiderData = parseCSV(text);
+    if(!spiderData.length) { showToast('No se pudo leer el CSV o está vacío', 'error'); return; }
+    showToast('CSV cargado: ' + spiderData.length + ' registros de Spider', 'success');
+    compareSpiderWithInventory();
+  };
+  reader.readAsText(file, 'UTF-8');
+}
+
+function compareSpiderWithInventory() {
+  const invBySN = {};
+  data.forEach(d => { if(d['S/N']) invBySN[d['S/N'].trim().toUpperCase()] = d; });
+
+  spiderResults = spiderData.map(spRow => {
+    const sn = (spRow['SERIAL'] || '').trim().toUpperCase();
+    const inv = invBySN[sn];
+    const spStatus = normalizeSpiderStatus(spRow['STATUS'] || '');
+    const invStatus = inv ? normalizeStatus(inv['ESTATUS FISICO'] || '') : '';
+    const spCat = (spRow['CATEGORIA'] || '').trim();
+    const invCat = inv ? (inv['Categoría'] || '').trim() : '';
+    const spModelo = (spRow['MODELO'] || '').trim();
+    const invModelo = inv ? (inv['MODELO'] || '').trim() : '';
+    const spFab = (spRow['FABRICANTE'] || '').trim();
+    const invFab = inv ? (inv['MARCA'] || '').trim() : '';
+    const spUser = (spRow['USERNAME'] || '').trim();
+    const invUser = inv ? (inv['ASIGNACIÓN'] || '').trim() : '';
+
+    const diffs = [];
+    if(inv) {
+      if(spStatus && invStatus && spStatus.toLowerCase() !== invStatus.toLowerCase())
+        diffs.push({field:'Status', spider:spStatus, inv:invStatus});
+      if(spCat && invCat && spCat.toLowerCase() !== invCat.toLowerCase())
+        diffs.push({field:'Categoria', spider:spCat, inv:invCat});
+      if(spModelo && invModelo && spModelo.toLowerCase() !== invModelo.toLowerCase())
+        diffs.push({field:'Modelo', spider:spModelo, inv:invModelo});
+      if(spFab && invFab && spFab.toLowerCase() !== invFab.toLowerCase())
+        diffs.push({field:'Fabricante', spider:spFab, inv:invFab});
+      if(spUser && invUser && spUser.toLowerCase() !== invUser.toLowerCase())
+        diffs.push({field:'Asignacion', spider:spUser, inv:invUser});
+    }
+
+    const state = !inv ? 'only-spider' : diffs.length > 0 ? 'diff' : 'match';
+
+    return { sn, spRow, inv, spStatus, invStatus, spCat, invCat,
+             spModelo, invModelo, spFab, invFab, spUser, invUser,
+             diffs, state };
+  });
+
+  // Find equipos only in inventory (not in Spider)
+  const spiderSNs = new Set(spiderResults.map(r => r.sn));
+  const onlyInv = data.filter(d => d['S/N'] && !spiderSNs.has(d['S/N'].trim().toUpperCase()));
+
+  // Stats
+  const total = spiderResults.length;
+  const match = spiderResults.filter(r => r.state==='match').length;
+  const diff = spiderResults.filter(r => r.state==='diff').length;
+  const onlySpider = spiderResults.filter(r => r.state==='only-spider').length;
+
+  document.getElementById('spSTotal').textContent = total.toLocaleString();
+  document.getElementById('spSMatch').textContent = match.toLocaleString();
+  document.getElementById('spSDiff').textContent = diff.toLocaleString();
+  document.getElementById('spSOnlySpider').textContent = onlySpider.toLocaleString();
+  document.getElementById('spSOnlyInv').textContent = onlyInv.length.toLocaleString();
+  document.getElementById('spiderBadge').textContent = (diff + onlySpider).toString();
+
+  document.getElementById('spiderStatsSection').style.display = '';
+  document.getElementById('spiderTableSection').style.display = '';
+  document.getElementById('spiderUploadSection').style.display = 'none';
+
+  filterSpider('diff'); // default: show differences
+}
+
+function filterSpider(filter) {
+  // Highlight active button
+  ['spiderFilterAll','spiderFilterDiff','spiderFilterOnly'].forEach(id => {
+    const b = document.getElementById(id);
+    if(b){ b.style.borderColor=''; b.style.color=''; b.style.background=''; }
+  });
+
+  let rows = spiderResults;
+  if(filter === 'diff') rows = spiderResults.filter(r => r.state === 'diff');
+  else if(filter === 'only-spider') rows = spiderResults.filter(r => r.state === 'only-spider');
+
+  document.getElementById('spiderResultCount').textContent =
+    rows.length + ' registro(s) — ' +
+    (filter==='diff' ? 'con diferencias' : filter==='only-spider' ? 'solo en Spider' : 'todos');
+
+  const tbody = document.getElementById('spiderTableBody');
+  const empty = document.getElementById('spiderEmpty');
+
+  if(!rows.length){ tbody.innerHTML=''; empty.style.display=''; return; }
+  empty.style.display='none';
+
+  const stateLabel = {
+    'match':       '<span class="diff-badge match">&#10003; Coincide</span>',
+    'diff':        '<span class="diff-badge diff">&#9888; Diferente</span>',
+    'only-spider': '<span class="diff-badge only-spider">Solo Spider</span>',
+    'only-inv':    '<span class="diff-badge only-inv">Solo Inventario</span>',
+  };
+
+  tbody.innerHTML = rows.map(r => {
+    const diffsHtml = r.diffs.map(d =>
+      '<div class="diff-field"><span style="font-size:10px;color:var(--text3)">' + d.field + ':</span>' +
+      '<span class="old">' + esc(d.spider) + '</span>' +
+      '<span class="new">' + esc(d.inv) + '</span></div>'
+    ).join('');
+
+    const actionBtn = r.state === 'diff' && r.diffs.some(d => d.field === 'Status')
+      ? '<button class="btn btn-primary" style="font-size:11px;padding:4px 10px" onclick="applySpiderStatus(\'' + r.sn + '\',\'' + r.invStatus + '\')" title="Actualizar status en inventario">' +
+        '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Aplicar</button>'
+      : '—';
+
+    return '<tr style="' + (r.state==='diff'?'background:rgba(224,32,32,.03)':r.state==='only-spider'?'background:rgba(245,166,35,.04)':'') + '">'
+      + '<td style="font-family:monospace;font-size:12px;color:var(--ml-blue);font-weight:700">' + esc(r.sn) + '</td>'
+      + '<td>' + (stateLabel[r.state]||'') + '</td>'
+      + '<td style="font-size:12px">' + esc(r.spStatus||'—') + '</td>'
+      + '<td style="font-size:12px">' + esc(r.invStatus||'—') + '</td>'
+      + '<td style="font-size:12px">' + esc(r.spCat||'—') + '</td>'
+      + '<td style="font-family:monospace;font-size:11px">' + esc(r.spModelo||'—') + '</td>'
+      + '<td style="font-size:12px">' + esc(r.spFab||'—') + '</td>'
+      + '<td style="font-size:12px;max-width:120px;overflow:hidden;text-overflow:ellipsis">' + esc(r.spUser||'—') + '</td>'
+      + '<td style="font-size:12px;max-width:120px;overflow:hidden;text-overflow:ellipsis">' + esc(r.invUser||'—') + '</td>'
+      + '<td style="min-width:160px">' + (diffsHtml || '<span style="font-size:11px;color:var(--green)">Sin diferencias</span>') + '</td>'
+      + '<td>' + actionBtn + '</td>'
+      + '</tr>';
+  }).join('');
+}
+
+async function applySpiderStatus(sn, currentInvStatus) {
+  // Find the spider row to get its status
+  const res = spiderResults.find(r => r.sn === sn);
+  if(!res) return;
+  const spiderStatus = res.spStatus;
+  if(!spiderStatus) return;
+
+  if(!confirm('Actualizar status de ' + sn + ' de "' + currentInvStatus + '" a "' + spiderStatus + '" (status de Spider)?')) return;
+
+  const idx = data.findIndex(d => d['S/N'] && d['S/N'].toUpperCase() === sn);
+  if(idx < 0) { showToast('Equipo no encontrado en inventario', 'error'); return; }
+
+  const before = data[idx]['ESTATUS FISICO'];
+  data[idx]['ESTATUS FISICO'] = spiderStatus;
+  data[idx]['Status in Arturito'] = spiderStatus;
+
+  if(typeof recordChange === 'function')
+    recordChange(sn, {'ESTATUS FISICO': spiderStatus, 'Status in Arturito': spiderStatus});
+
+  const saved = await saveToGitHub('[spider-sync] ' + sn + ' status -> ' + spiderStatus + ' por ' + currentUser);
+  if(saved) {
+    if(typeof addToChangelog === 'function')
+      await addToChangelog(sn, (data[idx]['DISPOSITIVO']||'')+' '+(data[idx]['MARCA']||''), data[idx]['AREA'],
+        [{label:'Status (Spider sync)', before:before, after:spiderStatus}], currentUser);
+    showToast('Status actualizado a "' + spiderStatus + '" ✓', 'success');
+    // Re-run comparison to update table
+    compareSpiderWithInventory();
+    applyFilters();
+  }
+}
+
+function exportSpiderDiff() {
+  const diffs = spiderResults.filter(r => r.state !== 'match');
+  if(!diffs.length) { showToast('No hay diferencias para exportar', 'info'); return; }
+  const cols = ['SERIAL','ESTADO','STATUS_SPIDER','STATUS_INVENTARIO','CATEGORIA','MODELO','FABRICANTE','USUARIO_SPIDER','USUARIO_INVENTARIO','CAMPOS_DIFERENTES'];
+  const rows = [cols.join(',')];
+  diffs.forEach(r => {
+    const diffStr = r.diffs.map(d => d.field+': '+d.spider+' vs '+d.inv).join(' | ');
+    const vals = [r.sn, r.state, r.spStatus, r.invStatus, r.spCat, r.spModelo, r.spFab, r.spUser, r.invUser, diffStr];
+    rows.push(vals.map(v => { const s=String(v||'').replace(/"/g,'""'); return s.includes(',')||s.includes('"')?'"'+s+'"':s; }).join(','));
+  });
+  const blob = new Blob([rows.join('\n')], {type:'text/csv;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'diferencias_spider_' + new Date().toISOString().slice(0,10) + '.csv';
+  a.click();
+  showToast('CSV exportado: ' + diffs.length + ' diferencias', 'success');
+}
 
 </script>
 </body>
