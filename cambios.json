@@ -718,5 +718,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "9B2348A05314": {
+    "S/N": "9B2348A05314",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "UPS",
+    "DISPOSITIVO": "UPS",
+    "MARCA": "APC",
+    "MODELO": "BV1000",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "FINGER 5",
+    "IP": "#N/A",
+    "MAC": "#N/A",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
