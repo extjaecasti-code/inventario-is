@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "sn": "0WXBTFQI24048091",
+    "device": "Meet Google Meet",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "PRUEBA"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-13T14:27:01.504Z"
+  }
+]
