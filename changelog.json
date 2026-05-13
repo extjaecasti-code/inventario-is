@@ -1,5 +1,19 @@
 [
   {
+    "sn": "0WXBTFQI24048091",
+    "device": "Meet Google Meet",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Comentarios",
+        "before": "PRUEBA",
+        "after": "PRUEBA 1"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-05-13T20:11:32.229Z"
+  },
+  {
     "sn": "8XCFSB4",
     "device": "Laptop DELL",
     "area": "INBOUND",
@@ -12,19 +26,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-13T17:20:34.324Z"
-  },
-  {
-    "sn": "0WXBTFQI24048091",
-    "device": "Meet Google Meet",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "PRUEBA"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-13T14:27:01.504Z"
   }
 ]
