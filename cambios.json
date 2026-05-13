@@ -466,5 +466,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "era de Silvia Garcia (BAJA), se le da a juanantonio.flores@mercadolibre.com.mx para proceso LOA",
     "Status in Arturito": "In Use"
+  },
+  "6QJZRW3": {
+    "S/N": "6QJZRW3",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "10.9.112.22",
+    "MAC": "",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "Chrome Flex",
+    "DEPLOY": "CHROME OS",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Stock"
   }
 }
