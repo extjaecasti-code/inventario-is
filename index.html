@@ -446,7 +446,7 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
       <span class="tab-badge" id="auditBadge">0</span>
     </div>
     <div class="nav-tab" id="tab-spider" onclick="switchTab('spider')">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      🕷️
       Spider
       <span class="tab-badge" id="spiderBadge" style="background:var(--red)">0</span>
     </div>
@@ -2748,8 +2748,10 @@ const STATUS_MAP = {
 
 function normalizeSpiderStatus(s) {
   if(!s) return '';
-  const l = s.trim().toLowerCase();
-  return STATUS_MAP[l] || s.trim();
+  // Remove anything in parentheses: "In Stock (Operational Backup)" -> "In Stock"
+  const clean = s.replace(/\s*\(.*?\)/g, '').trim();
+  const l = clean.toLowerCase();
+  return STATUS_MAP[l] || clean;
 }
 
 function parseCSV(text) {
@@ -2818,16 +2820,9 @@ function compareSpiderWithInventory() {
 
     const diffs = [];
     if(inv) {
+      // Only compare Status
       if(spStatus && invStatus && spStatus.toLowerCase() !== invStatus.toLowerCase())
         diffs.push({field:'Status', spider:spStatus, inv:invStatus});
-      if(spCat && invCat && spCat.toLowerCase() !== invCat.toLowerCase())
-        diffs.push({field:'Categoria', spider:spCat, inv:invCat});
-      if(spModelo && invModelo && spModelo.toLowerCase() !== invModelo.toLowerCase())
-        diffs.push({field:'Modelo', spider:spModelo, inv:invModelo});
-      if(spFab && invFab && spFab.toLowerCase() !== invFab.toLowerCase())
-        diffs.push({field:'Fabricante', spider:spFab, inv:invFab});
-      if(spUser && invUser && spUser.toLowerCase() !== invUser.toLowerCase())
-        diffs.push({field:'Asignacion', spider:spUser, inv:invUser});
     }
 
     const state = !inv ? 'only-spider' : diffs.length > 0 ? 'diff' : 'match';
