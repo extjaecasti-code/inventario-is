@@ -1,5 +1,29 @@
 [
   {
+    "sn": "OFU6HCBY300730",
+    "device": "MONITOR 55 SAMSUNG",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "ICQA"
+      },
+      {
+        "label": "Asignación",
+        "before": "",
+        "after": "MESA TL ICQA"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-14T17:54:07.820Z"
+  },
+  {
     "sn": "9B2348A05091",
     "device": "UPS APC",
     "area": "INBOUND",
