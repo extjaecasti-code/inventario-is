@@ -1,5 +1,19 @@
 [
   {
+    "sn": "7X10SW3",
+    "device": "Laptop DELL",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "MESA 1",
+        "after": "MESA ICQA FOTOS"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-14T17:48:07.059Z"
+  },
+  {
     "sn": "99J243803132",
     "device": "Impresora ZEBRA",
     "area": "INBOUND",
