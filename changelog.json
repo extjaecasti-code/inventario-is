@@ -1,5 +1,19 @@
 [
   {
+    "sn": "25294B0724",
+    "device": "Handheld Honeywell",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Status (Spider sync)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-14T17:11:27.920Z"
+  },
+  {
     "sn": "HVA7GMMN",
     "device": "Tablet Lenovo",
     "area": "ICQA",
