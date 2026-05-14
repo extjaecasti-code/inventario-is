@@ -56,5 +56,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "9B2348A05091": {
+    "S/N": "9B2348A05091",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "UPS",
+    "DISPOSITIVO": "UPS",
+    "MARCA": "APC",
+    "MODELO": "BV1000",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "MESA ICQA FOTOS",
+    "IP": "#N/A",
+    "MAC": "#N/A",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
