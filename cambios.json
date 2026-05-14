@@ -38,5 +38,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "24072010550836": {
+    "S/N": "24072010550836",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Scanner",
+    "DISPOSITIVO": "Scanner",
+    "MARCA": "ZEBRA",
+    "MODELO": "DS8178",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "MESA ICQA FOTOS",
+    "IP": "#N/A",
+    "MAC": "#N/A",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
