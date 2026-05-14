@@ -1,5 +1,19 @@
 [
   {
+    "sn": "HVA7GMMN",
+    "device": "Tablet Lenovo",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "ICQA",
+        "after": "Spotify"
+      }
+    ],
+    "user": "Erick Agustín Crisóstomo Sanchez",
+    "ts": "2026-05-14T14:31:54.979Z"
+  },
+  {
     "sn": "0WXBTFQI24048091",
     "device": "Meet Google Meet",
     "area": "OUTBOUND",
