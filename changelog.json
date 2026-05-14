@@ -1,5 +1,19 @@
 [
   {
+    "sn": "99J243803132",
+    "device": "Impresora ZEBRA",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "MESA 1",
+        "after": "MESA ICQA FOTOS"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-14T17:47:44.360Z"
+  },
+  {
     "sn": "25294B0724",
     "device": "Handheld Honeywell",
     "area": "INTERNAL SYSTEMS",
