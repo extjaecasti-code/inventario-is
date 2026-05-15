@@ -118,5 +118,23 @@
   "24248524204955": {
     "ESTATUS FISICO": "In Stock",
     "Status in Arturito": "In Stock"
+  },
+  "__new__7ZLC6F3": {
+    "S/N": "7ZLC6F3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "dpolovaldez",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "Se entrega laptop a LOA Polo \nlaptop de EX TL",
+    "Status in Arturito": "In Use"
   }
 }
