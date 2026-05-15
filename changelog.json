@@ -1,5 +1,24 @@
 [
   {
+    "sn": "BWK4XD3",
+    "device": "Laptop DELL",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "LOA",
+        "after": "Cristian Guerrero LOA"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Se asigna laptop para LOA de IB",
+        "after": "Se asigna laptop para LOA de IB a Cristian Guerrero"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-15T12:42:51.077Z"
+  },
+  {
     "sn": "OFU6HCBY300730",
     "device": "MONITOR 55 SAMSUNG",
     "area": "ICQA",
