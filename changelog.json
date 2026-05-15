@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24248524204994",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Status (Spider sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-15T17:00:57.786Z"
+  },
+  {
     "sn": "BWK4XD3",
     "device": "Laptop DELL",
     "area": "INBOUND",
