@@ -92,5 +92,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "BWK4XD3": {
+    "S/N": "BWK4XD3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "7420",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "Cristian Guerrero LOA",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se asigna laptop para LOA de IB a Cristian Guerrero",
+    "Status in Arturito": "In Use"
   }
 }
