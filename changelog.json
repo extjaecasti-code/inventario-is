@@ -1,5 +1,19 @@
 [
   {
+    "sn": "TH0HRR76CHG0047V0C9LA00",
+    "device": "Cargador DELL",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Categoría",
+        "before": "Notebook",
+        "after": "Accesorio"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-18T19:21:36.799Z"
+  },
+  {
     "sn": "TH0HRR76CHG0047V0M10A00",
     "device": "Cargador DELL",
     "area": "OUTBOUND",
@@ -26,20 +40,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-18T19:20:32.932Z"
-  },
-  {
-    "sn": "TH0HRR76CHG0047V0C9LA00",
-    "device": "Cargador DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-18T19:19:36.301Z"
   },
   {
     "sn": "6J65903",
