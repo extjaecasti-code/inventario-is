@@ -190,5 +190,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "FINGER -",
     "Status in Arturito": "In Use"
+  },
+  "3CCZRW3": {
+    "S/N": "3CCZRW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "10.9.112.21",
+    "MAC": "",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "Chrome Flex",
+    "DEPLOY": "CHROME OS",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "FINGER - ",
+    "Status in Arturito": "In Use"
   }
 }
