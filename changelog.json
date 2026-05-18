@@ -1,5 +1,24 @@
 [
   {
+    "sn": "6J65903",
+    "device": "Mini Desktop DELL",
+    "area": "ESFERA OB",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "ACTIVO FIJO",
+        "after": "ESFERA OB"
+      },
+      {
+        "label": "Asignación",
+        "before": "Sauron",
+        "after": "XIBO"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-18T19:15:04.534Z"
+  },
+  {
     "sn": "606ZRW3",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEM",
