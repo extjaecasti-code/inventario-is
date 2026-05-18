@@ -136,5 +136,23 @@
     "Fullfiment": "",
     "Comentarios": "Se entrega laptop a LOA Polo \nlaptop de EX TL",
     "Status in Arturito": "In Use"
+  },
+  "0WXBTFQI24048091": {
+    "S/N": "0WXBTFQI24048091",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Videoconferences",
+    "DISPOSITIVO": "Meet",
+    "MARCA": "Google Meet",
+    "MODELO": "AX211NGW",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Tepotzotlan",
+    "IP": "#N/A",
+    "MAC": "#N/A",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
