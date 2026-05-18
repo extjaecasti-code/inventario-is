@@ -1,5 +1,24 @@
 [
   {
+    "sn": "C16ZRW3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "FINGER -"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-18T19:06:23.604Z"
+  },
+  {
     "sn": "0WXBTFQI24048091",
     "device": "Meet Google Meet",
     "area": "OUTBOUND",
