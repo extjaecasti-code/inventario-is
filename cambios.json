@@ -384,5 +384,23 @@
     "Fullfiment": "",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "25294B0737": {
+    "S/N": "25294B0737",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "Honeywell",
+    "MODELO": "CT47",
+    "AREA": "INTERNAL SYSTEMS",
+    "ASIGNACIÓN": "MDF",
+    "IP": "192.168.1.96",
+    "MAC": "",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "13.0.0",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "SIM CON NUMERO: 55 3986 9909",
+    "Status in Arturito": "In Use"
   }
 }
