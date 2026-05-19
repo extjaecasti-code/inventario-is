@@ -162,15 +162,15 @@
     "DISPOSITIVO": "Laptop",
     "MARCA": "DELL",
     "MODELO": "5450",
-    "AREA": "INTERNAL SYSTEM",
-    "ASIGNACIÓN": "MDF",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "FINGER 9",
     "IP": "10.9.112.25",
     "MAC": "",
     "SSID": "MELI-SHIPPING",
     "O.S.": "Chrome Flex",
     "DEPLOY": "CHROME OS",
     "Fullfiment": "MXCD11",
-    "Comentarios": "FINGER - ",
+    "Comentarios": "",
     "Status in Arturito": "In Use"
   },
   "DP0ZRW3": {
