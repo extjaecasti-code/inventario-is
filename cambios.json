@@ -1,21 +1,7 @@
 {
   "25294B0724": {
     "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "S/N": "25294B0724",
-    "Categoría": "Handheld",
-    "DISPOSITIVO": "Handheld",
-    "MARCA": "Honeywell",
-    "MODELO": "CT47",
-    "AREA": "INTERNAL SYSTEMS",
-    "ASIGNACIÓN": "MDF",
-    "IP": "192.168.1.110",
-    "MAC": "",
-    "SSID": "",
-    "O.S.": "",
-    "DEPLOY": "",
-    "Fullfiment": "MXCD11",
-    "Comentarios": "SIM CON NUMERO: 33 1398 0504"
+    "Status in Arturito": "In Use"
   },
   "99J243803132": {
     "S/N": "99J243803132",
@@ -230,15 +216,15 @@
     "DISPOSITIVO": "Laptop",
     "MARCA": "DELL",
     "MODELO": "5450",
-    "AREA": "INTERNAL SYSTEM",
-    "ASIGNACIÓN": "MDF",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "FINGER 2",
     "IP": "10.9.112.6",
     "MAC": "",
     "SSID": "MELI-SHIPPING",
     "O.S.": "Chrome Flex",
     "DEPLOY": "CHROME OS",
     "Fullfiment": "MXCD11",
-    "Comentarios": "FINGER -",
+    "Comentarios": "",
     "Status in Arturito": "In Use"
   },
   "6J65903": {
@@ -383,24 +369,6 @@
     "DEPLOY": "",
     "Fullfiment": "",
     "Comentarios": "",
-    "Status in Arturito": "In Use"
-  },
-  "25294B0737": {
-    "S/N": "25294B0737",
-    "ESTATUS FISICO": "In Use",
-    "Categoría": "Handheld",
-    "DISPOSITIVO": "Handheld",
-    "MARCA": "Honeywell",
-    "MODELO": "CT47",
-    "AREA": "INTERNAL SYSTEMS",
-    "ASIGNACIÓN": "MDF",
-    "IP": "192.168.1.96",
-    "MAC": "",
-    "SSID": "MELI-SHIPPING",
-    "O.S.": "13.0.0",
-    "DEPLOY": "",
-    "Fullfiment": "MXCD11",
-    "Comentarios": "SIM CON NUMERO: 55 3986 9909",
     "Status in Arturito": "In Use"
   }
 }
