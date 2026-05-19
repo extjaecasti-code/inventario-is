@@ -1,5 +1,19 @@
 [
   {
+    "sn": "23042D84BA",
+    "device": "Handheld Honeywell",
+    "area": "Caseta MX11",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-05-19T20:07:51.409Z"
+  },
+  {
     "sn": "XXRBN244003870",
     "device": "Impresora Zebra",
     "area": "ACTIVO FIJO",
