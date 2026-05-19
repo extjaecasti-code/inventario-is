@@ -424,5 +424,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "SIM con numero: 33 1249 5022",
     "Status in Arturito": "In Use"
+  },
+  "23180D814D": {
+    "S/N": "23180D814D",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "Honeeywell",
+    "MODELO": "CT60",
+    "AREA": "LP",
+    "ASIGNACIÓN": "Caseta MX11",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "SIM con número: 33 1022 3050",
+    "Status in Arturito": "In Use"
   }
 }
