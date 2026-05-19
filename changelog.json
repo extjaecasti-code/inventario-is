@@ -1,5 +1,29 @@
 [
   {
+    "sn": "3CCZRW3",
+    "device": "Laptop DELL",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEM",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "FINGER 6"
+      },
+      {
+        "label": "Comentarios",
+        "before": "FINGER -",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-19T12:49:43.557Z"
+  },
+  {
     "sn": "CX5ZRW3",
     "device": "Laptop DELL",
     "area": "OUTBOUND",
@@ -135,25 +159,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-18T19:15:04.534Z"
-  },
-  {
-    "sn": "3CCZRW3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "FINGER -"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-18T19:14:15.512Z"
   },
   {
     "sn": "DP0ZRW3",
