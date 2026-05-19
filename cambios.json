@@ -1,7 +1,21 @@
 {
   "25294B0724": {
     "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use"
+    "Status in Arturito": "In Use",
+    "S/N": "25294B0724",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "Honeywell",
+    "MODELO": "CT47",
+    "AREA": "INTERNAL SYSTEMS",
+    "ASIGNACIÓN": "MDF",
+    "IP": "192.168.1.110",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "SIM CON NUMERO: 33 1398 0504"
   },
   "99J243803132": {
     "S/N": "99J243803132",
