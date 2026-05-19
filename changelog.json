@@ -1,5 +1,29 @@
 [
   {
+    "sn": "23180D814D",
+    "device": "Handheld Honeeywell",
+    "area": "LP",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Asignación",
+        "before": "Caseta 3",
+        "after": "Caseta MX11"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "SIM con número: 33 1022 3050"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-05-19T20:20:06.013Z"
+  },
+  {
     "sn": "23042D84BA",
     "device": "Handheld Honeywell",
     "area": "Caseta MX11",
