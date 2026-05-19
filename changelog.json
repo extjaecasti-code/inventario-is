@@ -1,5 +1,24 @@
 [
   {
+    "sn": "XXRBN244003870",
+    "device": "Impresora Zebra",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Stock"
+      },
+      {
+        "label": "Comentarios",
+        "before": "REVISAR",
+        "after": "Se encuentra en MDF"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-19T15:32:49.335Z"
+  },
+  {
     "sn": "C16ZRW3",
     "device": "Laptop DELL",
     "area": "OUTBOUND",
