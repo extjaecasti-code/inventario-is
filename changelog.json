@@ -1,5 +1,24 @@
 [
   {
+    "sn": "25294B0724",
+    "device": "Handheld Honeywell",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      },
+      {
+        "label": "Comentarios",
+        "before": "SIM CON NUMERO: 5580687364 (NO TIENE SEÑAL)",
+        "after": "SIM CON NUMERO: 33 1398 0504"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-05-19T00:38:51.735Z"
+  },
+  {
     "sn": "TH0HRR76CHG0047V0QQ5A00",
     "device": "Cargador DELL",
     "area": "OUTBOUND",
@@ -318,20 +337,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-14T17:47:44.360Z"
-  },
-  {
-    "sn": "25294B0724",
-    "device": "Handheld Honeywell",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (Spider sync)",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-14T17:11:27.920Z"
   },
   {
     "sn": "HVA7GMMN",
