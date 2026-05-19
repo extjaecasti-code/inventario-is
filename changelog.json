@@ -1,5 +1,29 @@
 [
   {
+    "sn": "25294B0737",
+    "device": "Handheld Honeywell",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      },
+      {
+        "label": "Comentarios",
+        "before": "SIM CON NUMERO: 5539869909 (TIENE SEÑAL)",
+        "after": "SIM CON NUMERO: 55 3986 9909"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-05-19T00:39:16.888Z"
+  },
+  {
     "sn": "25294B0724",
     "device": "Handheld Honeywell",
     "area": "INTERNAL SYSTEMS",
