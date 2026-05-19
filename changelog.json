@@ -1,5 +1,29 @@
 [
   {
+    "sn": "CX5ZRW3",
+    "device": "Laptop DELL",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEM",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "FINGER 4"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-19T12:48:42.557Z"
+  },
+  {
     "sn": "606ZRW3",
     "device": "Laptop DELL",
     "area": "OUTBOUND",
