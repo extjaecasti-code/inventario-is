@@ -406,5 +406,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Se encuentra en MDF",
     "Status in Arturito": "In Stock"
+  },
+  "__new__23042D84BA": {
+    "S/N": "23042D84BA",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "Honeywell",
+    "MODELO": "CT60",
+    "AREA": "Caseta MX11",
+    "ASIGNACIÓN": "Caseta MX11",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "13.0.0",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "SIM con numero: 33 1249 5022",
+    "Status in Arturito": "In Use"
   }
 }
