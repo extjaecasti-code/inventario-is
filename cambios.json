@@ -442,5 +442,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "SIM con número: 33 1022 3050",
     "Status in Arturito": "In Use"
+  },
+  "9B2348A05084": {
+    "S/N": "9B2348A05084",
+    "ESTATUS FISICO": "In repair",
+    "Categoría": "UPS",
+    "DISPOSITIVO": "UPS",
+    "MARCA": "APC",
+    "MODELO": "BV1000",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "AF",
+    "IP": "#N/A",
+    "MAC": "#N/A",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "El equipo no funciona correctamente ",
+    "Status in Arturito": "In repair"
   }
 }
