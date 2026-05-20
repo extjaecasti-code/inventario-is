@@ -1,5 +1,24 @@
 [
   {
+    "sn": "9B2348A07764",
+    "device": "UPS APC",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "Bancada 5",
+        "after": "FINGER 2"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Se coloca por el que no funcionaba correctamente - 9B2348A05084"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-20T18:35:53.029Z"
+  },
+  {
     "sn": "9B2348A05084",
     "device": "UPS APC",
     "area": "INTERNAL SYSTEM",
