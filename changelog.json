@@ -1,5 +1,19 @@
 [
   {
+    "sn": "8SSA10R16970D1SG5131K5T",
+    "device": "Cargador LENOVO",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Marca",
+        "before": "DELL",
+        "after": "LENOVO"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T16:16:15.801Z"
+  },
+  {
     "sn": "8SSA10R16922C2TJ41902KA",
     "device": "Cargador LENOVO",
     "area": "OB",
@@ -12,20 +26,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T16:16:01.299Z"
-  },
-  {
-    "sn": "8SSA10R16970D1SG5131K5T",
-    "device": "Cargador DELL",
-    "area": "LI",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T16:15:14.465Z"
   },
   {
     "sn": "CN0RGF3FLOC0043KDHUIA00",
