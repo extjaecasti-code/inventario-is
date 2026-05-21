@@ -1198,5 +1198,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": " ",
     "Status in Arturito": "In Use"
+  },
+  "BCF4XD3": {
+    "S/N": "BCF4XD3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "7420",
+    "AREA": "LOA",
+    "ASIGNACIÓN": "Diego Emanuel Polo",
+    "IP": "",
+    "MAC": "",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
