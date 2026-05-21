@@ -1,5 +1,19 @@
 [
   {
+    "sn": "CN0VFHDXCH2004420QNGA01",
+    "device": "Cargador DELL",
+    "area": "OB",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T16:33:40.187Z"
+  },
+  {
     "sn": "BCF4XD3",
     "device": "Laptop DELL",
     "area": "LOA",
