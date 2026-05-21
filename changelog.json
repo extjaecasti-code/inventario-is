@@ -1,5 +1,19 @@
 [
   {
+    "sn": "CN02WDR5DES009406135A00",
+    "device": "Cargador DELL",
+    "area": "OB",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T16:17:11.716Z"
+  },
+  {
     "sn": "8SSA10R16922C2TJ3AE16FF",
     "device": "Cargador LENOVO",
     "area": "OB",
