@@ -478,5 +478,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Se coloca por el que no funcionaba correctamente - 9B2348A05084 ",
     "Status in Arturito": "In Use"
+  },
+  "__new__TH0HRR76CHG00487064SA00": {
+    "S/N": "TH0HRR76CHG00487064SA00",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Accesorio",
+    "DISPOSITIVO": "Cargador",
+    "MARCA": "DELL",
+    "MODELO": "NA",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "IDEA 3",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
