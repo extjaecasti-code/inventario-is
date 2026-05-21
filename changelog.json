@@ -1,5 +1,29 @@
 [
   {
+    "sn": "BCF4XD3",
+    "device": "Laptop DELL",
+    "area": "LOA",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Asignación",
+        "before": "Angel Cora",
+        "after": "Diego Emanuel Polo"
+      },
+      {
+        "label": "SSID",
+        "before": "SHIPPING-CORP",
+        "after": "MELI-SHIPPING"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T16:27:41.892Z"
+  },
+  {
     "sn": "4TSR4D3",
     "device": "Laptop DELL",
     "area": "LOA",
