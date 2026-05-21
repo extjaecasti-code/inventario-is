@@ -1,5 +1,19 @@
 [
   {
+    "sn": "TH0M9JDMCHG0053A074IA01",
+    "device": "Cargador DELL",
+    "area": "IB",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T16:04:01.754Z"
+  },
+  {
     "sn": "TH0HRR76CHG0047V0M83A00",
     "device": "Cargador DELL",
     "area": "LP",
