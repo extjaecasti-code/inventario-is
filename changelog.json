@@ -1,5 +1,34 @@
 [
   {
+    "sn": "4TSR4D3",
+    "device": "Laptop DELL",
+    "area": "LOA",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Asignación",
+        "before": "Yair Contreras",
+        "after": "Brenda Jaqueline Ramirez"
+      },
+      {
+        "label": "SSID",
+        "before": "SHIPPING-CORP",
+        "after": "MELI-SHIPPING"
+      },
+      {
+        "label": "Comentarios",
+        "before": "(Operational Backup)",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T16:27:07.689Z"
+  },
+  {
     "sn": "8SSA10R16922C2TJ41902KA",
     "device": "Cargador LENOVO",
     "area": "LOA",
