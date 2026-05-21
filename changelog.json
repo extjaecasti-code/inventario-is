@@ -1,5 +1,19 @@
 [
   {
+    "sn": "8SSA10R16922C2TJ41902KA",
+    "device": "Cargador LENOVO",
+    "area": "OB",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T16:16:01.299Z"
+  },
+  {
     "sn": "8SSA10R16970D1SG5131K5T",
     "device": "Cargador DELL",
     "area": "LI",
