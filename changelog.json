@@ -1,5 +1,19 @@
 [
   {
+    "sn": "8SSA10R16922C2TJ41902KA",
+    "device": "Cargador LENOVO",
+    "area": "LOA",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "OB",
+        "after": "LOA"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T16:25:54.178Z"
+  },
+  {
     "sn": "PF3TW43N",
     "device": "Laptop LENOVO",
     "area": "LOA",
@@ -171,20 +185,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T16:16:15.801Z"
-  },
-  {
-    "sn": "8SSA10R16922C2TJ41902KA",
-    "device": "Cargador LENOVO",
-    "area": "OB",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T16:16:01.299Z"
   },
   {
     "sn": "CN0RGF3FLOC0043KDHUIA00",
