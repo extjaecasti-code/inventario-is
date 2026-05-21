@@ -640,5 +640,23 @@
     "Fullfiment": "",
     "Comentarios": "",
     "Status in Arturito": "In Stock"
+  },
+  "C8R66F3": {
+    "S/N": "C8R66F3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "LH",
+    "ASIGNACIÓN": "MAURICIO ALBA",
+    "IP": "10.9.69.140",
+    "MAC": "E8C8298763AB",
+    "SSID": "shipping-corp",
+    "O.S.": "W11",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MX_Oficina_Melitlan",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
