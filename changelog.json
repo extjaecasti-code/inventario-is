@@ -1,5 +1,19 @@
 [
   {
+    "sn": "TH0HRR76CHG0047V0CFDA00",
+    "device": "Cargador DELL",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T15:33:03.890Z"
+  },
+  {
     "sn": "TH0HRR76CHG0047V0IW0A00",
     "device": "Cargador DELL",
     "area": "ACTIVO FIJO",
