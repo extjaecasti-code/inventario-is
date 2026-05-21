@@ -1,5 +1,19 @@
 [
   {
+    "sn": "CN0RGF3FLOC004AO0DV0A02",
+    "device": "Cargador DELL",
+    "area": "LH",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T15:49:52.742Z"
+  },
+  {
     "sn": "C8R66F3",
     "device": "Laptop DELL",
     "area": "LH",
