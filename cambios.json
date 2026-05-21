@@ -1090,5 +1090,23 @@
     "Fullfiment": "",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "PF4RYGNP": {
+    "S/N": "PF4RYGNP",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "Lenovo",
+    "MODELO": "THINK PAD",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "ADRIANA CORTES",
+    "IP": "10.9.69.145",
+    "MAC": "C8154E52FDF0",
+    "SSID": "meli-shipping",
+    "O.S.": "W11",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MX_Oficina_Melitlan",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
