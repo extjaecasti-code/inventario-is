@@ -1180,5 +1180,23 @@
     "Fullfiment": "",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "4TSR4D3": {
+    "S/N": "4TSR4D3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "7420",
+    "AREA": "LOA",
+    "ASIGNACIÓN": "Brenda Jaqueline Ramirez",
+    "IP": "",
+    "MAC": "",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MXCD11",
+    "Comentarios": " ",
+    "Status in Arturito": "In Use"
   }
 }
