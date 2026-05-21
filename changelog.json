@@ -1,5 +1,24 @@
 [
   {
+    "sn": "PF3TW43N",
+    "device": "Laptop LENOVO",
+    "area": "LOA",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "LOA"
+      },
+      {
+        "label": "Asignación",
+        "before": "mdf",
+        "after": "JUAN ANTONIO FLORES"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T16:25:38.700Z"
+  },
+  {
     "sn": "CN0RGF3FLOC0044NANXJA01",
     "device": "Cargador DELL",
     "area": "OUTBOUND",
