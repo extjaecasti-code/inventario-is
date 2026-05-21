@@ -1,5 +1,19 @@
 [
   {
+    "sn": "PF4RYGNP",
+    "device": "Laptop Lenovo",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "ADRIANA CORTEZ MIGUEL",
+        "after": "ADRIANA CORTES"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T16:21:05.118Z"
+  },
+  {
     "sn": "TH0HRR76CHG004870QPKA00",
     "device": "Cargador DELL",
     "area": "TRAINING",
