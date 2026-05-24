@@ -1342,5 +1342,23 @@
     "Fullfiment": "",
     "Comentarios": "FALTA MARCA Y MODELO",
     "Status in Arturito": "In Use"
+  },
+  "8Y5ZRW3": {
+    "S/N": "8Y5ZRW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "Daniel Alejandro Gallegos",
+    "IP": "10.9.112.9",
+    "MAC": "",
+    "SSID": "SHIPPING-CORP",
+    "O.S.": "W11",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se presto al TL, se resguarda en AF",
+    "Status in Arturito": "In Use"
   }
 }
