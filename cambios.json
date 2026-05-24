@@ -1288,5 +1288,23 @@
     "Fullfiment": "",
     "Comentarios": "FALTA MARCA Y MODELO",
     "Status in Arturito": "In Use"
+  },
+  "__new__TF3TPCZR": {
+    "S/N": "TF3TPCZR",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "?",
+    "MODELO": "?",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Dalila Vidal",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
