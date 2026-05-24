@@ -1378,5 +1378,23 @@
     "Fullfiment": "",
     "Comentarios": "FALTA MARCA Y MODELO",
     "Status in Arturito": "In Use"
+  },
+  "__new__9KTQS2D3": {
+    "S/N": "9KTQS2D3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "?",
+    "MODELO": "?",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "ENRIQUE DAVILA ",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
