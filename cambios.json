@@ -1270,5 +1270,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In repair"
+  },
+  "__new__PE4X6MVH": {
+    "S/N": "PE4X6MVH",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "?",
+    "MODELO": "?",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Aida Dubet Santiago",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "FALTA MARCA Y MODELO",
+    "Status in Arturito": "In Use"
   }
 }
