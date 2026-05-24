@@ -1,5 +1,24 @@
 [
   {
+    "sn": "8Y5ZRW3",
+    "device": "Laptop DELL",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "INBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "Daniel Alejandro Gallegos"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-24T02:33:44.314Z"
+  },
+  {
     "sn": "TF3TPCZR",
     "device": "Laptop ?",
     "area": "OUTBOUND",
