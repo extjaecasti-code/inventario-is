@@ -1360,5 +1360,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Se presto al TL, se resguarda en AF",
     "Status in Arturito": "In Use"
+  },
+  "__new__H1RC6F3": {
+    "S/N": "H1RC6F3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "?",
+    "MODELO": "?",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Iris Lucero Arriaga",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "FALTA MARCA Y MODELO",
+    "Status in Arturito": "In Use"
   }
 }
