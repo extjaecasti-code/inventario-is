@@ -1,5 +1,19 @@
 [
   {
+    "sn": "95FC6F3",
+    "device": "Laptop ?",
+    "area": "IDEA",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-24T02:32:45.631Z"
+  },
+  {
     "sn": "TF3TPCZR",
     "device": "Laptop ?",
     "area": "OUTBOUND",
