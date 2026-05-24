@@ -1306,5 +1306,23 @@
     "Fullfiment": "",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "__new__95FC6F3": {
+    "S/N": "95FC6F3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "?",
+    "MODELO": "?",
+    "AREA": "IDEA",
+    "ASIGNACIÓN": "Jorge Eduardo Vega",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "FALTA MARCA Y MODELO",
+    "Status in Arturito": "In Use"
   }
 }
