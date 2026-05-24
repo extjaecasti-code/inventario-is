@@ -1,5 +1,19 @@
 [
   {
+    "sn": "H1RC6F3",
+    "device": "Laptop ?",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-24T02:35:51.799Z"
+  },
+  {
     "sn": "8Y5ZRW3",
     "device": "Laptop DELL",
     "area": "INBOUND",
