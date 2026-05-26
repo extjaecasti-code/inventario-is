@@ -52,5 +52,23 @@
     "Fullfiment": "",
     "Comentarios": "FALTA MARCA Y MODELO",
     "Status in Arturito": "In Use"
+  },
+  "2W376F3": {
+    "S/N": "2W376F3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "Kenya Rojas",
+    "IP": "10.9.69.13",
+    "MAC": "E8:C8:29:86:26:3F",
+    "SSID": "",
+    "O.S.": "W11",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
