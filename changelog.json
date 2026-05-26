@@ -1,5 +1,19 @@
 [
   {
+    "sn": "2W376F3",
+    "device": "Laptop DELL",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "IP",
+        "before": "10.9.69.69",
+        "after": "10.9.69.13"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-26T11:02:15.140Z"
+  },
+  {
     "sn": "H1RC6F3",
     "device": "Laptop DELL",
     "area": "OUTBOUND",
