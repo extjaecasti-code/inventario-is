@@ -1,5 +1,24 @@
 [
   {
+    "sn": "4TSR4D3",
+    "device": "Laptop DELL",
+    "area": "LOA",
+    "changes": [
+      {
+        "label": "IP",
+        "before": "",
+        "after": "10.9.69.19"
+      },
+      {
+        "label": "MAC",
+        "before": "",
+        "after": "7C-50-79-67-A1-47"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-26T11:01:17.757Z"
+  },
+  {
     "sn": "PF3Q98XZ",
     "device": "Laptop Lenovo",
     "area": "INBOUND",
@@ -191,35 +210,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T16:27:41.892Z"
-  },
-  {
-    "sn": "4TSR4D3",
-    "device": "Laptop DELL",
-    "area": "LOA",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Asignación",
-        "before": "Yair Contreras",
-        "after": "Brenda Jaqueline Ramirez"
-      },
-      {
-        "label": "SSID",
-        "before": "SHIPPING-CORP",
-        "after": "MELI-SHIPPING"
-      },
-      {
-        "label": "Comentarios",
-        "before": "(Operational Backup)",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T16:27:07.689Z"
   },
   {
     "sn": "8SSA10R16922C2TJ41902KA",
