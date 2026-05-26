@@ -1,1 +1,20 @@
-{}
+{
+  "PF3Q98XZ": {
+    "S/N": "PF3Q98XZ",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "Lenovo",
+    "MODELO": "THINK PAD",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "RAUL CHAVEZ",
+    "IP": "10.9.69.18",
+    "MAC": "8CB87E59B654",
+    "SSID": "shipping-corp",
+    "O.S.": "W11",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MX_Oficina_Melitlan",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
+  }
+}
