@@ -1,5 +1,19 @@
 [
   {
+    "sn": "PF3Q98XZ",
+    "device": "Laptop Lenovo",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "IP",
+        "before": "10.9.69.153",
+        "after": "10.9.69.18"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-26T10:59:24.397Z"
+  },
+  {
     "sn": "PF5E8E0S",
     "device": "Laptop ?",
     "area": "INBOUND",
