@@ -1,5 +1,19 @@
 [
   {
+    "sn": "CN0WMDHRCJ3PU3TBDFTDA01",
+    "device": "Cargador DELL",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Categoría",
+        "before": "Notebook",
+        "after": "Accesorio"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-27T12:00:43.239Z"
+  },
+  {
     "sn": "CN0VH2W4HKC0018JKTP3A00WFWV06",
     "device": "Cargador DELL",
     "area": "ICQA",
@@ -26,20 +40,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-27T12:00:08.527Z"
-  },
-  {
-    "sn": "CN0WMDHRCJ3PU3TBDFTDA01",
-    "device": "Cargador DELL",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-27T11:59:37.908Z"
   },
   {
     "sn": "TH0HRR76CHG0041D005UA00",
