@@ -1,5 +1,19 @@
 [
   {
+    "sn": "CN0VH2W4HKC0018JKTP3A00WFWV06",
+    "device": "Cargador DELL",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-27T12:00:33.614Z"
+  },
+  {
     "sn": "CN0WMDHRCJ3RE3TBDFTDA01",
     "device": "Cargador DELL",
     "area": "ICQA",
