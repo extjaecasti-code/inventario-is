@@ -1,5 +1,19 @@
 [
   {
+    "sn": "816ZRW3",
+    "device": "Laptop DELL",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "Meca M6",
+        "after": "mesa training docka 53"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-27T09:25:29.482Z"
+  },
+  {
     "sn": "2W376F3",
     "device": "Laptop DELL",
     "area": "INBOUND",
