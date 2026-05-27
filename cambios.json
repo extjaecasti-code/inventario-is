@@ -88,5 +88,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "__new__TH0HRR76CHG0041D005UA00": {
+    "S/N": "TH0HRR76CHG0041D005UA00",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Accesorio",
+    "DISPOSITIVO": "Cargador",
+    "MARCA": "DELL",
+    "MODELO": "NA",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "mesa training docka 53",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
