@@ -6,17 +6,12 @@
     "changes": [
       {
         "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Categoría",
-        "before": "HandHeld",
-        "after": "Handheld"
+        "before": "In Stock",
+        "after": "In repair"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-29T11:33:57.802Z"
+    "ts": "2026-05-29T11:34:05.948Z"
   },
   {
     "sn": "24248524205143",
