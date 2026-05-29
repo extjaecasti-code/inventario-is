@@ -19,7 +19,7 @@
   },
   "24255524200420": {
     "S/N": "24255524200420",
-    "ESTATUS FISICO": "In Stock",
+    "ESTATUS FISICO": "In repair",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33,6 +33,6 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "",
-    "Status in Arturito": "In Stock"
+    "Status in Arturito": "In repair"
   }
 }
