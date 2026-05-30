@@ -34,5 +34,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In repair"
+  },
+  "JBCZRW3": {
+    "S/N": "JBCZRW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "ICQA",
+    "ASIGNACIÓN": "Prestamo para PS (Raul)",
+    "IP": "10.9.112.31",
+    "MAC": "",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "Chrome Flex",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se realiza el prestamo de la lap por temporada HS",
+    "Status in Arturito": "In Use"
   }
 }
