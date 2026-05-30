@@ -1,5 +1,29 @@
 [
   {
+    "sn": "JBCZRW3",
+    "device": "Laptop DELL",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "ICQA"
+      },
+      {
+        "label": "Asignación",
+        "before": "Bancada 4",
+        "after": "Prestamo para PS (Raul)"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Se realiza el prestamo de la lap por temporada HS"
+      }
+    ],
+    "user": "Erick Agustín Crisóstomo Sanchez",
+    "ts": "2026-05-30T14:38:47.555Z"
+  },
+  {
     "sn": "24255524200420",
     "device": "Handheld ZEBRA",
     "area": "INBOUND",
