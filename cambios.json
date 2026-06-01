@@ -502,5 +502,23 @@
     "Fullfiment": "",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "__new__CN0FTTTJDES0026AIDRHA01": {
+    "S/N": "CN0FTTTJDES0026AIDRHA01",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Accesorio",
+    "DISPOSITIVO": "Cargador",
+    "MARCA": "DELL",
+    "MODELO": "NA",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "FINGER 8",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
