@@ -1,17 +1,22 @@
 [
   {
     "sn": "TH0HRR76CHG004870QKGA00",
-    "device": "Cargador D",
+    "device": "Cargador DELL",
     "area": "IB",
     "changes": [
       {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
+        "label": "Marca",
+        "before": "D",
+        "after": "DELL"
+      },
+      {
+        "label": "Modelo",
+        "before": "N",
+        "after": "NA"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-01T21:41:06.978Z"
+    "ts": "2026-06-01T21:41:16.965Z"
   },
   {
     "sn": "TH0M9JDMCHG0058T0QZDA02",
