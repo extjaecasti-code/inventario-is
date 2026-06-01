@@ -6,12 +6,12 @@
     "changes": [
       {
         "label": "Asignación",
-        "before": "FINGER -",
-        "after": "FINGER - 5"
+        "before": "FINGER - 5",
+        "after": "FINGER 4"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-01T22:02:53.532Z"
+    "ts": "2026-06-01T22:03:02.161Z"
   },
   {
     "sn": "TH0HRR76CHG0047V0M10A00",
