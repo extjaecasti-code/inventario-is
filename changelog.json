@@ -2,16 +2,26 @@
   {
     "sn": "TH0HRR76CHG0047V0C8SA00",
     "device": "Cargador DELL",
-    "area": "",
+    "area": "OUTBOUND",
     "changes": [
       {
-        "label": "Accion",
+        "label": "Modelo",
         "before": "",
-        "after": "Dispositivo agregado"
+        "after": "NA"
+      },
+      {
+        "label": "Área",
+        "before": "",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "NA",
+        "after": "MESA 8"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-01T21:51:58.117Z"
+    "ts": "2026-06-01T21:52:17.206Z"
   },
   {
     "sn": "CN0RGF3FLOC00456C6MNA01",
