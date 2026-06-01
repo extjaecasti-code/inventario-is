@@ -718,5 +718,23 @@
     "Fullfiment": "",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "PF5E8E0S": {
+    "S/N": "PF5E8E0S",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "LENOVO",
+    "MODELO": "?",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "Roberto Briseño",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "FALTA MARCA Y MODELO",
+    "Status in Arturito": "In Use"
   }
 }
