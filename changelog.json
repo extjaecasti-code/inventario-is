@@ -1,5 +1,19 @@
 [
   {
+    "sn": "TH0HRR76CHG0047V0M7AA00",
+    "device": "Cargador DELL",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-01T21:53:04.320Z"
+  },
+  {
     "sn": "TH0HRR76CHG0047V0C8SA00",
     "device": "Cargador DELL",
     "area": "OUTBOUND",
