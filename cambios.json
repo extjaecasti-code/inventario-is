@@ -556,5 +556,23 @@
     "Fullfiment": "",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "__new__TH0HRR76CHG004870QKEA00": {
+    "S/N": "TH0HRR76CHG004870QKEA00",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Accesorio",
+    "DISPOSITIVO": "Cargador",
+    "MARCA": "DELL",
+    "MODELO": "NA",
+    "AREA": "LI",
+    "ASIGNACIÓN": "MESA 2 TRIAGE",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
