@@ -1,5 +1,19 @@
 [
   {
+    "sn": "TH0HRR76CHG0047V0C8VA00",
+    "device": "Cargador DELL",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-01T21:35:14.008Z"
+  },
+  {
     "sn": "JBCZRW3",
     "device": "Laptop DELL",
     "area": "ICQA",
