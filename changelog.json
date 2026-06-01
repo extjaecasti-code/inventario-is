@@ -1,5 +1,19 @@
 [
   {
+    "sn": "TH0HRR76CHG0047V0M10A00",
+    "device": "Cargador DELL",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "FINGER -",
+        "after": "FINGER - 2"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-01T22:02:42.995Z"
+  },
+  {
     "sn": "TH0HRR76CHG0047V0M7AA00",
     "device": "Cargador DELL",
     "area": "OUTBOUND",
@@ -1437,20 +1451,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-18T19:21:36.799Z"
-  },
-  {
-    "sn": "TH0HRR76CHG0047V0M10A00",
-    "device": "Cargador DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-18T19:21:29.961Z"
   },
   {
     "sn": "6J65903",
