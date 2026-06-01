@@ -304,5 +304,23 @@
     "Fullfiment": "",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "__new__CN0RGF3FLOC0044NAIC0A01": {
+    "S/N": "CN0RGF3FLOC0044NAIC0A01",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Accesorio",
+    "DISPOSITIVO": "Cargador",
+    "MARCA": "DELL",
+    "MODELO": "NA",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "MESA 3",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
