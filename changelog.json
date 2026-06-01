@@ -1,5 +1,19 @@
 [
   {
+    "sn": "CN0VFHDXCH2004420QY0A01",
+    "device": "Cargador DELL",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-01T22:16:19.618Z"
+  },
+  {
     "sn": "TH0HRR76CHG004870QKEA00",
     "device": "Cargador DELL",
     "area": "LI",
