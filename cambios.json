@@ -790,5 +790,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Se hace cambio por la que se fue a garantia",
     "Status in Arturito": "In Use"
+  },
+  "99J243705990": {
+    "S/N": "99J243705990",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZT411",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Mesa PS (Melis)",
+    "IP": "10.9.124.18",
+    "MAC": "48A493E12FE0",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se cambia por la .185",
+    "Status in Arturito": "In Use"
   }
 }
