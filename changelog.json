@@ -1,5 +1,19 @@
 [
   {
+    "sn": "XXRBN244001749",
+    "device": "Impresora ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-02T00:37:59.686Z"
+  },
+  {
     "sn": "PF5E8E0S",
     "device": "Laptop LENOVO",
     "area": "INBOUND",
