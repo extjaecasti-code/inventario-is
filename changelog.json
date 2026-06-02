@@ -1,5 +1,34 @@
 [
   {
+    "sn": "99J243705990",
+    "device": "Impresora ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "Mesa PS (Melis)"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Se cambia por la .185"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-06-02T06:55:38.617Z"
+  },
+  {
     "sn": "XXRBN253100440",
     "device": "Impresora ZEBRA",
     "area": "INTERNAL SYSTEMS",
