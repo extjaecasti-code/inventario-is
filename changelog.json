@@ -1,5 +1,24 @@
 [
   {
+    "sn": "XXRBN253100440",
+    "device": "Impresora ZEBRA",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Comentarios",
+        "before": "En Stock dentro de MDF",
+        "after": "Se hace cambio por la que se fue a garantia"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-02T01:06:00.889Z"
+  },
+  {
     "sn": "24255524200450",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
