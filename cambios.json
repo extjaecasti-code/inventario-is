@@ -772,5 +772,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Se regresa a operacion",
     "Status in Arturito": "In repair"
+  },
+  "XXRBN253100440": {
+    "S/N": "XXRBN253100440",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZQ521",
+    "AREA": "INTERNAL SYSTEMS",
+    "ASIGNACIÓN": "MDF",
+    "IP": "10.9.124.198",
+    "MAC": "9075DE12B290",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se hace cambio por la que se fue a garantia",
+    "Status in Arturito": "In Use"
   }
 }
