@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24173010564087",
+    "device": "Scanner ZEBRA",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "SMX0"
+      },
+      {
+        "label": "Comentarios",
+        "before": "En Stock dentro de MDF",
+        "after": "Se presta equipo para SMX0 por 2 semanas apartir del 4 de junio, se entregara AF"
+      }
+    ],
+    "user": "Erick Agustín Crisóstomo Sanchez",
+    "ts": "2026-06-04T13:08:52.116Z"
+  },
+  {
     "sn": "99J243705990",
     "device": "Impresora ZEBRA",
     "area": "OUTBOUND",
