@@ -1261,10 +1261,10 @@
   },
   {
     "S/N": "24173010564087",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "INTERNAL SYSTEMS",
-    "ASIGNACIÓN": "MDF",
+    "ASIGNACIÓN": "SMX0",
     "Categoría": "Scanner",
     "DISPOSITIVO": "Scanner",
     "MARCA": "ZEBRA",
@@ -1275,7 +1275,7 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "En Stock dentro de MDF"
+    "Comentarios": "Se presta equipo para SMX0 por 2 semanas apartir del 4 de junio, se entregara AF"
   },
   {
     "S/N": "24173010564089",
@@ -12169,10 +12169,10 @@
   },
   {
     "S/N": "24362010556548",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "Reserved for expansion",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "INTERNAL SYSTEMS",
-    "ASIGNACIÓN": "IS",
+    "ASIGNACIÓN": "SMX0",
     "Categoría": "Scanner",
     "DISPOSITIVO": "Scanner",
     "MARCA": "ZEBRA",
@@ -12183,7 +12183,7 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Se presta equipo para SMX0 por 2 semanas apartir del 4 de junio, se entregara AF"
   },
   {
     "S/N": "24362010556549",
@@ -12313,10 +12313,10 @@
   },
   {
     "S/N": "24362010556605",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "Reserved for expansion",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "INTERNAL SYSTEMS",
-    "ASIGNACIÓN": "MDF",
+    "ASIGNACIÓN": "SMX0",
     "Categoría": "Scanner",
     "DISPOSITIVO": "Scanner",
     "MARCA": "ZEBRA",
@@ -12327,7 +12327,7 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "24362010556605"
   },
   {
     "S/N": "24362010556606",
