@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24362010556605",
+    "device": "Scanner ZEBRA",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "SMX0"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "24362010556605"
+      }
+    ],
+    "user": "Erick Agustín Crisóstomo Sanchez",
+    "ts": "2026-06-04T13:09:19.521Z"
+  },
+  {
     "sn": "24173010564087",
     "device": "Scanner ZEBRA",
     "area": "INTERNAL SYSTEMS",
