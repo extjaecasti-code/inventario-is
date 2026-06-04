@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24362010556548",
+    "device": "Scanner ZEBRA",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Asignación",
+        "before": "IS",
+        "after": "SMX0"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Se presta equipo para SMX0 por 2 semanas apartir del 4 de junio, se entregara AF"
+      }
+    ],
+    "user": "Erick Agustín Crisóstomo Sanchez",
+    "ts": "2026-06-04T13:09:59.829Z"
+  },
+  {
     "sn": "24362010556605",
     "device": "Scanner ZEBRA",
     "area": "INTERNAL SYSTEMS",
