@@ -16,5 +16,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Se presta equipo para SMX0 por 2 semanas apartir del 4 de junio, se entregara AF",
     "Status in Arturito": "In Use"
+  },
+  "__new__TH0HRR76CHG0047V0CJGA00": {
+    "S/N": "TH0HRR76CHG0047V0CJGA00",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Cargador",
+    "MARCA": "DELL",
+    "MODELO": "NA",
+    "AREA": "LI",
+    "ASIGNACIÓN": "SMX0",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
