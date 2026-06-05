@@ -1,5 +1,19 @@
 [
   {
+    "sn": "25224524203502",
+    "device": "Handheld ZEBRA",
+    "area": "MDF",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-05T14:19:01.458Z"
+  },
+  {
     "sn": "TH0HRR76CHG0047V0CJGA00",
     "device": "Cargador DELL",
     "area": "LI",
