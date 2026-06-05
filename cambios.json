@@ -268,5 +268,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "En Stock dentro de MDF",
     "Status in Arturito": "In Use"
+  },
+  "DPC25031341": {
+    "S/N": "DPC25031341",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "",
+    "DISPOSITIVO": "Dex manager",
+    "MARCA": "DEX",
+    "MODELO": "Mini24",
+    "AREA": "COMEDOR",
+    "ASIGNACIÓN": "PEOPLE",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Cerca del Refri",
+    "Status in Arturito": "In Stock"
   }
 }
