@@ -1,5 +1,29 @@
 [
   {
+    "sn": "99J243803134",
+    "device": "Impresora ZEBRA",
+    "area": "MDF",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "MDF"
+      },
+      {
+        "label": "Asignación",
+        "before": "Meca M9",
+        "after": "MDF"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-05T19:16:58.254Z"
+  },
+  {
     "sn": "DPC25031341",
     "device": "Dex manager DEX",
     "area": "COMEDOR",
