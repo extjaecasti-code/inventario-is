@@ -1,5 +1,24 @@
 [
   {
+    "sn": "DPC25031341",
+    "device": "Dex manager DEX",
+    "area": "COMEDOR",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Categoría",
+        "before": "Videoplayer",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-05T19:16:20.133Z"
+  },
+  {
     "sn": "XXRBN244003819",
     "device": "Impresora Zebra",
     "area": "INTERNAL SYSTEMS",
