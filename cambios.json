@@ -322,5 +322,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "In Stock (Operational Backup)",
     "Status in Arturito": "In Stock"
+  },
+  "3RJZRW3": {
+    "S/N": "3RJZRW3",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Blanca Hernandez",
+    "IP": "10.9.112.12",
+    "MAC": "",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "W11",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Equipo prestado para PS",
+    "Status in Arturito": "In Stock"
   }
 }
