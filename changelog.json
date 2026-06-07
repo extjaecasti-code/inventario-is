@@ -1,5 +1,29 @@
 [
   {
+    "sn": "3RJZRW3",
+    "device": "Laptop DELL",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "mesa 5",
+        "after": "Blanca Hernandez"
+      },
+      {
+        "label": "Sistema Operativo",
+        "before": "Chrome Flex",
+        "after": "W11"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Equipo prestado para PS"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-06-07T00:46:42.064Z"
+  },
+  {
     "sn": "9B2348A09064",
     "device": "UPS APC",
     "area": "INTERNAL SYSTEMS",
