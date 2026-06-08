@@ -1,5 +1,34 @@
 [
   {
+    "sn": "JBCZRW3",
+    "device": "Laptop DELL",
+    "area": "SMX0",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "ICQA",
+        "after": "SMX0"
+      },
+      {
+        "label": "Asignación",
+        "before": "Prestamo para PS (Raul)",
+        "after": "Angeles Ramirez"
+      },
+      {
+        "label": "Sistema Operativo",
+        "before": "Chrome Flex",
+        "after": "W11"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Se realiza el prestamo de la lap por temporada HS",
+        "after": "Préstamo de laptop a SMX0"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-06-08T16:10:29.804Z"
+  },
+  {
     "sn": "3RJZRW3",
     "device": "Laptop DELL",
     "area": "SMX0",
@@ -967,30 +996,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-01T21:37:18.625Z"
-  },
-  {
-    "sn": "JBCZRW3",
-    "device": "Laptop DELL",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "ICQA"
-      },
-      {
-        "label": "Asignación",
-        "before": "Bancada 4",
-        "after": "Prestamo para PS (Raul)"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Se realiza el prestamo de la lap por temporada HS"
-      }
-    ],
-    "user": "Erick Agustín Crisóstomo Sanchez",
-    "ts": "2026-05-30T14:38:47.555Z"
   },
   {
     "sn": "24255524200420",
