@@ -56,5 +56,23 @@
   "PF3TW43N": {
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use"
+  },
+  "CY5ZRW3": {
+    "S/N": "CY5ZRW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "",
+    "IP": "10.9.112.42",
+    "MAC": "",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "Chrome Flex",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Ubicar en que bancada está",
+    "Status in Arturito": "In Use"
   }
 }
