@@ -1,1 +1,56 @@
-{}
+{
+  "3RJZRW3": {
+    "S/N": "3RJZRW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "SMX0",
+    "ASIGNACIÓN": "Angeles Ramirez",
+    "IP": "10.9.112.12",
+    "MAC": "",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "W11",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Equipo prestado para SMX0",
+    "Status in Arturito": "In Use"
+  },
+  "JBCZRW3": {
+    "S/N": "JBCZRW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "SMX0",
+    "ASIGNACIÓN": "Angeles Ramirez",
+    "IP": "10.9.112.31",
+    "MAC": "",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "W11",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Préstamo de laptop a SMX0",
+    "Status in Arturito": "In Use"
+  },
+  "406ZRW3": {
+    "S/N": "406ZRW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "Ing Planta",
+    "ASIGNACIÓN": "Bodega",
+    "IP": "10.9.112.4",
+    "MAC": "EC:4C:8C:59:AB:A5",
+    "SSID": "SHIPPING-CORP",
+    "O.S.": "",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
+  }
+}
