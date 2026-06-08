@@ -1,5 +1,34 @@
 [
   {
+    "sn": "406ZRW3",
+    "device": "Laptop DELL",
+    "area": "Ing Planta",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "Ing Planta"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "Bodega"
+      },
+      {
+        "label": "Deploy",
+        "before": "PSGAC",
+        "after": "DRM"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-06-08T16:15:03.550Z"
+  },
+  {
     "sn": "JBCZRW3",
     "device": "Laptop DELL",
     "area": "SMX0",
