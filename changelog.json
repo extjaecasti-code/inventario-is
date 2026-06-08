@@ -2,16 +2,26 @@
   {
     "sn": "3RJZRW3",
     "device": "Laptop DELL",
-    "area": "OUTBOUND",
+    "area": "SMX0",
     "changes": [
       {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "SMX0"
+      },
+      {
+        "label": "Asignación",
+        "before": "Blanca Hernandez",
+        "after": "Angeles Ramirez"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Equipo prestado para PS",
+        "after": "Equipo prestado para SMX0"
       }
     ],
-    "user": "Erick Agustín Crisóstomo Sanchez",
-    "ts": "2026-06-08T13:36:43.883Z"
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-06-08T16:09:28.845Z"
   },
   {
     "sn": "9B2348A09064",
