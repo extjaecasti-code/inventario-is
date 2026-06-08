@@ -5,23 +5,13 @@
     "area": "OUTBOUND",
     "changes": [
       {
-        "label": "Asignación",
-        "before": "mesa 5",
-        "after": "Blanca Hernandez"
-      },
-      {
-        "label": "Sistema Operativo",
-        "before": "Chrome Flex",
-        "after": "W11"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Equipo prestado para PS"
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
       }
     ],
-    "user": "Luis Eduardo Avalos Garcia",
-    "ts": "2026-06-07T00:46:42.064Z"
+    "user": "Erick Agustín Crisóstomo Sanchez",
+    "ts": "2026-06-08T13:36:43.883Z"
   },
   {
     "sn": "9B2348A09064",
