@@ -1,1 +1,20 @@
-{}
+{
+  "3RJZRW3": {
+    "S/N": "3RJZRW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "SMX0",
+    "ASIGNACIÓN": "Angeles Ramirez",
+    "IP": "10.9.112.12",
+    "MAC": "",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "W11",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Equipo prestado para SMX0",
+    "Status in Arturito": "In Use"
+  }
+}
