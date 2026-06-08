@@ -92,5 +92,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Buscar en que bancada está colocada",
     "Status in Arturito": "In Use"
+  },
+  "6QJZRW3": {
+    "S/N": "6QJZRW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Erick Moises",
+    "IP": "10.9.112.22",
+    "MAC": "",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "Chrome Flex",
+    "DEPLOY": "CHROME OS",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Asignada a PS de OB",
+    "Status in Arturito": "In Use"
   }
 }
