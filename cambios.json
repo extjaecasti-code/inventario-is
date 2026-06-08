@@ -74,5 +74,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Ubicar en que bancada está",
     "Status in Arturito": "In Use"
+  },
+  "GS5ZRW3": {
+    "S/N": "GS5ZRW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Bancadas",
+    "IP": "10.9.112.41",
+    "MAC": "",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "Chrome Flex",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Buscar en que bancada está colocada",
+    "Status in Arturito": "In Use"
   }
 }
