@@ -1,5 +1,29 @@
 [
   {
+    "sn": "CY5ZRW3",
+    "device": "Laptop DELL",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Asignación",
+        "before": "mesa 19 exp",
+        "after": ""
+      },
+      {
+        "label": "Comentarios",
+        "before": "Se encuentra en MDF laptop de expansion",
+        "after": "Ubicar en que bancada está"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-06-08T16:18:57.996Z"
+  },
+  {
     "sn": "PF3TW43N",
     "device": "Laptop LENOVO",
     "area": "LOA",
