@@ -1,5 +1,29 @@
 [
   {
+    "sn": "GS5ZRW3",
+    "device": "Laptop DELL",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Asignación",
+        "before": "mesa 17 exp",
+        "after": "Bancadas"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Buscar en que bancada está colocada"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-06-08T16:20:54.965Z"
+  },
+  {
     "sn": "CY5ZRW3",
     "device": "Laptop DELL",
     "area": "OUTBOUND",
