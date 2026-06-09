@@ -308,5 +308,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In repair"
+  },
+  "XXRBN220600049": {
+    "S/N": "XXRBN220600049",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZQ521",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "OUTBOUND",
+    "IP": "10.9.124.56",
+    "MAC": "48:a4:93:8e:98:38",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se manda a garantia por problemas de sensor",
+    "Status in Arturito": "In Use"
   }
 }
