@@ -1,5 +1,24 @@
 [
   {
+    "sn": "25288524210742",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEM",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "",
+        "after": "OUTBOUND"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-09T01:38:44.571Z"
+  },
+  {
     "sn": "25288524209719",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
