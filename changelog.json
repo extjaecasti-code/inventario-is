@@ -1,5 +1,19 @@
 [
   {
+    "sn": "9FJB5J4",
+    "device": "Laptop DELL",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-12T01:04:22.829Z"
+  },
+  {
     "sn": "XXRBN220600049",
     "device": "Impresora ZEBRA",
     "area": "OUTBOUND",
