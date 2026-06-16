@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24160523023113",
+    "device": "RING SCANER ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-16T01:06:39.718Z"
+  },
+  {
     "sn": "24255524200432",
     "device": "Handheld ZEBRA",
     "area": "INBOUND",
