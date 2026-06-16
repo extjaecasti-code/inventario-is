@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24243524206994",
+    "device": "Handheld ZEBRA",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "Missed",
+        "after": "In Stock"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Missed Lost",
+        "after": "Marcada como perdida pero se habia ido a garantia"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-16T01:11:09.723Z"
+  },
+  {
     "sn": "24243524207010",
     "device": "Handheld ZEBRA",
     "area": "INBOUND",
