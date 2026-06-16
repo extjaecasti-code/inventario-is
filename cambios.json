@@ -322,5 +322,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Se manda a garantia, lcd estrellado",
     "Status in Arturito": "In Stock"
+  },
+  "XXRBN253200533": {
+    "S/N": "XXRBN253200533",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZQ521",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "P2S",
+    "IP": "10.9.124.148",
+    "MAC": "9075DE12E9A8",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Stock"
   }
 }
