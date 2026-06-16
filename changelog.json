@@ -1,5 +1,24 @@
 [
   {
+    "sn": "24255524200617",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Stock"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-16T01:13:30.325Z"
+  },
+  {
     "sn": "24255524200659",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
