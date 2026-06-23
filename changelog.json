@@ -1,5 +1,19 @@
 [
   {
+    "sn": "0WXBTFQI24048091",
+    "device": "Meet Google Meet",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "prueba"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-23T20:20:47.796Z"
+  },
+  {
     "sn": "24248524205021",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
@@ -2764,20 +2778,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-18T19:15:04.534Z"
-  },
-  {
-    "sn": "0WXBTFQI24048091",
-    "device": "Meet Google Meet",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Comentarios",
-        "before": "PRUEBA 1",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-18T14:44:37.337Z"
   },
   {
     "sn": "7ZLC6F3",
