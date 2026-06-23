@@ -150,31 +150,6 @@ tbody tr:hover .row-actions{opacity:1;}
 .tri-source.inv{background:#EBF5FF;color:#2968C8;}
 .tri-source.spider{background:#FFF3E0;color:#E65100;}
 .tri-source.excel{background:#E8F5E9;color:#2E7D32;}
-.tri-match{color:var(--green);font-size:11px;font-weight:700;}
-.tri-diff{color:var(--red);font-size:11px;font-weight:700;}
-.tri-missing{color:var(--text3);font-size:11px;font-style:italic;}
-.tri-cell{font-size:12px;vertical-align:top;padding:8px 12px!important;}
-.tri-field-block{display:flex;flex-direction:column;gap:2px;margin:1px 0;}
-.tri-field-label{font-size:10px;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:.4px;}
-.tri-field-val{font-size:12px;font-weight:600;}
-.tri-field-val.diff{color:var(--red);}
-.tri-field-val.match{color:var(--green);}
-
-/* ── WEBHOOK DISCLAIMER ── */
-#webhookDisclaimer{position:fixed;bottom:52px;left:0;right:0;z-index:80;padding:0 24px;pointer-events:none;}
-.disclaimer-card{background:#1a1a2e;border:1px solid rgba(255,230,0,.3);border-radius:10px;padding:14px 18px;display:flex;align-items:flex-start;gap:14px;box-shadow:0 4px 20px rgba(0,0,0,.3);pointer-events:all;}
-.disclaimer-icon{font-size:24px;flex-shrink:0;margin-top:2px;}
-.disclaimer-body{flex:1;}
-.disclaimer-title{font-size:13px;font-weight:700;color:#FFE600;margin-bottom:6px;}
-.disclaimer-text{font-size:12px;color:#aab;line-height:1.6;margin-bottom:10px;}
-.disclaimer-code{background:#0d0d1a;border:1px solid rgba(255,230,0,.2);border-radius:6px;padding:8px 12px;font-family:monospace;font-size:11px;color:#7af;word-break:break-all;margin-bottom:10px;cursor:pointer;transition:background .2s;}
-.disclaimer-code:hover{background:#111128;}
-.disclaimer-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
-.disclaimer-btn{background:var(--ml-yellow);color:#333;border:none;border-radius:5px;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--sans);transition:all .15s;}
-.disclaimer-btn:hover{background:#f0d800;}
-.disclaimer-btn.dismiss{background:transparent;color:#667;border:1px solid #334;}
-.disclaimer-btn.dismiss:hover{color:#aab;border-color:#556;}
-.disclaimer-warn{font-size:11px;color:#f97316;font-weight:600;}
 
 /* ── SPIDER COMPARATIVO ── */
 .spider-upload-zone{border:2px dashed var(--border2);border-radius:12px;padding:40px 24px;text-align:center;cursor:pointer;transition:all .2s;background:var(--surface2);}
@@ -424,7 +399,7 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
 </head>
 <body>
 <div id="offlineBanner"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.56 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg> Sin conexión — <span id="pendingCount">0</span> auditorías pendientes de sincronizar <span class="sync-pending-badge" id="syncNowBtn" onclick="syncPendingAudits()" style="cursor:pointer">Sincronizar ahora</span></div>
-<div id="loadingOverlay"><div class="big-spin"></div><p>Cargando inventario...</p></div>
+<div id="loadingOverlay"><div class="big-spin"></div><p>Conectando con GitHub...</p></div>
 
 <div id="tokenScreen" style="display:none">
   <div class="token-card">
@@ -436,7 +411,7 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
     <p>Para sincronizar con GitHub necesitas ingresar el token de acceso.<br>Solo se pide <strong>una vez</strong> y se guarda en tu navegador.</p>
     <div class="token-input-wrap">
       <label>GitHub Personal Access Token</label>
-      <input type="password" id="tokenInput" placeholder="Token de acceso..." autocomplete="off">
+      <input type="password" id="tokenInput" placeholder="ghp_..." autocomplete="off">
     </div>
     <p class="token-hint">Tu token no se sube a ningún servidor.<br>Se guarda solo en este navegador.</p>
     <button class="btn btn-primary" style="width:100%;justify-content:center;padding:11px" onclick="saveToken()">Guardar y continuar</button>
@@ -467,7 +442,6 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
     <div class="header-right">
       <div class="header-stats"><div>Total <strong id="hTotal">—</strong></div><div>Filtrados <strong id="hFiltered">—</strong></div></div>
       <div class="user-pill"><div class="av-sm" id="headerAvatar">?</div><span id="headerUser">—</span></div>
-      <button class="logout-btn" onclick="openSettings()" title="Ajustes">⚙️</button>
       <button class="logout-btn" onclick="logout()">Salir</button>
       <button class="dark-toggle" id="darkToggle" onclick="toggleDark()" title="Modo oscuro">🌙</button>
     </div>
@@ -701,17 +675,17 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
       <div class="spider-subtab active" id="stab-spider" onclick="switchSpiderTab('spider')">🕷️ Spider vs Inventario</div>
       <div class="spider-subtab" id="stab-tri" onclick="switchSpiderTab('tri')">📊 Comparativo 3 Fuentes</div>
     </div>
-    <!-- SUB-PANEL: SPIDER -->
+    <!-- SUB-PANEL SPIDER -->
     <div class="spider-subpanel active" id="spanel-spider">
     <div style="padding:14px 24px 0;display:flex;gap:8px;flex-wrap:wrap">
-        <button class="btn btn-ghost" id="spiderFilterAll" onclick="filterSpider('all')" style="font-size:12px">Todos</button>
-        <button class="btn btn-ghost" id="spiderFilterDiff" onclick="filterSpider('diff')" style="font-size:12px">Solo diferencias</button>
-        <button class="btn btn-ghost" id="spiderFilterOnly" onclick="filterSpider('only-spider')" style="font-size:12px">Solo en Spider</button>
-        <button class="btn btn-export" onclick="exportSpiderDiff()" style="font-size:12px">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Exportar diferencias
-        </button>
-      </div>
+      <button class="btn btn-ghost" id="spiderFilterAll" onclick="filterSpider('all')" style="font-size:12px">Todos</button>
+      <button class="btn btn-ghost" id="spiderFilterDiff" onclick="filterSpider('diff')" style="font-size:12px">Solo diferencias</button>
+      <button class="btn btn-ghost" id="spiderFilterOnly" onclick="filterSpider('only-spider')" style="font-size:12px">Solo en Spider</button>
+      <button class="btn btn-export" onclick="exportSpiderDiff()" style="font-size:12px">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Exportar diferencias
+      </button>
+    </div>
 
     <!-- UPLOAD ZONE -->
     <div style="padding:16px 24px" id="spiderUploadSection">
@@ -768,7 +742,7 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
     </div>
   </div><!-- /spanel-spider -->
 
-  <!-- SUB-PANEL: TRI-COMPARE -->
+  <!-- SUB-PANEL TRI-COMPARE -->
   <div class="spider-subpanel" id="spanel-tri">
     <div style="padding:16px 24px 0">
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px">
@@ -781,7 +755,7 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
           <input type="file" id="triSpiderInput" accept=".csv" style="display:none" onchange="loadTriFile(this,'spider')">
         </div>
         <div style="flex:1;min-width:220px">
-          <div style="font-size:12px;font-weight:700;color:var(--text2);margin-bottom:8px">📊 Archivo Excel/CSV propio</div>
+          <div style="font-size:12px;font-weight:700;color:var(--text2);margin-bottom:8px">📊 Tu Excel o CSV propio</div>
           <div class="spider-upload-zone" style="padding:16px" onclick="document.getElementById('triExcelInput').click()">
             <div style="font-size:24px;margin-bottom:6px">📊</div>
             <p style="font-size:12px;margin:0" id="triExcelLabel">Subir Excel o CSV</p>
@@ -795,7 +769,7 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
           </button>
         </div>
       </div>
-      <!-- TRI STATS -->
+      <!-- STATS -->
       <div id="triStats" style="display:none;margin-bottom:16px">
         <div class="spider-stats">
           <div class="spider-stat"><div class="val" id="triTotal" style="color:var(--ml-blue)">0</div><div class="lbl">Total S/N</div></div>
@@ -814,15 +788,13 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
           </button>
         </div>
       </div>
-      <!-- TRI TABLE -->
-      <div id="triTableWrap" style="display:none;border:1px solid var(--border);border-radius:8px;overflow:auto;max-height:520px">
+      <!-- TABLE -->
+      <div id="triTableWrap" style="display:none;border:1px solid var(--border);border-radius:8px;overflow:auto;max-height:520px;margin-bottom:80px">
         <table style="width:100%;border-collapse:collapse;font-size:12px">
           <thead><tr style="background:var(--surface2);position:sticky;top:0">
             <th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">S/N</th>
             <th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Estado</th>
-            <th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Inventario IS</th>
-            <th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">🕷️ Spider</th>
-            <th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">📊 Excel/CSV</th>
+            <th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Status por fuente</th>
             <th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Diferencias</th>
           </tr></thead>
           <tbody id="triTableBody"></tbody>
@@ -1139,68 +1111,24 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
   </div>
 </div>
 
-
-<!-- SETTINGS MODAL -->
-<div class="overlay" id="settingsOverlay" onclick="closeModal(event)">
-  <div class="modal" style="max-width:480px">
-    <div class="modal-header">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3483FA" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-      <h2>Ajustes</h2>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:14px">
-      <div class="form-group">
-        <label>Webhook de Google Chat</label>
-        <input id="settingsWebhook" type="password" placeholder="https://chat.googleapis.com/v1/spaces/..." style="width:100%;background:var(--surface2);border:1px solid var(--border);color:var(--text);font-family:var(--sans);font-size:13px;border-radius:6px;padding:9px 12px;outline:none">
-        <small style="font-size:11px;color:var(--text3);margin-top:4px;display:block">Se guarda de forma segura y persiste entre sesiones</small>
-      </div>
-      <div id="webhookStatus" style="font-size:12px;display:none"></div>
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-ghost" onclick="document.getElementById('settingsOverlay').classList.remove('open')">Cancelar</button>
-      <button class="btn btn-primary" onclick="saveSettings()">Guardar</button>
-    </div>
-  </div>
-</div>
-
-
-
-
 <div class="toast" id="toast"></div>
 <script>
-
-// ── STORAGE SHIM (localStorage for GitHub Pages) ─────────────────────────
-const _mem = {};
-const store = {
-  get: async (k) => { try{ return localStorage.getItem(k); }catch(e){ return _mem[k]||null; } },
-  set: async (k, v) => { try{ localStorage.setItem(k,v); }catch(e){ _mem[k]=v; } },
-  del: async (k) => { try{ localStorage.removeItem(k); }catch(e){ delete _mem[k]; } }
-};
-
-// ── GITHUB CONFIG ──
-const GITHUB_TOKEN='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';
-const RAW_URL='https://raw.githubusercontent.com/extjaecasti-code/inventario-is/main/inventario.json';
-const API_URL='https://api.github.com/repos/extjaecasti-code/inventario-is/contents/inventario.json';
-const CHANGES_API='https://api.github.com/repos/extjaecasti-code/inventario-is/contents/cambios.json';
-const CHANGELOG_API='https://api.github.com/repos/extjaecasti-code/inventario-is/contents/changelog.json';
-const AUDIT_API='https://api.github.com/repos/extjaecasti-code/inventario-is/contents/auditorias.json';
-const GRID_BASE='',GRID_READ=()=>'',GRID_API=()=>'',GRID_PATCH=()=>'';
-const INV_ID='',CAMBIOS_ID='',CHANGELOG_ID='',AUDITS_ID='';
-let changesSHA='',changelogSHA='',auditSHA='';
+const GITHUB_USER='extjaecasti-code';
+const GITHUB_REPO='inventario-is';
+const GITHUB_FILE='inventario.json';
+const CHANGES_FILE='cambios.json';
+const CHANGES_API=`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${CHANGES_FILE}`;
+const CHANGES_RAW=`https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${CHANGES_FILE}`;
+let changesSHA='';
 let changes_db={};
-let changelog=[];
-// Webhook encoded to avoid security scanner detection
-const _wh='aHR0cHM6Ly9jaGF0Lmdvb2dsZWFwaXMuY29tL3YxL3NwYWNlcy9BQVFBN2JvdEVRby9tZXNzYWdlcz9rZXk9QUl6YVN5RGRJMGhDWnRFNnZ5U2pNbS1XRWZScTNDUHpxS3Fxc0hJJnRva2VuPUhabTdZT1RHVUtzODRrWkhpWTRBMF9VRjFHZHpyTmU5NjRHSzhPWVRZbVE=';
-let WEBHOOK=atob(_wh);
-// Load user preferences
-store.get('gchat_webhook').then(v=>{ if(v) WEBHOOK=v; }); // user override
-store.get('darkMode').then(v=>{
-  if(v==='1'){
-    document.body.classList.add('dark');
-    const btn=document.getElementById('darkToggle');
-    if(btn) btn.textContent='☀️';
-  }
-});
-// Grid-based storage — no GitHub API needed
+// Changelog stored in GitHub so all users see the same history
+const CHANGELOG_FILE='changelog.json';
+const CHANGELOG_API=`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${CHANGELOG_FILE}`;
+let changelogSHA='';
+const WEBHOOK='https://chat.googleapis.com/v1/spaces/AAQA7botEQo/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=HZm7YOTGUKs84kZHiY4A0_UF1GdzrNe964GK8OYTYmQ';
+let GITHUB_TOKEN=localStorage.getItem('gh_token')||'';
+const RAW_URL=`https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${GITHUB_FILE}`;
+const API_URL=`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${GITHUB_FILE}`;
 const PRESET_USERS=[{"id": "u1", "name": "André Jael Castillo Diaz", "role": "Admin", "os": "Windows"}, {"id": "u2", "name": "Luis Eduardo Avalos Garcia", "role": "Editor", "os": "Windows"}, {"id": "u3", "name": "Erick Agustín Crisóstomo Sanchez", "role": "Editor", "os": "macOS"}, {"id": "u4", "name": "Erick Avisai Núñez Loza", "role": "Admin", "os": "macOS"}];
 
 const FIELD_LABELS={
@@ -1255,28 +1183,41 @@ function setSyncState(state,msg){
 async function loadFromGitHub(showMsg){
   setSyncState('syncing','Cargando...');
   try{
-    // Load base inventory from GitHub
+    // Load base inventory
     const res=await fetch(RAW_URL+'?t='+Date.now());
     if(!res.ok)throw new Error('HTTP '+res.status);
     const base=await res.json();
 
-    // Load changes from GitHub API (bypass cache)
+    // Load changes file via API with timestamp to bypass cache
     try{
-      const cMeta=await fetch(CHANGES_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
+      const cMeta=await fetch(CHANGES_API+'?t='+Date.now(),{
+        headers:{Authorization:'token '+GITHUB_TOKEN}
+      });
       if(cMeta.ok){
         const m=await cMeta.json();
         changesSHA=m.sha;
         if(m.content){
           const decoded=decodeURIComponent(escape(atob(m.content.replace(/\n/g,''))));
           try{ changes_db=JSON.parse(decoded); }catch(e){ changes_db={}; }
+        } else {
+          changes_db={};
         }
       }
     }catch(e){ changes_db={}; }
 
-    // Merge base + changes
-    let merged=base.filter(r=>!changes_db['__deleted__'+r['S/N']]);
-    merged=merged.map(r=>changes_db[r['S/N']]?{...r,...changes_db[r['S/N']]}:r);
-    Object.keys(changes_db).forEach(k=>{ if(k.startsWith('__new__')) merged.push(changes_db[k]); });
+    // Merge: apply changes on top of base
+    let merged = base.filter(r => !changes_db['__deleted__'+r['S/N']]);
+    // Apply edits
+    merged = merged.map(r => {
+      if(changes_db[r['S/N']]) return {...r, ...changes_db[r['S/N']]};
+      return r;
+    });
+    // Add new records
+    Object.keys(changes_db).forEach(k=>{
+      if(k.startsWith('__new__')){
+        merged.push(changes_db[k]);
+      }
+    });
 
     data=merged.map((r,i)=>({...r,_id:i,'ESTATUS FISICO':normalizeStatus(r['ESTATUS FISICO'])}));
     populateFilters();applyFilters();
@@ -1291,13 +1232,24 @@ async function loadFromGitHub(showMsg){
 async function saveToGitHub(commitMsg){
   setSyncState('syncing','Guardando...');
   try{
-    // Get fresh SHA
+    // Only save the small changes file (never the full 0.64MB inventory)
     const metaRes=await fetch(CHANGES_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
-    if(metaRes.ok){ const m=await metaRes.json(); changesSHA=m.sha; } else { changesSHA=''; }
+    if(metaRes.ok){
+      const m=await metaRes.json();
+      changesSHA=m.sha;
+    } else {
+      changesSHA=''; // file doesn't exist yet
+    }
+
     const content=btoa(unescape(encodeURIComponent(JSON.stringify(changes_db,null,2))));
     const body={message:commitMsg,content};
     if(changesSHA) body.sha=changesSHA;
-    const res=await fetch(CHANGES_API,{method:'PUT',headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'},body:JSON.stringify(body)});
+
+    const res=await fetch(CHANGES_API,{
+      method:'PUT',
+      headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    });
     if(!res.ok){const err=await res.json();throw new Error(err.message||'HTTP '+res.status);}
     const result=await res.json();
     changesSHA=result.content.sha;
@@ -1609,6 +1561,8 @@ document.getElementById('rowsPerPage').addEventListener('change',function(){rows
 function saveToken(){
   const t=document.getElementById('tokenInput').value.trim();
   if(!t){showTokenError('Token inválido.');return;}
+  localStorage.setItem('gh_token',t);
+  GITHUB_TOKEN=t;
   document.getElementById('tokenScreen').style.display='none';
   document.getElementById('loadingOverlay').style.display='flex';
   loadFromGitHub(false).then(()=>{
@@ -1626,7 +1580,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 (async()=>{
   initLogin();
-  {
+  if(!GITHUB_TOKEN){
+    document.getElementById('loadingOverlay').style.display='none';
+    document.getElementById('tokenScreen').style.display='flex';
+  } else {
     await loadFromGitHub(false);
     document.getElementById('loadingOverlay').style.display='none';
     document.getElementById('loginScreen').style.display='flex';
@@ -1657,43 +1614,55 @@ function filterByStat(status){
 
 function toggleDark(){
   const isDark=document.body.classList.toggle('dark');
-  store.set('darkMode',isDark?'1':'0');
+  localStorage.setItem('darkMode',isDark?'1':'0');
   document.getElementById('darkToggle').textContent=isDark?'☀️':'🌙';
 }
 // Apply saved dark mode on load
-
+if(localStorage.getItem('darkMode')==='1'){
+  document.body.classList.add('dark');
+  document.addEventListener('DOMContentLoaded',()=>{
+    const btn=document.getElementById('darkToggle');
+    if(btn)btn.textContent='☀️';
+  });
+}
 
 // ── AUDIT MODULE ──────────────────────────────────────────────────────────
 let audits = []; // {id, sn, device, area, estado, limpieza, func, comment, photo, auditor, fecha, ts}
 let auditEditId = null;
 let photoBase64 = '';
 
+const AUDIT_FILE = 'auditorias.json';
+const AUDIT_API = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${AUDIT_FILE}`;
+const AUDIT_RAW = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${AUDIT_FILE}`;
+let auditSHA = '';
 
 async function loadAudits() {
-  try{
-    const metaRes=await fetch(AUDIT_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
-    if(metaRes.ok){
-      const m=await metaRes.json();
-      auditSHA=m.sha;
-      if(m.content){ const decoded=decodeURIComponent(escape(atob(m.content.replace(/\n/g,'')))); try{ audits=JSON.parse(decoded); }catch(e){ audits=[]; } }
-    }
-  }catch(e){ audits=[]; }
+  try {
+    const res = await fetch(AUDIT_RAW + '?t=' + Date.now());
+    if (!res.ok) { audits = []; renderAuditTab(); return; }
+    const text = await res.text();
+    try { audits = JSON.parse(text); } catch(e) { audits = []; }
+    const meta = await fetch(AUDIT_API, { headers: { Authorization: 'token ' + GITHUB_TOKEN } });
+    if (meta.ok) { const m = await meta.json(); auditSHA = m.sha; }
+  } catch(e) { audits = []; }
   renderAuditTab();
 }
 
 async function saveAudits(commitMsg) {
-  try{
-    const metaRes=await fetch(AUDIT_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
-    if(metaRes.ok){ const m=await metaRes.json(); auditSHA=m.sha; }
-    const content=btoa(unescape(encodeURIComponent(JSON.stringify(audits,null,2))));
-    const body={message:commitMsg,content};
-    if(auditSHA) body.sha=auditSHA;
-    const res=await fetch(AUDIT_API,{method:'PUT',headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'},body:JSON.stringify(body)});
-    if(!res.ok) throw new Error('HTTP '+res.status);
-    const result=await res.json();
-    auditSHA=result.content.sha;
+  try {
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(audits, null, 2))));
+    const body = { message: commitMsg, content };
+    if (auditSHA) body.sha = auditSHA;
+    const res = await fetch(AUDIT_API, {
+      method: 'PUT',
+      headers: { Authorization: 'token ' + GITHUB_TOKEN, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const result = await res.json();
+    auditSHA = result.content.sha;
     return true;
-  }catch(e){ showToast('Error al guardar auditoria: '+e.message,'error'); return false; }
+  } catch(e) { showToast('Error al guardar auditoría: ' + e.message, 'error'); return false; }
 }
 
 function switchTab(tab) {
@@ -2064,10 +2033,10 @@ function closeScannerModal(e) {
 const OFFLINE_KEY = 'pending_audits';
 
 function getPendingAudits() {
-  return _mem[OFFLINE_KEY] ? JSON.parse(_mem[OFFLINE_KEY]) : [];
+  try { return JSON.parse(localStorage.getItem(OFFLINE_KEY) || '[]'); } catch(e) { return []; }
 }
 function savePendingAudits(list) {
-  _mem[OFFLINE_KEY] = JSON.stringify(list);
+  localStorage.setItem(OFFLINE_KEY, JSON.stringify(list));
   updateOfflineBanner();
 }
 function updateOfflineBanner() {
@@ -2321,7 +2290,7 @@ let leaders = {}; // { 'ACTIVO FIJO': { name:'Juan', email:'juan@ml.com' }, ... 
 let currentMeetArea = null;
 
 function loadLeaders() {
-  store.get('area_leaders').then(v=>{ try{ if(v) leaders=JSON.parse(v); }catch(e){ leaders={}; } });
+  try { leaders = JSON.parse(localStorage.getItem('area_leaders') || '{}'); } catch(e) { leaders = {}; }
 }
 
 function saveLeaders() {
@@ -2333,7 +2302,7 @@ function saveLeaders() {
       leaders[a.name] = { name: nameEl.value.trim(), email: emailEl.value.trim() };
     }
   });
-  store.set('area_leaders', JSON.stringify(leaders));
+  localStorage.setItem('area_leaders', JSON.stringify(leaders));
   document.getElementById('leadersOverlay').classList.remove('open');
   showToast('Lideres guardados ✓', 'success');
   renderAuditTab();
@@ -2688,23 +2657,43 @@ async function consolidateInventory() {
   showToast('Consolidando inventario...', 'info');
 
   try {
+    // Step 1: Get current SHA of base inventory
     setSyncState('syncing', 'Consolidando...');
+    const metaRes = await fetch(API_URL+'?t='+Date.now(), { headers: { Authorization: 'token ' + GITHUB_TOKEN } });
+    if (!metaRes.ok) throw new Error('No se pudo obtener el inventario base');
+    const meta = await metaRes.json();
+    currentSHA = meta.sha;
 
-    // Step 2: Save full merged inventory to GitHub
+    // Step 2: Save full merged inventory as new base
     const clean = data.map(r => { const c = {...r}; delete c._id; return c; });
-    const invMeta=await fetch(API_URL+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
-    let invSHA='';
-    if(invMeta.ok){ const m=await invMeta.json(); invSHA=m.sha; }
-    const invContent=btoa(unescape(encodeURIComponent(JSON.stringify(clean,null,2))));
-    const saveRes=await fetch(API_URL,{method:'PUT',headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'},body:JSON.stringify({message:'[consolidate] Inventario consolidado por '+currentUser,content:invContent,sha:invSHA})});
-    if(!saveRes.ok) throw new Error('Error al guardar inventario');
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(clean, null, 2))));
+    const saveRes = await fetch(API_URL, {
+      method: 'PUT',
+      headers: { Authorization: 'token ' + GITHUB_TOKEN, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: '[consolidate] Inventario consolidado por ' + currentUser, content, sha: currentSHA })
+    });
+    if (!saveRes.ok) {
+      const err = await saveRes.json();
+      throw new Error(err.message || 'Error al guardar base');
+    }
+    const saveResult = await saveRes.json();
+    currentSHA = saveResult.content.sha;
 
     // Step 3: Clear changes file
-    const cMeta=await fetch(CHANGES_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
-    let cSHA='';
-    if(cMeta.ok){ const m=await cMeta.json(); cSHA=m.sha; }
-    const clearRes=await fetch(CHANGES_API,{method:'PUT',headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'},body:JSON.stringify({message:'[consolidate] Limpiar cambios',content:btoa('{}'),sha:cSHA})});
-    if(!clearRes.ok) throw new Error('Error al limpiar cambios');
+    const cMetaRes = await fetch(CHANGES_API+'?t='+Date.now(), { headers: { Authorization: 'token ' + GITHUB_TOKEN } });
+    if (cMetaRes.ok) {
+      const cMeta = await cMetaRes.json();
+      changesSHA = cMeta.sha;
+    }
+    const emptyContent = btoa('{}');
+    const clearRes = await fetch(CHANGES_API, {
+      method: 'PUT',
+      headers: { Authorization: 'token ' + GITHUB_TOKEN, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: '[consolidate] Limpiar cambios', content: emptyContent, sha: changesSHA })
+    });
+    if (!clearRes.ok) throw new Error('Error al limpiar cambios');
+    const clearResult = await clearRes.json();
+    changesSHA = clearResult.content.sha;
 
     // Step 4: Reset local changes_db
     changes_db = {};
@@ -2722,6 +2711,7 @@ async function consolidateInventory() {
 }
 
 // ── RECENTLY MODIFIED ─────────────────────────────────────────────────────
+let changelog = [];
 
 async function addToChangelog(sn, device, area, changes, user) {
   // Remove previous entry for same SN to keep only latest per device
@@ -2734,23 +2724,31 @@ async function addToChangelog(sn, device, area, changes, user) {
 
 async function saveChangelog() {
   try{
-    const metaRes=await fetch(CHANGELOG_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
+    // Get fresh SHA
+    const metaRes = await fetch(CHANGELOG_API+'?t='+Date.now(), {headers:{Authorization:'token '+GITHUB_TOKEN}});
     if(metaRes.ok){ const m=await metaRes.json(); changelogSHA=m.sha; }
-    const content=btoa(unescape(encodeURIComponent(JSON.stringify(changelog,null,2))));
-    const body={message:'[changelog] update',content};
-    if(changelogSHA) body.sha=changelogSHA;
-    const res=await fetch(CHANGELOG_API,{method:'PUT',headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'},body:JSON.stringify(body)});
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(changelog,null,2))));
+    const body = {message:'[changelog] update', content:content};
+    if(changelogSHA) body.sha = changelogSHA;
+    const res = await fetch(CHANGELOG_API, {
+      method:'PUT',
+      headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    });
     if(res.ok){ const r=await res.json(); changelogSHA=r.content.sha; }
   }catch(e){ console.warn('Changelog save error',e); }
 }
 
 async function loadChangelog() {
   try{
-    const metaRes=await fetch(CHANGELOG_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
+    const metaRes = await fetch(CHANGELOG_API+'?t='+Date.now(), {headers:{Authorization:'token '+GITHUB_TOKEN}});
     if(metaRes.ok){
-      const m=await metaRes.json();
-      changelogSHA=m.sha;
-      if(m.content){ const decoded=decodeURIComponent(escape(atob(m.content.replace(/\n/g,'')))); try{ changelog=JSON.parse(decoded); }catch(e){ changelog=[]; } }
+      const m = await metaRes.json();
+      changelogSHA = m.sha;
+      if(m.content){
+        const decoded = decodeURIComponent(escape(atob(m.content.replace(/\n/g,''))));
+        try{ changelog = JSON.parse(decoded); }catch(e){ changelog=[]; }
+      }
     }
   }catch(e){ changelog=[]; }
 }
@@ -3049,121 +3047,7 @@ function exportSpiderDiff() {
   showToast('CSV exportado: ' + diffs.length + ' diferencias', 'success');
 }
 
-// ── SETTINGS ──────────────────────────────────────────────────────────────
-async function openSettings() {
-  const w = await store.get('gchat_webhook');
-  const input = document.getElementById('settingsWebhook');
-  input.value = w || '';
-  const status = document.getElementById('webhookStatus');
-  if(w) {
-    status.style.display = 'block';
-    status.innerHTML = '<span style="color:var(--green)">✓ Webhook configurado</span>';
-  } else {
-    status.style.display = 'block';
-    status.innerHTML = '<span style="color:var(--text3)">Sin webhook — las notificaciones de Google Chat estan desactivadas</span>';
-  }
-  document.getElementById('settingsOverlay').classList.add('open');
-}
-
-async function saveSettings() {
-  const w = document.getElementById('settingsWebhook').value.trim();
-  if(w && !w.startsWith('https://')) {
-    showToast('URL de webhook invalida', 'error');
-    return;
-  }
-  if(w) {
-    WEBHOOK = w;
-    await store.set('gchat_webhook', w);
-    showToast('Webhook guardado ✓', 'success');
-  } else {
-    WEBHOOK = '';
-    await store.del('gchat_webhook');
-    showToast('Webhook eliminado', 'info');
-  }
-  document.getElementById('settingsOverlay').classList.remove('open');
-}
-
-// ── WEBHOOK DISCLAIMER ────────────────────────────────────────────────────
-const _wh2 = 'aHR0cHM6Ly9jaGF0Lmdvb2dsZWFwaXMuY29tL3YxL3NwYWNlcy9BQVFBN2JvdEVRby9tZXNzYWdlcz9rZXk9QUl6YVN5RGRJMGhDWnRFNnZ5U2pNbS1XRWZScTNDUHpxS3Fxc0hJJnRva2VuPUhabTdZT1RHVUtzODRrWkhpWTRBMF9VRjFHZHpyTmU5NjRHSzhPWVRZbVE=';
-const WEBHOOK_DISPLAY = atob(_wh2);
-
-// JS code to paste in console to enable notifications
-const WEBHOOK_CONSOLE_CODE = 'window._notifyOverride=async function(t){try{await fetch("' + WEBHOOK_DISPLAY + '",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text:t})})}catch(e){}}; console.log("Notificaciones activadas ✓");';
-
-function initDisclaimer() {
-  // Set the code in the disclaimer
-  const codeEl = document.getElementById('webhookCode');
-  if(codeEl) codeEl.textContent = WEBHOOK_CONSOLE_CODE;
-
-  // Check if dismissed today
-  const dismissed = _mem['disclaimer_dismissed'];
-  const today = new Date().toDateString();
-  if(dismissed !== today) {
-    document.getElementById('webhookDisclaimer').style.display = 'block';
-  }
-}
-
-function copyWebhookCode() {
-  const code = WEBHOOK_CONSOLE_CODE;
-  // Use clipboard API
-  if(navigator.clipboard) {
-    navigator.clipboard.writeText(code).then(()=>{
-      showToast('Codigo copiado — pegalo en F12 → Console', 'success');
-    }).catch(()=>fallbackCopy(code));
-  } else {
-    fallbackCopy(code);
-  }
-}
-
-function fallbackCopy(text) {
-  const ta = document.createElement('textarea');
-  ta.value = text;
-  ta.style.position = 'fixed';
-  ta.style.opacity = '0';
-  document.body.appendChild(ta);
-  ta.select();
-  document.execCommand('copy');
-  document.body.removeChild(ta);
-  showToast('Codigo copiado — pegalo en F12 → Console', 'success');
-}
-
-function dismissDisclaimer() {
-  _mem['disclaimer_dismissed'] = new Date().toDateString();
-  document.getElementById('webhookDisclaimer').style.display = 'none';
-}
-
-// Override notifyChat to use window._notifyOverride if available (set via console)
-const _origNotifyChat = typeof notifyChat === 'function' ? notifyChat : null;
-async function notifyChat(device, changes, action) {
-  // Try console-injected override first (works around CSP)
-  if(window._notifyOverride) {
-    // Build the message text same way as original but call override
-    const now = new Date().toLocaleString('es-MX',{dateStyle:'medium',timeStyle:'short',timeZone:'America/Mexico_City'});
-    const sep = '========================';
-    const nl = '\n';
-    const devInfo = (device['S/N']||'') + ' - ' + (device['DISPOSITIVO']||'') + ' ' + (device['MARCA']||'');
-    let text = '';
-    if(action==='edit'){
-      const cLines = changes.map(c=>'  - '+c.label+': ~~'+(c.before||'vacio')+'~~ -> '+(c.after||'vacio')).join(nl);
-      text = 'Actualizacion Inventario IS'+nl+sep+nl+'Editado por: '+currentUser+nl+'Dispositivo: '+devInfo+nl+'Area: '+(device['AREA']||'-')+nl+sep+nl+'Cambios ('+changes.length+'):'+nl+cLines+nl+sep+nl+now;
-    } else if(action==='add'){
-      text = 'Nuevo Dispositivo'+nl+sep+nl+'Agregado por: '+currentUser+nl+'S/N: '+devInfo+nl+'Area: '+(device['AREA']||'-')+nl+sep+nl+now;
-    } else if(action==='delete'){
-      text = 'Dispositivo Eliminado'+nl+sep+nl+'Eliminado por: '+currentUser+nl+'S/N: '+devInfo+nl+sep+nl+now;
-    } else if(action==='status'){
-      text = 'Cambio de Status'+nl+sep+nl+'Modificado por: '+currentUser+nl+'Dispositivo: '+devInfo+nl+'Status: ~~'+changes[0].before+'~~ -> '+changes[0].after+nl+sep+nl+now;
-    }
-    try { await window._notifyOverride(text); } catch(e) { console.warn('notify error',e); }
-    return;
-  }
-  // Fallback: try direct fetch (will fail with CSP but fail silently)
-  try {
-    const now = new Date().toLocaleString('es-MX',{dateStyle:'medium',timeStyle:'short',timeZone:'America/Mexico_City'});
-    await fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:'['+action+'] '+device['S/N']+' por '+currentUser+' - '+now})});
-  } catch(e) { /* CSP blocks this silently */ }
-}
-
-// ── TRI-COMPARE MODULE ────────────────────────────────────────────────────
+// ── TRI-COMPARE ───────────────────────────────────────────────────────────
 let triSpiderData = null;
 let triExcelData  = null;
 let triResults    = [];
@@ -3178,239 +3062,138 @@ function switchSpiderTab(tab) {
 function loadTriFile(input, source) {
   const file = input.files[0];
   if (!file) return;
-  const ext = file.name.split('.').pop().toLowerCase();
   const label = document.getElementById(source === 'spider' ? 'triSpiderLabel' : 'triExcelLabel');
-
-  if (ext === 'csv') {
-    const reader = new FileReader();
-    reader.onload = e => {
-      const rows = parseCSV(e.target.result);
-      if (source === 'spider') triSpiderData = rows;
-      else triExcelData = rows;
-      label.textContent = '✓ ' + file.name + ' (' + rows.length + ' filas)';
-      label.style.color = 'var(--green)';
-      checkTriReady();
-    };
-    reader.readAsText(file, 'UTF-8');
-  } else {
-    // Excel - use SheetJS
-    const reader = new FileReader();
-    reader.onload = e => {
-      try {
-        const XLSX = window.XLSX || {};
-        if (!XLSX.read) { showToast('Libreria Excel no disponible, usa CSV', 'error'); return; }
-        const wb = XLSX.read(e.target.result, {type:'binary'});
-        const ws = wb.Sheets[wb.SheetNames[0]];
-        const rows = XLSX.utils.sheet_to_json(ws, {defval:''});
-        if (source === 'spider') triSpiderData = rows;
-        else triExcelData = rows;
-        label.textContent = '✓ ' + file.name + ' (' + rows.length + ' filas)';
-        label.style.color = 'var(--green)';
-        checkTriReady();
-      } catch(e) {
-        showToast('Error al leer Excel: ' + e.message, 'error');
-      }
-    };
-    reader.readAsBinaryString(file);
-  }
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const rows = parseCSV(e.target.result);
+    if (source === 'spider') triSpiderData = rows;
+    else triExcelData = rows;
+    label.textContent = '✓ ' + file.name + ' (' + rows.length + ' filas)';
+    label.style.color = 'var(--green)';
+    document.getElementById('triRunBtn').disabled = !(triSpiderData && triExcelData);
+  };
+  reader.readAsText(file, 'UTF-8');
 }
 
-function checkTriReady() {
-  const btn = document.getElementById('triRunBtn');
-  if (btn) btn.disabled = !(triSpiderData && triExcelData);
-}
-
-function getSnFromRow(row, preferredKeys) {
-  // Try to find S/N column with various possible names
-  const snKeys = preferredKeys || ['SERIAL','S/N','SN','SERIAL_NUMBER','NUMERO_SERIE','NUM_SERIE','SERIE','serial','s/n'];
-  for (const k of snKeys) {
-    if (row[k] !== undefined && row[k] !== '') return String(row[k]).trim().toUpperCase();
-  }
-  // Try any key that contains 'serial' or 'serie'
-  for (const k of Object.keys(row)) {
-    if (/serial|serie|s\/n/i.test(k)) return String(row[k]).trim().toUpperCase();
-  }
+function getSnFromRow(row) {
+  const keys = ['SERIAL','S/N','SN','SERIAL_NUMBER','SERIE','serial','s/n','Serie'];
+  for (const k of keys) { if (row[k]) return String(row[k]).trim().toUpperCase(); }
+  for (const k of Object.keys(row)) { if (/serial|serie|s\/n/i.test(k) && row[k]) return String(row[k]).trim().toUpperCase(); }
   return null;
 }
 
 function getStatusFromRow(row) {
-  const statusKeys = ['STATUS','ESTATUS','ESTATUS FISICO','Status','status','Estado','ESTADO','ESTATUS_FISICO'];
-  for (const k of statusKeys) {
-    if (row[k] !== undefined && row[k] !== '') {
-      return String(row[k]).replace(/\s*\(.*?\)/g,'').trim();
-    }
-  }
+  const keys = ['STATUS','ESTATUS','ESTATUS FISICO','Status','status','Estado','ESTADO'];
+  for (const k of keys) { if (row[k]) return String(row[k]).replace(/\s*\(.*?\)/g,'').trim(); }
   return '';
-}
-
-function getAllFieldsFromRow(row) {
-  const skip = new Set(['id','ID','_id']);
-  const result = {};
-  for (const [k,v] of Object.entries(row)) {
-    if (!skip.has(k) && v !== undefined && v !== '') result[k] = String(v).trim();
-  }
-  return result;
 }
 
 function runTriCompare() {
   if (!triSpiderData || !triExcelData) return;
 
-  // Build lookup maps by SN
   const invMap = {};
   data.forEach(d => { if(d['S/N']) invMap[d['S/N'].trim().toUpperCase()] = d; });
-
   const spiderMap = {};
-  triSpiderData.forEach(r => {
-    const sn = getSnFromRow(r, ['SERIAL','S/N']);
-    if (sn) spiderMap[sn] = r;
-  });
-
+  triSpiderData.forEach(r => { const sn=getSnFromRow(r); if(sn) spiderMap[sn]=r; });
   const excelMap = {};
-  triExcelData.forEach(r => {
-    const sn = getSnFromRow(r);
-    if (sn) excelMap[sn] = r;
-  });
+  triExcelData.forEach(r => { const sn=getSnFromRow(r); if(sn) excelMap[sn]=r; });
 
-  // Union of all SNs
-  const allSNs = new Set([...Object.keys(invMap), ...Object.keys(spiderMap), ...Object.keys(excelMap)]);
-
+  const allSNs = new Set([...Object.keys(invMap),...Object.keys(spiderMap),...Object.keys(excelMap)]);
   triResults = [];
+
   allSNs.forEach(sn => {
     const inv    = invMap[sn]    || null;
     const spider = spiderMap[sn] || null;
     const excel  = excelMap[sn]  || null;
-
-    const invStatus    = inv    ? normalizeStatus(inv['ESTATUS FISICO'] || '') : '';
+    const invStatus    = inv    ? normalizeStatus(inv['ESTATUS FISICO']||'') : '';
     const spiderStatus = spider ? normalizeSpiderStatus(getStatusFromRow(spider)) : '';
     const excelStatus  = excel  ? normalizeSpiderStatus(getStatusFromRow(excel))  : '';
 
-    // Find all differing fields
     const diffs = [];
-
-    // Status comparison
-    const statuses = [invStatus, spiderStatus, excelStatus].filter(Boolean);
-    const uniqueStatuses = new Set(statuses.map(s => s.toLowerCase()));
-    if (uniqueStatuses.size > 1) {
+    const statuses = [invStatus,spiderStatus,excelStatus].filter(Boolean);
+    if(new Set(statuses.map(s=>s.toLowerCase())).size > 1)
       diffs.push({field:'Status', inv:invStatus, spider:spiderStatus, excel:excelStatus});
-    }
 
     // Compare other fields between excel and inventory
-    if (inv && excel) {
+    if(inv && excel) {
       const fieldMap = {
-        'AREA':['AREA','Area','LOCATION','Location','area'],
-        'MARCA':['MARCA','Marca','MANUFACTURER','Fabricante','FABRICANTE'],
-        'MODELO':['MODELO','Modelo','MODEL','Model','modelo'],
-        'DISPOSITIVO':['DISPOSITIVO','Dispositivo','NAME','Name','nombre'],
-        'ASIGNACIÓN':['ASIGNACIÓN','ASIGNACION','USERNAME','Asignacion','asignacion','Usuario','USUARIO'],
+        'AREA':['AREA','Area','LOCATION','area'],
+        'MARCA':['MARCA','FABRICANTE','Fabricante','MANUFACTURER'],
+        'MODELO':['MODELO','MODEL','Modelo'],
+        'ASIGNACIÓN':['ASIGNACIÓN','USERNAME','Usuario','USUARIO'],
       };
-      for (const [invKey, excelKeys] of Object.entries(fieldMap)) {
-        const invVal = (inv[invKey] || '').trim().toLowerCase();
-        let excelVal = '';
-        for (const ek of excelKeys) {
-          if (excel[ek] !== undefined && excel[ek] !== '') { excelVal = String(excel[ek]).trim().toLowerCase(); break; }
-        }
-        if (invVal && excelVal && invVal !== excelVal) {
-          diffs.push({field:invKey, inv:inv[invKey]||'', spider:'', excel:String(excel[excelKeys.find(k=>excel[k])||excelKeys[0]]||'')});
-        }
+      for(const [invKey, exKeys] of Object.entries(fieldMap)) {
+        const invVal = (inv[invKey]||'').trim().toLowerCase();
+        let exVal = '';
+        for(const k of exKeys) { if(excel[k]) { exVal=String(excel[k]).trim().toLowerCase(); break; } }
+        if(invVal && exVal && invVal !== exVal)
+          diffs.push({field:invKey, inv:inv[invKey]||'', spider:'', excel:exVal});
       }
     }
 
-    const sources = (inv?1:0) + (spider?1:0) + (excel?1:0);
-    let state = 'match';
-    if (sources === 1) state = 'only-one';
-    else if (diffs.length > 0) state = sources === 3 ? 'diff3' : 'diff2';
-
-    triResults.push({ sn, inv, spider, excel, invStatus, spiderStatus, excelStatus, diffs, state, sources });
+    const sources = (inv?1:0)+(spider?1:0)+(excel?1:0);
+    const state = sources===1?'only-one':diffs.length>0?sources===3?'diff3':'diff2':'match';
+    triResults.push({sn,inv,spider,excel,invStatus,spiderStatus,excelStatus,diffs,state,sources});
   });
 
-  // Stats
-  const total  = triResults.length;
-  const match3 = triResults.filter(r => r.state === 'match' && r.sources === 3).length;
-  const diff3  = triResults.filter(r => r.state === 'diff3').length;
-  const diff2  = triResults.filter(r => r.state === 'diff2').length;
-  const only1  = triResults.filter(r => r.state === 'only-one').length;
-
-  document.getElementById('triTotal').textContent  = total;
-  document.getElementById('triMatch3').textContent = match3;
-  document.getElementById('triDiff3').textContent  = diff3;
-  document.getElementById('triDiff2').textContent  = diff2;
-  document.getElementById('triOnlyOne').textContent= only1;
-  document.getElementById('triStats').style.display = '';
-  document.getElementById('triTableWrap').style.display = '';
-
+  const total=triResults.length;
+  document.getElementById('triTotal').textContent=total;
+  document.getElementById('triMatch3').textContent=triResults.filter(r=>r.state==='match'&&r.sources===3).length;
+  document.getElementById('triDiff3').textContent=triResults.filter(r=>r.state==='diff3').length;
+  document.getElementById('triDiff2').textContent=triResults.filter(r=>r.state==='diff2').length;
+  document.getElementById('triOnlyOne').textContent=triResults.filter(r=>r.state==='only-one').length;
+  document.getElementById('triStats').style.display='';
+  document.getElementById('triTableWrap').style.display='';
   filterTri('any-diff');
 }
 
 function filterTri(filter) {
   let rows = triResults;
-  if (filter === 'diff3')    rows = triResults.filter(r => r.state === 'diff3');
-  if (filter === 'any-diff') rows = triResults.filter(r => r.state !== 'match');
-
-  const tbody = document.getElementById('triTableBody');
-  const empty = document.getElementById('triEmpty');
-
-  if (!rows.length) { tbody.innerHTML = ''; empty.style.display = ''; return; }
-  empty.style.display = 'none';
-
-  const srcBadge = (has, label, cls) => has
-    ? '<span class="tri-source ' + cls + '">' + label + '</span>'
-    : '<span style="font-size:10px;color:var(--text3)">—</span>';
-
-  tbody.innerHTML = rows.map(r => {
-    // Build field comparison cells
-    const invFields  = r.inv    ? getAllFieldsFromRow(r.inv)    : {};
-    const spFields   = r.spider ? getAllFieldsFromRow(r.spider) : {};
-    const exFields   = r.excel  ? getAllFieldsFromRow(r.excel)  : {};
-
-    const stateColor = r.state === 'match' ? 'var(--green)' : r.state === 'only-one' ? 'var(--purple)' : r.state === 'diff3' ? 'var(--red)' : 'var(--yellow-s)';
-    const stateLabel = r.state === 'match' ? '✓ Coinciden' : r.state === 'only-one' ? 'Solo 1 fuente' : r.state === 'diff3' ? '⚠ Los 3 difieren' : '⚠ 2 difieren';
-
-    const diffsHtml = r.diffs.map(d => {
-      return '<div style="margin-bottom:4px">'
-        + '<div style="font-size:10px;color:var(--text3);font-weight:700;text-transform:uppercase">' + esc(d.field) + '</div>'
-        + (d.inv    ? '<div style="font-size:11px"><span class="tri-source inv" style="font-size:10px">IS</span> ' + esc(d.inv) + '</div>' : '')
-        + (d.spider ? '<div style="font-size:11px"><span class="tri-source spider" style="font-size:10px">Spider</span> ' + esc(d.spider) + '</div>' : '')
-        + (d.excel  ? '<div style="font-size:11px"><span class="tri-source excel" style="font-size:10px">Excel</span> ' + esc(d.excel) + '</div>' : '')
-        + '</div>';
-    }).join('');
-
-    // Status cell
-    const statusHtml =
-      '<div style="display:flex;flex-direction:column;gap:3px">'
-      + (r.invStatus    ? '<div><span class="tri-source inv" style="font-size:10px">IS</span> <span style="font-size:12px">' + esc(r.invStatus) + '</span></div>' : '')
-      + (r.spiderStatus ? '<div><span class="tri-source spider" style="font-size:10px">Spider</span> <span style="font-size:12px">' + esc(r.spiderStatus) + '</span></div>' : '')
-      + (r.excelStatus  ? '<div><span class="tri-source excel" style="font-size:10px">Excel</span> <span style="font-size:12px">' + esc(r.excelStatus) + '</span></div>' : '')
-      + '</div>';
-
-    // Sources present
-    const sourcesHtml = srcBadge(!!r.inv,'IS','inv') + ' ' + srcBadge(!!r.spider,'Spider','spider') + ' ' + srcBadge(!!r.excel,'Excel','excel');
-
-    return '<tr style="border-bottom:1px solid var(--border);' + (r.state==='diff3'?'background:rgba(224,32,32,.03)':r.state==='diff2'?'background:rgba(245,166,35,.03)':'') + '">'
-      + '<td class="tri-cell" style="font-family:monospace;color:var(--ml-blue);font-weight:700">' + esc(r.sn) + '</td>'
-      + '<td class="tri-cell"><span style="font-size:11px;font-weight:700;color:' + stateColor + '">' + stateLabel + '</span><br><div style="margin-top:4px">' + sourcesHtml + '</div></td>'
-      + '<td class="tri-cell">' + statusHtml + '</td>'
-      + '<td class="tri-cell" style="min-width:200px">' + (diffsHtml || '<span style="color:var(--green);font-size:11px">Sin diferencias</span>') + '</td>'
-      + '</tr>';
+  if(filter==='diff3') rows=triResults.filter(r=>r.state==='diff3');
+  if(filter==='any-diff') rows=triResults.filter(r=>r.state!=='match');
+  const tbody=document.getElementById('triTableBody');
+  const empty=document.getElementById('triEmpty');
+  if(!rows.length){tbody.innerHTML='';empty.style.display='';return;}
+  empty.style.display='none';
+  const stateColor={'match':'var(--green)','only-one':'var(--purple)','diff3':'var(--red)','diff2':'var(--yellow-s)'};
+  const stateLabel={'match':'Coinciden','only-one':'Solo 1 fuente','diff3':'Los 3 difieren','diff2':'2 difieren'};
+  tbody.innerHTML=rows.map(r=>{
+    const srcBadge=(has,lbl,cls)=>has?'<span class="tri-source '+cls+'">'+lbl+'</span>':'<span style="font-size:10px;color:var(--text3)">—</span>';
+    const statusHtml='<div style="display:flex;flex-direction:column;gap:3px">'
+      +(r.invStatus?'<div>'+srcBadge(true,'IS','inv')+' '+esc(r.invStatus)+'</div>':'')
+      +(r.spiderStatus?'<div>'+srcBadge(true,'Spider','spider')+' '+esc(r.spiderStatus)+'</div>':'')
+      +(r.excelStatus?'<div>'+srcBadge(true,'Excel','excel')+' '+esc(r.excelStatus)+'</div>':'')
+      +'</div>';
+    const diffsHtml=r.diffs.map(d=>'<div style="margin-bottom:4px"><div style="font-size:10px;color:var(--text3);font-weight:700">'+esc(d.field)+'</div>'
+      +(d.inv?'<div style="font-size:11px">'+srcBadge(true,'IS','inv')+' '+esc(d.inv)+'</div>':'')
+      +(d.spider?'<div style="font-size:11px">'+srcBadge(true,'Spider','spider')+' '+esc(d.spider)+'</div>':'')
+      +(d.excel?'<div style="font-size:11px">'+srcBadge(true,'Excel','excel')+' '+esc(d.excel)+'</div>':'')
+      +'</div>').join('');
+    const sourcesHtml=srcBadge(!!r.inv,'IS','inv')+' '+srcBadge(!!r.spider,'Spider','spider')+' '+srcBadge(!!r.excel,'Excel','excel');
+    return '<tr style="border-bottom:1px solid var(--border);'+(r.state==='diff3'?'background:rgba(224,32,32,.03)':r.state==='diff2'?'background:rgba(245,166,35,.03)':'')+'"><td style="padding:9px 12px;font-family:monospace;color:var(--ml-blue);font-weight:700">'+esc(r.sn)+'</td>'
+      +'<td style="padding:9px 12px"><span style="font-size:11px;font-weight:700;color:'+(stateColor[r.state]||'var(--text)')+'">'+( stateLabel[r.state]||r.state)+'</span><br><div style="margin-top:4px">'+sourcesHtml+'</div></td>'
+      +'<td style="padding:9px 12px">'+statusHtml+'</td>'
+      +'<td style="padding:9px 12px;min-width:200px">'+(diffsHtml||'<span style="color:var(--green);font-size:11px">Sin diferencias</span>')+'</td></tr>';
   }).join('');
 }
 
 function exportTriDiff() {
-  const diffs = triResults.filter(r => r.state !== 'match');
-  if (!diffs.length) { showToast('No hay diferencias para exportar', 'info'); return; }
-  const cols = ['S/N','ESTADO','STATUS_INVENTARIO','STATUS_SPIDER','STATUS_EXCEL','FUENTES_CON_DATOS','CAMPOS_DIFERENTES'];
-  const rows = [cols.join(',')];
-  diffs.forEach(r => {
-    const diffStr = r.diffs.map(d => d.field + ': IS=' + d.inv + ' Spider=' + d.spider + ' Excel=' + d.excel).join(' | ');
-    const sources = (r.inv?'IS ':'') + (r.spider?'Spider ':'') + (r.excel?'Excel':'');
-    const vals = [r.sn, r.state, r.invStatus, r.spiderStatus, r.excelStatus, sources.trim(), diffStr];
-    rows.push(vals.map(v => { const s=String(v||'').replace(/"/g,'""'); return s.includes(',')||s.includes('"')?'"'+s+'"':s; }).join(','));
+  const diffs=triResults.filter(r=>r.state!=='match');
+  if(!diffs.length){showToast('No hay diferencias para exportar','info');return;}
+  const cols=['S/N','ESTADO','STATUS_IS','STATUS_SPIDER','STATUS_EXCEL','FUENTES','DIFERENCIAS'];
+  const rows=[cols.join(',')];
+  diffs.forEach(r=>{
+    const diffStr=r.diffs.map(d=>d.field+': IS='+d.inv+' Spider='+d.spider+' Excel='+d.excel).join(' | ');
+    const sources=(r.inv?'IS ':'')+( r.spider?'Spider ':'')+( r.excel?'Excel':'');
+    const vals=[r.sn,r.state,r.invStatus,r.spiderStatus,r.excelStatus,sources.trim(),diffStr];
+    rows.push(vals.map(v=>{const s=String(v||'').replace(/"/g,'""');return s.includes(',')||s.includes('"')?'"'+s+'"':s;}).join(','));
   });
-  const blob = new Blob([rows.join('\n')], {type:'text/csv;charset=utf-8'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'comparativo_3fuentes_' + new Date().toISOString().slice(0,10) + '.csv';
+  const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='comparativo_3fuentes_'+new Date().toISOString().slice(0,10)+'.csv';
   a.click();
-  showToast('CSV exportado: ' + diffs.length + ' diferencias', 'success');
+  showToast('CSV exportado: '+diffs.length+' diferencias','success');
 }
 
 </script>
