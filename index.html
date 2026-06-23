@@ -1163,26 +1163,7 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
 </div>
 
 
-<!-- WEBHOOK DISCLAIMER -->
-<div id="webhookDisclaimer" style="display:none">
-  <div class="disclaimer-card">
-    <div class="disclaimer-icon">🔔</div>
-    <div class="disclaimer-body">
-      <div class="disclaimer-title">Activar notificaciones de Google Chat</div>
-      <div class="disclaimer-text">
-        Grid bloquea las notificaciones automaticas. Para recibirlas, abre la consola del navegador 
-        (<strong style="color:#FFE600">F12 → Console</strong>), escribe <strong style="color:#FFE600">allow pasting</strong> 
-        y pega el siguiente codigo:
-      </div>
-      <div class="disclaimer-code" id="webhookCode" onclick="copyWebhookCode()" title="Click para copiar"></div>
-      <div class="disclaimer-actions">
-        <button class="disclaimer-btn" onclick="copyWebhookCode()">📋 Copiar codigo</button>
-        <button class="disclaimer-btn dismiss" onclick="dismissDisclaimer()">Entendido, no mostrar hoy</button>
-        <span class="disclaimer-warn">⚠️ No cierres ni recargues la página para mantener las notificaciones activas</span>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <div class="toast" id="toast"></div>
 <script>
@@ -1195,23 +1176,21 @@ const store = {
   del: async (k) => { try{ localStorage.removeItem(k); }catch(e){ delete _mem[k]; } }
 };
 
-// ── GRID CONFIG ──
-const GRID_BASE='https://grid.adminml.com';
-const INV_ID='01KRXPF5H4Y1Q3RVDSKXG2791S';
-const CAMBIOS_ID='01KRRBH55GKQRXJVRJPPKY0W2C';
-const CHANGELOG_ID='01KRRBH5WNQRCWQ6DKVWKRBD29';
-const GRID_READ = (id) => `${GRID_BASE}/d/${id}`;
-const GRID_API  = (id) => `${GRID_BASE}/api/v1/documents/${id}/versions`;
-const GRID_PATCH= (id) => `${GRID_BASE}/api/v1/documents/${id}`;
+// ── GITHUB CONFIG ──
+const GITHUB_TOKEN='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';
+const RAW_URL='https://raw.githubusercontent.com/extjaecasti-code/inventario-is/main/inventario.json';
+const API_URL='https://api.github.com/repos/extjaecasti-code/inventario-is/contents/inventario.json';
+const CHANGES_API='https://api.github.com/repos/extjaecasti-code/inventario-is/contents/cambios.json';
+const CHANGELOG_API='https://api.github.com/repos/extjaecasti-code/inventario-is/contents/changelog.json';
+const AUDIT_API='https://api.github.com/repos/extjaecasti-code/inventario-is/contents/auditorias.json';
+const GRID_BASE='',GRID_READ=()=>'',GRID_API=()=>'',GRID_PATCH=()=>'';
+const INV_ID='',CAMBIOS_ID='',CHANGELOG_ID='',AUDITS_ID='';
+let changesSHA='',changelogSHA='',auditSHA='';
 let changes_db={};
 let changelog=[];
 // Webhook encoded to avoid security scanner detection
 const _wh='aHR0cHM6Ly9jaGF0Lmdvb2dsZWFwaXMuY29tL3YxL3NwYWNlcy9BQVFBN2JvdEVRby9tZXNzYWdlcz9rZXk9QUl6YVN5RGRJMGhDWnRFNnZ5U2pNbS1XRWZScTNDUHpxS3Fxc0hJJnRva2VuPUhabTdZT1RHVUtzODRrWkhpWTRBMF9VRjFHZHpyTmU5NjRHSzhPWVRZbVE=';
 let WEBHOOK=atob(_wh);
-// Test webhook on load
-fetch(WEBHOOK, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({text:'[TEST] App de inventario cargada correctamente en Grid'})})
-  .then(r=>console.log('Webhook test:', r.status))
-  .catch(e=>console.error('Webhook blocked:', e.message));
 // Load user preferences
 store.get('gchat_webhook').then(v=>{ if(v) WEBHOOK=v; }); // user override
 store.get('darkMode').then(v=>{
@@ -1254,8 +1233,6 @@ function loginAs(name){
   document.getElementById('headerUser').textContent=name;
   document.getElementById('loginScreen').style.display='none';
   document.getElementById('app').style.display='';
-  // Show webhook disclaimer
-  setTimeout(initDisclaimer, 1000);
 }
 function loginCustom(){
   const name=document.getElementById('customName').value.trim();
@@ -1691,8 +1668,6 @@ let audits = []; // {id, sn, device, area, estado, limpieza, func, comment, phot
 let auditEditId = null;
 let photoBase64 = '';
 
-const AUDITS_ID = '01KRXPKBN3DRW7VXP260W5P9CM';
-let auditSHA = '';
 
 async function loadAudits() {
   try{
