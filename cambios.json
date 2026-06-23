@@ -1,1 +1,20 @@
-{}
+{
+  "XXRBN244001749": {
+    "S/N": "XXRBN244001749",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZQ521",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "P2S",
+    "IP": "10.9.124.76",
+    "MAC": "8CD54A1B16BA",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se regreso de Dataware ",
+    "Status in Arturito": "In Use"
+  }
+}
