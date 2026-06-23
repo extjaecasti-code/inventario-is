@@ -2845,7 +2845,9 @@ function parseCSV(text) {
   if(!lines.length) return [];
   // Detect delimiter
   const delim = lines[0].includes('\t') ? '\t' : ',';
-  const headers = lines[0].split(delim).map(h => h.trim().replace(/^"|"$/g,'').toUpperCase());
+  // Parse headers - preserve original case and remove empty trailing columns
+  const headers = lines[0].split(delim).map(h => h.trim().replace(/^"|"$/g,''));
+  while(headers.length && !headers[headers.length-1]) headers.pop();
   return lines.slice(1).map(line => {
     const vals = [];
     let cur='', inQ=false;
@@ -3076,15 +3078,23 @@ function loadTriFile(input, source) {
 }
 
 function getSnFromRow(row) {
-  const keys = ['SERIAL','S/N','SN','NS','N/S','SERIAL_NUMBER','SERIE','serial','s/n','Serie','ns','N.S.','No. Serie'];
-  for (const k of keys) { if (row[k]) return String(row[k]).trim().toUpperCase(); }
-  for (const k of Object.keys(row)) { if (/serial|serie|s\/n/i.test(k) && row[k]) return String(row[k]).trim().toUpperCase(); }
+  const keys = ['SERIAL','S/N','SN','NS','N/S','SERIAL_NUMBER','SERIE','serial','s/n','Serie','ns','N.S.','No. Serie','NS ','N_S'];
+  for (const k of keys) { if (row[k] !== undefined && row[k] !== '') return String(row[k]).trim().toUpperCase(); }
+  // Try case-insensitive match
+  for (const k of Object.keys(row)) {
+    if (/^(ns|sn|serial|s\/n|serie)$/i.test(k.trim()) && row[k]) return String(row[k]).trim().toUpperCase();
+  }
   return null;
 }
 
 function getStatusFromRow(row) {
-  const keys = ['STATUS','ESTATUS','ESTATUS FISICO','Status','status','Estado','ESTADO'];
+  const keys = ['STATUS','ESTATUS','ESTATUS FISICO','Status','status','Estado','ESTADO','In Use','IN USE','Estatus'];
   for (const k of keys) { if (row[k]) return String(row[k]).replace(/\s*\(.*?\)/g,'').trim(); }
+  // If none found, look for any key whose VALUE looks like a status
+  const statusVals = ['in use','in stock','in repair','retired','missed'];
+  for (const [k,v] of Object.entries(row)) {
+    if (v && statusVals.includes(String(v).toLowerCase().trim())) return String(v).trim();
+  }
   return '';
 }
 
