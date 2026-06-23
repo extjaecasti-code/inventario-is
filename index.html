@@ -2841,12 +2841,14 @@ function normalizeSpiderStatus(s) {
 }
 
 function parseCSV(text) {
-  const lines = text.split(/\r?\n/).filter(Boolean);
+  // Normalize line endings
+  text = text.replace(/\r\n/g,'\n').replace(/\r/g,'\n');
+  const lines = text.split('\n').filter(l => l.trim());
   if(!lines.length) return [];
   // Detect delimiter
   const delim = lines[0].includes('\t') ? '\t' : ',';
-  // Parse headers - preserve original case and remove empty trailing columns
-  const headers = lines[0].split(delim).map(h => h.trim().replace(/^"|"$/g,''));
+  // Parse headers - trim whitespace/CR and remove empty trailing columns
+  const headers = lines[0].split(delim).map(h => h.trim().replace(/^"|"$/g,'').replace(/\r/g,''));
   while(headers.length && !headers[headers.length-1]) headers.pop();
   return lines.slice(1).map(line => {
     const vals = [];
