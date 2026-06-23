@@ -1187,32 +1187,12 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
 <div class="toast" id="toast"></div>
 <script>
 
-// ── STORAGE SHIM (Grid-compatible) ───────────────────────────────────────
-// Grid provides window.storage API that persists per-user across sessions
+// ── STORAGE SHIM (localStorage for GitHub Pages) ─────────────────────────
 const _mem = {};
 const store = {
-  get: async (k) => {
-    try {
-      if (window.storage) {
-        const r = await window.storage.get(k);
-        return r ? r.value : null;
-      }
-    } catch(e) {}
-    return _mem[k] || null;
-  },
-  set: async (k, v) => {
-    try {
-      if (window.storage) {
-        await window.storage.set(k, v);
-        return;
-      }
-    } catch(e) {}
-    _mem[k] = v;
-  },
-  del: async (k) => {
-    try { if (window.storage) await window.storage.delete(k); } catch(e) {}
-    delete _mem[k];
-  }
+  get: async (k) => { try{ return localStorage.getItem(k); }catch(e){ return _mem[k]||null; } },
+  set: async (k, v) => { try{ localStorage.setItem(k,v); }catch(e){ _mem[k]=v; } },
+  del: async (k) => { try{ localStorage.removeItem(k); }catch(e){ delete _mem[k]; } }
 };
 
 // ── GRID CONFIG ──
@@ -1298,15 +1278,22 @@ function setSyncState(state,msg){
 async function loadFromGitHub(showMsg){
   setSyncState('syncing','Cargando...');
   try{
-    // Load base inventory from Grid
-    const res=await fetch(GRID_READ(INV_ID)+'?t='+Date.now());
+    // Load base inventory from GitHub
+    const res=await fetch(RAW_URL+'?t='+Date.now());
     if(!res.ok)throw new Error('HTTP '+res.status);
     const base=await res.json();
 
-    // Load changes from Grid
+    // Load changes from GitHub API (bypass cache)
     try{
-      const cRes=await fetch(GRID_READ(CAMBIOS_ID)+'?t='+Date.now());
-      if(cRes.ok){ try{ changes_db=await cRes.json(); }catch(e){ changes_db={}; } }
+      const cMeta=await fetch(CHANGES_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
+      if(cMeta.ok){
+        const m=await cMeta.json();
+        changesSHA=m.sha;
+        if(m.content){
+          const decoded=decodeURIComponent(escape(atob(m.content.replace(/\n/g,''))));
+          try{ changes_db=JSON.parse(decoded); }catch(e){ changes_db={}; }
+        }
+      }
     }catch(e){ changes_db={}; }
 
     // Merge base + changes
@@ -1327,11 +1314,16 @@ async function loadFromGitHub(showMsg){
 async function saveToGitHub(commitMsg){
   setSyncState('syncing','Guardando...');
   try{
-    const content=JSON.stringify(changes_db,null,2);
-    const form=new FormData();
-    form.append('file',new Blob([content],{type:'application/json'}),'cambios.json');
-    const res=await fetch(GRID_API(CAMBIOS_ID),{method:'POST',credentials:'include',body:form});
-    if(!res.ok){const err=await res.json();throw new Error(err.error||'HTTP '+res.status);}
+    // Get fresh SHA
+    const metaRes=await fetch(CHANGES_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
+    if(metaRes.ok){ const m=await metaRes.json(); changesSHA=m.sha; } else { changesSHA=''; }
+    const content=btoa(unescape(encodeURIComponent(JSON.stringify(changes_db,null,2))));
+    const body={message:commitMsg,content};
+    if(changesSHA) body.sha=changesSHA;
+    const res=await fetch(CHANGES_API,{method:'PUT',headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'},body:JSON.stringify(body)});
+    if(!res.ok){const err=await res.json();throw new Error(err.message||'HTTP '+res.status);}
+    const result=await res.json();
+    changesSHA=result.content.sha;
     setSyncState('ok','Sincronizado');
     updateConsolidateBanner();
     return true;
@@ -1704,18 +1696,27 @@ let auditSHA = '';
 
 async function loadAudits() {
   try{
-    const res=await fetch(GRID_READ(AUDITS_ID)+'?t='+Date.now());
-    if(res.ok){ try{ audits=await res.json(); }catch(e){ audits=[]; } }
+    const metaRes=await fetch(AUDIT_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
+    if(metaRes.ok){
+      const m=await metaRes.json();
+      auditSHA=m.sha;
+      if(m.content){ const decoded=decodeURIComponent(escape(atob(m.content.replace(/\n/g,'')))); try{ audits=JSON.parse(decoded); }catch(e){ audits=[]; } }
+    }
   }catch(e){ audits=[]; }
   renderAuditTab();
 }
 
 async function saveAudits(commitMsg) {
   try{
-    const form=new FormData();
-    form.append('file',new Blob([JSON.stringify(audits,null,2)],{type:'application/json'}),'auditorias.json');
-    const res=await fetch(GRID_API(AUDITS_ID),{method:'POST',credentials:'include',body:form});
+    const metaRes=await fetch(AUDIT_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
+    if(metaRes.ok){ const m=await metaRes.json(); auditSHA=m.sha; }
+    const content=btoa(unescape(encodeURIComponent(JSON.stringify(audits,null,2))));
+    const body={message:commitMsg,content};
+    if(auditSHA) body.sha=auditSHA;
+    const res=await fetch(AUDIT_API,{method:'PUT',headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'},body:JSON.stringify(body)});
     if(!res.ok) throw new Error('HTTP '+res.status);
+    const result=await res.json();
+    auditSHA=result.content.sha;
     return true;
   }catch(e){ showToast('Error al guardar auditoria: '+e.message,'error'); return false; }
 }
@@ -2714,18 +2715,21 @@ async function consolidateInventory() {
   try {
     setSyncState('syncing', 'Consolidando...');
 
-    // Step 2: Save full merged inventory to Grid
+    // Step 2: Save full merged inventory to GitHub
     const clean = data.map(r => { const c = {...r}; delete c._id; return c; });
-    const invForm = new FormData();
-    invForm.append('file', new Blob([JSON.stringify(clean,null,2)],{type:'application/json'}), 'inventario.json');
-    const saveRes = await fetch(GRID_API(INV_ID), {method:'POST', credentials:'include', body:invForm});
-    if (!saveRes.ok) throw new Error('Error al guardar inventario en Grid');
+    const invMeta=await fetch(API_URL+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
+    let invSHA='';
+    if(invMeta.ok){ const m=await invMeta.json(); invSHA=m.sha; }
+    const invContent=btoa(unescape(encodeURIComponent(JSON.stringify(clean,null,2))));
+    const saveRes=await fetch(API_URL,{method:'PUT',headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'},body:JSON.stringify({message:'[consolidate] Inventario consolidado por '+currentUser,content:invContent,sha:invSHA})});
+    if(!saveRes.ok) throw new Error('Error al guardar inventario');
 
-    // Step 3: Clear changes file in Grid
-    const emptyForm = new FormData();
-    emptyForm.append('file', new Blob(['{}'],{type:'application/json'}), 'cambios.json');
-    const clearRes = await fetch(GRID_API(CAMBIOS_ID), {method:'POST', credentials:'include', body:emptyForm});
-    if (!clearRes.ok) throw new Error('Error al limpiar cambios en Grid');
+    // Step 3: Clear changes file
+    const cMeta=await fetch(CHANGES_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
+    let cSHA='';
+    if(cMeta.ok){ const m=await cMeta.json(); cSHA=m.sha; }
+    const clearRes=await fetch(CHANGES_API,{method:'PUT',headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'},body:JSON.stringify({message:'[consolidate] Limpiar cambios',content:btoa('{}'),sha:cSHA})});
+    if(!clearRes.ok) throw new Error('Error al limpiar cambios');
 
     // Step 4: Reset local changes_db
     changes_db = {};
@@ -2755,17 +2759,24 @@ async function addToChangelog(sn, device, area, changes, user) {
 
 async function saveChangelog() {
   try{
-    const content=JSON.stringify(changelog,null,2);
-    const form=new FormData();
-    form.append('file',new Blob([content],{type:'application/json'}),'changelog.json');
-    await fetch(GRID_API(CHANGELOG_ID),{method:'POST',credentials:'include',body:form});
+    const metaRes=await fetch(CHANGELOG_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
+    if(metaRes.ok){ const m=await metaRes.json(); changelogSHA=m.sha; }
+    const content=btoa(unescape(encodeURIComponent(JSON.stringify(changelog,null,2))));
+    const body={message:'[changelog] update',content};
+    if(changelogSHA) body.sha=changelogSHA;
+    const res=await fetch(CHANGELOG_API,{method:'PUT',headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'},body:JSON.stringify(body)});
+    if(res.ok){ const r=await res.json(); changelogSHA=r.content.sha; }
   }catch(e){ console.warn('Changelog save error',e); }
 }
 
 async function loadChangelog() {
   try{
-    const res=await fetch(GRID_READ(CHANGELOG_ID)+'?t='+Date.now());
-    if(res.ok){ try{ changelog=await res.json(); }catch(e){ changelog=[]; } }
+    const metaRes=await fetch(CHANGELOG_API+'?t='+Date.now(),{headers:{Authorization:'token '+GITHUB_TOKEN}});
+    if(metaRes.ok){
+      const m=await metaRes.json();
+      changelogSHA=m.sha;
+      if(m.content){ const decoded=decodeURIComponent(escape(atob(m.content.replace(/\n/g,'')))); try{ changelog=JSON.parse(decoded); }catch(e){ changelog=[]; } }
+    }
   }catch(e){ changelog=[]; }
 }
 
