@@ -6,12 +6,12 @@
     "changes": [
       {
         "label": "Comentarios",
-        "before": "",
-        "after": "prueba"
+        "before": "prueba 1",
+        "after": "prueba 12"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-23T20:20:47.796Z"
+    "ts": "2026-06-23T20:26:28.326Z"
   },
   {
     "sn": "24248524205021",
