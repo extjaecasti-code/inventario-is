@@ -1126,7 +1126,7 @@ const CHANGELOG_FILE='changelog.json';
 const CHANGELOG_API=`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${CHANGELOG_FILE}`;
 let changelogSHA='';
 const WEBHOOK='https://chat.googleapis.com/v1/spaces/AAQA7botEQo/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=HZm7YOTGUKs84kZHiY4A0_UF1GdzrNe964GK8OYTYmQ';
-let GITHUB_TOKEN=localStorage.getItem('gh_token')||'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';
+let GITHUB_TOKEN=localStorage.getItem('gh_token')||'';
 const RAW_URL=`https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${GITHUB_FILE}`;
 const API_URL=`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${GITHUB_FILE}`;
 const PRESET_USERS=[{"id": "u1", "name": "André Jael Castillo Diaz", "role": "Admin", "os": "Windows"}, {"id": "u2", "name": "Luis Eduardo Avalos Garcia", "role": "Editor", "os": "Windows"}, {"id": "u3", "name": "Erick Agustín Crisóstomo Sanchez", "role": "Editor", "os": "macOS"}, {"id": "u4", "name": "Erick Avisai Núñez Loza", "role": "Admin", "os": "macOS"}];
