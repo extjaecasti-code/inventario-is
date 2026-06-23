@@ -1,5 +1,24 @@
 [
   {
+    "sn": "XXRBN244001749",
+    "device": "Impresora ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Use"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Se regreso de Dataware"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-06-23T03:34:12.578Z"
+  },
+  {
     "sn": "XXRBN244003748",
     "device": "Impresora Zebra",
     "area": "ACTIVO FIJO",
@@ -1171,20 +1190,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-02T00:38:38.259Z"
-  },
-  {
-    "sn": "XXRBN244001749",
-    "device": "Impresora ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In repair"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-02T00:37:59.686Z"
   },
   {
     "sn": "PF5E8E0S",
