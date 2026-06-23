@@ -1,5 +1,24 @@
 [
   {
+    "sn": "24255524200450",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Use"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Se regresa a operacion",
+        "after": "Se regresa a operación"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-06-23T03:34:45.671Z"
+  },
+  {
     "sn": "XXRBN244001749",
     "device": "Impresora ZEBRA",
     "area": "ACTIVO FIJO",
@@ -1171,25 +1190,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-02T01:06:00.889Z"
-  },
-  {
-    "sn": "24255524200450",
-    "device": "Handheld ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In repair"
-      },
-      {
-        "label": "Categoría",
-        "before": "HandHeld",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-02T00:38:38.259Z"
   },
   {
     "sn": "PF5E8E0S",
