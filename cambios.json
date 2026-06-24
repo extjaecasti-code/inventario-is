@@ -52,5 +52,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "In Use / In Stock MDF",
     "Status in Arturito": "In Stock"
+  },
+  "24248524204927": {
+    "S/N": "24248524204927",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "ZEBRA",
+    "MODELO": "TC520K",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "MDF",
+    "IP": "10.9.96.235",
+    "MAC": "88:BC:AC:13:CA:A1",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "13.0.0",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "In Use / In Stock MDF",
+    "Status in Arturito": "In Stock"
   }
 }
