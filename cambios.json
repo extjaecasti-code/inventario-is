@@ -142,5 +142,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Stock"
+  },
+  "24255524200662": {
+    "S/N": "24255524200662",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "ZEBRA",
+    "MODELO": "TC520K",
+    "AREA": "ICQA",
+    "ASIGNACIÓN": "ICQA",
+    "IP": "10.9.96.66",
+    "MAC": "88:BC:AC:13:FF:E0",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "14.0.0",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Pantalla rota, en espera de proveedor",
+    "Status in Arturito": "In Stock"
   }
 }
