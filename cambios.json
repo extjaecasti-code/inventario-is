@@ -376,5 +376,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In repair"
+  },
+  "24249524203167": {
+    "S/N": "24249524203167",
+    "ESTATUS FISICO": "In repair",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "ZEBRA",
+    "MODELO": "TC520K",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "OUTBOUND",
+    "IP": "10.9.96.91",
+    "MAC": "88:BC:AC:12:C4:87",
+    "SSID": "",
+    "O.S.": "14.0.0",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se regresa de garantía, se entrega a AF",
+    "Status in Arturito": "In repair"
   }
 }
