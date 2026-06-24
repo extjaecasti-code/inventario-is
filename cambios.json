@@ -394,5 +394,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Se regresa de garantía, se entrega a AF",
     "Status in Arturito": "In repair"
+  },
+  "__new__25224524203502": {
+    "S/N": "25224524203502",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "ZEBRA",
+    "MODELO": "TC520K",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Stock"
   }
 }
