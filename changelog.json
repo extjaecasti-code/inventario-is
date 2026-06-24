@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24173010562857",
+    "device": "Scanner ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-24T17:27:38.628Z"
+  },
+  {
     "sn": "25224524203502",
     "device": "Handheld ZEBRA",
     "area": "INTERNAL SYSTEM",
