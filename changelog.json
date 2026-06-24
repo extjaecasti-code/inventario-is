@@ -1,5 +1,19 @@
 [
   {
+    "sn": "25224524203502",
+    "device": "Handheld ZEBRA",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-24T15:53:07.588Z"
+  },
+  {
     "sn": "24249524203167",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
