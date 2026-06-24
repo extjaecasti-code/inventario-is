@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24243524207010",
+    "device": "Handheld ZEBRA",
+    "area": "DATAWARE",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-24T15:37:58.747Z"
+  },
+  {
     "sn": "0WXBTFQI24048091",
     "device": "Meet Google Meet",
     "area": "OUTBOUND",
@@ -244,25 +258,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-16T01:11:09.723Z"
-  },
-  {
-    "sn": "24243524207010",
-    "device": "Handheld ZEBRA",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In repair",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "DATAWARE",
-        "after": "INBOUND"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-16T01:09:56.877Z"
   },
   {
     "sn": "24249524203326",
