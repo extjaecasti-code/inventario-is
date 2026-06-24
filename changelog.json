@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24255524200533",
+    "device": "Handheld ZEBRA",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-24T15:48:19.573Z"
+  },
+  {
     "sn": "24243524206994",
     "device": "Handheld ZEBRA",
     "area": "INBOUND",
@@ -475,25 +489,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-16T01:03:52.573Z"
-  },
-  {
-    "sn": "24255524200533",
-    "device": "Handheld ZEBRA",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In repair",
-        "after": "In Stock"
-      },
-      {
-        "label": "Comentarios",
-        "before": "Se regresa de garantía, se entrega a AF",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-16T01:01:52.111Z"
   },
   {
     "sn": "24255524200665",
