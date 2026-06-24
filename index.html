@@ -150,6 +150,7 @@ tbody tr:hover .row-actions{opacity:1;}
 .tri-source.inv{background:#EBF5FF;color:#2968C8;}
 .tri-source.spider{background:#FFF3E0;color:#E65100;}
 .tri-source.excel{background:#E8F5E9;color:#2E7D32;}
+.spider-stat{transition:box-shadow .15s;}.spider-stat:hover{box-shadow:0 0 0 2px var(--ml-blue);}
 
 /* ── SPIDER COMPARATIVO ── */
 .spider-upload-zone{border:2px dashed var(--border2);border-radius:12px;padding:40px 24px;text-align:center;cursor:pointer;transition:all .2s;background:var(--surface2);}
@@ -772,11 +773,11 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
       <!-- STATS -->
       <div id="triStats" style="display:none;margin-bottom:16px">
         <div class="spider-stats">
-          <div class="spider-stat"><div class="val" id="triTotal" style="color:var(--ml-blue)">0</div><div class="lbl">Total S/N</div></div>
-          <div class="spider-stat"><div class="val" id="triMatch3" style="color:var(--green)">0</div><div class="lbl">Los 3 coinciden</div></div>
-          <div class="spider-stat"><div class="val" id="triDiff3" style="color:var(--red)">0</div><div class="lbl">Los 3 difieren</div></div>
-          <div class="spider-stat"><div class="val" id="triDiff2" style="color:var(--yellow-s)">0</div><div class="lbl">2 de 3 difieren</div></div>
-          <div class="spider-stat"><div class="val" id="triOnlyOne" style="color:var(--purple)">0</div><div class="lbl">Solo en 1 fuente</div></div>
+          <div class="spider-stat" onclick="filterTri('all')" style="cursor:pointer" title="Ver todos"><div class="val" id="triTotal" style="color:var(--ml-blue)">0</div><div class="lbl">Total S/N</div></div>
+          <div class="spider-stat" onclick="filterTri('match')" style="cursor:pointer" title="Ver coincidencias"><div class="val" id="triMatch3" style="color:var(--green)">0</div><div class="lbl">Los 3 coinciden</div></div>
+          <div class="spider-stat" onclick="filterTri('diff3')" style="cursor:pointer" title="Ver los 3 difieren"><div class="val" id="triDiff3" style="color:var(--red)">0</div><div class="lbl">Los 3 difieren</div></div>
+          <div class="spider-stat" onclick="filterTri('diff2')" style="cursor:pointer" title="Ver 2 de 3 difieren"><div class="val" id="triDiff2" style="color:var(--yellow-s)">0</div><div class="lbl">2 de 3 difieren</div></div>
+          <div class="spider-stat" onclick="filterTri('only-one')" style="cursor:pointer" title="Ver solo en 1 fuente"><div class="val" id="triOnlyOne" style="color:var(--purple)">0</div><div class="lbl">Solo en 1 fuente</div></div>
         </div>
         <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
           <button class="btn btn-ghost" style="font-size:12px" onclick="filterTri('all')">Todos</button>
@@ -3133,23 +3134,6 @@ function runTriCompare() {
     if(new Set(statuses.map(s=>s.toLowerCase())).size > 1)
       diffs.push({field:'Status', inv:invStatus, spider:spiderStatus, excel:excelStatus});
 
-    // Compare other fields between excel and inventory
-    if(inv && excel) {
-      const fieldMap = {
-        'AREA':['AREA','Area','LOCATION','area'],
-        'MARCA':['MARCA','FABRICANTE','Fabricante','MANUFACTURER'],
-        'MODELO':['MODELO','MODEL','Modelo'],
-        'ASIGNACIÓN':['ASIGNACIÓN','USERNAME','Usuario','USUARIO'],
-      };
-      for(const [invKey, exKeys] of Object.entries(fieldMap)) {
-        const invVal = (inv[invKey]||'').trim().toLowerCase();
-        let exVal = '';
-        for(const k of exKeys) { if(excel[k]) { exVal=String(excel[k]).trim().toLowerCase(); break; } }
-        if(invVal && exVal && invVal !== exVal)
-          diffs.push({field:invKey, inv:inv[invKey]||'', spider:'', excel:exVal});
-      }
-    }
-
     const sources = (inv?1:0)+(spider?1:0)+(excel?1:0);
     const state = sources===1?'only-one':diffs.length>0?sources===3?'diff3':'diff2':'match';
     triResults.push({sn,inv,spider,excel,invStatus,spiderStatus,excelStatus,diffs,state,sources});
@@ -3168,8 +3152,19 @@ function runTriCompare() {
 
 function filterTri(filter) {
   let rows = triResults;
-  if(filter==='diff3') rows=triResults.filter(r=>r.state==='diff3');
+  if(filter==='diff3')    rows=triResults.filter(r=>r.state==='diff3');
+  if(filter==='diff2')    rows=triResults.filter(r=>r.state==='diff2');
+  if(filter==='match')    rows=triResults.filter(r=>r.state==='match');
+  if(filter==='only-one') rows=triResults.filter(r=>r.state==='only-one');
   if(filter==='any-diff') rows=triResults.filter(r=>r.state!=='match');
+  // Highlight active stat card
+  document.querySelectorAll('.spider-stat').forEach(el=>el.style.outline='');
+  const filterMap={'all':0,'match':1,'diff3':2,'diff2':3,'only-one':4};
+  const idx=filterMap[filter];
+  if(idx!==undefined){
+    const cards=document.querySelectorAll('#triStats .spider-stat');
+    if(cards[idx]) cards[idx].style.outline='2px solid var(--ml-blue)';
+  }
   const tbody=document.getElementById('triTableBody');
   const empty=document.getElementById('triEmpty');
   if(!rows.length){tbody.innerHTML='';empty.style.display='';return;}
