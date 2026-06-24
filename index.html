@@ -2841,33 +2841,34 @@ function normalizeSpiderStatus(s) {
 }
 
 function parseCSV(text) {
-  // Normalize all line endings to \n
   var normalized = '';
   for (var i = 0; i < text.length; i++) {
-    if (text[i] === '\r' && text[i+1] === '\n') { normalized += '\n'; i++; }
-    else if (text[i] === '\r') { normalized += '\n'; }
+    var ch = text.charCodeAt(i);
+    if (ch === 13 && text.charCodeAt(i+1) === 10) { normalized += String.fromCharCode(10); i++; }
+    else if (ch === 13) { normalized += String.fromCharCode(10); }
     else { normalized += text[i]; }
   }
-  const lines = normalized.split('\n').filter(function(l){ return l.trim(); });
+  var lines = normalized.split(String.fromCharCode(10)).filter(function(l){ return l.trim().length > 0; });
   if(!lines.length) return [];
-  const delim = lines[0].indexOf('\t') >= 0 ? '\t' : ',';
-  const headers = lines[0].split(delim).map(function(h){ return h.trim().replace(/^"|"$/g,''); });
+  var delim = lines[0].indexOf(String.fromCharCode(9)) >= 0 ? String.fromCharCode(9) : ',';
+  var headers = lines[0].split(delim).map(function(h){ return h.trim().replace(/^"|"$/g,''); });
   while(headers.length && !headers[headers.length-1]) headers.pop();
-  return lines.slice(1).map(function(line) {
-
-    const vals = [];
-    let cur='', inQ=false;
-    for(let i=0;i<line.length;i++){
-      const ch=line[i];
-      if(ch==='"'){inQ=!inQ;}
-      else if(ch===delim&&!inQ){vals.push(cur.trim());cur='';}
-      else cur+=ch;
+  var result = [];
+  for(var j=1; j<lines.length; j++) {
+    var line = lines[j];
+    var vals = [], cur = '', inQ = false;
+    for(var k=0; k<line.length; k++) {
+      var c = line[k];
+      if(c==='"'){ inQ=!inQ; }
+      else if(c===delim&&!inQ){ vals.push(cur.trim()); cur=''; }
+      else { cur+=c; }
     }
     vals.push(cur.trim());
-    const obj={};
-    headers.forEach((h,i)=>{ obj[h]=(vals[i]||'').replace(/^"|"$/g,''); });
-    return obj;
-  }).filter(r => r['SERIAL'] || r['SERIAL ']);
+    var row = {};
+    for(var h=0; h<headers.length; h++) row[headers[h]] = vals[h]||'';
+    result.push(row);
+  }
+  return result;
 }
 
 function handleSpiderDrop(e) {
