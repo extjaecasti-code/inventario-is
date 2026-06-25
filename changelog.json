@@ -1,857 +1,17 @@
 [
   {
-    "sn": "XXRBN244003748",
-    "device": "Impresora Zebra",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In repair",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:14:30.033Z"
-  },
-  {
-    "sn": "XXRBJ221900546",
-    "device": "Impresora Zebra",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:14:24.876Z"
-  },
-  {
-    "sn": "24173010564165",
-    "device": "Scanner ZEBRA",
-    "area": "TRAINING",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:14:21.182Z"
-  },
-  {
-    "sn": "DPC25030001",
-    "device": "Dex manager DEX",
-    "area": "SHE",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:14:17.914Z"
-  },
-  {
-    "sn": "24173010563007",
-    "device": "Scanner ZEBRA",
-    "area": "TRAINING",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:14:15.251Z"
-  },
-  {
-    "sn": "24173010562974",
-    "device": "Scanner ZEBRA",
-    "area": "LOSS PREVENTION",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:14:09.196Z"
-  },
-  {
-    "sn": "24173010563869",
-    "device": "Scanner ZEBRA",
-    "area": "LOSS PREVENTION",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:14:04.392Z"
-  },
-  {
-    "sn": "24072010559337",
-    "device": "Scanner ZEBRA",
-    "area": "LOSS PREVENTION",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:13:58.454Z"
-  },
-  {
-    "sn": "24173010562942",
-    "device": "Scanner ZEBRA",
-    "area": "LOSS PREVENTION",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:13:53.845Z"
-  },
-  {
-    "sn": "24072010559331",
-    "device": "Scanner ZEBRA",
-    "area": "LOSS PREVENTION",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:13:49.233Z"
-  },
-  {
-    "sn": "XXRBN220600249",
-    "device": "Impresora ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:13:44.450Z"
-  },
-  {
-    "sn": "XXRBN220600049",
-    "device": "Impresora ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:13:42.080Z"
-  },
-  {
-    "sn": "24173010564303",
-    "device": "Scanner ZEBRA",
-    "area": "LOSS PREVENTION",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:13:35.304Z"
-  },
-  {
-    "sn": "DPC25030115",
-    "device": "Dex manager DEX",
-    "area": "SALA DE ESTAR",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:13:31.749Z"
-  },
-  {
-    "sn": "XXRBN253201165",
-    "device": "Impresora ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:13:21.078Z"
-  },
-  {
-    "sn": "XXRBN253201183",
-    "device": "Impresora ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:13:19.927Z"
-  },
-  {
-    "sn": "CN0T2D3",
-    "device": "Laptop DELL",
-    "area": "PEOPLE",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:13:14.592Z"
-  },
-  {
-    "sn": "7ZLC6F3",
-    "device": "Laptop DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:13:13.512Z"
-  },
-  {
-    "sn": "XXRBN244004057",
-    "device": "Impresora Zebra",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:13:05.824Z"
-  },
-  {
-    "sn": "XXRBN253200533",
-    "device": "Impresora ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:13:01.062Z"
-  },
-  {
-    "sn": "XXRBN244001774",
-    "device": "Impresora ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:12:58.140Z"
-  },
-  {
-    "sn": "XXRBN244003652",
-    "device": "Impresora Zebra",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:12:55.718Z"
-  },
-  {
-    "sn": "XXRBN244003671",
-    "device": "Impresora Zebra",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:12:53.328Z"
-  },
-  {
-    "sn": "XXRBN244003721",
-    "device": "Impresora Zebra",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In repair",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:12:50.970Z"
-  },
-  {
-    "sn": "XXRBN244003876",
-    "device": "Impresora Zebra",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:12:44.933Z"
-  },
-  {
-    "sn": "XXRBN253201003",
-    "device": "Impresora ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:12:41.861Z"
-  },
-  {
-    "sn": "XXRBN244601093",
-    "device": "Impresora Zebra",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:12:36.638Z"
-  },
-  {
-    "sn": "XXRBN253201164",
-    "device": "Impresora ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:12:34.485Z"
-  },
-  {
-    "sn": "PF4RYGNP",
-    "device": "Laptop LENOVO",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:12:32.132Z"
-  },
-  {
-    "sn": "99J243804098",
-    "device": "Impresora ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:12:26.398Z"
-  },
-  {
-    "sn": "99J243803135",
-    "device": "Impresora ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:12:19.943Z"
-  },
-  {
-    "sn": "99J243705984",
-    "device": "Impresora ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:12:13.628Z"
-  },
-  {
-    "sn": "HJWTQW3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:12:08.272Z"
-  },
-  {
-    "sn": "JBCZRW3",
-    "device": "Laptop DELL",
-    "area": "SMX0",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:12:00.968Z"
-  },
-  {
-    "sn": "3RJZRW3",
-    "device": "Laptop DELL",
-    "area": "SMX0",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:11:43.703Z"
-  },
-  {
-    "sn": "24173010564245",
-    "device": "Scanner ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:11:37.763Z"
-  },
-  {
-    "sn": "1J0R2D3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:11:32.130Z"
-  },
-  {
-    "sn": "HKVCZH3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:11:26.894Z"
-  },
-  {
-    "sn": "JY5ZRW3",
-    "device": "Laptop DELL",
-    "area": "LOA",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:11:16.260Z"
-  },
-  {
-    "sn": "24362010556605",
-    "device": "Scanner ZEBRA",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:11:12.163Z"
-  },
-  {
-    "sn": "24362010556548",
-    "device": "Scanner ZEBRA",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:11:07.286Z"
-  },
-  {
-    "sn": "24173010563895",
-    "device": "Scanner ZEBRA",
-    "area": "LI",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:11:02.235Z"
-  },
-  {
-    "sn": "24173010563853",
-    "device": "Scanner ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:10:52.912Z"
-  },
-  {
-    "sn": "24173010562858",
-    "device": "Scanner ZEBRA",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:10:48.508Z"
-  },
-  {
-    "sn": "BCF4XD3",
-    "device": "Laptop DELL",
-    "area": "LOA",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:10:44.262Z"
-  },
-  {
-    "sn": "24173010563032",
-    "device": "Scanner ZEBRA",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:10:39.565Z"
-  },
-  {
-    "sn": "24173010562984",
-    "device": "Scanner ZEBRA",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:10:35.504Z"
-  },
-  {
-    "sn": "24173010562953",
-    "device": "Scanner ZEBRA",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:10:30.396Z"
-  },
-  {
-    "sn": "24173010562933",
-    "device": "Scanner ZEBRA",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:10:25.573Z"
-  },
-  {
-    "sn": "24072010550836",
-    "device": "Scanner ZEBRA",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:10:14.689Z"
-  },
-  {
-    "sn": "24173010563052",
-    "device": "Scanner ZEBRA",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:10:07.036Z"
-  },
-  {
-    "sn": "24173010562920",
-    "device": "Scanner ZEBRA",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:10:02.078Z"
-  },
-  {
-    "sn": "24248524205164",
-    "device": "Handheld ZEBRA",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In repair"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:09:00.417Z"
-  },
-  {
-    "sn": "24173010564302",
-    "device": "Scanner ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:08:55.212Z"
-  },
-  {
-    "sn": "24173010564087",
-    "device": "Scanner ZEBRA",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:08:49.885Z"
-  },
-  {
-    "sn": "24173010564046",
-    "device": "Scanner ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:08:37.181Z"
-  },
-  {
-    "sn": "24173010562978",
-    "device": "Scanner ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:08:31.960Z"
-  },
-  {
-    "sn": "24173010562957",
-    "device": "Scanner ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:08:24.698Z"
-  },
-  {
-    "sn": "24173010562941",
-    "device": "Scanner ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T19:08:21.186Z"
-  },
-  {
-    "sn": "9B2348A05089",
+    "sn": "9B2348A05084",
     "device": "UPS APC",
-    "area": "OUTBOUND",
+    "area": "INTERNAL SYSTEM",
     "changes": [
       {
-        "label": "Status (CSV sync)",
-        "before": "In Stock",
-        "after": "In Use"
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "Retired"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:46:57.105Z"
-  },
-  {
-    "sn": "XXRBN253200756",
-    "device": "Impresora ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:46:02.426Z"
+    "ts": "2026-06-25T20:13:15.109Z"
   },
   {
     "sn": "XXRBN253200718",
@@ -1236,6 +396,25 @@
     "ts": "2026-06-25T18:09:07.365Z"
   },
   {
+    "sn": "24173010563853",
+    "device": "Scanner ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Asignación",
+        "before": "IS/Trabajo",
+        "after": "ACTIVO FIJO"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T18:08:47.183Z"
+  },
+  {
     "sn": "XXRBN244001842",
     "device": "Impresora ZEBRA",
     "area": "OUTBOUND",
@@ -1352,6 +531,25 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-24T15:52:11.935Z"
+  },
+  {
+    "sn": "24248524205164",
+    "device": "Handheld ZEBRA",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-24T15:51:59.639Z"
   },
   {
     "sn": "24255524200490",
@@ -1822,6 +1020,53 @@
     "ts": "2026-06-23T03:34:12.578Z"
   },
   {
+    "sn": "XXRBN244003748",
+    "device": "Impresora Zebra",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Stock"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Se manda a garantia",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-16T01:16:30.827Z"
+  },
+  {
+    "sn": "XXRBN253200533",
+    "device": "Impresora ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-16T01:15:44.657Z"
+  },
+  {
+    "sn": "XXRBN244003721",
+    "device": "Impresora Zebra",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-16T01:15:18.615Z"
+  },
+  {
     "sn": "24160523023113",
     "device": "RING SCANER ZEBRA",
     "area": "OUTBOUND",
@@ -1848,6 +1093,20 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-12T01:04:22.829Z"
+  },
+  {
+    "sn": "XXRBN220600049",
+    "device": "Impresora ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-09T22:00:39.736Z"
   },
   {
     "sn": "XXRBN253200540",
@@ -2209,6 +1468,59 @@
     "ts": "2026-06-08T16:15:03.550Z"
   },
   {
+    "sn": "JBCZRW3",
+    "device": "Laptop DELL",
+    "area": "SMX0",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "ICQA",
+        "after": "SMX0"
+      },
+      {
+        "label": "Asignación",
+        "before": "Prestamo para PS (Raul)",
+        "after": "Angeles Ramirez"
+      },
+      {
+        "label": "Sistema Operativo",
+        "before": "Chrome Flex",
+        "after": "W11"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Se realiza el prestamo de la lap por temporada HS",
+        "after": "Préstamo de laptop a SMX0"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-06-08T16:10:29.804Z"
+  },
+  {
+    "sn": "3RJZRW3",
+    "device": "Laptop DELL",
+    "area": "SMX0",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "SMX0"
+      },
+      {
+        "label": "Asignación",
+        "before": "Blanca Hernandez",
+        "after": "Angeles Ramirez"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Equipo prestado para PS",
+        "after": "Equipo prestado para SMX0"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-06-08T16:09:28.845Z"
+  },
+  {
     "sn": "9B2348A09064",
     "device": "UPS APC",
     "area": "INTERNAL SYSTEMS",
@@ -2311,6 +1623,102 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-04T15:25:38.310Z"
+  },
+  {
+    "sn": "24173010562858",
+    "device": "Scanner ZEBRA",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "SMX0"
+      },
+      {
+        "label": "Comentarios",
+        "before": "In Stock Reserved for expansion",
+        "after": "Se presta equipo para SMX0 por 2 semanas apartir del 4 de junio, se entregara AF"
+      }
+    ],
+    "user": "Erick Agustín Crisóstomo Sanchez",
+    "ts": "2026-06-04T13:16:34.347Z"
+  },
+  {
+    "sn": "24362010556548",
+    "device": "Scanner ZEBRA",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Asignación",
+        "before": "IS",
+        "after": "SMX0"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Se presta equipo para SMX0 por 2 semanas apartir del 4 de junio, se entregara AF"
+      }
+    ],
+    "user": "Erick Agustín Crisóstomo Sanchez",
+    "ts": "2026-06-04T13:09:59.829Z"
+  },
+  {
+    "sn": "24362010556605",
+    "device": "Scanner ZEBRA",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "SMX0"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "24362010556605"
+      }
+    ],
+    "user": "Erick Agustín Crisóstomo Sanchez",
+    "ts": "2026-06-04T13:09:19.521Z"
+  },
+  {
+    "sn": "24173010564087",
+    "device": "Scanner ZEBRA",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "SMX0"
+      },
+      {
+        "label": "Comentarios",
+        "before": "En Stock dentro de MDF",
+        "after": "Se presta equipo para SMX0 por 2 semanas apartir del 4 de junio, se entregara AF"
+      }
+    ],
+    "user": "Erick Agustín Crisóstomo Sanchez",
+    "ts": "2026-06-04T13:08:52.116Z"
   },
   {
     "sn": "99J243705990",
@@ -3087,6 +2495,30 @@
     "ts": "2026-05-21T16:33:40.187Z"
   },
   {
+    "sn": "BCF4XD3",
+    "device": "Laptop DELL",
+    "area": "LOA",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Asignación",
+        "before": "Angel Cora",
+        "after": "Diego Emanuel Polo"
+      },
+      {
+        "label": "SSID",
+        "before": "SHIPPING-CORP",
+        "after": "MELI-SHIPPING"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T16:27:41.892Z"
+  },
+  {
     "sn": "8SSA10R16922C2TJ41902KA",
     "device": "Cargador LENOVO",
     "area": "LOA",
@@ -3113,6 +2545,20 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T16:22:34.889Z"
+  },
+  {
+    "sn": "PF4RYGNP",
+    "device": "Laptop LENOVO",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Marca",
+        "before": "Lenovo",
+        "after": "LENOVO"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T16:21:24.580Z"
   },
   {
     "sn": "8SSA10R16922C2TJ3AE16FF",
@@ -3554,35 +3000,6 @@
     "ts": "2026-05-20T18:35:53.029Z"
   },
   {
-    "sn": "9B2348A05084",
-    "device": "UPS APC",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In repair"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "FINGER 2",
-        "after": "AF"
-      },
-      {
-        "label": "Comentarios",
-        "before": "In Stock (Operational Backup)",
-        "after": "El equipo no funciona correctamente"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-20T18:35:14.338Z"
-  },
-  {
     "sn": "23180D814D",
     "device": "Handheld Honeeywell",
     "area": "LP",
@@ -3807,6 +3224,20 @@
     "ts": "2026-05-18T19:15:04.534Z"
   },
   {
+    "sn": "7ZLC6F3",
+    "device": "Laptop DELL",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-15T19:44:28.060Z"
+  },
+  {
     "sn": "24248524204955",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
@@ -3890,6 +3321,20 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-14T17:49:15.705Z"
+  },
+  {
+    "sn": "24072010550836",
+    "device": "Scanner ZEBRA",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "MESA 4",
+        "after": "MESA ICQA FOTOS"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-14T17:48:36.071Z"
   },
   {
     "sn": "7X10SW3",
