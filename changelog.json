@@ -1,5 +1,19 @@
 [
   {
+    "sn": "DPC25030115",
+    "device": "Dex manager DEX",
+    "area": "SALA DE ESTAR",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T19:13:31.749Z"
+  },
+  {
     "sn": "XXRBN253201165",
     "device": "Impresora ZEBRA",
     "area": "ACTIVO FIJO",
