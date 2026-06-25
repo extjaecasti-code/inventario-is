@@ -2,87 +2,72 @@
   {
     "sn": "XXRBN253100444",
     "device": "Impresora ZEBRA",
-    "area": "OUTBOUND",
+    "area": "INTERNAL SYSTEMS",
     "changes": [
       {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "OUTBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF",
-        "after": "P2S"
+        "label": "Status (CSV sync)",
+        "before": "In Stock",
+        "after": "In Use"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:30:57.263Z"
+    "ts": "2026-06-25T18:31:06.325Z"
   },
   {
     "sn": "XXRBN253100442",
     "device": "Impresora ZEBRA",
-    "area": "OUTBOUND",
+    "area": "INTERNAL SYSTEMS",
     "changes": [
       {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "OUTBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF",
-        "after": "P2S"
+        "label": "Status (CSV sync)",
+        "before": "In Stock",
+        "after": "In Use"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:30:24.663Z"
+    "ts": "2026-06-25T18:30:33.657Z"
   },
   {
     "sn": "XXRBN253100439",
     "device": "Impresora ZEBRA",
-    "area": "OUTBOUND",
+    "area": "INTERNAL SYSTEMS",
     "changes": [
       {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "OUTBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF",
-        "after": "P2S"
+        "label": "Status (CSV sync)",
+        "before": "In Stock",
+        "after": "In Use"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:29:41.018Z"
+    "ts": "2026-06-25T18:29:51.181Z"
   },
   {
-    "sn": "9B2348A05084",
+    "sn": "9B2348A09043",
     "device": "UPS APC",
-    "area": "INTERNAL SYSTEM",
+    "area": "INTERNAL SYSTEMS",
     "changes": [
       {
-        "label": "Estatus Físico",
-        "before": "In repair",
-        "after": "Retired"
+        "label": "Status (CSV sync)",
+        "before": "In Stock",
+        "after": "In Use"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:28:59.359Z"
+    "ts": "2026-06-25T18:14:54.062Z"
   },
   {
-    "sn": "9B2348A09038",
+    "sn": "9B2348A05087",
     "device": "UPS APC",
-    "area": "OUTBOUND",
+    "area": "INTERNAL SYSTEMS",
     "changes": [
       {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "Retired"
+        "label": "Status (CSV sync)",
+        "before": "In Stock",
+        "after": "In Use"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:23:55.321Z"
+    "ts": "2026-06-25T18:14:49.152Z"
   },
   {
     "sn": "XXRBN253201188",
@@ -2914,6 +2899,35 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-20T18:35:53.029Z"
+  },
+  {
+    "sn": "9B2348A05084",
+    "device": "UPS APC",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      },
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "FINGER 2",
+        "after": "AF"
+      },
+      {
+        "label": "Comentarios",
+        "before": "In Stock (Operational Backup)",
+        "after": "El equipo no funciona correctamente"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-20T18:35:14.338Z"
   },
   {
     "sn": "23180D814D",
