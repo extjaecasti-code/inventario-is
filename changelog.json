@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24248524205021",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In repair",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T18:05:29.109Z"
+  },
+  {
     "sn": "24173010562924",
     "device": "Scanner ZEBRA",
     "area": "OUTBOUND",
@@ -432,20 +446,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-23T20:26:28.326Z"
-  },
-  {
-    "sn": "24248524205021",
-    "device": "Handheld ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "hola"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-23T20:05:31.310Z"
   },
   {
     "sn": "24248524205187",
