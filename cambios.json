@@ -361,13 +361,13 @@
   },
   "24248524205164": {
     "S/N": "24248524205164",
-    "ESTATUS FISICO": "In repair",
+    "ESTATUS FISICO": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
-    "AREA": "ICQA",
-    "ASIGNACIÓN": "ICQA",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "OUTBOUND",
     "IP": "10.9.96.237",
     "MAC": "88:BC:AC:13:C9:6D",
     "SSID": "MELI-SHIPPING",
@@ -375,7 +375,7 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "",
-    "Status in Arturito": "In repair"
+    "Status in Arturito": "In Use"
   },
   "24249524203167": {
     "S/N": "24249524203167",
