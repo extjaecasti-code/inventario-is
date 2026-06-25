@@ -433,7 +433,7 @@
   },
   "24173010562924": {
     "S/N": "24173010562924",
-    "ESTATUS FISICO": "In Stock",
+    "ESTATUS FISICO": "In Use",
     "Categoría": "Scanner",
     "DISPOSITIVO": "Scanner",
     "MARCA": "ZEBRA",
@@ -447,6 +447,6 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "Se encuentra en MDF",
-    "Status in Arturito": "In Stock"
+    "Status in Arturito": "In Use"
   }
 }
