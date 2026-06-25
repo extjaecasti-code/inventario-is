@@ -1,5 +1,24 @@
 [
   {
+    "sn": "XXRBN253200756",
+    "device": "Impresora ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "P2S"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T18:45:52.086Z"
+  },
+  {
     "sn": "XXRBN253200718",
     "device": "Impresora ZEBRA",
     "area": "INTERNAL SYSTEMS",
