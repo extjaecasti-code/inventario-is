@@ -1,5 +1,19 @@
 [
   {
+    "sn": "9B2348A05084",
+    "device": "UPS APC",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "Retired"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T18:28:59.359Z"
+  },
+  {
     "sn": "9B2348A09038",
     "device": "UPS APC",
     "area": "OUTBOUND",
@@ -2843,35 +2857,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-20T18:35:53.029Z"
-  },
-  {
-    "sn": "9B2348A05084",
-    "device": "UPS APC",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In repair"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "FINGER 2",
-        "after": "AF"
-      },
-      {
-        "label": "Comentarios",
-        "before": "In Stock (Operational Backup)",
-        "after": "El equipo no funciona correctamente"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-20T18:35:14.338Z"
   },
   {
     "sn": "23180D814D",
