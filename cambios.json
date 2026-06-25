@@ -1038,5 +1038,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "24160523023113": {
+    "S/N": "24160523023113",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Scanner",
+    "DISPOSITIVO": "RING SCANER",
+    "MARCA": "ZEBRA",
+    "MODELO": "RSBT5",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "OUTBOUND",
+    "IP": "#N/A",
+    "MAC": "#N/A",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se manda a reparacion, se encuentra dañado la base",
+    "Status in Arturito": "In Stock"
   }
 }
