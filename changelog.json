@@ -1,45 +1,22 @@
 [
   {
-    "sn": "XXRBN253201013",
+    "sn": "XXRBN253100440",
     "device": "Impresora ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "Missed",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:06:36.075Z"
-  },
-  {
-    "sn": "9B2348A31168",
-    "device": "UPS APC",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:06:28.740Z"
-  },
-  {
-    "sn": "24248524205021",
-    "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
     "changes": [
       {
-        "label": "Status (CSV sync)",
-        "before": "In repair",
-        "after": "In Use"
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "P2S"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:05:29.109Z"
+    "ts": "2026-06-25T18:07:29.840Z"
   },
   {
     "sn": "24173010562924",
@@ -47,27 +24,18 @@
     "area": "OUTBOUND",
     "changes": [
       {
-        "label": "Status (CSV sync)",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:04:58.116Z"
-  },
-  {
-    "sn": "24248524205164",
-    "device": "Handheld ZEBRA",
-    "area": "ICQA",
-    "changes": [
+        "label": "Estatus Físico",
+        "before": "Missed",
+        "after": "In Stock"
+      },
       {
-        "label": "Status (CSV sync)",
-        "before": "In repair",
-        "after": "In Use"
+        "label": "Comentarios",
+        "before": "Missed Lost",
+        "after": "Se encuentra en MDF"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T17:56:27.262Z"
+    "ts": "2026-06-25T16:59:55.876Z"
   },
   {
     "sn": "24173010562857",
@@ -115,6 +83,25 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-24T15:52:11.935Z"
+  },
+  {
+    "sn": "24248524205164",
+    "device": "Handheld ZEBRA",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-24T15:51:59.639Z"
   },
   {
     "sn": "24255524200490",
@@ -474,6 +461,20 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-23T20:26:28.326Z"
+  },
+  {
+    "sn": "24248524205021",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "hola"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-23T20:05:31.310Z"
   },
   {
     "sn": "24248524205187",
@@ -1439,25 +1440,6 @@
     ],
     "user": "Luis Eduardo Avalos Garcia",
     "ts": "2026-06-02T06:55:38.617Z"
-  },
-  {
-    "sn": "XXRBN253100440",
-    "device": "Impresora ZEBRA",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Comentarios",
-        "before": "En Stock dentro de MDF",
-        "after": "Se hace cambio por la que se fue a garantia"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-02T01:06:00.889Z"
   },
   {
     "sn": "PF5E8E0S",
