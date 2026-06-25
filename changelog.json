@@ -5,18 +5,13 @@
     "area": "OUTBOUND",
     "changes": [
       {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "OUTBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF",
-        "after": "P2S"
+        "label": "Status (CSV sync)",
+        "before": "In Stock",
+        "after": "In Use"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:45:52.086Z"
+    "ts": "2026-06-25T18:46:02.426Z"
   },
   {
     "sn": "XXRBN253200718",
