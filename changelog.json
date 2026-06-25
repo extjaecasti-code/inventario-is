@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24248524205164",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In repair"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T20:33:22.847Z"
+  },
+  {
     "sn": "24173010564302",
     "device": "Scanner ZEBRA",
     "area": "ACTIVO FIJO",
@@ -96,30 +110,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-25T20:31:01.688Z"
-  },
-  {
-    "sn": "24248524205164",
-    "device": "Handheld ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In repair",
-        "after": "In Use"
-      },
-      {
-        "label": "Área",
-        "before": "ICQA",
-        "after": "OUTBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "ICQA",
-        "after": "OUTBOUND"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T20:29:14.436Z"
   },
   {
     "sn": "24160523023113",
