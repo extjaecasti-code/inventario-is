@@ -1,5 +1,19 @@
 [
   {
+    "sn": "XXRBN253201013",
+    "device": "Impresora ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "Missed",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T18:06:36.075Z"
+  },
+  {
     "sn": "9B2348A31168",
     "device": "UPS APC",
     "area": "INTERNAL SYSTEMS",
