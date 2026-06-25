@@ -675,6 +675,7 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
     <div class="spider-subtabs">
       <div class="spider-subtab active" id="stab-spider" onclick="switchSpiderTab('spider')">🕷️ Spider vs Inventario</div>
       <div class="spider-subtab" id="stab-tri" onclick="switchSpiderTab('tri')">📊 Comparativo 3 Fuentes</div>
+      <div class="spider-subtab" id="stab-csv" onclick="switchSpiderTab('csv')">📁 Inventario vs CSV</div>
     </div>
     <!-- SUB-PANEL SPIDER -->
     <div class="spider-subpanel active" id="spanel-spider">
@@ -807,6 +808,66 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
       </div>
     </div>
   </div><!-- /spanel-tri -->
+  <!-- SUB-PANEL CSV COMPARE -->
+  <div class="spider-subpanel" id="spanel-csv">
+    <div style="padding:16px 24px 0">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:flex-end">
+        <div style="flex:1;min-width:220px">
+          <div style="font-size:12px;font-weight:700;color:var(--text2);margin-bottom:8px">📁 Tu archivo CSV o Excel</div>
+          <div class="spider-upload-zone" style="padding:16px" onclick="document.getElementById('csvCompInput').click()">
+            <div style="font-size:24px;margin-bottom:6px">📁</div>
+            <p style="font-size:12px;margin:0" id="csvCompLabel">Subir CSV o Excel</p>
+          </div>
+          <input type="file" id="csvCompInput" accept=".csv,.xlsx,.xls" style="display:none" onchange="loadCsvComp(this)">
+        </div>
+        <div style="display:flex;align-items:flex-end;padding-bottom:4px">
+          <button class="btn btn-primary" onclick="runCsvCompare()" id="csvCompRunBtn" disabled style="height:40px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Comparar
+          </button>
+        </div>
+      </div>
+      <!-- STATS -->
+      <div id="csvCompStats" style="display:none;margin-bottom:16px">
+        <div class="spider-stats">
+          <div class="spider-stat" onclick="filterCsvComp('all')" style="cursor:pointer"><div class="val" id="csvCompTotal" style="color:var(--ml-blue)">0</div><div class="lbl">Total CSV</div></div>
+          <div class="spider-stat" onclick="filterCsvComp('match')" style="cursor:pointer"><div class="val" id="csvCompMatch" style="color:var(--green)">0</div><div class="lbl">Coinciden</div></div>
+          <div class="spider-stat" onclick="filterCsvComp('diff')" style="cursor:pointer"><div class="val" id="csvCompDiff" style="color:var(--red)">0</div><div class="lbl">Diferencias</div></div>
+          <div class="spider-stat" onclick="filterCsvComp('only-csv')" style="cursor:pointer"><div class="val" id="csvCompOnlyCsv" style="color:var(--yellow-s)">0</div><div class="lbl">Solo en CSV</div></div>
+          <div class="spider-stat" onclick="filterCsvComp('only-inv')" style="cursor:pointer"><div class="val" id="csvCompOnlyInv" style="color:var(--purple)">0</div><div class="lbl">Solo en Inventario</div></div>
+        </div>
+        <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+          <button class="btn btn-ghost" style="font-size:12px" onclick="filterCsvComp('all')">Todos</button>
+          <button class="btn btn-ghost" style="font-size:12px" onclick="filterCsvComp('diff')">Solo diferencias</button>
+          <button class="btn btn-ghost" style="font-size:12px" onclick="filterCsvComp('only-csv')">Solo en CSV</button>
+          <button class="btn btn-export" style="font-size:12px" onclick="exportCsvCompDiff()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Exportar diferencias
+          </button>
+        </div>
+      </div>
+      <!-- TABLE -->
+      <div id="csvCompTableWrap" style="display:none;border:1px solid var(--border);border-radius:8px;overflow:auto;max-height:520px;margin-bottom:80px">
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead><tr style="background:var(--surface2);position:sticky;top:0">
+            <th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">S/N</th>
+            <th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Estado</th>
+            <th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Status Inventario</th>
+            <th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Status CSV</th>
+            <th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Dispositivo</th>
+            <th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Area</th>
+            <th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Accion</th>
+          </tr></thead>
+          <tbody id="csvCompTableBody"></tbody>
+        </table>
+        <div id="csvCompEmpty" style="text-align:center;padding:40px;color:var(--text3);display:none">
+          <div style="font-size:32px;margin-bottom:8px">📁</div>
+          <p>Sube un CSV y presiona Comparar</p>
+        </div>
+      </div>
+    </div>
+  </div><!-- /spanel-csv -->
+
 
   </div><!-- /panel-spider -->
 
@@ -3208,6 +3269,158 @@ function exportTriDiff() {
   a.download='comparativo_3fuentes_'+new Date().toISOString().slice(0,10)+'.csv';
   a.click();
   showToast('CSV exportado: '+diffs.length+' diferencias','success');
+}
+
+// ── CSV vs INVENTARIO ─────────────────────────────────────────────────────
+let csvCompData = null;
+let csvCompResults = [];
+
+function loadCsvComp(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const label = document.getElementById('csvCompLabel');
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const rows = parseCSV(e.target.result);
+    csvCompData = rows;
+    label.textContent = '✓ ' + file.name + ' (' + rows.length + ' filas)';
+    label.style.color = 'var(--green)';
+    document.getElementById('csvCompRunBtn').disabled = false;
+  };
+  reader.readAsText(file, 'UTF-8');
+}
+
+function runCsvCompare() {
+  if (!csvCompData) return;
+
+  const invBySN = {};
+  data.forEach(d => { if(d['S/N']) invBySN[d['S/N'].trim().toUpperCase()] = d; });
+
+  const csvBySN = {};
+  csvCompData.forEach(r => {
+    const sn = getSnFromRow(r);
+    if(sn) csvBySN[sn] = r;
+  });
+
+  const allSNs = new Set([...Object.keys(invBySN), ...Object.keys(csvBySN)]);
+  csvCompResults = [];
+
+  allSNs.forEach(sn => {
+    const inv = invBySN[sn] || null;
+    const csv = csvBySN[sn] || null;
+    const invStatus = inv ? normalizeStatus(inv['ESTATUS FISICO'] || '') : '';
+    const csvStatus = csv ? normalizeSpiderStatus(getStatusFromRow(csv)) : '';
+
+    let state = 'match';
+    if (!inv) state = 'only-csv';
+    else if (!csv) state = 'only-inv';
+    else if (invStatus.toLowerCase() !== csvStatus.toLowerCase()) state = 'diff';
+
+    csvCompResults.push({ sn, inv, csv, invStatus, csvStatus, state });
+  });
+
+  const total  = Object.keys(csvBySN).length;
+  const match  = csvCompResults.filter(r => r.state === 'match').length;
+  const diff   = csvCompResults.filter(r => r.state === 'diff').length;
+  const onlyCsv = csvCompResults.filter(r => r.state === 'only-csv').length;
+  const onlyInv = csvCompResults.filter(r => r.state === 'only-inv').length;
+
+  document.getElementById('csvCompTotal').textContent   = total;
+  document.getElementById('csvCompMatch').textContent   = match;
+  document.getElementById('csvCompDiff').textContent    = diff;
+  document.getElementById('csvCompOnlyCsv').textContent = onlyCsv;
+  document.getElementById('csvCompOnlyInv').textContent = onlyInv;
+  document.getElementById('csvCompStats').style.display = '';
+  document.getElementById('csvCompTableWrap').style.display = '';
+
+  filterCsvComp('diff');
+}
+
+function filterCsvComp(filter) {
+  let rows = csvCompResults;
+  if(filter === 'match')    rows = csvCompResults.filter(r => r.state === 'match');
+  if(filter === 'diff')     rows = csvCompResults.filter(r => r.state === 'diff');
+  if(filter === 'only-csv') rows = csvCompResults.filter(r => r.state === 'only-csv');
+  if(filter === 'only-inv') rows = csvCompResults.filter(r => r.state === 'only-inv');
+
+  // Highlight active card
+  document.querySelectorAll('#csvCompStats .spider-stat').forEach(el => el.style.outline = '');
+  const filterMap = {'all':0,'match':1,'diff':2,'only-csv':3,'only-inv':4};
+  const idx = filterMap[filter];
+  if(idx !== undefined) {
+    const cards = document.querySelectorAll('#csvCompStats .spider-stat');
+    if(cards[idx]) cards[idx].style.outline = '2px solid var(--ml-blue)';
+  }
+
+  const tbody = document.getElementById('csvCompTableBody');
+  const empty = document.getElementById('csvCompEmpty');
+  if(!rows.length){ tbody.innerHTML=''; empty.style.display=''; return; }
+  empty.style.display = 'none';
+
+  const stateBadge = {
+    'match':    '<span class="diff-badge match">✓ Coincide</span>',
+    'diff':     '<span class="diff-badge diff">⚠ Diferente</span>',
+    'only-csv': '<span class="diff-badge only-spider">Solo en CSV</span>',
+    'only-inv': '<span class="diff-badge only-inv">Solo en Inventario</span>',
+  };
+
+  tbody.innerHTML = rows.map(r => {
+    const dev = r.inv ? ((r.inv['DISPOSITIVO']||'') + ' ' + (r.inv['MARCA']||'')).trim() : '—';
+    const area = r.inv ? (r.inv['AREA'] || '—') : '—';
+    const actionBtn = r.state === 'diff'
+      ? `<button class="btn btn-primary" style="font-size:11px;padding:4px 10px" onclick="applyCsvStatus('${r.sn}','${r.csvStatus}')" title="Actualizar status en inventario">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Aplicar
+         </button>`
+      : '—';
+
+    return `<tr style="border-bottom:1px solid var(--border);${r.state==='diff'?'background:rgba(224,32,32,.03)':r.state==='only-csv'?'background:rgba(245,166,35,.03)':''}">
+      <td style="padding:9px 12px;font-family:monospace;color:var(--ml-blue);font-weight:700">${esc(r.sn)}</td>
+      <td style="padding:9px 12px">${stateBadge[r.state]||''}</td>
+      <td style="padding:9px 12px;font-size:12px">${esc(r.invStatus||'—')}</td>
+      <td style="padding:9px 12px;font-size:12px">${esc(r.csvStatus||'—')}</td>
+      <td style="padding:9px 12px;font-size:12px">${esc(dev)}</td>
+      <td style="padding:9px 12px;font-size:12px">${esc(area)}</td>
+      <td style="padding:9px 12px">${actionBtn}</td>
+    </tr>`;
+  }).join('');
+}
+
+async function applyCsvStatus(sn, csvStatus) {
+  if(!confirm('Actualizar status de ' + sn + ' a "' + csvStatus + '" (del CSV)?')) return;
+  const idx = data.findIndex(d => d['S/N'] && d['S/N'].toUpperCase() === sn);
+  if(idx < 0){ showToast('Equipo no encontrado', 'error'); return; }
+  const before = data[idx]['ESTATUS FISICO'];
+  data[idx]['ESTATUS FISICO'] = csvStatus;
+  data[idx]['Status in Arturito'] = csvStatus;
+  if(typeof recordChange === 'function') recordChange(sn, {'ESTATUS FISICO': csvStatus, 'Status in Arturito': csvStatus});
+  const saved = await saveToGitHub('[csv-sync] ' + sn + ' -> ' + csvStatus + ' por ' + currentUser);
+  if(saved) {
+    if(typeof addToChangelog === 'function')
+      await addToChangelog(sn, (data[idx]['DISPOSITIVO']||'') + ' ' + (data[idx]['MARCA']||''), data[idx]['AREA'],
+        [{label:'Status (CSV sync)', before, after:csvStatus}], currentUser);
+    showToast('Status actualizado a "' + csvStatus + '" ✓', 'success');
+    runCsvCompare();
+    applyFilters();
+  }
+}
+
+function exportCsvCompDiff() {
+  const diffs = csvCompResults.filter(r => r.state !== 'match');
+  if(!diffs.length){ showToast('No hay diferencias para exportar', 'info'); return; }
+  const cols = ['S/N','ESTADO','STATUS_INVENTARIO','STATUS_CSV','DISPOSITIVO','AREA'];
+  const rows = [cols.join(',')];
+  diffs.forEach(r => {
+    const dev = r.inv ? ((r.inv['DISPOSITIVO']||'') + ' ' + (r.inv['MARCA']||'')).trim() : '';
+    const area = r.inv ? (r.inv['AREA']||'') : '';
+    const vals = [r.sn, r.state, r.invStatus, r.csvStatus, dev, area];
+    rows.push(vals.map(v => { const s=String(v||'').replace(/"/g,'""'); return s.includes(',')||s.includes('"')?'"'+s+'"':s; }).join(','));
+  });
+  const blob = new Blob([rows.join('\n')], {type:'text/csv;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'diff_inventario_csv_' + new Date().toISOString().slice(0,10) + '.csv';
+  a.click();
+  showToast('CSV exportado: ' + diffs.length + ' diferencias', 'success');
 }
 
 </script>
