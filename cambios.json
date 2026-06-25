@@ -361,7 +361,7 @@
   },
   "24248524205164": {
     "S/N": "24248524205164",
-    "ESTATUS FISICO": "In Use",
+    "ESTATUS FISICO": "In repair",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -375,7 +375,7 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "",
-    "Status in Arturito": "In Use"
+    "Status in Arturito": "In repair"
   },
   "24249524203167": {
     "S/N": "24249524203167",
@@ -433,7 +433,7 @@
   },
   "24173010562924": {
     "S/N": "24173010562924",
-    "ESTATUS FISICO": "In Use",
+    "ESTATUS FISICO": "In Stock",
     "Categoría": "Scanner",
     "DISPOSITIVO": "Scanner",
     "MARCA": "ZEBRA",
@@ -447,18 +447,24 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "Se encuentra en MDF",
-    "Status in Arturito": "In Use"
+    "Status in Arturito": "In Stock"
   },
-  "24248524205021": {
+  "XXRBN253100440": {
+    "S/N": "XXRBN253100440",
     "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use"
-  },
-  "9B2348A31168": {
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use"
-  },
-  "XXRBN253201013": {
-    "ESTATUS FISICO": "In Use",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZQ521",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "P2S",
+    "IP": "10.9.124.198",
+    "MAC": "9075DE12B290",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se hace cambio por la que se fue a garantia",
     "Status in Arturito": "In Use"
   }
 }
