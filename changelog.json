@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24173010563052",
+    "device": "Scanner ZEBRA",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T19:10:07.036Z"
+  },
+  {
     "sn": "24173010562920",
     "device": "Scanner ZEBRA",
     "area": "ICQA",
