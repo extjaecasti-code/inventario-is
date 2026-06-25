@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24173010562955",
+    "device": "Scanner ZEBRA",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "LI"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "LOGISTICA I."
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T20:17:16.766Z"
+  },
+  {
     "sn": "9B2348A05089",
     "device": "UPS APC",
     "area": "OUTBOUND",
