@@ -858,5 +858,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "En Stock dentro de MDF",
     "Status in Arturito": "In Use"
+  },
+  "9B2348A05085": {
+    "S/N": "9B2348A05085",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "UPS",
+    "DISPOSITIVO": "UPS",
+    "MARCA": "APC",
+    "MODELO": "BV1000",
+    "AREA": "OB",
+    "ASIGNACIÓN": "DOCKAS",
+    "IP": "#N/A",
+    "MAC": "#N/A",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "In Stock (Operational Backup)",
+    "Status in Arturito": "In Use"
   }
 }
