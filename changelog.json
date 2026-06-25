@@ -1,73 +1,107 @@
 [
   {
-    "sn": "XXRBN253100444",
+    "sn": "XXRBN253100450",
     "device": "Impresora ZEBRA",
-    "area": "INTERNAL SYSTEMS",
+    "area": "OUTBOUND",
     "changes": [
       {
-        "label": "Status (CSV sync)",
-        "before": "In Stock",
-        "after": "In Use"
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "P2S"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:31:06.325Z"
+    "ts": "2026-06-25T18:32:11.239Z"
+  },
+  {
+    "sn": "XXRBN253100444",
+    "device": "Impresora ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "P2S"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T18:30:57.263Z"
   },
   {
     "sn": "XXRBN253100442",
     "device": "Impresora ZEBRA",
-    "area": "INTERNAL SYSTEMS",
+    "area": "OUTBOUND",
     "changes": [
       {
-        "label": "Status (CSV sync)",
-        "before": "In Stock",
-        "after": "In Use"
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "P2S"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:30:33.657Z"
+    "ts": "2026-06-25T18:30:24.663Z"
   },
   {
     "sn": "XXRBN253100439",
     "device": "Impresora ZEBRA",
-    "area": "INTERNAL SYSTEMS",
+    "area": "OUTBOUND",
     "changes": [
       {
-        "label": "Status (CSV sync)",
-        "before": "In Stock",
-        "after": "In Use"
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "P2S"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:29:51.181Z"
+    "ts": "2026-06-25T18:29:41.018Z"
   },
   {
-    "sn": "9B2348A09043",
+    "sn": "9B2348A05084",
     "device": "UPS APC",
-    "area": "INTERNAL SYSTEMS",
+    "area": "INTERNAL SYSTEM",
     "changes": [
       {
-        "label": "Status (CSV sync)",
-        "before": "In Stock",
-        "after": "In Use"
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "Retired"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:14:54.062Z"
+    "ts": "2026-06-25T18:28:59.359Z"
   },
   {
-    "sn": "9B2348A05087",
+    "sn": "9B2348A09038",
     "device": "UPS APC",
-    "area": "INTERNAL SYSTEMS",
+    "area": "OUTBOUND",
     "changes": [
       {
-        "label": "Status (CSV sync)",
-        "before": "In Stock",
-        "after": "In Use"
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "Retired"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:14:49.152Z"
+    "ts": "2026-06-25T18:23:55.321Z"
   },
   {
     "sn": "XXRBN253201188",
@@ -2899,35 +2933,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-20T18:35:53.029Z"
-  },
-  {
-    "sn": "9B2348A05084",
-    "device": "UPS APC",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In repair"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "FINGER 2",
-        "after": "AF"
-      },
-      {
-        "label": "Comentarios",
-        "before": "In Stock (Operational Backup)",
-        "after": "El equipo no funciona correctamente"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-20T18:35:14.338Z"
   },
   {
     "sn": "23180D814D",
