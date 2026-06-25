@@ -1,5 +1,19 @@
 [
   {
+    "sn": "JY5ZRW3",
+    "device": "Laptop DELL",
+    "area": "LOA",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T19:11:16.260Z"
+  },
+  {
     "sn": "24362010556605",
     "device": "Scanner ZEBRA",
     "area": "INTERNAL SYSTEMS",
