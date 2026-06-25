@@ -1,5 +1,33 @@
 [
   {
+    "sn": "CN0T2D3",
+    "device": "Laptop DELL",
+    "area": "PEOPLE",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T19:13:14.592Z"
+  },
+  {
+    "sn": "7ZLC6F3",
+    "device": "Laptop DELL",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T19:13:13.512Z"
+  },
+  {
     "sn": "XXRBN244004057",
     "device": "Impresora Zebra",
     "area": "ACTIVO FIJO",
@@ -3586,20 +3614,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-18T19:15:04.534Z"
-  },
-  {
-    "sn": "7ZLC6F3",
-    "device": "Laptop DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-15T19:44:28.060Z"
   },
   {
     "sn": "24248524204955",
