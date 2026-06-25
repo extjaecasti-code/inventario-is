@@ -1,5 +1,19 @@
 [
   {
+    "sn": "9B2348A05087",
+    "device": "UPS APC",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T18:14:49.152Z"
+  },
+  {
     "sn": "XXRBN253201188",
     "device": "Impresora ZEBRA",
     "area": "OUTBOUND",
