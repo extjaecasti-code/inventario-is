@@ -1,5 +1,19 @@
 [
   {
+    "sn": "B5B2104",
+    "device": "Monitor 24 DELL",
+    "area": "ESFERA",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "ESFERA"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T18:07:54.051Z"
+  },
+  {
     "sn": "XXRBN253100440",
     "device": "Impresora ZEBRA",
     "area": "OUTBOUND",
