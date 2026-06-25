@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24173010563007",
+    "device": "Scanner ZEBRA",
+    "area": "TRAINING",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T19:14:15.251Z"
+  },
+  {
     "sn": "24173010562974",
     "device": "Scanner ZEBRA",
     "area": "LOSS PREVENTION",
