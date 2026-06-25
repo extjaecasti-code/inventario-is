@@ -361,7 +361,7 @@
   },
   "24248524205164": {
     "S/N": "24248524205164",
-    "ESTATUS FISICO": "In Use",
+    "ESTATUS FISICO": "In repair",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -375,7 +375,7 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "",
-    "Status in Arturito": "In Use"
+    "Status in Arturito": "In repair"
   },
   "24249524203167": {
     "S/N": "24249524203167",
