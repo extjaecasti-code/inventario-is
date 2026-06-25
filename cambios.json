@@ -466,5 +466,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Se hace cambio por la que se fue a garantia",
     "Status in Arturito": "In Use"
+  },
+  "B5B2104": {
+    "S/N": "B5B2104",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Display",
+    "DISPOSITIVO": "Monitor 24",
+    "MARCA": "DELL",
+    "MODELO": "P2425HE",
+    "AREA": "ESFERA",
+    "ASIGNACIÓN": "ESFERA",
+    "IP": "#N/A",
+    "MAC": "#N/A",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   }
 }
