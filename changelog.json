@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24248524205164",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "ICQA",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "ICQA",
+        "after": "OUTBOUND"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T20:29:14.436Z"
+  },
+  {
     "sn": "24160523023113",
     "device": "RING SCANER ZEBRA",
     "area": "OUTBOUND",
@@ -794,25 +818,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-24T15:52:11.935Z"
-  },
-  {
-    "sn": "24248524205164",
-    "device": "Handheld ZEBRA",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In repair"
-      },
-      {
-        "label": "Categoría",
-        "before": "HandHeld",
-        "after": "Handheld"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-24T15:51:59.639Z"
   },
   {
     "sn": "24255524200490",
