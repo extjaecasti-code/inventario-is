@@ -1,5 +1,19 @@
 [
   {
+    "sn": "XXRBN220600249",
+    "device": "Impresora ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T19:13:44.450Z"
+  },
+  {
     "sn": "XXRBN220600049",
     "device": "Impresora ZEBRA",
     "area": "OUTBOUND",
