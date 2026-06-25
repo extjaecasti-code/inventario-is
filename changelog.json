@@ -1,31 +1,17 @@
 [
   {
-    "sn": "9B2348A09043",
+    "sn": "9B2348A09038",
     "device": "UPS APC",
-    "area": "INTERNAL SYSTEMS",
+    "area": "OUTBOUND",
     "changes": [
       {
-        "label": "Status (CSV sync)",
-        "before": "In Stock",
-        "after": "In Use"
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "Retired"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:14:54.062Z"
-  },
-  {
-    "sn": "9B2348A05087",
-    "device": "UPS APC",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:14:49.152Z"
+    "ts": "2026-06-25T18:23:55.321Z"
   },
   {
     "sn": "XXRBN253201188",
