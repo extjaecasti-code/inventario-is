@@ -1,5 +1,24 @@
 [
   {
+    "sn": "24173010563853",
+    "device": "Scanner ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Asignación",
+        "before": "IS/Trabajo",
+        "after": "ACTIVO FIJO"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T18:08:47.183Z"
+  },
+  {
     "sn": "XXRBN244001842",
     "device": "Impresora ZEBRA",
     "area": "OUTBOUND",
