@@ -894,5 +894,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": " (Operational Backup)",
     "Status in Arturito": "In Use"
+  },
+  "24173010562955": {
+    "S/N": "24173010562955",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Scanner",
+    "DISPOSITIVO": "Scanner",
+    "MARCA": "ZEBRA",
+    "MODELO": "DS8178",
+    "AREA": "LI",
+    "ASIGNACIÓN": "LOGISTICA I.",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "En Stock dentro de MDF",
+    "Status in Arturito": "In Use"
   }
 }
