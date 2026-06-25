@@ -1,5 +1,19 @@
 [
   {
+    "sn": "CN0T2D3",
+    "device": "Laptop DELL",
+    "area": "PEOPLE",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T20:33:36.461Z"
+  },
+  {
     "sn": "7ZLC6F3",
     "device": "Laptop DELL",
     "area": "OUTBOUND",
