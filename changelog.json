@@ -1,5 +1,19 @@
 [
   {
+    "sn": "99J243705984",
+    "device": "Impresora ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T19:12:13.628Z"
+  },
+  {
     "sn": "HJWTQW3",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEMS",
