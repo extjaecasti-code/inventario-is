@@ -1,5 +1,19 @@
 [
   {
+    "sn": "BCF4XD3",
+    "device": "Laptop DELL",
+    "area": "LOA",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T19:10:44.262Z"
+  },
+  {
     "sn": "24173010563032",
     "device": "Scanner ZEBRA",
     "area": "INBOUND",
@@ -2660,30 +2674,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T16:33:40.187Z"
-  },
-  {
-    "sn": "BCF4XD3",
-    "device": "Laptop DELL",
-    "area": "LOA",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Asignación",
-        "before": "Angel Cora",
-        "after": "Diego Emanuel Polo"
-      },
-      {
-        "label": "SSID",
-        "before": "SHIPPING-CORP",
-        "after": "MELI-SHIPPING"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T16:27:41.892Z"
   },
   {
     "sn": "8SSA10R16922C2TJ41902KA",
