@@ -825,7 +825,7 @@
   },
   "XXRBN253200756": {
     "S/N": "XXRBN253200756",
-    "ESTATUS FISICO": "In Stock",
+    "ESTATUS FISICO": "In Use",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -839,6 +839,6 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "En Stock dentro de MDF",
-    "Status in Arturito": "In Stock"
+    "Status in Arturito": "In Use"
   }
 }
