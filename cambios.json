@@ -755,94 +755,24 @@
     "Comentarios": "En Stock dentro de MDF",
     "Status in Arturito": "In Use"
   },
-  "9B2348A09038": {
-    "S/N": "9B2348A09038",
-    "ESTATUS FISICO": "Retired",
-    "Categoría": "UPS",
-    "DISPOSITIVO": "UPS",
-    "MARCA": "APC",
-    "MODELO": "BV1000",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "",
-    "IP": "#N/A",
-    "MAC": "#N/A",
-    "SSID": "",
-    "O.S.": "#N/A",
-    "DEPLOY": "",
-    "Fullfiment": "MXCD11",
-    "Comentarios": "",
-    "Status in Arturito": "Retired"
+  "9B2348A05087": {
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use"
   },
-  "9B2348A05084": {
-    "S/N": "9B2348A05084",
-    "ESTATUS FISICO": "Retired",
-    "Categoría": "UPS",
-    "DISPOSITIVO": "UPS",
-    "MARCA": "APC",
-    "MODELO": "BV1000",
-    "AREA": "INTERNAL SYSTEM",
-    "ASIGNACIÓN": "AF",
-    "IP": "#N/A",
-    "MAC": "#N/A",
-    "SSID": "",
-    "O.S.": "",
-    "DEPLOY": "",
-    "Fullfiment": "MXCD11",
-    "Comentarios": "El equipo no funciona correctamente ",
-    "Status in Arturito": "Retired"
+  "9B2348A09043": {
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use"
   },
   "XXRBN253100439": {
-    "S/N": "XXRBN253100439",
-    "ESTATUS FISICO": "In Stock",
-    "Categoría": "Printer",
-    "DISPOSITIVO": "Impresora",
-    "MARCA": "ZEBRA",
-    "MODELO": "ZQ521",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "P2S",
-    "IP": "10.9.124.191",
-    "MAC": "9075DE12B900",
-    "SSID": "MELI-IOT",
-    "O.S.": "",
-    "DEPLOY": "",
-    "Fullfiment": "MXCD11",
-    "Comentarios": "En Stock dentro de MDF",
-    "Status in Arturito": "In Stock"
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use"
   },
   "XXRBN253100442": {
-    "S/N": "XXRBN253100442",
-    "ESTATUS FISICO": "In Stock",
-    "Categoría": "Printer",
-    "DISPOSITIVO": "Impresora",
-    "MARCA": "ZEBRA",
-    "MODELO": "ZQ521",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "P2S",
-    "IP": "10.9.124.189",
-    "MAC": "9075DE10F17E",
-    "SSID": "MELI-IOT",
-    "O.S.": "",
-    "DEPLOY": "",
-    "Fullfiment": "MXCD11",
-    "Comentarios": "En Stock dentro de MDF",
-    "Status in Arturito": "In Stock"
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use"
   },
   "XXRBN253100444": {
-    "S/N": "XXRBN253100444",
-    "ESTATUS FISICO": "In Stock",
-    "Categoría": "Printer",
-    "DISPOSITIVO": "Impresora",
-    "MARCA": "ZEBRA",
-    "MODELO": "ZQ521",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "P2S",
-    "IP": "10.9.124.192",
-    "MAC": "9075DE10F7C6",
-    "SSID": "MELI-IOT",
-    "O.S.": "",
-    "DEPLOY": "",
-    "Fullfiment": "MXCD11",
-    "Comentarios": "En Stock dentro de MDF",
-    "Status in Arturito": "In Stock"
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use"
   }
 }
