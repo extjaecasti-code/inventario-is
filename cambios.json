@@ -505,7 +505,7 @@
   },
   "24173010563853": {
     "S/N": "24173010563853",
-    "ESTATUS FISICO": "In Stock",
+    "ESTATUS FISICO": "In Use",
     "Categoría": "Scanner",
     "DISPOSITIVO": "Scanner",
     "MARCA": "ZEBRA",
@@ -519,7 +519,7 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "",
-    "Status in Arturito": "In Stock"
+    "Status in Arturito": "In Use"
   },
   "9B2348A09062": {
     "S/N": "9B2348A09062",
@@ -823,284 +823,22 @@
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use"
   },
-  "XXRBN253200756": {
-    "S/N": "XXRBN253200756",
-    "ESTATUS FISICO": "In Use",
-    "Categoría": "Printer",
-    "DISPOSITIVO": "Impresora",
-    "MARCA": "ZEBRA",
-    "MODELO": "ZQ521",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "P2S",
-    "IP": "10.9.124.197",
-    "MAC": "9075DE13A94C",
-    "SSID": "MELI-IOT",
-    "O.S.": "",
-    "DEPLOY": "",
-    "Fullfiment": "MXCD11",
-    "Comentarios": "En Stock dentro de MDF",
-    "Status in Arturito": "In Use"
-  },
-  "9B2348A05089": {
-    "S/N": "9B2348A05089",
-    "ESTATUS FISICO": "In Use",
+  "9B2348A05084": {
+    "S/N": "9B2348A05084",
+    "ESTATUS FISICO": "Retired",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
     "MODELO": "BV1000",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "DOCKAS",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "AF",
     "IP": "#N/A",
     "MAC": "#N/A",
     "SSID": "",
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": " (Operational Backup)",
-    "Status in Arturito": "In Use"
-  },
-  "24173010562941": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010562957": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010562978": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010564046": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010564087": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010564302": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010562920": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010563052": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24072010550836": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010562933": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010562953": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010562984": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010563032": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "BCF4XD3": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010562858": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010563895": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24362010556548": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24362010556605": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "JY5ZRW3": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "HKVCZH3": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "1J0R2D3": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010564245": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "3RJZRW3": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "JBCZRW3": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "HJWTQW3": {
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use"
-  },
-  "99J243705984": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "99J243803135": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "99J243804098": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "PF4RYGNP": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN253201164": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN244601093": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN253201003": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN244003876": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN244003721": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN244003671": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN244003652": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN244001774": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN253200533": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN244003716": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN244004057": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "7ZLC6F3": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "CN0T2D3": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN253201183": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN253201165": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "DPC25030115": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010564305": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010564303": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN220600049": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN220600249": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24072010559331": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010562942": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24072010559337": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010563049": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010563869": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010563022": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010562974": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010563007": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "DPC25030001": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "24173010564165": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBJ221900546": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
-  },
-  "XXRBN244003748": {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock"
+    "Comentarios": "El equipo no funciona correctamente ",
+    "Status in Arturito": "Retired"
   }
 }
