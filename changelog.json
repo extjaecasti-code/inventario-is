@@ -1,5 +1,33 @@
 [
   {
+    "sn": "XXRBN253201165",
+    "device": "Impresora ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T19:13:21.078Z"
+  },
+  {
+    "sn": "XXRBN253201183",
+    "device": "Impresora ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T19:13:19.927Z"
+  },
+  {
     "sn": "CN0T2D3",
     "device": "Laptop DELL",
     "area": "PEOPLE",
