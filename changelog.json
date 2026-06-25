@@ -1,5 +1,33 @@
 [
   {
+    "sn": "XXRBN244601093",
+    "device": "Impresora Zebra",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T19:12:36.638Z"
+  },
+  {
+    "sn": "XXRBN253201164",
+    "device": "Impresora ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T19:12:34.485Z"
+  },
+  {
     "sn": "PF4RYGNP",
     "device": "Laptop LENOVO",
     "area": "OUTBOUND",
