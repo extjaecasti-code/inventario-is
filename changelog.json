@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24173010564224",
+    "device": "Scanner ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Asignación",
+        "before": "IS",
+        "after": "SAURON"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T20:19:07.371Z"
+  },
+  {
     "sn": "24173010562955",
     "device": "Scanner ZEBRA",
     "area": "LI",
