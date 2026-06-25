@@ -430,5 +430,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Stock"
+  },
+  "24173010562924": {
+    "S/N": "24173010562924",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Scanner",
+    "DISPOSITIVO": "Scanner",
+    "MARCA": "ZEBRA",
+    "MODELO": "DS8178",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "MS3 Packing",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se encuentra en MDF",
+    "Status in Arturito": "In Stock"
   }
 }
