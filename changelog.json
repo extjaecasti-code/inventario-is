@@ -1,5 +1,19 @@
 [
   {
+    "sn": "XXRBN244003671",
+    "device": "Impresora Zebra",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T13:02:56.888Z"
+  },
+  {
     "sn": "XXRBN244001774",
     "device": "Impresora ZEBRA",
     "area": "ACTIVO FIJO",
