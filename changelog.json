@@ -1,5 +1,19 @@
 [
   {
+    "sn": "HKVCZH3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T17:16:48.792Z"
+  },
+  {
     "sn": "XXRBJ221900546",
     "device": "Impresora Zebra",
     "area": "ACTIVO FIJO",
@@ -1370,20 +1384,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T12:34:44.073Z"
-  },
-  {
-    "sn": "HKVCZH3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T12:33:53.023Z"
   },
   {
     "sn": "PF4RYGNP",
