@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24173010562955",
+    "device": "Scanner ZEBRA",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T12:33:10.125Z"
+  },
+  {
     "sn": "24173010562858",
     "device": "Scanner ZEBRA",
     "area": "INTERNAL SYSTEMS",
@@ -517,30 +531,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-25T20:19:07.371Z"
-  },
-  {
-    "sn": "24173010562955",
-    "device": "Scanner ZEBRA",
-    "area": "LI",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "LI"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF",
-        "after": "LOGISTICA I."
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T20:17:16.766Z"
   },
   {
     "sn": "9B2348A05089",
