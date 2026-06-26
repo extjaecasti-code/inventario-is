@@ -2,16 +2,21 @@
   {
     "sn": "24173010562924",
     "device": "Scanner ZEBRA",
-    "area": "OUTBOUND",
+    "area": "INBOUND",
     "changes": [
       {
-        "label": "Status (CSV sync)",
-        "before": "In Stock",
-        "after": "In Use"
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "INBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MS3 Packing",
+        "after": "INBOUND"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T15:12:40.061Z"
+    "ts": "2026-06-26T15:13:04.955Z"
   },
   {
     "sn": "XXRBN253201013",
