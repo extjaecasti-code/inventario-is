@@ -117,6 +117,20 @@
   },
   "24362010556549": {
     "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use"
+    "Status in Arturito": "In Use",
+    "S/N": "24362010556549",
+    "Categoría": "Scanner",
+    "DISPOSITIVO": "Scanner",
+    "MARCA": "ZEBRA",
+    "MODELO": "DS8178",
+    "AREA": "LI",
+    "ASIGNACIÓN": "TRIAGE 2",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": ""
   }
 }
