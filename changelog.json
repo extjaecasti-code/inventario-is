@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24173010564305",
+    "device": "Scanner ZEBRA",
+    "area": "LOSS PREVENTION",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T17:17:49.328Z"
+  },
+  {
     "sn": "24173010564303",
     "device": "Scanner ZEBRA",
     "area": "LOSS PREVENTION",
@@ -1230,20 +1244,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T13:03:39.636Z"
-  },
-  {
-    "sn": "24173010564305",
-    "device": "Scanner ZEBRA",
-    "area": "LOSS PREVENTION",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T13:03:31.653Z"
   },
   {
     "sn": "DPC25030001",
