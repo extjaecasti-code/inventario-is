@@ -151,6 +151,26 @@ tbody tr:hover .row-actions{opacity:1;}
 .tri-source.spider{background:#FFF3E0;color:#E65100;}
 .tri-source.excel{background:#E8F5E9;color:#2E7D32;}
 .spider-stat{transition:box-shadow .15s;}.spider-stat:hover{box-shadow:0 0 0 2px var(--ml-blue);}
+/* ── GARANTIA ── */
+.garantia-subtabs{display:flex;gap:4px;padding:14px 24px 0;border-bottom:2px solid var(--border);}
+.garantia-subtab{padding:8px 18px;font-size:13px;font-weight:600;color:var(--text3);cursor:pointer;border-radius:6px 6px 0 0;border:1px solid transparent;border-bottom:none;transition:all .15s;}
+.garantia-subtab.active{color:var(--ml-blue);background:var(--surface);border-color:var(--border);border-bottom:2px solid var(--surface);margin-bottom:-2px;}
+.garantia-subtab:hover:not(.active){color:var(--text2);background:var(--surface2);}
+.garantia-subpanel{display:none;}
+.garantia-subpanel.active{display:block;}
+.step-btn{border:none;border-radius:6px;padding:6px 12px;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--sans);transition:all .15s;white-space:nowrap;display:inline-flex;align-items:center;gap:4px;}
+.step-btn.pending{background:var(--surface2);color:var(--text3);border:1px solid var(--border);cursor:not-allowed;}
+.step-btn.active{background:var(--ml-blue);color:#fff;}
+.step-btn.active:hover{background:var(--ml-blue-dark);}
+.step-btn.done{background:var(--green-bg);color:var(--green);border:1px solid rgba(0,166,80,.2);}
+.step-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.step-dot.done{background:var(--green);}
+.step-dot.active{background:var(--ml-blue);}
+.step-dot.pending{background:var(--border2);}
+.warranty-progress{display:flex;align-items:center;gap:4px;margin-bottom:6px;}
+.warranty-step-label{font-size:10px;color:var(--text3);font-weight:600;}
+.prev-warranty-badge{display:inline-flex;align-items:center;gap:4px;background:var(--yellow-bg);color:var(--yellow-s);border:1px solid rgba(245,166,35,.3);border-radius:10px;padding:2px 8px;font-size:10px;font-weight:700;}
+
 
 /* ── SPIDER COMPARATIVO ── */
 .spider-upload-zone{border:2px dashed var(--border2);border-radius:12px;padding:40px 24px;text-align:center;cursor:pointer;transition:all .2s;background:var(--surface2);}
@@ -870,6 +890,75 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
 
 
   </div><!-- /panel-spider -->
+  <!-- GARANTIA PANEL -->
+  <div class="tab-panel" id="panel-garantia">
+    <div style="padding:20px 24px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <div>
+        <h2 style="font-size:18px;font-weight:700;color:var(--text)">🛡️ Gestión de Garantías</h2>
+        <p style="font-size:12px;color:var(--text3);margin-top:4px">Seguimiento del flujo completo de equipos en garantía</p>
+      </div>
+      <button class="btn btn-primary" onclick="openAddWarranty()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Agregar Equipo
+      </button>
+    </div>
+    <!-- SUB-TABS -->
+    <div class="garantia-subtabs">
+      <div class="garantia-subtab active" id="gtab-activos" onclick="switchGarantiaTab('activos')">🔄 En Proceso <span id="gActivosBadge" style="background:var(--ml-blue);color:#fff;border-radius:10px;padding:1px 7px;font-size:11px;margin-left:4px">0</span></div>
+      <div class="garantia-subtab" id="gtab-historial" onclick="switchGarantiaTab('historial')">📋 Historial</div>
+    </div>
+
+    <!-- ACTIVOS PANEL -->
+    <div class="garantia-subpanel active" id="gpanel-activos">
+      <div style="padding:16px 24px;overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;min-width:900px">
+          <thead>
+            <tr style="background:var(--surface2)">
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">S/N</th>
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Dispositivo</th>
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Área</th>
+              <th style="padding:10px 12px;text-align:center;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">1. Ticket generado / recogido</th>
+              <th style="padding:10px 12px;text-align:center;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">2. Se va a garantía</th>
+              <th style="padding:10px 12px;text-align:center;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">3. Regresa de garantía</th>
+              <th style="padding:10px 12px;text-align:center;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">4. Regresa a operación</th>
+            </tr>
+          </thead>
+          <tbody id="garantiaTableBody"></tbody>
+        </table>
+        <div id="garantiaEmpty" style="text-align:center;padding:40px;color:var(--text3)">
+          <div style="font-size:32px;margin-bottom:8px">🛡️</div>
+          <p>No hay equipos en garantía.<br>Click en "Agregar Equipo" para comenzar.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- HISTORIAL PANEL -->
+    <div class="garantia-subpanel" id="gpanel-historial">
+      <div style="padding:16px 24px;overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;min-width:800px">
+          <thead>
+            <tr style="background:var(--surface2)">
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">S/N</th>
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Dispositivo</th>
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Área</th>
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Ticket</th>
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Salida</th>
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Regreso garantía</th>
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Regreso operación</th>
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Días en garantía</th>
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Veces enviado</th>
+            </tr>
+          </thead>
+          <tbody id="historialTableBody"></tbody>
+        </table>
+        <div id="historialEmpty" style="text-align:center;padding:40px;color:var(--text3)">
+          <div style="font-size:32px;margin-bottom:8px">📋</div>
+          <p>El historial aparecerá aquí cuando un equipo complete el proceso.</p>
+        </div>
+      </div>
+    </div>
+  </div><!-- /panel-garantia -->
+
 
 
   <div class="pager">
@@ -1169,6 +1258,31 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
     </div>
     <div class="modal-footer">
       <button class="btn btn-ghost" onclick="document.getElementById('recentOverlay').classList.remove('open')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- WARRANTY ADD MODAL -->
+<div class="overlay" id="warrantyOverlay" onclick="closeModal(event)">
+  <div class="modal" style="max-width:480px">
+    <div class="modal-header">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3483FA" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <h2>Agregar Equipo a Garantía</h2>
+    </div>
+    <div class="form-group">
+      <label>S/N del Equipo *</label>
+      <input id="wSN" placeholder="Busca o escribe el S/N..." oninput="warrantySnSearch(this.value)" autocomplete="off">
+      <div id="warrantySnDrop" style="display:none;position:absolute;background:var(--surface);border:1px solid var(--border);border-radius:6px;z-index:200;max-height:180px;overflow-y:auto;width:100%;box-shadow:0 4px 12px rgba(0,0,0,0.1)"></div>
+    </div>
+    <div id="warrantyDevInfo" style="display:none;background:var(--surface2);border-radius:8px;padding:12px;margin-top:-8px;font-size:12px;color:var(--text2)"></div>
+    <div class="form-group" style="margin-top:12px">
+      <label>Motivo / Descripción del problema</label>
+      <textarea id="wMotivo" placeholder="Describe el problema del equipo..." style="min-height:70px"></textarea>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="document.getElementById('warrantyOverlay').classList.remove('open')">Cancelar</button>
+      <button class="btn btn-primary" onclick="saveAddWarranty()">Agregar a Garantía</button>
     </div>
   </div>
 </div>
@@ -1733,6 +1847,7 @@ function switchTab(tab) {
   document.getElementById('tab-' + tab).classList.add('active');
   document.getElementById('panel-' + tab).classList.add('active');
   if (tab === 'audit') renderAuditTab();
+  if (tab === 'garantia') renderGarantias();
   document.querySelector('.pager').style.display = tab === 'inventory' ? 'flex' : 'none';
 }
 
@@ -3422,6 +3537,269 @@ function exportCsvCompDiff() {
   a.click();
   showToast('CSV exportado: ' + diffs.length + ' diferencias', 'success');
 }
+
+// ── GARANTIA MODULE ───────────────────────────────────────────────────────
+let warranties   = [];  // active warranties
+let warrantyHist = [];  // completed warranties
+const WARRANTY_API  = API_BASE + '/garantias.json';
+const WARRANTY_HIST_API = API_BASE + '/garantias_hist.json';
+let warrantySHA = '', warrantyHistSHA = '';
+
+function switchGarantiaTab(tab) {
+  document.querySelectorAll('.garantia-subtab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.garantia-subpanel').forEach(p => p.classList.remove('active'));
+  document.getElementById('gtab-' + tab).classList.add('active');
+  document.getElementById('gpanel-' + tab).classList.add('active');
+  if(tab === 'historial') renderHistorial();
+}
+
+function nowStr() {
+  return new Date().toLocaleString('es-MX', {dateStyle:'short', timeStyle:'short', timeZone:'America/Mexico_City'});
+}
+
+function daysBetween(isoA, isoB) {
+  return Math.round(Math.abs(new Date(isoB) - new Date(isoA)) / 86400000);
+}
+
+// ── LOAD / SAVE ───────────────────────────────────────────────────────────
+async function loadWarranties() {
+  try {
+    const r = await fetch(WARRANTY_API + '?t=' + Date.now(), {headers:{Authorization:'token ' + GITHUB_TOKEN}});
+    if(r.ok) {
+      const m = await r.json(); warrantySHA = m.sha;
+      if(m.content) { try{ warranties = JSON.parse(decodeURIComponent(escape(atob(m.content.replace(/\n/g,''))))); }catch(e){ warranties=[]; } }
+    }
+  } catch(e) { warranties = []; }
+  try {
+    const r = await fetch(WARRANTY_HIST_API + '?t=' + Date.now(), {headers:{Authorization:'token ' + GITHUB_TOKEN}});
+    if(r.ok) {
+      const m = await r.json(); warrantyHistSHA = m.sha;
+      if(m.content) { try{ warrantyHist = JSON.parse(decodeURIComponent(escape(atob(m.content.replace(/\n/g,''))))); }catch(e){ warrantyHist=[]; } }
+    }
+  } catch(e) { warrantyHist = []; }
+  renderGarantias();
+}
+
+async function saveWarranties() {
+  try {
+    const c = btoa(unescape(encodeURIComponent(JSON.stringify(warranties,null,2))));
+    const b = {message:'[warranty] update por '+currentUser, content:c};
+    if(warrantySHA) b.sha = warrantySHA;
+    const r = await fetch(WARRANTY_API, {method:'PUT', headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'}, body:JSON.stringify(b)});
+    if(r.ok) { const d = await r.json(); warrantySHA = d.content.sha; }
+  } catch(e) { console.warn('warranty save error', e); }
+}
+
+async function saveWarrantyHist() {
+  try {
+    const c = btoa(unescape(encodeURIComponent(JSON.stringify(warrantyHist,null,2))));
+    const b = {message:'[warranty-hist] update por '+currentUser, content:c};
+    if(warrantyHistSHA) b.sha = warrantyHistSHA;
+    const r = await fetch(WARRANTY_HIST_API, {method:'PUT', headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'}, body:JSON.stringify(b)});
+    if(r.ok) { const d = await r.json(); warrantyHistSHA = d.content.sha; }
+  } catch(e) { console.warn('warranty hist save error', e); }
+}
+
+// ── ADD DEVICE ────────────────────────────────────────────────────────────
+function openAddWarranty() {
+  document.getElementById('wSN').value = '';
+  document.getElementById('wMotivo').value = '';
+  document.getElementById('warrantyDevInfo').style.display = 'none';
+  document.getElementById('warrantySnDrop').style.display = 'none';
+  document.getElementById('warrantyOverlay').classList.add('open');
+  setTimeout(() => document.getElementById('wSN').focus(), 200);
+}
+
+function warrantySnSearch(val) {
+  const drop = document.getElementById('warrantySnDrop');
+  const info = document.getElementById('warrantyDevInfo');
+  if(!val.trim()) { drop.style.display='none'; info.style.display='none'; return; }
+  const matches = data.filter(d => d['S/N'] && d['S/N'].toLowerCase().includes(val.toLowerCase())).slice(0,8);
+  if(!matches.length) { drop.style.display='none'; return; }
+  drop.style.display = 'block';
+  drop.innerHTML = matches.map(d =>
+    `<div onclick="selectWarrantySN('${esc(d['S/N'])}')" style="padding:8px 12px;cursor:pointer;font-size:13px;border-bottom:1px solid var(--border);transition:background .1s" onmouseover="this.style.background='var(--surface2)'" onmouseout="this.style.background=''">
+      <strong>${esc(d['S/N'])}</strong> — ${esc((d['DISPOSITIVO']||'')+' '+(d['MARCA']||''))} <span style="color:var(--text3);font-size:11px">${esc(d['AREA']||'')}</span>
+    </div>`
+  ).join('');
+}
+
+function selectWarrantySN(sn) {
+  document.getElementById('wSN').value = sn;
+  document.getElementById('warrantySnDrop').style.display = 'none';
+  const dev = data.find(d => d['S/N'] === sn);
+  if(dev) {
+    document.getElementById('warrantyDevInfo').style.display = 'block';
+    document.getElementById('warrantyDevInfo').innerHTML =
+      `<strong>${esc(sn)}</strong> — ${esc((dev['DISPOSITIVO']||'')+' '+(dev['MARCA']||'')+' '+(dev['MODELO']||''))} | Área: ${esc(dev['AREA']||'—')} | Status actual: <strong>${esc(dev['ESTATUS FISICO']||'—')}</strong>`;
+  }
+  // Check previous warranties
+  const prev = warrantyHist.filter(h => h.sn === sn);
+  if(prev.length > 0) {
+    const last = prev[prev.length-1];
+    const days = last.step4ts ? daysBetween(last.step4ts, new Date().toISOString()) : null;
+    const msg = days !== null
+      ? `⚠️ Este equipo ya fue enviado a garantía ${prev.length} vez(veces). Última vez regresó a operación hace ${days} días (${last.step4||'—'}).`
+      : `⚠️ Este equipo ya fue enviado a garantía ${prev.length} vez(veces).`;
+    document.getElementById('warrantyDevInfo').innerHTML += `<div style="margin-top:6px;padding:6px 8px;background:var(--yellow-bg);border-radius:5px;font-size:11px;color:var(--yellow-s);font-weight:600">${msg}</div>`;
+  }
+}
+
+async function saveAddWarranty() {
+  const sn = document.getElementById('wSN').value.trim().toUpperCase();
+  if(!sn) { showToast('Ingresa el S/N del equipo', 'error'); return; }
+  if(warranties.find(w => w.sn === sn)) { showToast('Este equipo ya está en garantía', 'error'); return; }
+  const dev = data.find(d => d['S/N'] === sn);
+  const prevCount = warrantyHist.filter(h => h.sn === sn).length;
+  const rec = {
+    id: Date.now(), sn,
+    device: dev ? ((dev['DISPOSITIVO']||'')+' '+(dev['MARCA']||'')+' '+(dev['MODELO']||'')).trim() : 'Desconocido',
+    area: dev ? (dev['AREA']||'—') : '—',
+    motivo: document.getElementById('wMotivo').value.trim(),
+    addedBy: currentUser, addedTs: new Date().toISOString(),
+    prevCount,
+    step1:null, step1ts:null,
+    step2:null, step2ts:null,
+    step3:null, step3ts:null,
+    step4:null, step4ts:null,
+  };
+  warranties.push(rec);
+  // Change status in inventory to In Repair
+  const idx = data.findIndex(d => d['S/N'] === sn);
+  if(idx >= 0) {
+    data[idx]['ESTATUS FISICO'] = 'In repair';
+    data[idx]['Status in Arturito'] = 'In repair';
+    if(typeof recordChange === 'function') recordChange(sn, {'ESTATUS FISICO':'In repair','Status in Arturito':'In repair'});
+    await saveToGitHub('[warranty] ' + sn + ' -> In repair por ' + currentUser);
+    applyFilters();
+  }
+  await saveWarranties();
+  document.getElementById('warrantyOverlay').classList.remove('open');
+  renderGarantias();
+  showToast('Equipo agregado a garantía ✓', 'success');
+}
+
+// ── STEP BUTTONS ──────────────────────────────────────────────────────────
+async function pressWarrantyStep(id, step) {
+  const w = warranties.find(w => w.id === id);
+  if(!w) return;
+  // Validate order
+  const stepOrder = ['step1','step2','step3','step4'];
+  const stepIdx = stepOrder.indexOf(step);
+  if(stepIdx > 0 && !w[stepOrder[stepIdx-1]]) {
+    showToast('Debes completar el paso anterior primero', 'error'); return;
+  }
+  if(w[step]) { showToast('Este paso ya fue registrado', 'info'); return; }
+  const ts = new Date().toISOString();
+  w[step] = nowStr();
+  w[step+'ts'] = ts;
+  w[step+'by'] = currentUser;
+  // Step 4 = move to history
+  if(step === 'step4') {
+    warranties = warranties.filter(x => x.id !== id);
+    warrantyHist.push(w);
+    // Restore status in inventory to In Use
+    const idx = data.findIndex(d => d['S/N'] === w.sn);
+    if(idx >= 0) {
+      data[idx]['ESTATUS FISICO'] = 'In Use';
+      data[idx]['Status in Arturito'] = 'In Use';
+      if(typeof recordChange === 'function') recordChange(w.sn, {'ESTATUS FISICO':'In Use','Status in Arturito':'In Use'});
+      await saveToGitHub('[warranty-done] ' + w.sn + ' regresa a operacion por ' + currentUser);
+      applyFilters();
+    }
+    await saveWarrantyHist();
+    showToast(w.sn + ' regresó a operación ✓', 'success');
+  }
+  await saveWarranties();
+  renderGarantias();
+  updateGarantiaBadge();
+}
+
+// ── RENDER ────────────────────────────────────────────────────────────────
+function updateGarantiaBadge() {
+  document.getElementById('garantiaBadge').textContent = warranties.length;
+  document.getElementById('gActivosBadge').textContent = warranties.length;
+}
+
+function renderGarantias() {
+  updateGarantiaBadge();
+  const tbody = document.getElementById('garantiaTableBody');
+  const empty = document.getElementById('garantiaEmpty');
+  if(!warranties.length) { tbody.innerHTML=''; empty.style.display=''; return; }
+  empty.style.display = 'none';
+
+  const steps = [
+    {key:'step1', label:'1. Ticket generado'},
+    {key:'step2', label:'2. Se va a garantía'},
+    {key:'step3', label:'3. Regresa de garantía'},
+    {key:'step4', label:'4. Regresa a operación'},
+  ];
+
+  tbody.innerHTML = warranties.map(w => {
+    const stepCells = steps.map((s,i) => {
+      const done = !!w[s.key];
+      const prevDone = i === 0 || !!w[steps[i-1].key];
+      const canPress = !done && prevDone;
+      let btn;
+      if(done) {
+        btn = `<div><button class="step-btn done" onclick="pressWarrantyStep(${w.id},'${s.key}')" disabled>✓ Hecho</button><div style="font-size:10px;color:var(--text3);margin-top:3px">${esc(w[s.key])}</div><div style="font-size:10px;color:var(--text3)">${esc(w[s.key+'by']||'')}</div></div>`;
+      } else if(canPress) {
+        btn = `<button class="step-btn active" onclick="pressWarrantyStep(${w.id},'${s.key}')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Registrar</button>`;
+      } else {
+        btn = `<button class="step-btn pending" disabled>Pendiente</button>`;
+      }
+      return `<td style="padding:10px 12px;text-align:center;border-bottom:1px solid var(--border)">${btn}</td>`;
+    }).join('');
+
+    const prevBadge = w.prevCount > 0
+      ? `<div class="prev-warranty-badge">⚠️ ${w.prevCount}x anterior</div>`
+      : '';
+
+    return `<tr>
+      <td style="padding:10px 12px;border-bottom:1px solid var(--border)">
+        <div style="font-family:monospace;font-weight:700;color:var(--ml-blue)">${esc(w.sn)}</div>
+        ${prevBadge}
+        ${w.motivo ? `<div style="font-size:11px;color:var(--text3);margin-top:2px">${esc(w.motivo)}</div>` : ''}
+      </td>
+      <td style="padding:10px 12px;border-bottom:1px solid var(--border);font-size:12px">${esc(w.device)}</td>
+      <td style="padding:10px 12px;border-bottom:1px solid var(--border);font-size:12px">${esc(w.area)}</td>
+      ${stepCells}
+    </tr>`;
+  }).join('');
+}
+
+function renderHistorial() {
+  const tbody = document.getElementById('historialTableBody');
+  const empty = document.getElementById('historialEmpty');
+  if(!warrantyHist.length) { tbody.innerHTML=''; empty.style.display=''; return; }
+  empty.style.display = 'none';
+
+  // Group by SN to count
+  const snCount = {};
+  warrantyHist.forEach(h => { snCount[h.sn] = (snCount[h.sn]||0)+1; });
+
+  tbody.innerHTML = [...warrantyHist].reverse().map(h => {
+    const days = h.step2ts && h.step4ts ? daysBetween(h.step2ts, h.step4ts) : '—';
+    const veces = snCount[h.sn] || 1;
+    const vecesBadge = veces > 1
+      ? `<span class="prev-warranty-badge">${veces}x enviado</span>`
+      : '';
+    return `<tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:9px 12px;font-family:monospace;color:var(--ml-blue);font-weight:700">${esc(h.sn)} ${vecesBadge}</td>
+      <td style="padding:9px 12px;font-size:12px">${esc(h.device)}</td>
+      <td style="padding:9px 12px;font-size:12px">${esc(h.area)}</td>
+      <td style="padding:9px 12px;font-size:12px">${esc(h.step1||'—')}</td>
+      <td style="padding:9px 12px;font-size:12px">${esc(h.step2||'—')}</td>
+      <td style="padding:9px 12px;font-size:12px">${esc(h.step3||'—')}</td>
+      <td style="padding:9px 12px;font-size:12px">${esc(h.step4||'—')}</td>
+      <td style="padding:9px 12px;font-size:12px;font-weight:700;color:var(--ml-blue)">${days} días</td>
+      <td style="padding:9px 12px;font-size:12px">${veces}</td>
+    </tr>`;
+  }).join('');
+}
+
+// Init warranties on startup
+loadWarranties();
 
 </script>
 </body>
