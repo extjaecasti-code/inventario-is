@@ -99,6 +99,20 @@
   },
   "24173010562924": {
     "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use"
+    "Status in Arturito": "In Use",
+    "S/N": "24173010562924",
+    "Categoría": "Scanner",
+    "DISPOSITIVO": "Scanner",
+    "MARCA": "ZEBRA",
+    "MODELO": "DS8178",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "INBOUND",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se encuentra en MDF"
   }
 }
