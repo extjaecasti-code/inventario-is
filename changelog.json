@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24031523700824",
+    "device": "Cargador HH ZEBRA",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "ICQA",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "",
+        "after": "MDF"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T12:31:00.545Z"
+  },
+  {
     "sn": "PF4RYGNP",
     "device": "Laptop LENOVO",
     "area": "OUTBOUND",
