@@ -1,5 +1,19 @@
 [
   {
+    "sn": "99J243803135",
+    "device": "Impresora ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T12:34:49.593Z"
+  },
+  {
     "sn": "99J243705984",
     "device": "Impresora ZEBRA",
     "area": "OUTBOUND",
