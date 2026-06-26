@@ -1,5 +1,19 @@
 [
   {
+    "sn": "HKVCZH3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T12:33:53.023Z"
+  },
+  {
     "sn": "JY5ZRW3",
     "device": "Laptop DELL",
     "area": "LOA",
