@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24031523700824",
+    "device": "Cargador HH ZEBRA",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T15:38:31.850Z"
+  },
+  {
     "sn": "24173010564302",
     "device": "Scanner ZEBRA",
     "area": "ACTIVO FIJO",
@@ -1376,30 +1390,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T12:31:30.575Z"
-  },
-  {
-    "sn": "24031523700824",
-    "device": "Cargador HH ZEBRA",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "ICQA",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "",
-        "after": "MDF"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T12:31:00.545Z"
   },
   {
     "sn": "PF4RYGNP",
