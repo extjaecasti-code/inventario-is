@@ -1,5 +1,19 @@
 [
   {
+    "sn": "CN0WMDHRCJ3RE3TBDFTDA01",
+    "device": "Cargador DELL",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T17:20:23.327Z"
+  },
+  {
     "sn": "7ZLC6F3",
     "device": "Laptop DELL",
     "area": "OUTBOUND",
@@ -1393,20 +1407,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T13:18:52.200Z"
-  },
-  {
-    "sn": "CN0WMDHRCJ3RE3TBDFTDA01",
-    "device": "Cargador DELL",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T13:18:31.951Z"
   },
   {
     "sn": "TH0HRR76CHG0047V0CJGA00",
