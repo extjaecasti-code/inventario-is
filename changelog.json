@@ -1,5 +1,19 @@
 [
   {
+    "sn": "DPC25030001",
+    "device": "Dex manager DEX",
+    "area": "SHE",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T13:03:27.131Z"
+  },
+  {
     "sn": "24173010563007",
     "device": "Scanner ZEBRA",
     "area": "TRAINING",
