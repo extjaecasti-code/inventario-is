@@ -59,6 +59,20 @@
   },
   "9B2348A31168": {
     "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use"
+    "Status in Arturito": "In Use",
+    "S/N": "9B2348A31168",
+    "Categoría": "UPS",
+    "DISPOSITIVO": "UPS",
+    "MARCA": "APC",
+    "MODELO": "BV1000",
+    "AREA": "ICQA",
+    "ASIGNACIÓN": "ICQA",
+    "IP": "#N/A",
+    "MAC": "#N/A",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": ""
   }
 }
