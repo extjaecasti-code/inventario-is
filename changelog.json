@@ -2,16 +2,21 @@
   {
     "sn": "9B2348A31168",
     "device": "UPS APC",
-    "area": "INTERNAL SYSTEMS",
+    "area": "ICQA",
     "changes": [
       {
-        "label": "Status (CSV sync)",
-        "before": "In Stock",
-        "after": "In Use"
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "ICQA"
+      },
+      {
+        "label": "Asignación",
+        "before": "",
+        "after": "ICQA"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T15:10:57.656Z"
+    "ts": "2026-06-26T15:11:13.129Z"
   },
   {
     "sn": "9B2348A09063",
