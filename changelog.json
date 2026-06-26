@@ -1,5 +1,19 @@
 [
   {
+    "sn": "JY5ZRW3",
+    "device": "Laptop DELL",
+    "area": "LOA",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T17:10:13.737Z"
+  },
+  {
     "sn": "24362010556605",
     "device": "Scanner ZEBRA",
     "area": "INTERNAL SYSTEMS",
@@ -1370,20 +1384,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T12:33:53.023Z"
-  },
-  {
-    "sn": "JY5ZRW3",
-    "device": "Laptop DELL",
-    "area": "LOA",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T12:33:43.758Z"
   },
   {
     "sn": "PF4RYGNP",
