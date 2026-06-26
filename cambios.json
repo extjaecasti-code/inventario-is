@@ -5,6 +5,20 @@
   },
   "9B2348A05090": {
     "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use"
+    "Status in Arturito": "In Use",
+    "S/N": "9B2348A05090",
+    "Categoría": "UPS",
+    "DISPOSITIVO": "UPS",
+    "MARCA": "APC",
+    "MODELO": "BV1000",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "DOCKAS",
+    "IP": "#N/A",
+    "MAC": "#N/A",
+    "SSID": "",
+    "O.S.": "#N/A",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": ""
   }
 }
