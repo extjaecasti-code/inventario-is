@@ -1372,5 +1372,23 @@
   "XXRBN253201164": {
     "ESTATUS FISICO": "In Stock",
     "Status in Arturito": "In Stock"
+  },
+  "TH0HRR76CHG0047V0CJGA00": {
+    "S/N": "TH0HRR76CHG0047V0CJGA00",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Cargador",
+    "MARCA": "DELL",
+    "MODELO": "NA",
+    "AREA": "LI",
+    "ASIGNACIÓN": "SMX0",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "",
+    "Status in Arturito": "In Stock"
   }
 }
