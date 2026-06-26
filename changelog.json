@@ -1,5 +1,29 @@
 [
   {
+    "sn": "XXRBN244003721",
+    "device": "Impresora Zebra",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "ACTIVO FIJO",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "P2S",
+        "after": "MDF"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T15:29:07.174Z"
+  },
+  {
     "sn": "24160523023113",
     "device": "RING SCANER ZEBRA",
     "area": "INTERNAL SYSTEM",
@@ -762,20 +786,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T13:03:22.509Z"
-  },
-  {
-    "sn": "XXRBN244003721",
-    "device": "Impresora Zebra",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In repair",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T13:03:16.811Z"
   },
   {
     "sn": "24173010564165",
