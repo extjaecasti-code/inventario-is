@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24173010562858",
+    "device": "Scanner ZEBRA",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T12:33:06.229Z"
+  },
+  {
     "sn": "BCF4XD3",
     "device": "Laptop DELL",
     "area": "LOA",
@@ -2158,30 +2172,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-04T15:25:38.310Z"
-  },
-  {
-    "sn": "24173010562858",
-    "device": "Scanner ZEBRA",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF",
-        "after": "SMX0"
-      },
-      {
-        "label": "Comentarios",
-        "before": "In Stock Reserved for expansion",
-        "after": "Se presta equipo para SMX0 por 2 semanas apartir del 4 de junio, se entregara AF"
-      }
-    ],
-    "user": "Erick Agustín Crisóstomo Sanchez",
-    "ts": "2026-06-04T13:16:34.347Z"
   },
   {
     "sn": "24362010556548",
