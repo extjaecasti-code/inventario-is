@@ -1,5 +1,19 @@
 [
   {
+    "sn": "XXRBN244003876",
+    "device": "Impresora Zebra",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T17:19:33.657Z"
+  },
+  {
     "sn": "XXRBN244003716",
     "device": "Impresora Zebra",
     "area": "ACTIVO FIJO",
@@ -1342,20 +1356,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T13:02:39.428Z"
-  },
-  {
-    "sn": "XXRBN244003876",
-    "device": "Impresora Zebra",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T12:35:25.435Z"
   },
   {
     "sn": "XXRBN253201183",
