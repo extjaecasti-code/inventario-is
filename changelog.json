@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24173010564224",
+    "device": "Scanner ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Stock",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T13:20:51.000Z"
+  },
+  {
     "sn": "XXASB252201011",
     "device": "Cargador Batería Zebra",
     "area": "INTERNAL SYSTEMS",
@@ -82,20 +96,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T13:18:07.958Z"
-  },
-  {
-    "sn": "24173010564224",
-    "device": "Scanner ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T13:17:37.054Z"
   },
   {
     "sn": "XXRBN253201164",
