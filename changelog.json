@@ -1,5 +1,19 @@
 [
   {
+    "sn": "TH0M9JDMCHG0053A074IA01",
+    "device": "Cargador DELL",
+    "area": "IB",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T13:19:45.938Z"
+  },
+  {
     "sn": "TH0HRR76CHG0041D005UA00",
     "device": "Cargador DELL",
     "area": "OUTBOUND",
@@ -2625,25 +2639,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-05T19:16:20.133Z"
-  },
-  {
-    "sn": "TH0M9JDMCHG0053A074IA01",
-    "device": "Cargador DELL",
-    "area": "IB",
-    "changes": [
-      {
-        "label": "Asignación",
-        "before": "IVONNE MEJIA",
-        "after": "PS"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "SE LE PRESTA AL AREA DE SMX0"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-04T15:26:37.771Z"
   },
   {
     "sn": "TH0HRR76CHG00470M5MA00",
