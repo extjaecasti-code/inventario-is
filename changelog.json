@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24362010556549",
+    "device": "Scanner ZEBRA",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T12:33:32.614Z"
+  },
+  {
     "sn": "24362010556548",
     "device": "Scanner ZEBRA",
     "area": "INTERNAL SYSTEMS",
@@ -530,25 +544,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-25T20:21:53.441Z"
-  },
-  {
-    "sn": "24362010556549",
-    "device": "Scanner ZEBRA",
-    "area": "LI",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "LI"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T20:19:57.241Z"
   },
   {
     "sn": "24173010564224",
