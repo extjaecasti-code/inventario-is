@@ -1,5 +1,19 @@
 [
   {
+    "sn": "TH0HRR76CHG0047V0CJGA00",
+    "device": "Cargador DELL",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T13:18:07.958Z"
+  },
+  {
     "sn": "24173010564224",
     "device": "Scanner ZEBRA",
     "area": "ACTIVO FIJO",
@@ -2583,20 +2597,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-05T19:16:20.133Z"
-  },
-  {
-    "sn": "TH0HRR76CHG0047V0CJGA00",
-    "device": "Cargador DELL",
-    "area": "LI",
-    "changes": [
-      {
-        "label": "Categoría",
-        "before": "Notebook",
-        "after": "Accesorio"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-04T15:26:55.899Z"
   },
   {
     "sn": "TH0M9JDMCHG0053A074IA01",
