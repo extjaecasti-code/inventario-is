@@ -1,5 +1,19 @@
 [
   {
+    "sn": "TH0HRR76CHG0047V0CJGA00",
+    "device": "Cargador DELL",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T17:20:40.122Z"
+  },
+  {
     "sn": "TH0HRR76CHG0041D005UA00",
     "device": "Cargador DELL",
     "area": "OUTBOUND",
@@ -1407,20 +1421,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T15:08:07.801Z"
-  },
-  {
-    "sn": "TH0HRR76CHG0047V0CJGA00",
-    "device": "Cargador DELL",
-    "area": "LI",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T13:18:07.958Z"
   },
   {
     "sn": "24248524205164",
