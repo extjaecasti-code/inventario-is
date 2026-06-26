@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24160523023113",
+    "device": "RING SCANER ZEBRA",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "OUTBOUND",
+        "after": "MDF"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T15:27:43.575Z"
+  },
+  {
     "sn": "24362010556549",
     "device": "Scanner ZEBRA",
     "area": "LI",
@@ -1440,20 +1464,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-25T20:31:01.688Z"
-  },
-  {
-    "sn": "24160523023113",
-    "device": "RING SCANER ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In repair",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T20:27:31.516Z"
   },
   {
     "sn": "24248524205187",
