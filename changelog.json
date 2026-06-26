@@ -1,5 +1,19 @@
 [
   {
+    "sn": "1J0R2D3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T17:13:30.854Z"
+  },
+  {
     "sn": "XXASB252201013",
     "device": "Cargador Batería Zebra",
     "area": "INTERNAL SYSTEMS",
@@ -1356,20 +1370,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T12:34:12.395Z"
-  },
-  {
-    "sn": "1J0R2D3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T12:34:01.501Z"
   },
   {
     "sn": "HKVCZH3",
