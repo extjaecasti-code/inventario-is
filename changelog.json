@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24173010562920",
+    "device": "Scanner ZEBRA",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T17:04:18.819Z"
+  },
+  {
     "sn": "24031523700842",
     "device": "Cargador HH ZEBRA",
     "area": "ICQA",
@@ -1412,20 +1426,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-25T20:33:32.605Z"
-  },
-  {
-    "sn": "24173010562920",
-    "device": "Scanner ZEBRA",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T20:33:27.117Z"
   },
   {
     "sn": "24248524205164",
