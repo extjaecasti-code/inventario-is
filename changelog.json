@@ -1,5 +1,19 @@
 [
   {
+    "sn": "7ZLC6F3",
+    "device": "Laptop DELL",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T17:20:19.028Z"
+  },
+  {
     "sn": "PF4RYGNP",
     "device": "Laptop LENOVO",
     "area": "OUTBOUND",
@@ -1407,20 +1421,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T13:18:07.958Z"
-  },
-  {
-    "sn": "7ZLC6F3",
-    "device": "Laptop DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T20:33:32.605Z"
   },
   {
     "sn": "24248524205164",
