@@ -1,5 +1,19 @@
 [
   {
+    "sn": "XXRBN244001774",
+    "device": "Impresora ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T17:16:17.254Z"
+  },
+  {
     "sn": "JBCZRW3",
     "device": "Laptop DELL",
     "area": "SMX0",
@@ -1244,20 +1258,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T13:02:56.888Z"
-  },
-  {
-    "sn": "XXRBN244001774",
-    "device": "Impresora ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T13:02:50.943Z"
   },
   {
     "sn": "XXRBN244003716",
