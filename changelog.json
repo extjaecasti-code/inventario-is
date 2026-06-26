@@ -1,5 +1,19 @@
 [
   {
+    "sn": "3RJZRW3",
+    "device": "Laptop DELL",
+    "area": "SMX0",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T17:13:37.508Z"
+  },
+  {
     "sn": "24173010564245",
     "device": "Scanner ZEBRA",
     "area": "OUTBOUND",
@@ -1356,20 +1370,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T12:34:34.419Z"
-  },
-  {
-    "sn": "3RJZRW3",
-    "device": "Laptop DELL",
-    "area": "SMX0",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T12:34:18.698Z"
   },
   {
     "sn": "HKVCZH3",
