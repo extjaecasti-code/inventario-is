@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24173010564305",
+    "device": "Scanner ZEBRA",
+    "area": "LOSS PREVENTION",
+    "changes": [
+      {
+        "label": "Status (CSV sync)",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T13:03:31.653Z"
+  },
+  {
     "sn": "DPC25030001",
     "device": "Dex manager DEX",
     "area": "SHE",
