@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24173010564224",
+    "device": "Scanner ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T13:17:37.054Z"
+  },
+  {
     "sn": "XXRBN253201164",
     "device": "Impresora ZEBRA",
     "area": "ACTIVO FIJO",
@@ -1118,30 +1132,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-25T20:21:53.441Z"
-  },
-  {
-    "sn": "24173010564224",
-    "device": "Scanner ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Asignación",
-        "before": "IS",
-        "after": "SAURON"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T20:19:07.371Z"
   },
   {
     "sn": "9B2348A05089",
