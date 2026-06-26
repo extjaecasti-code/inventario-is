@@ -150,5 +150,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Se manda a reparacion, se encuentra dañado la base",
     "Status in Arturito": "In Stock"
+  },
+  "XXRBN244003721": {
+    "S/N": "XXRBN244003721",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "Zebra",
+    "MODELO": "ZQ521",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "10.9.124.114",
+    "MAC": "8CD54A1D9190",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se manda a garantia, lcd estrellado",
+    "Status in Arturito": "In Stock"
   }
 }
