@@ -34,5 +34,23 @@
     "step3ts": null,
     "step4": null,
     "step4ts": null
+  },
+  {
+    "id": 1782579067083,
+    "sn": "24248524205187",
+    "device": "Handheld ZEBRA TC520K",
+    "area": "OUTBOUND",
+    "motivo": "",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-06-27T16:51:07.083Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null
   }
 ]
