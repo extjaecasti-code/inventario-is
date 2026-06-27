@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": 1782579043183,
+    "sn": "24248524205164",
+    "device": "Handheld ZEBRA TC520K",
+    "area": "OUTBOUND",
+    "motivo": "",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-06-27T16:50:43.183Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null
+  }
+]
