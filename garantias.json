@@ -124,5 +124,23 @@
     "step3ts": null,
     "step4": null,
     "step4ts": null
+  },
+  {
+    "id": 1782579126029,
+    "sn": "XXRBN220600049",
+    "device": "Impresora ZEBRA ZQ521",
+    "area": "OUTBOUND",
+    "motivo": "",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-06-27T16:52:06.029Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null
   }
 ]
