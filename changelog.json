@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24243524206924",
+    "device": "Handheld ZEBRA",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      },
+      {
+        "label": "Comentarios",
+        "before": "En stock dentro del MDF (Pichonera)",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-27T16:07:08.115Z"
+  },
+  {
     "sn": "24255524200659",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
