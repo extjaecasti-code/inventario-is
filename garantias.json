@@ -200,12 +200,13 @@
     "prevCount": 0,
     "step1": "27/06/26, 10:55 a.m.",
     "step1ts": "2026-06-27T16:55:50.577Z",
-    "step2": null,
-    "step2ts": null,
+    "step2": "27/06/26, 10:56 a.m.",
+    "step2ts": "2026-06-27T16:56:42.668Z",
     "step3": null,
     "step3ts": null,
     "step4": null,
     "step4ts": null,
-    "step1by": "André Jael Castillo Diaz"
+    "step1by": "André Jael Castillo Diaz",
+    "step2by": "André Jael Castillo Diaz"
   }
 ]
