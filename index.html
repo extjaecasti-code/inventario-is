@@ -151,6 +151,17 @@ tbody tr:hover .row-actions{opacity:1;}
 .tri-source.spider{background:#FFF3E0;color:#E65100;}
 .tri-source.excel{background:#E8F5E9;color:#2E7D32;}
 .spider-stat{transition:box-shadow .15s;}.spider-stat:hover{box-shadow:0 0 0 2px var(--ml-blue);}
+/* ── IN REPAIR TRACKER ── */
+.repair-banner{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin:0 24px 16px;box-shadow:0 1px 4px rgba(0,0,0,.06);}
+.repair-banner-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.repair-item{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:var(--surface2);border-radius:7px;margin-bottom:6px;gap:12px;flex-wrap:wrap;}
+.repair-item-info{flex:1;min-width:0;}
+.repair-item-sn{font-family:monospace;font-weight:700;color:var(--ml-blue);font-size:13px;}
+.repair-item-dev{font-size:11px;color:var(--text3);margin-top:2px;}
+.repair-item-days{font-size:11px;font-weight:700;color:var(--yellow-s);}
+.btn-confirm-arturito{background:var(--green-bg);color:var(--green);border:1px solid rgba(0,166,80,.25);border-radius:6px;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--sans);transition:all .15s;white-space:nowrap;}
+.btn-confirm-arturito:hover{background:var(--green);color:#fff;}
+
 /* ── GARANTIA ── */
 .garantia-subtabs{display:flex;gap:4px;padding:14px 24px 0;border-bottom:2px solid var(--border);}
 .garantia-subtab{padding:8px 18px;font-size:13px;font-weight:600;color:var(--text3);cursor:pointer;border-radius:6px 6px 0 0;border:1px solid transparent;border-bottom:none;transition:all .15s;}
@@ -906,6 +917,18 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
         Agregar Equipo
       </button>
     </div>
+    <!-- IN REPAIR TRACKER BANNER -->
+    <div id="repairTrackerBanner" style="display:none;padding:16px 24px 0">
+      <div class="repair-banner">
+        <div class="repair-banner-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--yellow-s)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Equipos In Repair — Pendientes de confirmar en Arturito
+          <span style="font-size:11px;color:var(--text3);font-weight:400;margin-left:auto">Se notifica diariamente en Google Chat</span>
+        </div>
+        <div id="repairTrackerList"></div>
+      </div>
+    </div>
+
     <!-- SUB-TABS -->
     <div class="garantia-subtabs">
       <div class="garantia-subtab active" id="gtab-activos" onclick="switchGarantiaTab('activos')">🔄 En Proceso <span id="gActivosBadge" style="background:var(--ml-blue);color:#fff;border-radius:10px;padding:1px 7px;font-size:11px;margin-left:4px">0</span></div>
@@ -1404,6 +1427,7 @@ async function loadFromGitHub(showMsg){
     setSyncState('ok','Sincronizado');
     if(showMsg)showToast('Datos actualizados','success');
     updateConsolidateBanner();
+    initRepairTracker();
   }catch(e){
     setSyncState('error','Error de conexion');
     showToast('No se pudo cargar: '+e.message,'error');
@@ -1851,7 +1875,7 @@ function switchTab(tab) {
   document.getElementById('tab-' + tab).classList.add('active');
   document.getElementById('panel-' + tab).classList.add('active');
   if (tab === 'audit') renderAuditTab();
-  if (tab === 'garantia') renderGarantias();
+  if (tab === 'garantia') { renderGarantias(); initRepairTracker(); }
   document.querySelector('.pager').style.display = tab === 'inventory' ? 'flex' : 'none';
 }
 
@@ -3804,6 +3828,112 @@ function renderHistorial() {
 
 // Init warranties on startup
 loadWarranties();
+
+// ── IN REPAIR TRACKER ─────────────────────────────────────────────────────
+const REPAIR_CONFIRMED_KEY = 'repair_confirmed'; // store confirmed SNs + date
+let repairConfirmed = {}; // {SN: 'YYYY-MM-DD'}
+
+async function loadRepairConfirmed() {
+  try {
+    const v = await store.get(REPAIR_CONFIRMED_KEY);
+    if(v) repairConfirmed = JSON.parse(v);
+  } catch(e) { repairConfirmed = {}; }
+}
+
+async function saveRepairConfirmed() {
+  await store.set(REPAIR_CONFIRMED_KEY, JSON.stringify(repairConfirmed));
+}
+
+function getRepairDevices() {
+  return data.filter(d => {
+    const status = (d['ESTATUS FISICO']||'').toLowerCase().trim();
+    return status === 'in repair' || status === 'in repair ';
+  });
+}
+
+function daysSince(isoStr) {
+  if(!isoStr) return null;
+  return Math.floor((Date.now() - new Date(isoStr).getTime()) / 86400000);
+}
+
+async function confirmArturito(sn) {
+  const today = new Date().toISOString().slice(0,10);
+  repairConfirmed[sn] = today;
+  await saveRepairConfirmed();
+  renderRepairTracker();
+  showToast(sn + ' confirmado en Arturito ✓', 'success');
+}
+
+function renderRepairTracker() {
+  const repairDevs = getRepairDevices();
+  const today = new Date().toISOString().slice(0,10);
+
+  // Filter out ones confirmed today
+  const pending = repairDevs.filter(d => repairConfirmed[d['S/N']] !== today);
+
+  const banner = document.getElementById('repairTrackerBanner');
+  const list   = document.getElementById('repairTrackerList');
+
+  if(!pending.length) { banner.style.display='none'; return; }
+  banner.style.display = '';
+
+  list.innerHTML = pending.map(d => {
+    const sn = d['S/N'];
+    const dev = ((d['DISPOSITIVO']||'') + ' ' + (d['MARCA']||'') + ' ' + (d['MODELO']||'')).trim();
+    const area = d['AREA'] || '—';
+    const asig = d['ASIGNACIÓN'] || '—';
+    const lastConfirmed = repairConfirmed[sn];
+    const daysSinceConf = lastConfirmed ? daysSince(lastConfirmed + 'T00:00:00') : null;
+    const daysLabel = daysSinceConf !== null
+      ? `<span class="repair-item-days">Último confirmado hace ${daysSinceConf} día(s)</span>`
+      : `<span class="repair-item-days">Sin confirmar aún</span>`;
+
+    return `<div class="repair-item">
+      <div class="repair-item-info">
+        <div class="repair-item-sn">${esc(sn)}</div>
+        <div class="repair-item-dev">${esc(dev)} · ${esc(area)} · ${esc(asig)}</div>
+        <div style="margin-top:3px">${daysLabel}</div>
+      </div>
+      <button class="btn-confirm-arturito" onclick="confirmArturito('${esc(sn)}')">
+        ✓ Confirmado en Arturito
+      </button>
+    </div>`;
+  }).join('');
+}
+
+async function sendRepairDailyNotif() {
+  const repairDevs = getRepairDevices();
+  const today = new Date().toISOString().slice(0,10);
+  const pending = repairDevs.filter(d => repairConfirmed[d['S/N']] !== today);
+  if(!pending.length) return;
+
+  // Only send once per day
+  const lastSent = await store.get('repair_notif_sent');
+  if(lastSent === today) return;
+
+  const nl = '\n';
+  const sep = '========================';
+  let text = '[In Repair] Equipos pendientes de actualizar en Arturito' + nl + sep + nl;
+  text += 'Fecha: ' + new Date().toLocaleDateString('es-MX') + nl;
+  text += 'Total pendientes: ' + pending.length + nl + sep + nl;
+  pending.slice(0,15).forEach(d => {
+    text += '- ' + d['S/N'] + ' | ' + (d['DISPOSITIVO']||'') + ' ' + (d['MARCA']||'') + ' | ' + (d['AREA']||'') + nl;
+  });
+  if(pending.length > 15) text += '... y ' + (pending.length - 15) + ' más' + nl;
+  text += sep + nl + 'Confirma en la app: Pestaña Garantia > In Repair';
+
+  try {
+    await fetch(WEBHOOK, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({text})});
+    await store.set('repair_notif_sent', today);
+  } catch(e) { console.warn('repair notif error', e); }
+}
+
+// Initialize repair tracker
+async function initRepairTracker() {
+  await loadRepairConfirmed();
+  renderRepairTracker();
+  await sendRepairDailyNotif();
+}
 
 </script>
 </body>
