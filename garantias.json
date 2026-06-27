@@ -88,5 +88,23 @@
     "step3ts": null,
     "step4": null,
     "step4ts": null
+  },
+  {
+    "id": 1782579100392,
+    "sn": "24160523022814",
+    "device": "RING SCANER ZEBRA RSBT5",
+    "area": "OUTBOUND",
+    "motivo": "",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-06-27T16:51:40.392Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null
   }
 ]
