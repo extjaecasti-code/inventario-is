@@ -190,5 +190,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "24255524200533": {
+    "S/N": "24255524200533",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "ZEBRA",
+    "MODELO": "TC520K",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "INBOUND",
+    "IP": "10.9.96.94",
+    "MAC": "88:BC:AC:14:A1:7C",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "14.0.0",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Se regresa de garantía, se entrega a AF",
+    "Status in Arturito": "In Use"
   }
 }
