@@ -3859,6 +3859,7 @@ function daysSince(isoStr) {
 }
 
 async function confirmArturito(sn) {
+  if(!sn){ showToast('Error: S/N no válido', 'error'); return; }
   const today = new Date().toISOString().slice(0,10);
   repairConfirmed[sn] = today;
   await saveRepairConfirmed();
@@ -3896,7 +3897,7 @@ function renderRepairTracker() {
         <div class="repair-item-dev">${esc(dev)} · ${esc(area)} · ${esc(asig)}</div>
         <div style="margin-top:3px">${daysLabel}</div>
       </div>
-      <button class="btn-confirm-arturito" onclick="confirmArturito('${esc(sn)}')">
+      <button class="btn-confirm-arturito" data-sn="${esc(sn)}" onclick="confirmArturito(this.getAttribute('data-sn'))">
         ✓ Confirmado en Arturito
       </button>
     </div>`;
