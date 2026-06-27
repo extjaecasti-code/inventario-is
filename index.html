@@ -3835,15 +3835,27 @@ loadWarranties();
 const REPAIR_CONFIRMED_KEY = 'repair_confirmed'; // store confirmed SNs + date
 let repairConfirmed = {}; // {SN: 'YYYY-MM-DD'}
 
+const REPAIR_CONFIRMED_API = API_BASE + '/repair_confirmed.json';
+let repairConfirmedSHA = '';
+
 async function loadRepairConfirmed() {
   try {
-    const v = await store.get(REPAIR_CONFIRMED_KEY);
-    if(v) repairConfirmed = JSON.parse(v);
+    const r = await fetch(REPAIR_CONFIRMED_API + '?t=' + Date.now(), {headers:{Authorization:'token '+GITHUB_TOKEN}});
+    if(r.ok) {
+      const m = await r.json(); repairConfirmedSHA = m.sha;
+      if(m.content) { try{ repairConfirmed = JSON.parse(decodeURIComponent(escape(atob(m.content.replace(/\n/g,''))))); }catch(e){ repairConfirmed={}; } }
+    }
   } catch(e) { repairConfirmed = {}; }
 }
 
 async function saveRepairConfirmed() {
-  await store.set(REPAIR_CONFIRMED_KEY, JSON.stringify(repairConfirmed));
+  try {
+    const c = btoa(unescape(encodeURIComponent(JSON.stringify(repairConfirmed,null,2))));
+    const b = {message:'[repair-confirm] por '+currentUser, content:c};
+    if(repairConfirmedSHA) b.sha = repairConfirmedSHA;
+    const r = await fetch(REPAIR_CONFIRMED_API, {method:'PUT', headers:{Authorization:'token '+GITHUB_TOKEN,'Content-Type':'application/json'}, body:JSON.stringify(b)});
+    if(r.ok){ const d=await r.json(); repairConfirmedSHA=d.content.sha; }
+  } catch(e) { console.warn('repair confirm save error', e); }
 }
 
 function getRepairDevices() {
@@ -3911,8 +3923,8 @@ async function sendRepairDailyNotif() {
   if(!pending.length) return;
 
   // Only send once per day
-  const lastSent = await store.get('repair_notif_sent');
-  if(lastSent === today) return;
+  // Check if already sent today (use repairConfirmed as shared storage)
+  if(repairConfirmed['__notif_sent__'] === today) return;
 
   const nl = '\n';
   const sep = '========================';
@@ -3927,7 +3939,8 @@ async function sendRepairDailyNotif() {
 
   try {
     await fetch(WEBHOOK, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({text})});
-    await store.set('repair_notif_sent', today);
+    repairConfirmed['__notif_sent__'] = today;
+    await saveRepairConfirmed();
   } catch(e) { console.warn('repair notif error', e); }
 }
 
