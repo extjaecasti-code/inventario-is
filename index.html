@@ -922,7 +922,7 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
       <div class="repair-banner">
         <div class="repair-banner-title">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--yellow-s)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Equipos In Repair — Pendientes de confirmar en Arturito
+          Cambios de Status — Pendientes de confirmar en Arturito
           <span style="font-size:11px;color:var(--text3);font-weight:400;margin-left:auto">Se notifica diariamente en Google Chat</span>
         </div>
         <div id="repairTrackerList"></div>
@@ -1473,6 +1473,11 @@ async function saveToGitHub(commitMsg){
 function recordChange(sn, fields){
   if(!changes_db[sn]) changes_db[sn]={};
   Object.assign(changes_db[sn], fields);
+  // Track who made the change for Arturito confirmation
+  if(fields['ESTATUS FISICO'] || fields['Status in Arturito']) {
+    changes_db[sn]['_changedBy'] = currentUser;
+    changes_db[sn]['_changedTs'] = new Date().toISOString();
+  }
 }
 function recordNew(rec){
   changes_db['__new__'+rec['S/N']]={...rec};
@@ -3858,6 +3863,27 @@ async function saveRepairConfirmed() {
   } catch(e) { console.warn('repair confirm save error', e); }
 }
 
+function getPendingArturitoConfirm() {
+  // Return all devices that have a pending status change in changes_db
+  const pending = [];
+  Object.keys(changes_db).forEach(k => {
+    if(k.startsWith('__')) return; // skip __new__, __deleted__
+    const change = changes_db[k];
+    if(change['ESTATUS FISICO'] || change['Status in Arturito']) {
+      const dev = data.find(d => d['S/N'] === k);
+      if(dev) pending.push({
+        sn: k,
+        device: dev,
+        newStatus: change['ESTATUS FISICO'] || change['Status in Arturito'],
+        changedBy: change['_changedBy'] || '—',
+        changedTs: change['_changedTs'] || null,
+      });
+    }
+  });
+  return pending;
+}
+
+// Keep old function for backwards compat
 function getRepairDevices() {
   return data.filter(d => {
     const status = (d['ESTATUS FISICO']||'').toLowerCase().trim();
@@ -3880,16 +3906,11 @@ async function confirmArturito(sn) {
 }
 
 function renderRepairTracker() {
-  const repairDevs = getRepairDevices();
+  const allPending = getPendingArturitoConfirm();
   const today = new Date().toISOString().slice(0,10);
 
-  // Filter out ones already confirmed (any date - disappears until next day)
-  const pending = repairDevs.filter(d => {
-    const confirmed = repairConfirmed[d['S/N']];
-    if(!confirmed) return true; // never confirmed
-    const today = new Date().toISOString().slice(0,10);
-    return confirmed !== today; // show again next day
-  });
+  // Filter out ones already confirmed today
+  const pending = allPending.filter(p => repairConfirmed[p.sn] !== today);
 
   const banner = document.getElementById('repairTrackerBanner');
   const list   = document.getElementById('repairTrackerList');
@@ -3897,24 +3918,35 @@ function renderRepairTracker() {
   if(!pending.length) { banner.style.display='none'; return; }
   banner.style.display = '';
 
-  list.innerHTML = pending.map(d => {
-    const sn = d['S/N'];
-    const dev = ((d['DISPOSITIVO']||'') + ' ' + (d['MARCA']||'') + ' ' + (d['MODELO']||'')).trim();
-    const area = d['AREA'] || '—';
-    const asig = d['ASIGNACIÓN'] || '—';
-    const lastConfirmed = repairConfirmed[sn];
+  // Status color map
+  const statusColor = {
+    'in use': 'var(--green)', 'in stock': 'var(--ml-blue)',
+    'in repair': 'var(--yellow-s)', 'retired': 'var(--red)', 'missed': 'var(--purple)'
+  };
+
+  list.innerHTML = pending.map(p => {
+    const dev = ((p.device['DISPOSITIVO']||'') + ' ' + (p.device['MARCA']||'') + ' ' + (p.device['MODELO']||'')).trim();
+    const area = p.device['AREA'] || '—';
+    const asig = p.device['ASIGNACIÓN'] || '—';
+    const statusCol = statusColor[(p.newStatus||'').toLowerCase()] || 'var(--text)';
+    const lastConfirmed = repairConfirmed[p.sn];
     const daysSinceConf = lastConfirmed ? daysSince(lastConfirmed + 'T00:00:00') : null;
     const daysLabel = daysSinceConf !== null
       ? `<span class="repair-item-days">Último confirmado hace ${daysSinceConf} día(s)</span>`
-      : `<span class="repair-item-days">Sin confirmar aún</span>`;
+      : `<span class="repair-item-days">Pendiente de confirmar</span>`;
 
     return `<div class="repair-item">
       <div class="repair-item-info">
-        <div class="repair-item-sn">${esc(sn)}</div>
+        <div class="repair-item-sn">${esc(p.sn)}</div>
         <div class="repair-item-dev">${esc(dev)} · ${esc(area)} · ${esc(asig)}</div>
-        <div style="margin-top:3px">${daysLabel}</div>
+        <div style="margin-top:4px;display:flex;align-items:center;gap:8px">
+          <span style="font-size:11px;color:var(--text3)">Nuevo status:</span>
+          <strong style="font-size:12px;color:${statusCol}">${esc(p.newStatus||'—')}</strong>
+          ${p.changedBy !== '—' ? `<span style="font-size:10px;color:var(--text3)">por ${esc(p.changedBy)}</span>` : ''}
+        </div>
+        <div style="margin-top:2px">${daysLabel}</div>
       </div>
-      <button class="btn-confirm-arturito" data-sn="${esc(sn)}" onclick="confirmArturito(this.getAttribute('data-sn'))">
+      <button class="btn-confirm-arturito" data-sn="${esc(p.sn)}" onclick="confirmArturito(this.getAttribute('data-sn'))">
         ✓ Confirmado en Arturito
       </button>
     </div>`;
@@ -3922,25 +3954,23 @@ function renderRepairTracker() {
 }
 
 async function sendRepairDailyNotif() {
-  const repairDevs = getRepairDevices();
+  const allPending = getPendingArturitoConfirm();
   const today = new Date().toISOString().slice(0,10);
-  const pending = repairDevs.filter(d => repairConfirmed[d['S/N']] !== today);
+  const pending = allPending.filter(p => repairConfirmed[p.sn] !== today);
   if(!pending.length) return;
 
-  // Only send once per day
-  // Check if already sent today (use repairConfirmed as shared storage)
   if(repairConfirmed['__notif_sent__'] === today) return;
 
   const nl = '\n';
   const sep = '========================';
-  let text = '[In Repair] Equipos pendientes de actualizar en Arturito' + nl + sep + nl;
+  let text = '[Arturito] Cambios de status pendientes de confirmar' + nl + sep + nl;
   text += 'Fecha: ' + new Date().toLocaleDateString('es-MX') + nl;
   text += 'Total pendientes: ' + pending.length + nl + sep + nl;
-  pending.slice(0,15).forEach(d => {
-    text += '- ' + d['S/N'] + ' | ' + (d['DISPOSITIVO']||'') + ' ' + (d['MARCA']||'') + ' | ' + (d['AREA']||'') + nl;
+  pending.slice(0,15).forEach(p => {
+    text += '- ' + p.sn + ' | ' + (p.device['DISPOSITIVO']||'') + ' ' + (p.device['MARCA']||'') + ' | Status: ' + (p.newStatus||'?') + nl;
   });
-  if(pending.length > 15) text += '... y ' + (pending.length - 15) + ' más' + nl;
-  text += sep + nl + 'Confirma en la app: Pestaña Garantia > In Repair';
+  if(pending.length > 15) text += '... y ' + (pending.length - 15) + ' mas' + nl;
+  text += sep + nl + 'Confirma en la app: Pestana Garantia';
 
   try {
     await fetch(WEBHOOK, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({text})});
