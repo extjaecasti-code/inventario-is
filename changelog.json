@@ -1,5 +1,29 @@
 [
   {
+    "sn": "816ZRW3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "mesa training docka 53",
+        "after": "MDF"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-29T15:26:39.096Z"
+  },
+  {
     "sn": "CY5ZRW3",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEM",
@@ -3619,20 +3643,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-27T12:00:33.614Z"
-  },
-  {
-    "sn": "816ZRW3",
-    "device": "Laptop DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Asignación",
-        "before": "Meca M6",
-        "after": "mesa training docka 53"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-27T09:25:29.482Z"
   },
   {
     "sn": "2W376F3",
