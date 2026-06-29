@@ -3883,8 +3883,13 @@ function renderRepairTracker() {
   const repairDevs = getRepairDevices();
   const today = new Date().toISOString().slice(0,10);
 
-  // Filter out ones confirmed today
-  const pending = repairDevs.filter(d => repairConfirmed[d['S/N']] !== today);
+  // Filter out ones already confirmed (any date - disappears until next day)
+  const pending = repairDevs.filter(d => {
+    const confirmed = repairConfirmed[d['S/N']];
+    if(!confirmed) return true; // never confirmed
+    const today = new Date().toISOString().slice(0,10);
+    return confirmed !== today; // show again next day
+  });
 
   const banner = document.getElementById('repairTrackerBanner');
   const list   = document.getElementById('repairTrackerList');
