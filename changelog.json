@@ -1,5 +1,34 @@
 [
   {
+    "sn": "2V5ZRW3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "Meca M3",
+        "after": "MDF"
+      },
+      {
+        "label": "Comentarios",
+        "before": "MECANIZADA",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-29T15:29:36.362Z"
+  },
+  {
     "sn": "816ZRW3",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEM",
