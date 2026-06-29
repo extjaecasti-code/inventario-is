@@ -193,21 +193,21 @@
   },
   "24255524200533": {
     "S/N": "24255524200533",
-    "ESTATUS FISICO": "In Use",
+    "ESTATUS FISICO": "In Stock",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
-    "AREA": "INBOUND",
-    "ASIGNACIÓN": "INBOUND",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
     "IP": "10.9.96.94",
     "MAC": "88:BC:AC:14:A1:7C",
     "SSID": "MELI-SHIPPING",
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Se regresa de garantía, se entrega a AF",
-    "Status in Arturito": "In Use"
+    "Comentarios": "",
+    "Status in Arturito": "In Stock"
   },
   "24248524204988": {
     "S/N": "24248524204988",
