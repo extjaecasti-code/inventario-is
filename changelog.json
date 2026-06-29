@@ -1,5 +1,29 @@
 [
   {
+    "sn": "B06ZRW3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "Meca M7",
+        "after": "MDF"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-29T15:24:58.562Z"
+  },
+  {
     "sn": "GHCFSB4",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEM",
