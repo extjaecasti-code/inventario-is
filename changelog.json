@@ -1,5 +1,34 @@
 [
   {
+    "sn": "CY5ZRW3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "",
+        "after": "MDF"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Ubicar en que bancada está",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-29T15:26:04.792Z"
+  },
+  {
     "sn": "B06ZRW3",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEM",
@@ -2895,30 +2924,6 @@
     ],
     "user": "Luis Eduardo Avalos Garcia",
     "ts": "2026-06-08T16:20:54.965Z"
-  },
-  {
-    "sn": "CY5ZRW3",
-    "device": "Laptop DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Asignación",
-        "before": "mesa 19 exp",
-        "after": ""
-      },
-      {
-        "label": "Comentarios",
-        "before": "Se encuentra en MDF laptop de expansion",
-        "after": "Ubicar en que bancada está"
-      }
-    ],
-    "user": "Luis Eduardo Avalos Garcia",
-    "ts": "2026-06-08T16:18:57.996Z"
   },
   {
     "sn": "PF3TW43N",
