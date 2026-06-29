@@ -370,5 +370,23 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "Status in Arturito": "In Stock"
+  },
+  "GHCFSB4": {
+    "S/N": "GHCFSB4",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "pro 14",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "10.9.112.70",
+    "MAC": "C0A8102CBDA7",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "Chrome Flex",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Stock"
   }
 }
