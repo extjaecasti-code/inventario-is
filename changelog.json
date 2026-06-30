@@ -1,5 +1,19 @@
 [
   {
+    "sn": "FJCFSB4",
+    "device": "Laptop DELL",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "Fabían Ramirez",
+        "after": "FABIAN RAMIREZ"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T17:36:16.342Z"
+  },
+  {
     "sn": "BJWTQW3",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEM",
@@ -5079,19 +5093,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-19T12:47:31.082Z"
-  },
-  {
-    "sn": "TH0HRR76CHG0047V0QQ5A00",
-    "device": "Cargador DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-18T19:29:18.327Z"
   }
 ]
