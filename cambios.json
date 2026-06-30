@@ -248,5 +248,25 @@
     "Status in Arturito": "In Stock",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-06-30T18:31:46.051Z"
+  },
+  "8RSC6F3": {
+    "S/N": "8RSC6F3",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "10.9.69.36",
+    "MAC": "E8C8298977EF",
+    "SSID": "meli-shipping",
+    "O.S.": "W11",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MX_Oficina_Melitlan",
+    "Comentarios": "Equipo dado de baja en slack y en stock en arturito\nExTL: Begona Valeria Barberena",
+    "Status in Arturito": "In Stock",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T18:36:27.669Z"
   }
 }
