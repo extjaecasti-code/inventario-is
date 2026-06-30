@@ -288,5 +288,23 @@
     "Status in Arturito": "In Stock",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-06-30T18:37:15.900Z"
+  },
+  "__new__PW06TQ99": {
+    "S/N": "PW06TQ99",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "LENOVO",
+    "MODELO": "L14",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "Equipo dado de baja en slack y en stock en arturito\nExTL: HERMINIO",
+    "Status in Arturito": "In Stock"
   }
 }
