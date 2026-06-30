@@ -1,5 +1,19 @@
 [
   {
+    "sn": "6Q876F3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T17:53:28.387Z"
+  },
+  {
     "sn": "7ZLC6F3",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEM",
@@ -5079,29 +5093,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-19T15:32:49.335Z"
-  },
-  {
-    "sn": "C16ZRW3",
-    "device": "Laptop DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEM",
-        "after": "OUTBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF",
-        "after": "FINGER 9"
-      },
-      {
-        "label": "Comentarios",
-        "before": "FINGER -",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-19T12:52:41.473Z"
   }
 ]
