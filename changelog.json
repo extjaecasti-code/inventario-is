@@ -5,13 +5,13 @@
     "area": "INTERNAL SYSTEM",
     "changes": [
       {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
+        "label": "Comentarios",
+        "before": "Equipo dado de baja en slack y en stock en arturito\nExTL: HERMINIO",
+        "after": "Equipo dado de baja en slack y en stock en arturito\nExTL: Herminio De Jesus Armenta"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T18:41:41.197Z"
+    "ts": "2026-06-30T18:42:47.919Z"
   },
   {
     "sn": "H6CTQW3",
