@@ -1,5 +1,34 @@
 [
   {
+    "sn": "8RSC6F3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "INBOUND",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "BEGONA VALERIA BARBERENA",
+        "after": "MDF"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Equipo dado de baja en slack y en stock en arturito\nExTL: Begona Valeria Barberena"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T18:36:28.607Z"
+  },
+  {
     "sn": "HJWTQW3",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEMS",
@@ -5074,19 +5103,5 @@
     ],
     "user": "Luis Eduardo Avalos Garcia",
     "ts": "2026-05-19T20:20:06.013Z"
-  },
-  {
-    "sn": "23042D84BA",
-    "device": "Handheld Honeywell",
-    "area": "Caseta MX11",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "Luis Eduardo Avalos Garcia",
-    "ts": "2026-05-19T20:07:51.409Z"
   }
 ]
