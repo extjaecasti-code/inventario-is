@@ -1,5 +1,29 @@
 [
   {
+    "sn": "9B2404A06784",
+    "device": "UPS APC",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF - LI",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Esta en resguardo al lado de AF\nesta en buen estado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T14:39:40.648Z"
+  },
+  {
     "sn": "9B2348A07766",
     "device": "UPS APC",
     "area": "ACTIVO FIJO",
