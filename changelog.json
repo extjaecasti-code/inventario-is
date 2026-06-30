@@ -1,5 +1,29 @@
 [
   {
+    "sn": "9B2348A09046",
+    "device": "UPS APC",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF - LI",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Comentarios",
+        "before": "In Stock (Operational Backup)",
+        "after": "Esta en resguardo al lado de AF\nse encuentra en buen estado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T14:45:49.597Z"
+  },
+  {
     "sn": "9B2348A09044",
     "device": "UPS APC",
     "area": "ACTIVO FIJO",
@@ -4989,19 +5013,5 @@
     ],
     "user": "Erick Agustín Crisóstomo Sanchez",
     "ts": "2026-05-14T14:31:54.979Z"
-  },
-  {
-    "sn": "8XCFSB4",
-    "device": "Laptop DELL",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Status (Spider sync)",
-        "before": "In Use",
-        "after": "Missed"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-13T17:20:34.324Z"
   }
 ]
