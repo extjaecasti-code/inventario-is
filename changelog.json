@@ -5,13 +5,13 @@
     "area": "INTERNAL SYSTEM",
     "changes": [
       {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
+        "label": "Comentarios",
+        "before": "Equipo dado de baja en slack y arturito",
+        "after": "Equipo dado de baja en slack y arturito\nexTL: Victor Manuel Aragon"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T17:33:23.284Z"
+    "ts": "2026-06-30T17:33:42.885Z"
   },
   {
     "sn": "99J243803113",
