@@ -1,5 +1,24 @@
 [
   {
+    "sn": "9B2348A09063",
+    "device": "UPS APC",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Esta en resguardo al lado de AF\nse encuentra en buen estado (en caja)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T14:51:18.010Z"
+  },
+  {
     "sn": "9B2348A09068",
     "device": "UPS APC",
     "area": "ACTIVO FIJO",
@@ -2318,30 +2337,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T15:11:13.129Z"
-  },
-  {
-    "sn": "9B2348A09063",
-    "device": "UPS APC",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF - LI",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Comentarios",
-        "before": "In Stock (Operational Backup)",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T15:10:08.149Z"
   },
   {
     "sn": "9B2348A05088",
