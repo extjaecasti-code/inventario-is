@@ -1,5 +1,19 @@
 [
   {
+    "sn": "PW06TQ99",
+    "device": "Laptop LENOVO",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T18:41:41.197Z"
+  },
+  {
     "sn": "H6CTQW3",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEM",
@@ -5089,24 +5103,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T15:29:18.952Z"
-  },
-  {
-    "sn": "9B2348A07764",
-    "device": "UPS APC",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Asignación",
-        "before": "Bancada 5",
-        "after": "FINGER 2"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Se coloca por el que no funcionaba correctamente - 9B2348A05084"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-20T18:35:53.029Z"
   }
 ]
