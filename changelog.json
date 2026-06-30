@@ -1,5 +1,19 @@
 [
   {
+    "sn": "G9KPSW3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T17:33:23.284Z"
+  },
+  {
     "sn": "99J243803113",
     "device": "Impresora ZEBRA",
     "area": "ACTIVO FIJO",
@@ -5079,24 +5093,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-18T19:23:45.978Z"
-  },
-  {
-    "sn": "6J65903",
-    "device": "Mini Desktop DELL",
-    "area": "ESFERA OB",
-    "changes": [
-      {
-        "label": "Área",
-        "before": "ACTIVO FIJO",
-        "after": "ESFERA OB"
-      },
-      {
-        "label": "Asignación",
-        "before": "Sauron",
-        "after": "XIBO"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-18T19:15:04.534Z"
   }
 ]
