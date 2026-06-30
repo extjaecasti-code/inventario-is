@@ -170,5 +170,25 @@
     "Fullfiment": "",
     "Comentarios": "Equipo dado de baja en slack y en stock en arturito\nExTL: Jose Luis Rosas",
     "Status in Arturito": "In Stock"
+  },
+  "PF4RYGNP": {
+    "S/N": "PF4RYGNP",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "LENOVO",
+    "MODELO": "T14",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "10.9.69.145",
+    "MAC": "C8154E52FDF0",
+    "SSID": "meli-shipping",
+    "O.S.": "W11",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MX_Oficina_Melitlan",
+    "Comentarios": "Equipo dado de baja en slack y en stock en arturito\nExTL: Adriana Cortes Miguel",
+    "Status in Arturito": "In Stock",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T17:47:47.674Z"
   }
 }
