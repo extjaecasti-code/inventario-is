@@ -190,5 +190,25 @@
     "Status in Arturito": "In Stock",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-06-30T17:47:47.674Z"
+  },
+  "7ZLC6F3": {
+    "S/N": "7ZLC6F3",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "Equipo dado de baja en slack y en stock en arturito\nExTL: Marco Antonio Flores",
+    "Status in Arturito": "In Stock",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T17:51:36.801Z"
   }
 }
