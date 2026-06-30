@@ -158,5 +158,25 @@
     "Status in Arturito": "In Stock",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-06-30T14:38:59.773Z"
+  },
+  "9B2404A06784": {
+    "S/N": "9B2404A06784",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "UPS",
+    "DISPOSITIVO": "UPS",
+    "MARCA": "APC",
+    "MODELO": "BV1000",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Esta en resguardo al lado de AF\nesta en buen estado",
+    "Status in Arturito": "In Stock",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:39:39.309Z"
   }
 }
