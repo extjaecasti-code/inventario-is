@@ -92,5 +92,25 @@
     "Fullfiment": "",
     "Comentarios": "Equipo dado de baja en slack y en stock en arturito",
     "Status in Arturito": "In Stock"
+  },
+  "PF4T15FA": {
+    "S/N": "PF4T15FA",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "LENOVO",
+    "MODELO": "T14",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "Equipo dado de baja en slack y en stock en arturito\nExTL: Diego Armando Flores",
+    "Status in Arturito": "In Stock",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T17:39:21.636Z"
   }
 }
