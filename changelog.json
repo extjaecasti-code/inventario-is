@@ -1,5 +1,24 @@
 [
   {
+    "sn": "PF3TN6P4",
+    "device": "Laptop LENOVO",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "mdf",
+        "after": "MDF"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Equipo dado de baja en slack y en stock en arturito\nExTL: Monica Murguia"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T17:40:56.282Z"
+  },
+  {
     "sn": "PF4T15FA",
     "device": "Laptop LENOVO",
     "area": "INTERNAL SYSTEM",
@@ -5059,29 +5078,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-19T12:49:43.557Z"
-  },
-  {
-    "sn": "CX5ZRW3",
-    "device": "Laptop DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEM",
-        "after": "OUTBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF",
-        "after": "FINGER 4"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-19T12:48:42.557Z"
   }
 ]
