@@ -1,5 +1,19 @@
 [
   {
+    "sn": "PF3TN6P4",
+    "device": "Laptop LENOVO",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Modelo",
+        "before": "THINK PAD",
+        "after": "T14"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T18:28:51.296Z"
+  },
+  {
     "sn": "6Q876F3",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEM",
@@ -113,25 +127,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T17:43:43.634Z"
-  },
-  {
-    "sn": "PF3TN6P4",
-    "device": "Laptop LENOVO",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Asignación",
-        "before": "mdf",
-        "after": "MDF"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Equipo dado de baja en slack y en stock en arturito\nExTL: Monica Murguia"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T17:40:56.282Z"
   },
   {
     "sn": "PF4T15FA",
