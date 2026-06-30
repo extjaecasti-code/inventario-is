@@ -268,5 +268,25 @@
     "Status in Arturito": "In Stock",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-06-30T18:36:27.669Z"
+  },
+  "H6CTQW3": {
+    "S/N": "H6CTQW3",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "192.168.1.107",
+    "MAC": "6C:2F:80:FA:0E:8D",
+    "SSID": "",
+    "O.S.": "W11",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Equipo dado de baja en slack y en stock en arturito\nExTL: Silvia Garcia",
+    "Status in Arturito": "In Stock",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T18:37:15.900Z"
   }
 }
