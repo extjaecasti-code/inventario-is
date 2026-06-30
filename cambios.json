@@ -112,5 +112,25 @@
     "Status in Arturito": "In Stock",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-06-30T17:39:21.636Z"
+  },
+  "PF3TN6P4": {
+    "S/N": "PF3TN6P4",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "LENOVO",
+    "MODELO": "THINK PAD",
+    "AREA": "INTERNAL SYSTEMS",
+    "ASIGNACIÓN": "MDF",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Equipo dado de baja en slack y en stock en arturito\nExTL: Monica Murguia",
+    "Status in Arturito": "In Stock",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T17:40:55.467Z"
   }
 }
