@@ -132,5 +132,25 @@
     "Status in Arturito": "In Stock",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-06-30T17:40:55.467Z"
+  },
+  "PF5E3YJ9": {
+    "S/N": "PF5E3YJ9",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "Lenovo",
+    "MODELO": "T14",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "10.9.69.1",
+    "MAC": "C86E086454C4",
+    "SSID": "shipping-corp",
+    "O.S.": "W11",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MX_Oficina_Melitlan",
+    "Comentarios": "Equipo dado de baja en slack y en stock en arturito\nExTL: Cristian Montanez",
+    "Status in Arturito": "In Stock",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T17:43:42.589Z"
   }
 }
