@@ -5,13 +5,13 @@
     "area": "INTERNAL SYSTEM",
     "changes": [
       {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
+        "label": "Comentarios",
+        "before": "Equipo dado de baja en slack y en stock en arturito",
+        "after": "Equipo dado de baja en slack y en stock en arturito\nExTL: Diego Armando Flores"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T17:38:30.343Z"
+    "ts": "2026-06-30T17:39:22.860Z"
   },
   {
     "sn": "FJCFSB4",
