@@ -98,5 +98,25 @@
     "Status in Arturito": "In Stock",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-06-30T14:36:50.137Z"
+  },
+  "99J243803126": {
+    "S/N": "99J243803126",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZT411",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
+    "IP": "10.9.124.14",
+    "MAC": "8CD54A248AF8",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Esta en resguardo al lado de AF",
+    "Status in Arturito": "In Stock",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:37:12.979Z"
   }
 }
