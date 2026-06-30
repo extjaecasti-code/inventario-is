@@ -1,5 +1,19 @@
 [
   {
+    "sn": "BJWTQW3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T17:35:59.642Z"
+  },
+  {
     "sn": "G9KPSW3",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEM",
@@ -5079,19 +5093,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-18T19:29:18.327Z"
-  },
-  {
-    "sn": "CNOV148LOC0017AGPVZA02",
-    "device": "Cargador DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-18T19:23:45.978Z"
   }
 ]
