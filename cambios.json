@@ -54,5 +54,25 @@
     "Fullfiment": "",
     "Comentarios": "",
     "Status in Arturito": "In Stock"
+  },
+  "FJCFSB4": {
+    "S/N": "FJCFSB4",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "pro 14",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "FABIAN RAMIREZ",
+    "IP": "169.254.150.67",
+    "MAC": "C0:A8:10:2C:47:55",
+    "SSID": "SHIPPING-CORP",
+    "O.S.": "W11",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T17:36:15.449Z"
   }
 }
