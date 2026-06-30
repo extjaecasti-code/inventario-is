@@ -1,5 +1,29 @@
 [
   {
+    "sn": "7ZLC6F3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "dpolovaldez",
+        "after": "MDF"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Se entrega laptop a LOA Polo \nlaptop de EX TL",
+        "after": "Equipo dado de baja en slack y en stock en arturito\nExTL: Marco Antonio Flores"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T17:51:37.826Z"
+  },
+  {
     "sn": "PF4RYGNP",
     "device": "Laptop LENOVO",
     "area": "INTERNAL SYSTEM",
@@ -1260,20 +1284,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:20:23.327Z"
-  },
-  {
-    "sn": "7ZLC6F3",
-    "device": "Laptop DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:20:19.028Z"
   },
   {
     "sn": "CN0T2D3",
