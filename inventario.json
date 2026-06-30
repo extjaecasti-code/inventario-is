@@ -9505,10 +9505,10 @@
   },
   {
     "S/N": "9B2348A09058",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Meca M3",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -9519,7 +9519,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "MECANIZADA"
+    "Comentarios": "Esta en resguardo al lado de AF\nSe encuentra en buen estado",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:40:39.652Z"
   },
   {
     "S/N": "AS2426296793",
@@ -10153,10 +10155,10 @@
   },
   {
     "S/N": "9B2348A09036",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Bancada 6",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -10167,7 +10169,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF\nse encuentra en buen estado",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:49:20.721Z"
   },
   {
     "S/N": "1T02Z0CUS0001",
@@ -12765,8 +12769,8 @@
     "S/N": "9B2348A09046",
     "ESTATUS FISICO": "In Stock",
     "Status in Arturito": "In Stock",
-    "AREA": "INTERNAL SYSTEMS",
-    "ASIGNACIÓN": "MDF - LI",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -12777,7 +12781,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "In Stock (Operational Backup)"
+    "Comentarios": "Esta en resguardo al lado de AF\nse encuentra en buen estado",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:45:48.338Z"
   },
   {
     "S/N": "9B2348A09009",
@@ -13035,8 +13041,8 @@
     "S/N": "9B2348A09044",
     "ESTATUS FISICO": "In Stock",
     "Status in Arturito": "In Stock",
-    "AREA": "INTERNAL SYSTEMS",
-    "ASIGNACIÓN": "MDF - LI",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -13047,7 +13053,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "In Stock (Operational Backup)"
+    "Comentarios": "Esta en resguardo al lado de AF\nse encuentra en buen estado\n",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:45:10.978Z"
   },
   {
     "S/N": "9B2348A09047",
@@ -13375,10 +13383,10 @@
   },
   {
     "S/N": "9B2348A07766",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Bancada 4",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -13389,7 +13397,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF\nSe encuentra en buen estado",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:38:59.773Z"
   },
   {
     "S/N": "D4PLG54",
@@ -13447,10 +13457,10 @@
   },
   {
     "S/N": "9B2348A09067",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Bancada 2",
+    "ESTATUS FISICO": "Retired",
+    "Status in Arturito": "Retired",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -13461,7 +13471,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF\nse encuentra dañado",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:47:37.947Z"
   },
   {
     "S/N": "9B2348A05092",
@@ -14041,10 +14053,10 @@
   },
   {
     "S/N": "9B2348A09068",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Bancada 3",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -14055,7 +14067,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF\nse encuentra en buen estado",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:50:34.386Z"
   },
   {
     "S/N": "SZA2428022136",
@@ -16365,8 +16379,8 @@
     "S/N": "9B2348A09045",
     "ESTATUS FISICO": "In Stock",
     "Status in Arturito": "In Stock",
-    "AREA": "INTERNAL SYSTEMS",
-    "ASIGNACIÓN": "MDF - LI",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -16377,7 +16391,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "In Stock (Operational Backup)"
+    "Comentarios": "Esta en resguardo al lado de AF\nse encuentra en buen estado",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:43:49.751Z"
   },
   {
     "S/N": "9B2348A07756",
@@ -16399,8 +16415,8 @@
   },
   {
     "S/N": "9B2348A09063",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
     "AREA": "ACTIVO FIJO",
     "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "UPS",
@@ -16413,7 +16429,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF\nse encuentra en buen estado (en caja)",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:51:16.724Z"
   },
   {
     "S/N": "9B2348A09032",
@@ -23059,10 +23077,10 @@
   },
   {
     "S/N": "9B2348A09038",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "",
+    "ESTATUS FISICO": "Retired",
+    "Status in Arturito": "Retired",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -23073,7 +23091,9 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF\nse encuentra dañado",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:47:02.384Z"
   },
   {
     "S/N": "99N253401390",
@@ -23185,10 +23205,10 @@
   },
   {
     "S/N": "9B2348A05082",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Bancada 7",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -23199,7 +23219,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF\nse encuentra en buen estado",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:46:17.306Z"
   },
   {
     "S/N": "9B2348A07771",
@@ -24249,8 +24271,8 @@
     "S/N": "9B2404A06784",
     "ESTATUS FISICO": "In Stock",
     "Status in Arturito": "In Stock",
-    "AREA": "INTERNAL SYSTEMS",
-    "ASIGNACIÓN": "MDF - LI",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -24261,7 +24283,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF\nesta en buen estado",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:39:39.309Z"
   },
   {
     "S/N": "9B2404A06792",
@@ -25021,10 +25045,10 @@
   },
   {
     "S/N": "99J243803013",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Bancada 5",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25035,7 +25059,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:36:50.137Z"
   },
   {
     "S/N": "99J243705984",
@@ -25093,10 +25119,10 @@
   },
   {
     "S/N": "99J243705985",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "LI",
-    "ASIGNACIÓN": "TRIAGE",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25107,7 +25133,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:37:50.238Z"
   },
   {
     "S/N": "99J243803134",
@@ -25129,10 +25157,10 @@
   },
   {
     "S/N": "99J243803011",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Meca M8",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25143,14 +25171,16 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:33:41.148Z"
   },
   {
     "S/N": "99J245100303",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Meca M7",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25161,7 +25191,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:35:03.332Z"
   },
   {
     "S/N": "99J243803127",
@@ -25255,10 +25287,10 @@
   },
   {
     "S/N": "99J243803113",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Meca M4",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25269,7 +25301,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:52:24.312Z"
   },
   {
     "S/N": "99J243803014",
@@ -25417,10 +25451,10 @@
   },
   {
     "S/N": "99J243803126",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Meca M5",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25431,7 +25465,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:37:12.979Z"
   },
   {
     "S/N": "99J243804093",
@@ -25471,10 +25507,10 @@
   },
   {
     "S/N": "99J243804129",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Meca M3",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25485,7 +25521,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:34:30.633Z"
   },
   {
     "S/N": "32G252968H05926",
@@ -26677,10 +26715,10 @@
   },
   {
     "S/N": "99J244704579",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Mesa PS",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -26691,7 +26729,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:36:00.871Z"
   },
   {
     "S/N": "99J244704583",
@@ -27505,10 +27545,10 @@
   },
   {
     "S/N": "9B2348A09035",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Bancada 1",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -27519,7 +27559,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en resguardo al lado de AF\nse encuentra en buen estado",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:48:29.589Z"
   },
   {
     "S/N": "24255524200653",
@@ -31933,10 +31975,10 @@
   },
   {
     "S/N": "9B2348A33184",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "#N/A",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "MESA 15",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -31947,7 +31989,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Se revisa en Arturito y se ve que esta asignado en \t\nMX_SK_CD05 y no se puede cambiar estatus"
+    "Comentarios": "esta asignado en MX_SK_CD05 y no se puede cambiar estatus\nEsta en resguardo al lado de AF, se encuentra en buen estado",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-06-30T14:50:11.588Z"
   },
   {
     "S/N": "G39LH73",
