@@ -5,23 +5,13 @@
     "area": "ACTIVO FIJO",
     "changes": [
       {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Asignación",
-        "before": "MESA 15",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Comentarios",
-        "before": "Se revisa en Arturito y se ve que esta asignado en \t\nMX_SK_CD05 y no se puede cambiar estatus",
-        "after": "esta asignado en MX_SK_CD05 y no se puede cambiar estatus\nEsta en resguardo al lado de AF, se encuentra en buen estado"
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T14:50:05.503Z"
+    "ts": "2026-06-30T14:50:12.671Z"
   },
   {
     "sn": "9B2348A09036",
