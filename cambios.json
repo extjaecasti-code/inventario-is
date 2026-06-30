@@ -1,1 +1,20 @@
-{}
+{
+  "__new__G9KPSW3": {
+    "S/N": "G9KPSW3",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "7450",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "Equipo dado de baja en slack y arturito",
+    "Status in Arturito": "In Stock"
+  }
+}
