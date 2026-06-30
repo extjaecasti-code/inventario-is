@@ -1,5 +1,34 @@
 [
   {
+    "sn": "PF4RYGNP",
+    "device": "Laptop LENOVO",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Modelo",
+        "before": "THINK PAD",
+        "after": "T14"
+      },
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "ADRIANA CORTES",
+        "after": "MDF"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Equipo dado de baja en slack y en stock en arturito\nExTL: Adriana Cortes Miguel"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T17:47:49.018Z"
+  },
+  {
     "sn": "PF5T5KL8",
     "device": "Laptop LENOVO",
     "area": "INTERNAL SYSTEM",
@@ -1245,20 +1274,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:20:19.028Z"
-  },
-  {
-    "sn": "PF4RYGNP",
-    "device": "Laptop LENOVO",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:20:10.935Z"
   },
   {
     "sn": "CN0T2D3",
