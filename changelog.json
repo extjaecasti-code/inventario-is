@@ -1,5 +1,34 @@
 [
   {
+    "sn": "9B2348A09068",
+    "device": "UPS APC",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Asignación",
+        "before": "Bancada 3",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Esta en resguardo al lado de AF\nse encuentra en buen estado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T14:50:35.200Z"
+  },
+  {
     "sn": "9B2348A33184",
     "device": "UPS APC",
     "area": "ACTIVO FIJO",
@@ -5059,24 +5088,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-15T17:04:56.373Z"
-  },
-  {
-    "sn": "BWK4XD3",
-    "device": "Laptop DELL",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Asignación",
-        "before": "LOA",
-        "after": "Cristian Guerrero LOA"
-      },
-      {
-        "label": "Comentarios",
-        "before": "Se asigna laptop para LOA de IB",
-        "after": "Se asigna laptop para LOA de IB a Cristian Guerrero"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-15T12:42:51.077Z"
   }
 ]
