@@ -1,5 +1,24 @@
 [
   {
+    "sn": "HJWTQW3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEMS",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "Marcos Saul Hernandez (BAJA)",
+        "after": "MDF"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Equipo dado de baja en slack y en stock en arturito\nExTL: Marcos Saul Hernandez"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T18:31:47.100Z"
+  },
+  {
     "sn": "PF3TN6P4",
     "device": "Laptop LENOVO",
     "area": "INTERNAL SYSTEMS",
@@ -5069,24 +5088,5 @@
     ],
     "user": "Luis Eduardo Avalos Garcia",
     "ts": "2026-05-19T20:07:51.409Z"
-  },
-  {
-    "sn": "XXRBN244003870",
-    "device": "Impresora Zebra",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In repair",
-        "after": "In Stock"
-      },
-      {
-        "label": "Comentarios",
-        "before": "REVISAR",
-        "after": "Se encuentra en MDF"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-19T15:32:49.335Z"
   }
 ]
