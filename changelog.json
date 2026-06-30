@@ -1,5 +1,39 @@
 [
   {
+    "sn": "PF5E3YJ9",
+    "device": "Laptop Lenovo",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Modelo",
+        "before": "THINK PAD",
+        "after": "T14"
+      },
+      {
+        "label": "Área",
+        "before": "PEOPLE",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "CRISTIAN MONTAÑEZ",
+        "after": "MDF"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Pendiente de devolución MX_Oficina_Melitlan",
+        "after": "Equipo dado de baja en slack y en stock en arturito\nExTL: Cristian Montanez"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T17:43:43.634Z"
+  },
+  {
     "sn": "PF3TN6P4",
     "device": "Laptop LENOVO",
     "area": "INTERNAL SYSTEMS",
@@ -5054,29 +5088,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-19T12:52:01.135Z"
-  },
-  {
-    "sn": "3CCZRW3",
-    "device": "Laptop DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEM",
-        "after": "OUTBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF",
-        "after": "FINGER 6"
-      },
-      {
-        "label": "Comentarios",
-        "before": "FINGER -",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-19T12:49:43.557Z"
   }
 ]
