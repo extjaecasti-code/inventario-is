@@ -115,24 +115,6 @@
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-06-30T17:43:42.589Z"
   },
-  "__new__PF5T5KL8": {
-    "S/N": "PF5T5KL8",
-    "ESTATUS FISICO": "In Stock",
-    "Categoría": "Notebook",
-    "DISPOSITIVO": "Laptop",
-    "MARCA": "LENOVO",
-    "MODELO": "T14",
-    "AREA": "INTERNAL SYSTEM",
-    "ASIGNACIÓN": "MDF",
-    "IP": "",
-    "MAC": "",
-    "SSID": "",
-    "O.S.": "",
-    "DEPLOY": "",
-    "Fullfiment": "",
-    "Comentarios": "Equipo dado de baja en slack y en stock en arturito\nExTL: Jose Luis Rosas",
-    "Status in Arturito": "In Stock"
-  },
   "PF4RYGNP": {
     "S/N": "PF4RYGNP",
     "ESTATUS FISICO": "In Stock",
@@ -332,5 +314,6 @@
     "_changedTs": "2026-07-02T13:55:02.427Z"
   },
   "__deleted__G9KPSW3": true,
-  "__deleted__6Q876F3": true
+  "__deleted__6Q876F3": true,
+  "__deleted__PF5T5KL8": true
 }
