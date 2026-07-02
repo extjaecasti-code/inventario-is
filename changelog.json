@@ -1,5 +1,34 @@
 [
   {
+    "sn": "BWK4XD3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "INBOUND",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "Cristian Guerrero LOA",
+        "after": "MDF"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Se asigna laptop para LOA de IB a Cristian Guerrero",
+        "after": "Se regresa lap de prestamo"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-02T13:51:52.101Z"
+  },
+  {
     "sn": "PW06TQ99",
     "device": "Laptop LENOVO",
     "area": "INTERNAL SYSTEM",
@@ -5089,19 +5118,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T15:29:46.261Z"
-  },
-  {
-    "sn": "TH0HRR76CHG00487064SA00",
-    "device": "Cargador DELL",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T15:29:18.952Z"
   }
 ]
