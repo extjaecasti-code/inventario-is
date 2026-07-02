@@ -1904,16 +1904,64 @@ function openAuditNew() {
 
 function auditSnSearch(val) {
   const hint = document.getElementById('a_sn_hint');
-  if (!val) { hint.textContent = ''; return; }
-  const found = data.find(d => d['S/N'] && d['S/N'].toLowerCase() === val.toLowerCase());
-  if (found) {
-    hint.textContent = '✓ ' + (found['DISPOSITIVO'] || '') + ' ' + (found['MARCA'] || '') + ' — ' + (found['AREA'] || '');
+  let drop = document.getElementById('auditSnDrop');
+  if(!drop) {
+    drop = document.createElement('div');
+    drop.id = 'auditSnDrop';
+    drop.style.cssText = 'position:absolute;background:var(--surface);border:1px solid var(--border);border-radius:6px;z-index:300;max-height:200px;overflow-y:auto;width:100%;box-shadow:0 4px 12px rgba(0,0,0,0.12);top:100%;left:0';
+    document.getElementById('a_sn').parentNode.style.position = 'relative';
+    document.getElementById('a_sn').parentNode.appendChild(drop);
+  }
+
+  if (!val) { hint.textContent=''; drop.style.display='none'; return; }
+
+  // Exact match
+  const exact = data.find(d => d['S/N'] && d['S/N'].toLowerCase() === val.toLowerCase());
+  if(exact) {
+    hint.textContent = '✓ ' + (exact['DISPOSITIVO']||'') + ' ' + (exact['MARCA']||'') + ' — ' + (exact['AREA']||'');
     hint.style.color = 'var(--green)';
-  } else {
+    drop.style.display = 'none';
+    return;
+  }
+
+  // Partial match - show dropdown
+  const matches = data.filter(d => d['S/N'] && d['S/N'].toLowerCase().includes(val.toLowerCase())).slice(0,8);
+  if(!matches.length) {
     hint.textContent = 'S/N no encontrado en inventario';
     hint.style.color = 'var(--text3)';
+    drop.style.display = 'none';
+    return;
+  }
+
+  hint.textContent = '';
+  drop.style.display = 'block';
+  drop.innerHTML = matches.map(d =>
+    '<div data-sn="' + esc(d['S/N']) + '" style="padding:8px 12px;cursor:pointer;font-size:13px;border-bottom:1px solid var(--border)" ' +
+    'onmouseover="this.style.background=\'var(--surface2)\'" onmouseout="this.style.background=\'\'" ' +
+    'onclick="selectAuditSN(this.getAttribute(\'data-sn\'))">' +
+    '<strong>' + esc(d['S/N']) + '</strong> — ' + esc((d['DISPOSITIVO']||'') + ' ' + (d['MARCA']||'')) +
+    ' <span style="color:var(--text3);font-size:11px">' + esc(d['AREA']||'') + '</span></div>'
+  ).join('');
+}
+
+function selectAuditSN(sn) {
+  const input = document.getElementById('a_sn');
+  input.value = sn;
+  const drop = document.getElementById('auditSnDrop');
+  if(drop) drop.style.display = 'none';
+  const found = data.find(d => d['S/N'] === sn);
+  const hint = document.getElementById('a_sn_hint');
+  if(found) {
+    hint.textContent = '✓ ' + (found['DISPOSITIVO']||'') + ' ' + (found['MARCA']||'') + ' — ' + (found['AREA']||'');
+    hint.style.color = 'var(--green)';
   }
 }
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+  const drop = document.getElementById('auditSnDrop');
+  if(drop && !drop.contains(e.target) && e.target.id !== 'a_sn') drop.style.display = 'none';
+});
 
 function handlePhoto(input) {
   const file = input.files[0];
