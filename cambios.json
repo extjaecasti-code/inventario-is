@@ -366,5 +366,25 @@
     "Status in Arturito": "In Stock",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-07-02T13:52:32.956Z"
+  },
+  "4TSR4D3": {
+    "S/N": "4TSR4D3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "7420",
+    "AREA": "LOA",
+    "ASIGNACIÓN": "Polo",
+    "IP": "10.9.69.19",
+    "MAC": "7C-50-79-67-A1-47",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MXCD11",
+    "Comentarios": " Se le pasa a polo",
+    "Status in Arturito": "In Use",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-02T13:55:02.427Z"
   }
 }
