@@ -1,5 +1,19 @@
 [
   {
+    "sn": "99J243803132",
+    "device": "Impresora ZEBRA",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INBOUND",
+        "after": "ICQA"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-03T12:53:40.769Z"
+  },
+  {
     "sn": "7Z5ZRW3",
     "device": "Laptop DELL",
     "area": "ICQA",
@@ -5129,19 +5143,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T15:31:35.929Z"
-  },
-  {
-    "sn": "TH0HRR76CHG0047V0IYYA00",
-    "device": "Cargador DELL",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T15:30:56.115Z"
   }
 ]
