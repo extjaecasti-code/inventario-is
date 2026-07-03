@@ -250,6 +250,16 @@ tbody tr:hover .row-actions{opacity:1;}
 
 /* ── LEADERS / MEET ── */
 .area-card{cursor:default;}
+.area-card{cursor:pointer !important;}
+.area-card:hover{box-shadow:0 4px 12px rgba(52,131,250,.15);border-color:var(--ml-blue);}
+.pending-sn-list{display:flex;flex-direction:column;gap:4px;max-height:420px;overflow-y:auto;}
+.pending-sn-item{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:var(--surface2);border-radius:6px;border:1px solid var(--border);}
+.pending-sn-item:hover{border-color:var(--ml-blue);background:var(--ml-blue-light);}
+.pending-sn{font-family:monospace;font-weight:700;color:var(--ml-blue);font-size:13px;}
+.pending-dev{font-size:11px;color:var(--text3);margin-top:2px;}
+.already-audited{background:var(--green-bg) !important;border-color:rgba(0,166,80,.2) !important;}
+.already-audited .pending-sn{color:var(--green);}
+
 .area-card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding-top:8px;border-top:1px solid var(--border);}
 .area-card-leader{font-size:11px;color:var(--text3);display:flex;align-items:center;gap:4px;}
 .area-card-leader strong{color:var(--text2);}
@@ -1314,6 +1324,42 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
   </div>
 </div>
 
+
+<!-- AREA DETAIL MODAL -->
+<div class="overlay" id="areaDetailOverlay" onclick="closeModal(event)">
+  <div class="modal" style="max-width:620px">
+    <div class="modal-header">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3483FA" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <h2 id="areaDetailTitle">Área</h2>
+    </div>
+    <div style="display:flex;gap:12px;margin-bottom:14px;flex-wrap:wrap">
+      <div style="background:var(--surface2);border-radius:8px;padding:10px 16px;flex:1;text-align:center">
+        <div style="font-size:22px;font-weight:700;color:var(--ml-blue)" id="areaDetailDone">0</div>
+        <div style="font-size:11px;color:var(--text3)">Auditados</div>
+      </div>
+      <div style="background:var(--surface2);border-radius:8px;padding:10px 16px;flex:1;text-align:center">
+        <div style="font-size:22px;font-weight:700;color:var(--red)" id="areaDetailPending">0</div>
+        <div style="font-size:11px;color:var(--text3)">Pendientes</div>
+      </div>
+      <div style="background:var(--surface2);border-radius:8px;padding:10px 16px;flex:1;text-align:center">
+        <div style="font-size:22px;font-weight:700;color:var(--text)" id="areaDetailTotal">0</div>
+        <div style="font-size:11px;color:var(--text3)">Total</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;margin-bottom:10px">
+      <button class="btn btn-ghost" style="font-size:12px" onclick="filterAreaDetail('all')" id="adFilterAll">Todos</button>
+      <button class="btn btn-ghost" style="font-size:12px" onclick="filterAreaDetail('pending')" id="adFilterPending">Solo pendientes</button>
+      <button class="btn btn-ghost" style="font-size:12px" onclick="filterAreaDetail('done')" id="adFilterDone">Solo auditados</button>
+      <input type="text" id="areaDetailSearch" placeholder="Filtrar por S/N..." style="margin-left:auto;background:var(--surface2);border:1px solid var(--border);color:var(--text);font-family:var(--sans);font-size:12px;border-radius:6px;padding:5px 10px;outline:none;width:140px" oninput="filterAreaDetail(currentAreaDetailFilter)">
+    </div>
+    <div class="pending-sn-list" id="areaDetailList"></div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="document.getElementById('areaDetailOverlay').classList.remove('open')">Cerrar</button>
+      <button class="btn btn-primary" onclick="document.getElementById('areaDetailOverlay').classList.remove('open');openAuditNew()">+ Nueva Auditoría</button>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 <script>
 const GITHUB_USER='extjaecasti-code';
@@ -2113,7 +2159,7 @@ function renderAuditTab() {
     const cls = aPct >= 66 ? '' : aPct >= 33 ? ' mid' : ' low';
     const leader = (typeof leaders !== 'undefined' && leaders[a.name]) ? leaders[a.name] : null;
     const aFaults = typeof getAreaFaults === 'function' ? getAreaFaults(typeof getAreaAudits === 'function' ? getAreaAudits(a.name) : []) : [];
-    return `<div class="area-card">
+    return `<div class="area-card" onclick="openAreaDetail('${a.name}',${a.total})">
       <div class="area-card-header">
         <div class="area-card-name">${a.name}</div>
         <div class="area-card-count">${aDone}/${a.total} (${aPct}%)</div>
@@ -4032,6 +4078,93 @@ async function initRepairTracker() {
   await loadRepairConfirmed();
   renderRepairTracker();
   await sendRepairDailyNotif();
+}
+
+// ── AREA DETAIL MODAL ─────────────────────────────────────────────────────
+let currentAreaDetail = null;
+let currentAreaDetailFilter = 'pending';
+let currentAreaDetailDevices = [];
+
+function openAreaDetail(areaName, total) {
+  currentAreaDetail = areaName;
+  currentAreaDetailFilter = 'pending';
+  document.getElementById('areaDetailTitle').textContent = areaName;
+  document.getElementById('areaDetailSearch').value = '';
+
+  // Get all devices for this area (In Use + In Stock, Notebook/Printer/Desktop)
+  const areaDevs = data.filter(d => {
+    const cats = ['Notebook','Printer','Desktop'];
+    const statuses = ['in use','in stock'];
+    const devArea = (d['AREA']||'').toUpperCase();
+    const inCat = cats.includes(d['Categoría']);
+    const inStatus = statuses.includes((d['ESTATUS FISICO']||'').toLowerCase().trim());
+    if(areaName === 'LOA / PEOPLE / OTRAS') {
+      const mainAreas = ['ACTIVO FIJO','INTERNAL SYSTEMS','OUTBOUND','INBOUND','LI','LOSS PREVENTION','ICQA','TRAINING','EXT','CCM'];
+      return inCat && inStatus && !mainAreas.includes(devArea);
+    }
+    return inCat && inStatus && devArea === areaName.toUpperCase();
+  });
+
+  // Get audited SNs this month
+  const now = new Date();
+  const auditedSNs = new Set(
+    audits.filter(a => isSameMonth(a.ts, now.toISOString())).map(a => a.sn.toUpperCase())
+  );
+
+  currentAreaDetailDevices = areaDevs.map(d => ({
+    sn: d['S/N'],
+    device: ((d['DISPOSITIVO']||'') + ' ' + (d['MARCA']||'') + ' ' + (d['MODELO']||'')).trim(),
+    area: d['AREA']||'—',
+    asig: d['ASIGNACIÓN']||'—',
+    audited: auditedSNs.has((d['S/N']||'').toUpperCase()),
+  }));
+
+  const done    = currentAreaDetailDevices.filter(d => d.audited).length;
+  const pending = currentAreaDetailDevices.filter(d => !d.audited).length;
+
+  document.getElementById('areaDetailDone').textContent    = done;
+  document.getElementById('areaDetailPending').textContent = pending;
+  document.getElementById('areaDetailTotal').textContent   = currentAreaDetailDevices.length;
+
+  filterAreaDetail('pending');
+  document.getElementById('areaDetailOverlay').classList.add('open');
+}
+
+function filterAreaDetail(filter) {
+  currentAreaDetailFilter = filter;
+  const q = (document.getElementById('areaDetailSearch')?.value||'').toLowerCase();
+
+  // Highlight active button
+  ['adFilterAll','adFilterPending','adFilterDone'].forEach(id => {
+    const btn = document.getElementById(id);
+    if(btn) btn.style.fontWeight = '';
+  });
+  const activeId = filter==='pending'?'adFilterPending':filter==='done'?'adFilterDone':'adFilterAll';
+  const activeBtn = document.getElementById(activeId);
+  if(activeBtn) activeBtn.style.fontWeight = '700';
+
+  let devs = currentAreaDetailDevices;
+  if(filter === 'pending') devs = devs.filter(d => !d.audited);
+  if(filter === 'done')    devs = devs.filter(d => d.audited);
+  if(q) devs = devs.filter(d => d.sn.toLowerCase().includes(q) || d.device.toLowerCase().includes(q) || d.asig.toLowerCase().includes(q));
+
+  const list = document.getElementById('areaDetailList');
+  if(!devs.length) {
+    list.innerHTML = '<div style="text-align:center;padding:24px;color:var(--text3)">No hay equipos en esta categoría</div>';
+    return;
+  }
+
+  list.innerHTML = devs.map(d =>
+    '<div class="pending-sn-item ' + (d.audited ? 'already-audited' : '') + '">' +
+    '<div>' +
+      '<div class="pending-sn">' + (d.audited ? '✓ ' : '') + esc(d.sn) + '</div>' +
+      '<div class="pending-dev">' + esc(d.device) + ' · ' + esc(d.asig) + '</div>' +
+    '</div>' +
+    '<span style="font-size:11px;font-weight:700;color:' + (d.audited ? 'var(--green)' : 'var(--red)') + '">' +
+      (d.audited ? 'Auditado' : 'Pendiente') +
+    '</span>' +
+    '</div>'
+  ).join('');
 }
 
 </script>
