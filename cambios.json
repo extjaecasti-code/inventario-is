@@ -78,5 +78,25 @@
     "Status in Arturito": "In Use",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-07-03T12:54:16.833Z"
+  },
+  "B92BL84": {
+    "S/N": "B92BL84",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Desktop",
+    "DISPOSITIVO": "DESKTOP",
+    "MARCA": "DELL",
+    "MODELO": "OPTIPLEX 7020",
+    "AREA": "ICQA",
+    "ASIGNACIÓN": "OB",
+    "IP": "10.9.69.160",
+    "MAC": "54:E4:ED:C9:D2:EA",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T13:13:00.995Z"
   }
 }
