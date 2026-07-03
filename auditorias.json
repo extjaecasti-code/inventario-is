@@ -298,5 +298,20 @@
     "fecha": "3 jul 2026, 7:38 a.m.",
     "ts": "2026-07-03T13:38:37.449Z",
     "week": 1
+  },
+  {
+    "id": 1783085973601,
+    "sn": "4VJZRW3",
+    "device": "Laptop DELL 5450",
+    "area": "OUTBOUND",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "3 jul 2026, 7:39 a.m.",
+    "ts": "2026-07-03T13:39:33.601Z",
+    "week": 1
   }
 ]
