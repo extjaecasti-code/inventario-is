@@ -208,5 +208,20 @@
     "fecha": "3 jul 2026, 7:12 a.m.",
     "ts": "2026-07-03T13:12:22.376Z",
     "week": 1
+  },
+  {
+    "id": 1783084444800,
+    "sn": "B92BL84",
+    "device": "DESKTOP DELL OPTIPLEX 7020",
+    "area": "ICQA",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "3 jul 2026, 7:14 a.m.",
+    "ts": "2026-07-03T13:14:04.800Z",
+    "week": 1
   }
 ]
