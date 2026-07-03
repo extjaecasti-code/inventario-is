@@ -5,23 +5,13 @@
     "area": "INBOUND",
     "changes": [
       {
-        "label": "Área",
-        "before": "INTERNAL SYSTEM",
-        "after": "INBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF",
-        "after": "INBOUND"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "SE REGESA A OPERACION"
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-03T18:41:57.856Z"
+    "ts": "2026-07-03T18:42:05.966Z"
   },
   {
     "sn": "FRJZRW3",
