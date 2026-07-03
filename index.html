@@ -696,7 +696,7 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
             <thead><tr>
               <th>S/N</th><th>Dispositivo</th><th>Area</th>
               <th>Estado Fisico</th><th>Limpieza</th><th>Funcionamiento</th>
-              <th>Auditor</th><th>Fecha/Hora</th><th>Foto</th><th>Acciones</th>
+              <th>Comentario</th><th>Auditor</th><th>Fecha/Hora</th><th>Foto</th><th>Acciones</th>
             </tr></thead>
             <tbody id="auditTableBody"></tbody>
           </table>
@@ -2213,6 +2213,7 @@ function renderAuditTable() {
       <td><span class="chip ${estadoMap[a.estado]||'pending'}">${esc(a.estado)}</span>${a.estado==='Malo'||a.func==='Fallo'?'<span class="fault-chip" style="margin-left:4px">Falla</span>':''}</td>
       <td><span class="chip ${limpMap[a.limpieza]||'pending'}">${esc(a.limpieza)}</span></td>
       <td><span class="chip ${funcMap[a.func]||'pending'}">${esc(a.func)}</span></td>
+      <td style="font-size:12px;max-width:180px;color:var(--text3)">${a.comment ? esc(a.comment) : '<span style="color:var(--border2)">—</span>'}</td>
       <td style="font-size:12px">${esc(a.auditor)}</td>
       <td style="font-size:11px;font-family:monospace">${esc(a.fecha)}</td>
       <td>${a.photo ? `<img src="${a.photo}" style="width:36px;height:36px;object-fit:cover;border-radius:4px;cursor:pointer" onclick="showPhoto('${a.id}')">` : '—'}</td>
