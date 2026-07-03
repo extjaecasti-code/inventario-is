@@ -2,31 +2,21 @@
   {
     "sn": "HRJZRW3",
     "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
+    "area": "INBOUND",
     "changes": [
       {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In repair"
-      },
-      {
         "label": "Área",
-        "before": "INBOUND",
-        "after": "INTERNAL SYSTEM"
+        "before": "INTERNAL SYSTEM",
+        "after": "INBOUND"
       },
       {
         "label": "Asignación",
-        "before": "MESA 4",
-        "after": "MDF"
-      },
-      {
-        "label": "Comentarios",
-        "before": "In Use In Use",
-        "after": "Se va a reparación , teclado roto"
+        "before": "MDF",
+        "after": "Mesa 4"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-03T15:26:28.736Z"
+    "ts": "2026-07-03T15:29:43.727Z"
   },
   {
     "sn": "XXRBN253200522",
