@@ -181,7 +181,7 @@
   },
   "24255524200533": {
     "S/N": "24255524200533",
-    "ESTATUS FISICO": "In Stock",
+    "ESTATUS FISICO": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -195,8 +195,8 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "SE REGESA A OPERACION",
-    "Status in Arturito": "In Stock",
+    "Status in Arturito": "In Use",
     "_changedBy": "André Jael Castillo Diaz",
-    "_changedTs": "2026-07-03T18:41:56.981Z"
+    "_changedTs": "2026-07-03T18:42:05.115Z"
   }
 }
