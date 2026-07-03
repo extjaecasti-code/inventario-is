@@ -18,5 +18,25 @@
     "Status in Arturito": "In Use",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-07-03T12:53:04.057Z"
+  },
+  "99J243803132": {
+    "S/N": "99J243803132",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZT411",
+    "AREA": "ICQA",
+    "ASIGNACIÓN": "MESA ICQA FOTOS",
+    "IP": "10.9.124.3",
+    "MAC": "8CD54A10B5D8",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T12:53:39.904Z"
   }
 }
