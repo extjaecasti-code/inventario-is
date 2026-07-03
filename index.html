@@ -2115,7 +2115,7 @@ async function notifyAuditChat(rec) {
 function renderAuditTab() {
   const now = new Date();
   const thisMonth = audits.filter(a => isSameMonth(a.ts, now.toISOString()));
-  const total = 330;
+  const total = AUDIT_AREAS.reduce((s,a) => s+a.total, 0);
   const done = new Set(thisMonth.map(a => a.sn)).size;
   const pct = Math.round(done / total * 100);
 
@@ -2143,7 +2143,14 @@ function renderAuditTab() {
   }).join('');
 
   // Area progress
-  const AREAS = typeof AUDIT_AREAS !== 'undefined' ? AUDIT_AREAS : [];
+  // Recalculate totals from current inventory
+  AUDIT_AREAS = AUDIT_AREAS_BASE.map(a => ({...a, total: getAreaTotal(a.name)}));
+  const AREAS = AUDIT_AREAS;
+  // Update total counts
+  const grandTotal = AREAS.reduce((s,a) => s+a.total, 0);
+  const elTotal = document.getElementById('auditTotal');
+  const elPending = document.getElementById('auditPending');
+  if(elTotal) elTotal.textContent = grandTotal;
   const areaGrid = document.getElementById('areaProgressGrid');
   areaGrid.innerHTML = AREAS.map(a => {
     const aDone = thisMonth.filter(au => {
@@ -2432,7 +2439,7 @@ async function generatePDF() {
   const now = new Date();
   const mes = now.toLocaleString('es-MX', { month:'long', year:'numeric' });
   const thisMonth = audits.filter(a => isSameMonth(a.ts, now.toISOString()));
-  const total = 330;
+  const total = AUDIT_AREAS.reduce((s,a) => s+a.total, 0);
   const done = new Set(thisMonth.map(a => a.sn)).size;
   const pct = Math.round(done / total * 100);
 
@@ -2578,19 +2585,36 @@ async function generatePDF() {
 }
 
 // ── LEADERS & MEET MODULE ──────────────────────────────────────────────────
-const AUDIT_AREAS = [
-  {name:'ACTIVO FIJO',          total:87},
-  {name:'OUTBOUND',             total:64},
-  {name:'INBOUND',              total:30},
-  {name:'LI',                   total:21},
-  {name:'LOSS PREVENTION',      total:13},
-  {name:'ICQA',                 total:11},
-  {name:'TRAINING',             total:7},
-  {name:'EXT',                  total:7},
-  {name:'CCM',                  total:6},
-  {name:'LOA / PEOPLE / OTRAS', total:15},
-  {name:'INTERNAL SYSTEMS',     total:70},
+const AUDIT_AREAS_BASE = [
+  {name:'ACTIVO FIJO'},
+  {name:'OUTBOUND'},
+  {name:'INBOUND'},
+  {name:'LI'},
+  {name:'LOSS PREVENTION'},
+  {name:'ICQA'},
+  {name:'TRAINING'},
+  {name:'EXT'},
+  {name:'CCM'},
+  {name:'LOA / PEOPLE / OTRAS'},
+  {name:'INTERNAL SYSTEMS'},
 ];
+
+function getAreaTotal(areaName) {
+  const cats = ['Notebook','Printer','Desktop'];
+  const statuses = ['in use','in stock'];
+  const mainAreas = ['ACTIVO FIJO','INTERNAL SYSTEMS','OUTBOUND','INBOUND','LI','LOSS PREVENTION','ICQA','TRAINING','EXT','CCM'];
+  return data.filter(d => {
+    const inCat = cats.includes(d['Categoría']);
+    const inStatus = statuses.includes((d['ESTATUS FISICO']||'').toLowerCase().trim());
+    const devArea = (d['AREA']||'').toUpperCase();
+    if(!inCat || !inStatus) return false;
+    if(areaName === 'LOA / PEOPLE / OTRAS') return !mainAreas.includes(devArea);
+    return devArea === areaName.toUpperCase();
+  }).length;
+}
+
+// Dynamic AUDIT_AREAS - recalculated from inventory
+let AUDIT_AREAS = AUDIT_AREAS_BASE.map(a => ({...a, total: getAreaTotal(a.name)}));
 
 let leaders = {}; // { 'ACTIVO FIJO': { name:'Juan', email:'juan@ml.com' }, ... }
 let currentMeetArea = null;
