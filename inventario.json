@@ -9145,10 +9145,10 @@
   },
   {
     "S/N": "HRJZRW3",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In repair",
+    "Status in Arturito": "In repair",
     "AREA": "INBOUND",
-    "ASIGNACIÓN": "MESA 4",
+    "ASIGNACIÓN": "Mesa 4",
     "Categoría": "Notebook",
     "DISPOSITIVO": "Laptop",
     "MARCA": "DELL",
@@ -9159,13 +9159,15 @@
     "O.S.": "Chrome Flex",
     "DEPLOY": "DRM",
     "Fullfiment": "MXCD11",
-    "Comentarios": "In Use In Use"
+    "Comentarios": "Se va a reparación , teclado roto ",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T15:29:42.777Z"
   },
   {
     "S/N": "7X10SW3",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "INBOUND",
+    "AREA": "ICQA",
     "ASIGNACIÓN": "MESA ICQA FOTOS",
     "Categoría": "Notebook",
     "DISPOSITIVO": "Laptop",
@@ -9177,14 +9179,16 @@
     "O.S.": "Chrome Flex",
     "DEPLOY": "DRM",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T12:53:58.058Z"
   },
   {
     "S/N": "7Z5ZRW3",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "INBOUND",
-    "ASIGNACIÓN": "MESA 2",
+    "AREA": "ICQA",
+    "ASIGNACIÓN": "ICQA ",
     "Categoría": "Notebook",
     "DISPOSITIVO": "Laptop",
     "MARCA": "DELL",
@@ -9195,7 +9199,9 @@
     "O.S.": "Chrome Flex",
     "DEPLOY": "DRM",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Revisar"
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T12:53:04.057Z"
   },
   {
     "S/N": "XXRBN253100451",
@@ -23361,7 +23367,7 @@
     "S/N": "B92BL84",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
+    "AREA": "ICQA",
     "ASIGNACIÓN": "OB",
     "Categoría": "Desktop",
     "DISPOSITIVO": "DESKTOP",
@@ -23373,7 +23379,9 @@
     "O.S.": "",
     "DEPLOY": "DRM",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T13:13:00.995Z"
   },
   {
     "S/N": "606ZRW3",
@@ -23629,10 +23637,10 @@
   },
   {
     "S/N": "FRJZRW3",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
-    "AREA": "INTERNAL SYSTEM",
-    "ASIGNACIÓN": "MDF",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "Mesa 4",
     "Categoría": "Notebook",
     "DISPOSITIVO": "Laptop",
     "MARCA": "DELL",
@@ -23643,7 +23651,9 @@
     "O.S.": "Chrome Flex",
     "DEPLOY": "DRM",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T15:30:41.918Z"
   },
   {
     "S/N": "3CCZRW3",
@@ -25007,7 +25017,7 @@
     "S/N": "99J243803132",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "INBOUND",
+    "AREA": "ICQA",
     "ASIGNACIÓN": "MESA ICQA FOTOS",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
@@ -25019,7 +25029,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T12:53:39.904Z"
   },
   {
     "S/N": "99J243803240",
@@ -25323,8 +25335,8 @@
     "S/N": "99J243803014",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "INBOUND",
-    "ASIGNACIÓN": "MESA 3",
+    "AREA": "ICQA",
+    "ASIGNACIÓN": "ICQA",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25335,7 +25347,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T12:54:16.833Z"
   },
   {
     "S/N": "99J245100299",
@@ -29041,7 +29055,7 @@
     "S/N": "XXRBN244002893",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "ACTIVO FIJO",
+    "AREA": "OUTBOUND",
     "ASIGNACIÓN": "P2S",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
@@ -29053,7 +29067,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T13:48:11.383Z"
   },
   {
     "S/N": "XXRBN244002894",
@@ -29779,7 +29795,7 @@
     "S/N": "XXRBN253200522",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "ACTIVO FIJO",
+    "AREA": "OUTBOUND",
     "ASIGNACIÓN": "P2S",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
@@ -29791,7 +29807,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T13:53:23.573Z"
   },
   {
     "S/N": "XXRBN253200523",
