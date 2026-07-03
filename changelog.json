@@ -1,5 +1,29 @@
 [
   {
+    "sn": "FRJZRW3",
+    "device": "Laptop DELL",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEM",
+        "after": "INBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "Mesa 4"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-03T15:30:43.204Z"
+  },
+  {
     "sn": "HRJZRW3",
     "device": "Laptop DELL",
     "area": "INBOUND",
@@ -1235,30 +1259,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-29T15:24:38.273Z"
-  },
-  {
-    "sn": "FRJZRW3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "Meca M5",
-        "after": "MDF"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-29T15:23:43.490Z"
   },
   {
     "sn": "24255524200604",
