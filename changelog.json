@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24255524200533",
+    "device": "Handheld ZEBRA",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEM",
+        "after": "INBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "INBOUND"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "SE REGESA A OPERACION"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-03T18:41:57.856Z"
+  },
+  {
     "sn": "FRJZRW3",
     "device": "Laptop DELL",
     "area": "INBOUND",
@@ -1100,35 +1124,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T14:33:42.088Z"
-  },
-  {
-    "sn": "24255524200533",
-    "device": "Handheld ZEBRA",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "INBOUND",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "INBOUND",
-        "after": "MDF"
-      },
-      {
-        "label": "Comentarios",
-        "before": "Se regresa de garantía, se entrega a AF",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-29T16:12:38.162Z"
   },
   {
     "sn": "2V5ZRW3",
