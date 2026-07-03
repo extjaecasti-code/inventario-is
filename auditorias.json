@@ -178,5 +178,20 @@
     "fecha": "3 jul 2026, 7:04 a.m.",
     "ts": "2026-07-03T13:04:52.044Z",
     "week": 1
+  },
+  {
+    "id": 1783084141578,
+    "sn": "T3J243103040",
+    "device": "Impresora ZEBRA ZT231",
+    "area": "ICQA",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "3 jul 2026, 7:09 a.m.",
+    "ts": "2026-07-03T13:09:01.578Z",
+    "week": 1
   }
 ]
