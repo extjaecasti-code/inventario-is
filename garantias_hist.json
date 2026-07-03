@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": 1782579090899,
+    "sn": "24248524205113",
+    "device": "Handheld ZEBRA TC520K",
+    "area": "OUTBOUND",
+    "motivo": "",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-06-27T16:51:30.899Z",
+    "prevCount": 0,
+    "step1": "27/06/26, 10:55 a.m.",
+    "step1ts": "2026-06-27T16:55:43.103Z",
+    "step2": "27/06/26, 10:57 a.m.",
+    "step2ts": "2026-06-27T16:57:17.923Z",
+    "step3": "03/07/26, 1:25 p.m.",
+    "step3ts": "2026-07-03T19:25:21.860Z",
+    "step4": "03/07/26, 1:25 p.m.",
+    "step4ts": "2026-07-03T19:25:23.773Z",
+    "step1by": "André Jael Castillo Diaz",
+    "step2by": "André Jael Castillo Diaz",
+    "step3by": "André Jael Castillo Diaz",
+    "step4by": "André Jael Castillo Diaz"
+  }
+]
