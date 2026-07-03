@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": 1783082850546,
+    "sn": "JGCZRW3",
+    "device": "Laptop DELL 5450",
+    "area": "ICQA",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "3 jul 2026, 6:47 a.m.",
+    "ts": "2026-07-03T12:47:30.545Z",
+    "week": 1
+  }
+]
