@@ -1,5 +1,29 @@
 [
   {
+    "sn": "7Z5ZRW3",
+    "device": "Laptop DELL",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INBOUND",
+        "after": "ICQA"
+      },
+      {
+        "label": "Asignación",
+        "before": "MESA 2",
+        "after": "ICQA"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Revisar",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-03T12:53:05.132Z"
+  },
+  {
     "sn": "4TSR4D3",
     "device": "Laptop DELL",
     "area": "LOA",
@@ -5119,19 +5143,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T15:30:56.115Z"
-  },
-  {
-    "sn": "CN0RGF3FLOC0044NAIHCA01",
-    "device": "Cargador DELL",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T15:29:46.261Z"
   }
 ]
