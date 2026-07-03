@@ -523,5 +523,20 @@
     "fecha": "3 jul 2026, 8:25 a.m.",
     "ts": "2026-07-03T14:25:26.114Z",
     "week": 1
+  },
+  {
+    "id": 1783088802381,
+    "sn": "1LT5200617",
+    "device": "Impresora Kyocera MA4000",
+    "area": "OUTBOUND",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "Toner al 85 no requiere cambio ",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "3 jul 2026, 8:26 a.m.",
+    "ts": "2026-07-03T14:26:42.380Z",
+    "week": 1
   }
 ]
