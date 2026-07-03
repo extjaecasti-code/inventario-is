@@ -1,5 +1,19 @@
 [
   {
+    "sn": "XXRBN253201029",
+    "device": "Impresora ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-03T19:41:08.211Z"
+  },
+  {
     "sn": "24255524200533",
     "device": "Handheld ZEBRA",
     "area": "INBOUND",
@@ -5124,19 +5138,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T15:49:52.742Z"
-  },
-  {
-    "sn": "C8R66F3",
-    "device": "Laptop DELL",
-    "area": "LH",
-    "changes": [
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "LH"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T15:49:14.443Z"
   }
 ]
