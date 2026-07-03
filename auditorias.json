@@ -433,5 +433,20 @@
     "fecha": "3 jul 2026, 8:01 a.m.",
     "ts": "2026-07-03T14:01:00.646Z",
     "week": 1
+  },
+  {
+    "id": 1783087315266,
+    "sn": "1LT5100534",
+    "device": "Impresora Kyocera MA4000",
+    "area": "OUTBOUND",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "1/4 de toner, proximo cambio de toner",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "3 jul 2026, 8:01 a.m.",
+    "ts": "2026-07-03T14:01:55.266Z",
+    "week": 1
   }
 ]
