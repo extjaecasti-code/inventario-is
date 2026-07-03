@@ -1,5 +1,19 @@
 [
   {
+    "sn": "XXRBN253200522",
+    "device": "Impresora ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "ACTIVO FIJO",
+        "after": "OUTBOUND"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-03T13:53:24.876Z"
+  },
+  {
     "sn": "XXRBN244002893",
     "device": "Impresora Zebra",
     "area": "OUTBOUND",
@@ -5134,19 +5148,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T15:48:13.200Z"
-  },
-  {
-    "sn": "CN0VFHDXCH2004420R28A01",
-    "device": "Cargador DELL",
-    "area": "LI",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T15:46:41.659Z"
   }
 ]
