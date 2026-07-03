@@ -4017,8 +4017,15 @@ function daysSince(isoStr) {
 
 async function confirmArturito(sn) {
   if(!sn){ showToast('Error: S/N no válido', 'error'); return; }
-  const today = new Date().toISOString().slice(0,10);
-  repairConfirmed[sn] = today;
+  // Use SN+currentStatus as key so each new status change requires new confirmation
+  const pending = getPendingArturitoConfirm();
+  const item = pending.find(p => p.sn === sn);
+  const key = sn + '|' + (item ? item.newStatus : '');
+  repairConfirmed[key] = new Date().toISOString().slice(0,10);
+  // Clean old keys for this SN
+  Object.keys(repairConfirmed).forEach(k => {
+    if(k.startsWith(sn + '|') && k !== key) delete repairConfirmed[k];
+  });
   await saveRepairConfirmed();
   renderRepairTracker();
   showToast(sn + ' confirmado en Arturito ✓', 'success');
@@ -4028,8 +4035,12 @@ function renderRepairTracker() {
   const allPending = getPendingArturitoConfirm();
   const today = new Date().toISOString().slice(0,10);
 
-  // Filter out ones already confirmed today
-  const pending = allPending.filter(p => repairConfirmed[p.sn] !== today);
+  // Filter out ones already confirmed for their CURRENT status
+  const pending = allPending.filter(p => {
+    const key = p.sn + '|' + p.newStatus;
+    const today = new Date().toISOString().slice(0,10);
+    return repairConfirmed[key] !== today;
+  });
 
   const banner = document.getElementById('repairTrackerBanner');
   const list   = document.getElementById('repairTrackerList');
@@ -4063,7 +4074,7 @@ function renderRepairTracker() {
           <strong style="font-size:12px;color:${statusCol}">${esc(p.newStatus||'—')}</strong>
           ${p.changedBy !== '—' ? `<span style="font-size:10px;color:var(--text3)">por ${esc(p.changedBy)}</span>` : ''}
         </div>
-        <div style="margin-top:2px">${daysLabel}</div>
+        <div style="margin-top:2px"><span class="repair-item-days">Pendiente de confirmar</span></div>
       </div>
       <button class="btn-confirm-arturito" data-sn="${esc(p.sn)}" onclick="confirmArturito(this.getAttribute('data-sn'))">
         ✓ Confirmado en Arturito
@@ -4075,7 +4086,10 @@ function renderRepairTracker() {
 async function sendRepairDailyNotif() {
   const allPending = getPendingArturitoConfirm();
   const today = new Date().toISOString().slice(0,10);
-  const pending = allPending.filter(p => repairConfirmed[p.sn] !== today);
+  const pending = allPending.filter(p => {
+    const key = p.sn + '|' + p.newStatus;
+    return repairConfirmed[key] !== today;
+  });
   if(!pending.length) return;
 
   if(repairConfirmed['__notif_sent__'] === today) return;
