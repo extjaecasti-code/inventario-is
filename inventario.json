@@ -5131,10 +5131,10 @@
   },
   {
     "S/N": "24255524200533",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
-    "AREA": "INTERNAL SYSTEM",
-    "ASIGNACIÓN": "MDF",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "INBOUND",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -5145,7 +5145,9 @@
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "SE REGESA A OPERACION",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T18:42:05.115Z"
   },
   {
     "S/N": "24255524200537",
@@ -19689,8 +19691,8 @@
   },
   {
     "S/N": "24248524205113",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
     "Categoría": "",
@@ -19703,7 +19705,9 @@
     "O.S.": "13.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "REVISAR"
+    "Comentarios": "REVISAR",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T19:25:23.773Z"
   },
   {
     "S/N": "24191524208888",
@@ -22083,8 +22087,8 @@
   },
   {
     "S/N": "24320524202445",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
     "Categoría": "",
@@ -22097,7 +22101,9 @@
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "REVISAR"
+    "Comentarios": "REVISAR",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T19:25:57.085Z"
   },
   {
     "S/N": "24320524202502",
@@ -30083,8 +30089,8 @@
   },
   {
     "S/N": "XXRBN253201029",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In repair",
+    "Status in Arturito": "In repair",
     "AREA": "ACTIVO FIJO",
     "ASIGNACIÓN": "P2S",
     "Categoría": "Printer",
@@ -30097,7 +30103,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-03T19:41:07.206Z"
   },
   {
     "S/N": "XXRBN253201051",
