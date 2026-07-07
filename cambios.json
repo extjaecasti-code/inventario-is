@@ -16,5 +16,25 @@
     "Status in Arturito": "In repair",
     "_changedBy": "Luis Eduardo Avalos Garcia",
     "_changedTs": "2026-07-07T14:57:50.919Z"
+  },
+  "6J65903": {
+    "S/N": "6J65903",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Desktop",
+    "DISPOSITIVO": "Mini Desktop",
+    "MARCA": "DELL",
+    "MODELO": "OptiPlex 3070",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "SAURON",
+    "IP": "10.9.70.8",
+    "MAC": "50:E0:85:0E:0B:55",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-07T19:53:30.479Z"
   }
 }
