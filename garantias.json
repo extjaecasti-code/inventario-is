@@ -227,5 +227,23 @@
     "step4": null,
     "step4ts": null,
     "step1by": "Luis Eduardo Avalos Garcia"
+  },
+  {
+    "id": 1783436270919,
+    "sn": "24255524200541",
+    "device": "Handheld ZEBRA TC520K",
+    "area": "OUTBOUND",
+    "motivo": "Display roto",
+    "addedBy": "Luis Eduardo Avalos Garcia",
+    "addedTs": "2026-07-07T14:57:50.919Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null
   }
 ]
