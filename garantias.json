@@ -189,5 +189,23 @@
     "step4": null,
     "step4ts": null,
     "step1by": "André Jael Castillo Diaz"
+  },
+  {
+    "id": 1783434471992,
+    "sn": "XXRBN253201029",
+    "device": "Impresora ZEBRA ZQ521",
+    "area": "ACTIVO FIJO",
+    "motivo": "Falla de cabezal, ya no imprime bien",
+    "addedBy": "Luis Eduardo Avalos Garcia",
+    "addedTs": "2026-07-07T14:27:51.992Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null
   }
 ]
