@@ -1,5 +1,24 @@
 [
   {
+    "sn": "6J65903",
+    "device": "Mini Desktop DELL",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "ESFERA OB",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Asignación",
+        "before": "XIBO",
+        "after": "SAURON"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-07-07T19:53:31.994Z"
+  },
+  {
     "sn": "XXRBN253201029",
     "device": "Impresora ZEBRA",
     "area": "ACTIVO FIJO",
@@ -5124,19 +5143,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T15:50:37.183Z"
-  },
-  {
-    "sn": "CN0RGF3FLOC004AO0DV0A02",
-    "device": "Cargador DELL",
-    "area": "LH",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T15:49:52.742Z"
   }
 ]
