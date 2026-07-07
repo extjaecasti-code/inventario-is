@@ -246,5 +246,23 @@
     "step4": null,
     "step4ts": null,
     "step1by": "Luis Eduardo Avalos Garcia"
+  },
+  {
+    "id": 1783462485701,
+    "sn": "24243524208307",
+    "device": "Handheld ZEBRA TC520K",
+    "area": "OUTBOUND",
+    "motivo": "Pantalla estrellada",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-07-07T22:14:45.701Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null
   }
 ]
