@@ -1,5 +1,24 @@
 [
   {
+    "sn": "24243524208307",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-07T22:14:22.716Z"
+  },
+  {
     "sn": "6J65903",
     "device": "Mini Desktop DELL",
     "area": "ACTIVO FIJO",
@@ -5129,19 +5148,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T15:51:15.274Z"
-  },
-  {
-    "sn": "TH0HRR76CHG0047V0C9WA00",
-    "device": "Cargador DELL",
-    "area": "LP",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T15:50:37.183Z"
   }
 ]
