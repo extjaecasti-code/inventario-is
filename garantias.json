@@ -218,13 +218,14 @@
     "addedBy": "Luis Eduardo Avalos Garcia",
     "addedTs": "2026-07-07T14:29:18.948Z",
     "prevCount": 0,
-    "step1": null,
-    "step1ts": null,
+    "step1": "07/07/26, 8:29 a.m.",
+    "step1ts": "2026-07-07T14:29:26.554Z",
     "step2": null,
     "step2ts": null,
     "step3": null,
     "step3ts": null,
     "step4": null,
-    "step4ts": null
+    "step4ts": null,
+    "step1by": "Luis Eduardo Avalos Garcia"
   }
 ]
