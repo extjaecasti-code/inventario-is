@@ -208,5 +208,23 @@
     "step4": null,
     "step4ts": null,
     "step1by": "Luis Eduardo Avalos Garcia"
+  },
+  {
+    "id": 1783434558947,
+    "sn": "XXRBN244003708",
+    "device": "Impresora Zebra ZQ521",
+    "area": "ACTIVO FIJO",
+    "motivo": "Display roto",
+    "addedBy": "Luis Eduardo Avalos Garcia",
+    "addedTs": "2026-07-07T14:29:18.948Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null
   }
 ]
