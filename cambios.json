@@ -36,5 +36,25 @@
     "Status in Arturito": "In Use",
     "_changedBy": "Luis Eduardo Avalos Garcia",
     "_changedTs": "2026-07-07T19:53:30.479Z"
+  },
+  "24243524208307": {
+    "S/N": "24243524208307",
+    "ESTATUS FISICO": "In repair",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "ZEBRA",
+    "MODELO": "TC520K",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "OUTBOUND",
+    "IP": "10.9.96.200",
+    "MAC": "88:BC:AC:12:C4:3C",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "14.0.0",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In repair",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-07T22:14:21.764Z"
   }
 }
