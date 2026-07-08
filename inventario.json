@@ -12529,8 +12529,8 @@
     "S/N": "6J65903",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "ESFERA OB",
-    "ASIGNACIÓN": "XIBO ",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "SAURON",
     "Categoría": "Desktop",
     "DISPOSITIVO": "Mini Desktop",
     "MARCA": "DELL",
@@ -12541,7 +12541,9 @@
     "O.S.": "",
     "DEPLOY": "DRM",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-07T19:53:30.479Z"
   },
   {
     "S/N": "965PH73",
@@ -18449,11 +18451,11 @@
   },
   {
     "S/N": "24243524208307",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In repair",
+    "Status in Arturito": "In repair",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
-    "Categoría": "HandHeld",
+    "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
@@ -18463,7 +18465,9 @@
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-07T22:14:45.701Z"
   },
   {
     "S/N": "24243524208198",
@@ -19133,8 +19137,8 @@
   },
   {
     "S/N": "24255524200541",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In repair",
+    "Status in Arturito": "In repair",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
     "Categoría": "HandHeld",
@@ -19147,7 +19151,9 @@
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Se regresa a operacion"
+    "Comentarios": "Se regresa a operacion",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-07T14:57:50.919Z"
   },
   {
     "S/N": "24255524200501",
@@ -29313,8 +29319,8 @@
   },
   {
     "S/N": "XXRBN244003708",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In repair",
+    "Status in Arturito": "In repair",
     "AREA": "ACTIVO FIJO",
     "ASIGNACIÓN": "P2S",
     "Categoría": "Printer",
@@ -29327,7 +29333,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-07T14:29:18.948Z"
   },
   {
     "S/N": "XXRBN244003709",
@@ -30104,8 +30112,8 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "",
-    "_changedBy": "André Jael Castillo Diaz",
-    "_changedTs": "2026-07-03T19:41:07.206Z"
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-07T14:27:51.993Z"
   },
   {
     "S/N": "XXRBN253201051",
