@@ -150,13 +150,14 @@
     "prevCount": 0,
     "step1": "27/06/26, 10:55 a.m.",
     "step1ts": "2026-06-27T16:55:49.200Z",
-    "step2": null,
-    "step2ts": null,
+    "step2": "09/07/26, 1:38 p.m.",
+    "step2ts": "2026-07-09T19:38:10.668Z",
     "step3": null,
     "step3ts": null,
     "step4": null,
     "step4ts": null,
-    "step1by": "André Jael Castillo Diaz"
+    "step1by": "André Jael Castillo Diaz",
+    "step2by": "Luis Eduardo Avalos Garcia"
   },
   {
     "id": 1782579158309,
