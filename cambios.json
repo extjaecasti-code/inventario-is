@@ -1,1 +1,22 @@
-{}
+{
+  "XXRBN253200717": {
+    "S/N": "XXRBN253200717",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZQ521",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "P2S",
+    "IP": "10.9.124..",
+    "MAC": "9075DE123BC4",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use",
+    "_changedBy": "Erick Agustín Crisóstomo Sanchez",
+    "_changedTs": "2026-07-10T17:31:59.097Z"
+  }
+}
