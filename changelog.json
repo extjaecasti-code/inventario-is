@@ -1,5 +1,24 @@
 [
   {
+    "sn": "XXRBN253201133",
+    "device": "Impresora ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "IP",
+        "before": "10.9.124.164",
+        "after": "10.9.124.157"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "ZEB13568"
+      }
+    ],
+    "user": "Erick Agustín Crisóstomo Sanchez",
+    "ts": "2026-07-10T17:29:57.082Z"
+  },
+  {
     "sn": "24243524208307",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
@@ -5134,19 +5153,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T15:58:24.983Z"
-  },
-  {
-    "sn": "TH0M9JDMCHG0055O0C1EA01",
-    "device": "Cargador DELL",
-    "area": "LP",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T15:51:15.274Z"
   }
 ]
