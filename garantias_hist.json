@@ -42,5 +42,30 @@
     "step2by": "André Jael Castillo Diaz",
     "step3by": "André Jael Castillo Diaz",
     "step4by": "André Jael Castillo Diaz"
+  },
+  {
+    "id": 1783092551371,
+    "sn": "HRJZRW3",
+    "device": "Laptop DELL 5450",
+    "area": "INTERNAL SYSTEM",
+    "motivo": "Tecla rota",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-07-03T15:29:11.371Z",
+    "prevCount": 0,
+    "step1": "03/07/26, 9:29 a.m.",
+    "step1ts": "2026-07-03T15:29:18.363Z",
+    "step2": "11/07/26, 4:16 p.m.",
+    "step2ts": "2026-07-11T22:16:17.543Z",
+    "step3": "11/07/26, 4:16 p.m.",
+    "step3ts": "2026-07-11T22:16:19.448Z",
+    "step4": null,
+    "step4ts": null,
+    "step1by": "André Jael Castillo Diaz",
+    "step2by": "André Jael Castillo Diaz",
+    "step3by": "André Jael Castillo Diaz",
+    "step4b": "11/07/26, 4:16 p.m.",
+    "step4bts": "2026-07-11T22:16:23.025Z",
+    "step4bby": "André Jael Castillo Diaz",
+    "finalStatus": "In Stock"
   }
 ]
