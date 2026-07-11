@@ -1,5 +1,24 @@
 [
   {
+    "sn": "24320524202683",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-11T03:22:28.462Z"
+  },
+  {
     "sn": "XXRBN253200523",
     "device": "Impresora ZEBRA",
     "area": "ACTIVO FIJO",
@@ -5139,19 +5158,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T16:10:34.190Z"
-  },
-  {
-    "sn": "H0HRR76CHG0047V0M5MA00",
-    "device": "Cargador DELL",
-    "area": "OB",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T16:05:05.586Z"
   }
 ]
