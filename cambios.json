@@ -18,5 +18,25 @@
     "Status in Arturito": "In repair",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-07-11T03:22:27.229Z"
+  },
+  "24312523020338": {
+    "S/N": "24312523020338",
+    "ESTATUS FISICO": "In repair",
+    "Categoría": "Scanner",
+    "DISPOSITIVO": "RING SCANER",
+    "MARCA": "ZEBRA",
+    "MODELO": "RSBT5",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "OUTBOUND",
+    "IP": "#N/A",
+    "MAC": "#N/A",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In repair",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-11T03:22:43.036Z"
   }
 }
