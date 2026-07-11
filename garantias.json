@@ -278,5 +278,23 @@
     "step4ts": null,
     "step1by": "André Jael Castillo Diaz",
     "step2by": "Luis Eduardo Avalos Garcia"
+  },
+  {
+    "id": 1783740180027,
+    "sn": "24312523020338",
+    "device": "RING SCANER ZEBRA RSBT5",
+    "area": "OUTBOUND",
+    "motivo": "Falso en la base",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-07-11T03:23:00.027Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null
   }
 ]
