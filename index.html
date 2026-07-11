@@ -957,7 +957,8 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
               <th style="padding:10px 12px;text-align:center;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">1. Ticket generado / recogido</th>
               <th style="padding:10px 12px;text-align:center;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">2. Se va a garantía</th>
               <th style="padding:10px 12px;text-align:center;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">3. Regresa de garantía</th>
-              <th style="padding:10px 12px;text-align:center;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">4. Regresa a operación</th>
+              <th style="padding:10px 12px;text-align:center;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">4a. Regresa a operación</th>
+              <th style="padding:10px 12px;text-align:center;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">4b. Regresa a Stock</th>
             </tr>
           </thead>
           <tbody id="garantiaTableBody"></tbody>
@@ -981,7 +982,8 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
               <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Ticket</th>
               <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Salida</th>
               <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Regreso garantía</th>
-              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Regreso operación</th>
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Regreso final</th>
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Destino</th>
               <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Días en garantía</th>
               <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Veces enviado</th>
             </tr>
@@ -1356,6 +1358,32 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
     <div class="modal-footer">
       <button class="btn btn-ghost" onclick="document.getElementById('areaDetailOverlay').classList.remove('open')">Cerrar</button>
       <button class="btn btn-primary" onclick="document.getElementById('areaDetailOverlay').classList.remove('open');openAuditNew()">+ Nueva Auditoría</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- IN REPAIR REASON MODAL -->
+<div class="overlay" id="inRepairOverlay" onclick="closeModal(event)">
+  <div class="modal" style="max-width:460px">
+    <div class="modal-header">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <h2>Equipo enviado a reparación</h2>
+    </div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:14px">
+      El equipo <strong id="inRepairSN" style="color:var(--ml-blue)"></strong> fue marcado como <strong style="color:var(--yellow-s)">In Repair</strong>.<br>
+      Describe el motivo para agregarlo al seguimiento de garantía.
+    </p>
+    <div class="form-group">
+      <label>Motivo de la falla *</label>
+      <textarea id="inRepairMotivo" placeholder="Ej: Pantalla rota, no enciende, falla de teclado..." style="min-height:80px"></textarea>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="skipInRepairWarranty()">Omitir — no agregar a garantía</button>
+      <button class="btn btn-primary" onclick="confirmInRepairWarranty()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Agregar a Garantía
+      </button>
     </div>
   </div>
 </div>
@@ -1745,6 +1773,8 @@ async function saveDevice(){
       if(saved){
         addToChangelog(sn,(rec['DISPOSITIVO']||'')+' '+(rec['MARCA']||''),rec['AREA'],changes,currentUser);
         await notifyChat(rec,changes,'edit');showToast('Guardado '+changes.length+' cambio(s) notificado(s)','success');
+        // Check if changed to In Repair
+        if(typeof checkInRepairPrompt === 'function' && rec['ESTATUS FISICO']) checkInRepairPrompt(sn, rec);
       }
     }else{showToast('Sin cambios detectados.','info');}
   }else{
@@ -1794,6 +1824,8 @@ async function setStatus(val){
     if(saved){
       addToChangelog(data[idx]['S/N'],(data[idx]['DISPOSITIVO']||'')+' '+(data[idx]['MARCA']||''),data[idx]['AREA'],[{label:'Estatus',before:before,after:val}],currentUser);
       await notifyChat(data[idx],[{label:'Estatus Fisico',before:before,after:val}],'status');showToast('Status "'+val+'" guardado y notificado','success');
+      // Check if changed to In Repair - prompt to add to warranty
+      if(typeof checkInRepairPrompt === 'function') checkInRepairPrompt(data[idx]['S/N'], data[idx]);
     }
   }
 }
@@ -3837,32 +3869,40 @@ async function saveAddWarranty() {
 async function pressWarrantyStep(id, step) {
   const w = warranties.find(w => w.id === id);
   if(!w) return;
-  // Validate order
+  // Validate order - step4 and step4b both require step3
   const stepOrder = ['step1','step2','step3','step4'];
-  const stepIdx = stepOrder.indexOf(step);
-  if(stepIdx > 0 && !w[stepOrder[stepIdx-1]]) {
+  const checkStep = step === 'step4b' ? 'step4' : step;
+  const stepIdx = stepOrder.indexOf(checkStep);
+  if(step !== 'step4b' && stepIdx > 0 && !w[stepOrder[stepIdx-1]]) {
     showToast('Debes completar el paso anterior primero', 'error'); return;
+  }
+  if(step === 'step4b' && !w['step3']) {
+    showToast('Debes completar el paso 3 primero', 'error'); return;
+  }
+  if(step === 'step4b' && w['step4']) {
+    showToast('Este equipo ya regresó a operación', 'error'); return;
   }
   if(w[step]) { showToast('Este paso ya fue registrado', 'info'); return; }
   const ts = new Date().toISOString();
   w[step] = nowStr();
   w[step+'ts'] = ts;
   w[step+'by'] = currentUser;
-  // Step 4 = move to history
-  if(step === 'step4') {
+  // Step 4 or 4b = move to history
+  if(step === 'step4' || step === 'step4b') {
+    const finalStatus = step === 'step4b' ? 'In Stock' : 'In Use';
     warranties = warranties.filter(x => x.id !== id);
+    w.finalStatus = finalStatus;
     warrantyHist.push(w);
-    // Restore status in inventory to In Use
     const idx = data.findIndex(d => d['S/N'] === w.sn);
     if(idx >= 0) {
-      data[idx]['ESTATUS FISICO'] = 'In Use';
-      data[idx]['Status in Arturito'] = 'In Use';
-      if(typeof recordChange === 'function') recordChange(w.sn, {'ESTATUS FISICO':'In Use','Status in Arturito':'In Use'});
-      await saveToGitHub('[warranty-done] ' + w.sn + ' regresa a operacion por ' + currentUser);
+      data[idx]['ESTATUS FISICO'] = finalStatus;
+      data[idx]['Status in Arturito'] = finalStatus;
+      if(typeof recordChange === 'function') recordChange(w.sn, {'ESTATUS FISICO':finalStatus,'Status in Arturito':finalStatus});
+      await saveToGitHub('[warranty-done] ' + w.sn + ' regresa a ' + finalStatus + ' por ' + currentUser);
       applyFilters();
     }
     await saveWarrantyHist();
-    showToast(w.sn + ' regresó a operación ✓', 'success');
+    showToast(w.sn + ' regresó a ' + finalStatus + ' ✓', 'success');
   }
   await saveWarranties();
   renderGarantias();
@@ -3886,19 +3926,32 @@ function renderGarantias() {
     {key:'step1', label:'1. Ticket generado'},
     {key:'step2', label:'2. Se va a garantía'},
     {key:'step3', label:'3. Regresa de garantía'},
-    {key:'step4', label:'4. Regresa a operación'},
+    {key:'step4', label:'4a. Regresa a operación', finalStatus:'In Use'},
+    {key:'step4b', label:'4b. Regresa a Stock', finalStatus:'In Stock'},
   ];
 
   tbody.innerHTML = warranties.map(w => {
     const stepCells = steps.map((s,i) => {
       const done = !!w[s.key];
-      const prevDone = i === 0 || !!w[steps[i-1].key];
-      const canPress = !done && prevDone;
+      // For step4 and step4b, previous required is step3
+      let prevDone;
+      if(s.key === 'step4' || s.key === 'step4b') {
+        prevDone = !!w['step3'];
+      } else {
+        prevDone = i === 0 || !!w[steps[i-1].key];
+      }
+      // step4b disabled if step4 done and vice versa
+      const otherFinal = s.key === 'step4' ? w['step4b'] : s.key === 'step4b' ? w['step4'] : false;
+      const canPress = !done && prevDone && !otherFinal;
       let btn;
       if(done) {
-        btn = `<div><button class="step-btn done" onclick="pressWarrantyStep(${w.id},'${s.key}')" disabled>✓ Hecho</button><div style="font-size:10px;color:var(--text3);margin-top:3px">${esc(w[s.key])}</div><div style="font-size:10px;color:var(--text3)">${esc(w[s.key+'by']||'')}</div></div>`;
+        const color = s.key === 'step4b' ? 'var(--ml-blue)' : 'var(--green)';
+        btn = `<div><button class="step-btn done" style="background:${color === 'var(--ml-blue)' ? 'var(--ml-blue-light)' : ''};color:${color}" disabled>✓ Hecho</button><div style="font-size:10px;color:var(--text3);margin-top:3px">${esc(w[s.key])}</div><div style="font-size:10px;color:var(--text3)">${esc(w[s.key+'by']||'')}</div></div>`;
+      } else if(otherFinal) {
+        btn = `<button class="step-btn pending" disabled>N/A</button>`;
       } else if(canPress) {
-        btn = `<button class="step-btn active" onclick="pressWarrantyStep(${w.id},'${s.key}')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Registrar</button>`;
+        const btnColor = s.key === 'step4b' ? 'background:var(--ml-blue)' : '';
+        btn = `<button class="step-btn active" style="${btnColor}" onclick="pressWarrantyStep(${w.id},'${s.key}')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Registrar</button>`;
       } else {
         btn = `<button class="step-btn pending" disabled>Pendiente</button>`;
       }
@@ -3945,7 +3998,8 @@ function renderHistorial() {
       <td style="padding:9px 12px;font-size:12px">${esc(h.step1||'—')}</td>
       <td style="padding:9px 12px;font-size:12px">${esc(h.step2||'—')}</td>
       <td style="padding:9px 12px;font-size:12px">${esc(h.step3||'—')}</td>
-      <td style="padding:9px 12px;font-size:12px">${esc(h.step4||'—')}</td>
+      <td style="padding:9px 12px;font-size:12px">${esc(h.step4||h.step4b||'—')}</td>
+      <td style="padding:9px 12px;font-size:12px"><span style="font-weight:700;color:${h.finalStatus==='In Stock'?'var(--ml-blue)':'var(--green)'}">${esc(h.finalStatus||'In Use')}</span></td>
       <td style="padding:9px 12px;font-size:12px;font-weight:700;color:var(--ml-blue)">${days} días</td>
       <td style="padding:9px 12px;font-size:12px">${veces}</td>
     </tr>`;
@@ -4204,6 +4258,59 @@ function filterAreaDetail(filter) {
     '</span>' +
     '</div>'
   ).join('');
+}
+
+// ── IN REPAIR AUTO-WARRANTY ───────────────────────────────────────────────
+let pendingRepairSN = null;
+let pendingRepairRec = null;
+
+function checkInRepairPrompt(sn, rec) {
+  const newStatus = (rec['ESTATUS FISICO']||'').toLowerCase().trim();
+  if(newStatus === 'in repair') {
+    // Check not already in active warranty
+    if(warranties.find(w => w.sn === sn)) return; // already tracking
+    pendingRepairSN = sn;
+    pendingRepairRec = rec;
+    document.getElementById('inRepairSN').textContent = sn;
+    document.getElementById('inRepairMotivo').value = '';
+    document.getElementById('inRepairOverlay').classList.add('open');
+  }
+}
+
+function skipInRepairWarranty() {
+  document.getElementById('inRepairOverlay').classList.remove('open');
+  pendingRepairSN = null;
+  pendingRepairRec = null;
+}
+
+async function confirmInRepairWarranty() {
+  const sn = pendingRepairSN;
+  const motivo = document.getElementById('inRepairMotivo').value.trim();
+  if(!motivo) { showToast('Ingresa el motivo de la falla', 'error'); return; }
+
+  document.getElementById('inRepairOverlay').classList.remove('open');
+
+  const dev = data.find(d => d['S/N'] === sn);
+  const prevCount = warrantyHist.filter(h => h.sn === sn).length;
+  const rec = {
+    id: Date.now(), sn,
+    device: dev ? ((dev['DISPOSITIVO']||'')+' '+(dev['MARCA']||'')+' '+(dev['MODELO']||'')).trim() : 'Desconocido',
+    area: dev ? (dev['AREA']||'—') : '—',
+    motivo,
+    addedBy: currentUser, addedTs: new Date().toISOString(),
+    prevCount,
+    step1:null, step1ts:null,
+    step2:null, step2ts:null,
+    step3:null, step3ts:null,
+    step4:null, step4ts:null,
+    step4b:null, step4bts:null,
+  };
+  warranties.push(rec);
+  await saveWarranties();
+  renderGarantias();
+  showToast(sn + ' agregado a Garantía ✓', 'success');
+  pendingRepairSN = null;
+  pendingRepairRec = null;
 }
 
 </script>
