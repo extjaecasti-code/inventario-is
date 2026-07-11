@@ -296,5 +296,23 @@
     "step3ts": null,
     "step4": null,
     "step4ts": null
+  },
+  {
+    "id": 1783740200108,
+    "sn": "24320524202683",
+    "device": "Handheld ZEBRA TC520K",
+    "area": "OUTBOUND",
+    "motivo": "No funcionan botones del scanner",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-07-11T03:23:20.108Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null
   }
 ]
