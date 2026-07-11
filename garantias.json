@@ -191,13 +191,14 @@
     "prevCount": 0,
     "step1": "03/07/26, 9:29 a.m.",
     "step1ts": "2026-07-03T15:29:18.363Z",
-    "step2": null,
-    "step2ts": null,
+    "step2": "11/07/26, 4:16 p.m.",
+    "step2ts": "2026-07-11T22:16:17.543Z",
     "step3": null,
     "step3ts": null,
     "step4": null,
     "step4ts": null,
-    "step1by": "André Jael Castillo Diaz"
+    "step1by": "André Jael Castillo Diaz",
+    "step2by": "André Jael Castillo Diaz"
   },
   {
     "id": 1783434471992,
