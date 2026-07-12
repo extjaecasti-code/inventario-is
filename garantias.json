@@ -160,27 +160,6 @@
     "step2by": "Luis Eduardo Avalos Garcia"
   },
   {
-    "id": 1782579158309,
-    "sn": "XXRBN253200540",
-    "device": "Impresora ZEBRA ZQ521",
-    "area": "ACTIVO FIJO",
-    "motivo": "",
-    "addedBy": "André Jael Castillo Diaz",
-    "addedTs": "2026-06-27T16:52:38.309Z",
-    "prevCount": 0,
-    "step1": "27/06/26, 10:55 a.m.",
-    "step1ts": "2026-06-27T16:55:50.577Z",
-    "step2": "27/06/26, 10:56 a.m.",
-    "step2ts": "2026-06-27T16:56:42.668Z",
-    "step3": "09/07/26, 2:00 p.m.",
-    "step3ts": "2026-07-09T20:00:25.079Z",
-    "step4": null,
-    "step4ts": null,
-    "step1by": "André Jael Castillo Diaz",
-    "step2by": "André Jael Castillo Diaz",
-    "step3by": "Luis Eduardo Avalos Garcia"
-  },
-  {
     "id": 1783434471992,
     "sn": "XXRBN253201029",
     "device": "Impresora ZEBRA ZQ521",
