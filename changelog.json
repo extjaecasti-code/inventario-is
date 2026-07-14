@@ -5,13 +5,13 @@
     "area": "INTERNAL SYSTEM",
     "changes": [
       {
-        "label": "Accion",
+        "label": "Comentarios",
         "before": "",
-        "after": "Dispositivo agregado"
+        "after": "ExTL"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-14T20:56:41.431Z"
+    "ts": "2026-07-14T20:57:19.211Z"
   },
   {
     "sn": "24312523020338",
