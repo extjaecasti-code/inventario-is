@@ -17,5 +17,25 @@
     "Comentarios": "",
     "Status in Arturito": "In Stock"
   },
-  "__deleted__H1RC6F3": true
+  "__deleted__H1RC6F3": true,
+  "H1PC6F3": {
+    "S/N": "H1PC6F3",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "Iris Lucero Arriaga",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "ExTL",
+    "Status in Arturito": "In Stock",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-14T20:57:18.200Z"
+  }
 }
