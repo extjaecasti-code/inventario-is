@@ -5,13 +5,18 @@
     "area": "INTERNAL SYSTEM",
     "changes": [
       {
+        "label": "Asignación",
+        "before": "Iris Lucero Arriaga",
+        "after": "MDF"
+      },
+      {
         "label": "Comentarios",
-        "before": "",
-        "after": "ExTL"
+        "before": "ExTL",
+        "after": "ExTL Iris Lucero Arriaga"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-14T20:57:19.211Z"
+    "ts": "2026-07-14T20:57:35.025Z"
   },
   {
     "sn": "24312523020338",
