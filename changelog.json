@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24243524206845",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:00.336Z"
+  },
+  {
     "sn": "24248524205165",
     "device": "",
     "area": "",
@@ -5149,19 +5163,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T16:33:40.187Z"
-  },
-  {
-    "sn": "8SSA10R16922C2TJ41902KA",
-    "device": "Cargador LENOVO",
-    "area": "LOA",
-    "changes": [
-      {
-        "label": "Área",
-        "before": "OB",
-        "after": "LOA"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T16:25:54.178Z"
   }
 ]
