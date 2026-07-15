@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24321524207069",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:40.206Z"
+  },
+  {
     "sn": "24191524209179",
     "device": "",
     "area": "",
@@ -5114,19 +5128,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-01T22:25:09.879Z"
-  },
-  {
-    "sn": "6RJTQW3",
-    "device": "Laptop DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-01T22:23:14.792Z"
   }
 ]
