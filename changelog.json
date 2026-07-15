@@ -1,5 +1,19 @@
 [
   {
+    "sn": "G9KPSW3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T21:01:03.831Z"
+  },
+  {
     "sn": "H1PC6F3",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEM",
@@ -1840,20 +1854,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T17:35:59.642Z"
-  },
-  {
-    "sn": "G9KPSW3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Comentarios",
-        "before": "Equipo dado de baja en slack y arturito",
-        "after": "Equipo dado de baja en slack y arturito\nexTL: Victor Manuel Aragon"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T17:33:42.885Z"
   },
   {
     "sn": "99J243803113",
