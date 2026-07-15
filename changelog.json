@@ -1,5 +1,19 @@
 [
   {
+    "sn": "H1PC6F3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T20:35:24.058Z"
+  },
+  {
     "sn": "99J245100303",
     "device": "Impresora ZEBRA",
     "area": "OUTBOUND",
@@ -4954,24 +4968,5 @@
     ],
     "user": "Luis Eduardo Avalos Garcia",
     "ts": "2026-06-23T03:34:45.671Z"
-  },
-  {
-    "sn": "XXRBN244001749",
-    "device": "Impresora ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In repair",
-        "after": "In Use"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Se regreso de Dataware"
-      }
-    ],
-    "user": "Luis Eduardo Avalos Garcia",
-    "ts": "2026-06-23T03:34:12.578Z"
   }
 ]
