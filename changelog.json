@@ -1,5 +1,33 @@
 [
   {
+    "sn": "24320524202171",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:43.487Z"
+  },
+  {
+    "sn": "24248524205179",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:42.961Z"
+  },
+  {
     "sn": "24255524200439",
     "device": "",
     "area": "",
@@ -5080,48 +5108,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-05T19:16:20.133Z"
-  },
-  {
-    "sn": "TH0HRR76CHG00470M5MA00",
-    "device": "Cargador DELL",
-    "area": "IB",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-04T15:25:38.310Z"
-  },
-  {
-    "sn": "99J243705990",
-    "device": "Impresora ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "OUTBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF",
-        "after": "Mesa PS (Melis)"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Se cambia por la .185"
-      }
-    ],
-    "user": "Luis Eduardo Avalos Garcia",
-    "ts": "2026-06-02T06:55:38.617Z"
   }
 ]
