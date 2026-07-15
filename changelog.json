@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24249524203247",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:45.584Z"
+  },
+  {
     "sn": "24320524202414",
     "device": "",
     "area": "",
@@ -5079,29 +5093,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-05T19:17:58.663Z"
-  },
-  {
-    "sn": "99J243803134",
-    "device": "Impresora ZEBRA",
-    "area": "MDF",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "MDF"
-      },
-      {
-        "label": "Asignación",
-        "before": "Meca M9",
-        "after": "MDF"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-05T19:16:58.254Z"
   }
 ]
