@@ -1816,9 +1816,6 @@ async function saveDevice(){
     if(idx>=0)data[idx]={...data[idx],...rec};
     document.getElementById('formOverlay').classList.remove('open');
     if(changes.length>0){
-      // Record only the changed fields
-      const changedFields={};
-      changes.forEach(c=>{ changedFields[c.field||c.label]=rec[c.field||c.label]; });
       recordChange(sn, rec);
       const saved=await saveToGitHub('[edit] '+sn+' por '+currentUser);
       if(saved){
