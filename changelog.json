@@ -5,13 +5,13 @@
     "area": "INTERNAL SYSTEM",
     "changes": [
       {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
+        "label": "Comentarios",
+        "before": "EXTL IRIS",
+        "after": "EXTL Iris Lucero Arriaga"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-15T20:35:24.058Z"
+    "ts": "2026-07-15T20:35:41.293Z"
   },
   {
     "sn": "99J245100303",
