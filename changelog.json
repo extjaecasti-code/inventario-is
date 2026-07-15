@@ -1,22 +1,27 @@
 [
   {
-    "sn": "H1PC6F3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
+    "sn": "99J245100303",
+    "device": "Impresora ZEBRA",
+    "area": "OUTBOUND",
     "changes": [
       {
-        "label": "Asignación",
-        "before": "Iris Lucero Arriaga",
-        "after": "MDF"
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
       },
       {
-        "label": "Comentarios",
-        "before": "ExTL",
-        "after": "ExTL Iris Lucero Arriaga"
+        "label": "Área",
+        "before": "ACTIVO FIJO",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "ACTIVO FIJO",
+        "after": "Mesa PS2"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-14T20:57:35.025Z"
+    "ts": "2026-07-15T01:39:21.496Z"
   },
   {
     "sn": "24312523020338",
@@ -1192,35 +1197,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T14:36:02.118Z"
-  },
-  {
-    "sn": "99J245100303",
-    "device": "Impresora ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Asignación",
-        "before": "Meca M7",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Esta en resguardo al lado de AF"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T14:35:04.562Z"
   },
   {
     "sn": "99J243804129",
@@ -5163,5 +5139,19 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T16:11:40.855Z"
+  },
+  {
+    "sn": "TH0HRR76CHG0047V0M7RA00",
+    "device": "Cargador DELL",
+    "area": "OB",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-05-21T16:11:05.118Z"
   }
 ]
