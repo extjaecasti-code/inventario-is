@@ -1816,6 +1816,7 @@ async function saveDevice(){
     if(idx>=0)data[idx]={...data[idx],...rec};
     document.getElementById('formOverlay').classList.remove('open');
     if(changes.length>0){
+      console.log('DEBUG rec Comentarios:', rec['Comentarios'], '| changes:', changes.map(c=>c.label));
       recordChange(sn, rec);
       const saved=await saveToGitHub('[edit] '+sn+' por '+currentUser);
       if(saved){
