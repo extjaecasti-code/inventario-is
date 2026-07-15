@@ -77,5 +77,23 @@
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-07-15T20:50:16.894Z"
   },
-  "__deleted__H1RC6F3": true
+  "__deleted__H1RC6F3": true,
+  "__new__G9KPSW3": {
+    "S/N": "G9KPSW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "7450",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "EXTL VICTOR - SE LE PRESTA A USUARIO DE SHE: Marianny Carolina Torrealba",
+    "Status in Arturito": "In Use"
+  }
 }
