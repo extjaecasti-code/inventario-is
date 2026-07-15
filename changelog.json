@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24192524210228",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:50.945Z"
+  },
+  {
     "sn": "24255524200553",
     "device": "",
     "area": "",
@@ -5039,34 +5053,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-09T01:38:02.073Z"
-  },
-  {
-    "sn": "6QJZRW3",
-    "device": "Laptop DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEM",
-        "after": "OUTBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF",
-        "after": "Erick Moises"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Asignada a PS de OB"
-      }
-    ],
-    "user": "Luis Eduardo Avalos Garcia",
-    "ts": "2026-06-08T16:22:47.166Z"
   }
 ]
