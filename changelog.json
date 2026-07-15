@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24249524203324",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:22.412Z"
+  },
+  {
     "sn": "24255524200453",
     "device": "",
     "area": "",
@@ -5124,19 +5138,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-01T21:49:55.675Z"
-  },
-  {
-    "sn": "TH0M9JDMCHG0055O0C6VA01",
-    "device": "Cargador DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-01T21:49:29.145Z"
   }
 ]
