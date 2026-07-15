@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24320524202414",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:44.593Z"
+  },
+  {
     "sn": "24320524202171",
     "device": "",
     "area": "",
@@ -5089,24 +5103,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-05T19:16:58.254Z"
-  },
-  {
-    "sn": "DPC25031341",
-    "device": "Dex manager DEX",
-    "area": "COMEDOR",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Categoría",
-        "before": "Videoplayer",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-05T19:16:20.133Z"
   }
 ]
