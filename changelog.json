@@ -1,5 +1,47 @@
 [
   {
+    "sn": "24242524204741",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:05:55.977Z"
+  },
+  {
+    "sn": "24248524205016",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:05:55.477Z"
+  },
+  {
+    "sn": "24255524200636",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:05:54.954Z"
+  },
+  {
     "sn": "24255524200508",
     "device": "",
     "area": "",
@@ -5121,47 +5163,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T16:20:50.622Z"
-  },
-  {
-    "sn": "CN0R2M8KLOC001A95498A03",
-    "device": "Cargador DELL",
-    "area": "TRAINING",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T16:20:22.281Z"
-  },
-  {
-    "sn": "TH0HRR76CHG0047V0LZSA00",
-    "device": "Cargador DELL",
-    "area": "TRAINING",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T16:19:59.835Z"
-  },
-  {
-    "sn": "TH0HRR76CHG0047V0CG6A00",
-    "device": "Cargador DELL",
-    "area": "TRAINING",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T16:19:32.003Z"
   }
 ]
