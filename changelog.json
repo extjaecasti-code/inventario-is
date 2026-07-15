@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24243524208320",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:05:57.115Z"
+  },
+  {
     "sn": "24242524204741",
     "device": "",
     "area": "",
@@ -5149,19 +5163,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T16:21:16.762Z"
-  },
-  {
-    "sn": "TH0HRR76CHG004870QPKA00",
-    "device": "Cargador DELL",
-    "area": "TRAINING",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T16:20:50.622Z"
   }
 ]
