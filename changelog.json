@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24348524216735",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:05:50.756Z"
+  },
+  {
     "sn": "24248524205015",
     "device": "",
     "area": "",
@@ -5149,19 +5163,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T16:17:11.716Z"
-  },
-  {
-    "sn": "8SSA10R16970D1SG5131K5T",
-    "device": "Cargador LENOVO",
-    "area": "LI",
-    "changes": [
-      {
-        "label": "Marca",
-        "before": "DELL",
-        "after": "LENOVO"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T16:16:15.801Z"
   }
 ]
