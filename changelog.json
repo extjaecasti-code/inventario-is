@@ -1,5 +1,33 @@
 [
   {
+    "sn": "24320524202289",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:07.643Z"
+  },
+  {
+    "sn": "24249524203307",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:06.894Z"
+  },
+  {
     "sn": "24255524200624",
     "device": "",
     "area": "",
@@ -5115,48 +5143,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-27T12:00:33.614Z"
-  },
-  {
-    "sn": "2W376F3",
-    "device": "Laptop DELL",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "IP",
-        "before": "10.9.69.69",
-        "after": "10.9.69.13"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-26T11:02:15.140Z"
-  },
-  {
-    "sn": "H1RC6F3",
-    "device": "Laptop DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Marca",
-        "before": "?",
-        "after": "DELL"
-      },
-      {
-        "label": "Modelo",
-        "before": "?",
-        "after": "5450"
-      },
-      {
-        "label": "IP",
-        "before": "",
-        "after": "10.9.69.35"
-      },
-      {
-        "label": "MAC",
-        "before": "",
-        "after": "E8-C8-29-88-A1-CI"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-26T11:01:52.568Z"
   }
 ]
