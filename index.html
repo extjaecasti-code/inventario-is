@@ -537,6 +537,10 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
     <select id="filterStatus"><option value="">Todos los status</option><option value="In Use">In Use</option><option value="In Stock">In Stock</option><option value="In repair">In Repair</option><option value="Retired">Retired</option><option value="Missed">Missed</option></select>
     <select id="filterCat"><option value="">Todas las categorías</option></select>
     <select id="filterArea"><option value="">Todas las áreas</option></select>
+    <button class="btn btn-ghost" onclick="openBulkStatusUpdate()" title="Cambiar status a multiples equipos a la vez">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+      Actualizar Status
+    </button>
     <button class="btn btn-ghost" onclick="openBulkAdd()" title="Agregar multiples dispositivos con el mismo modelo">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8a2 2 0 0 0-2 2v2h12V5a2 2 0 0 0-2-2z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
       Agregar en Masa
@@ -1383,6 +1387,53 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
       <button class="btn btn-primary" onclick="confirmInRepairWarranty()">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         Agregar a Garantía
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- BULK STATUS UPDATE MODAL -->
+<div class="overlay" id="bulkStatusOverlay" onclick="closeModal(event)">
+  <div class="modal" style="width:640px">
+    <div class="modal-header">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3483FA" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+      <h2>Actualizar Status en Masa</h2>
+    </div>
+    <p style="font-size:12px;color:var(--text3);margin-bottom:16px">Ingresa los S/N separados por Enter o coma y selecciona el nuevo status.</p>
+
+    <!-- SN INPUT -->
+    <div class="form-group" style="margin-bottom:14px">
+      <label>Números de Serie (S/N) *</label>
+      <div class="sn-tags-wrap" id="bsuTagsWrap" onclick="document.getElementById('bsuSnInput').focus()">
+        <input id="bsuSnInput" placeholder="Escribe un S/N y presiona Enter o coma..." autocomplete="off">
+      </div>
+      <div class="bulk-preview-count" id="bsuCount"></div>
+    </div>
+
+    <!-- NEW STATUS -->
+    <div class="form-group" style="margin-bottom:14px">
+      <label>Nuevo Status *</label>
+      <select id="bsuStatus">
+        <option value="In Use">In Use</option>
+        <option value="In Stock">In Stock</option>
+        <option value="In repair">In Repair</option>
+        <option value="Retired">Retired</option>
+        <option value="Missed">Missed</option>
+      </select>
+    </div>
+
+    <!-- PROGRESS -->
+    <div id="bsuProgressWrap" style="display:none;margin-top:12px">
+      <div style="font-size:12px;color:var(--text2);margin-bottom:4px">Guardando... <span id="bsuProgressLabel"></span></div>
+      <div class="bulk-progress-wrap"><div class="bulk-progress-fill" id="bsuProgressBar" style="width:0%"></div></div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="document.getElementById('bulkStatusOverlay').classList.remove('open')">Cancelar</button>
+      <button class="btn btn-primary" id="bsuSaveBtn" onclick="saveBulkStatus()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Actualizar Todos
       </button>
     </div>
   </div>
@@ -4311,6 +4362,148 @@ async function confirmInRepairWarranty() {
   showToast(sn + ' agregado a Garantía ✓', 'success');
   pendingRepairSN = null;
   pendingRepairRec = null;
+}
+
+// ── BULK STATUS UPDATE ────────────────────────────────────────────────────
+let bsuSns = [];
+
+function openBulkStatusUpdate() {
+  bsuSns = [];
+  document.getElementById('bsuSnInput').value = '';
+  document.getElementById('bsuTagsWrap').querySelectorAll('.sn-tag').forEach(t => t.remove());
+  document.getElementById('bsuCount').innerHTML = '';
+  document.getElementById('bsuProgressWrap').style.display = 'none';
+  document.getElementById('bsuStatus').value = 'In Use';
+  document.getElementById('bsuSaveBtn').disabled = false;
+  document.getElementById('bsuSaveBtn').innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Actualizar Todos';
+  document.getElementById('bulkStatusOverlay').classList.add('open');
+  setTimeout(() => document.getElementById('bsuSnInput').focus(), 200);
+}
+
+function addBsuTag(sn) {
+  sn = sn.trim().toUpperCase();
+  if(!sn || bsuSns.includes(sn)) return;
+  bsuSns.push(sn);
+  renderBsuTags();
+}
+
+function removeBsuTag(sn) {
+  bsuSns = bsuSns.filter(s => s !== sn);
+  renderBsuTags();
+}
+
+function renderBsuTags() {
+  const wrap = document.getElementById('bsuTagsWrap');
+  wrap.querySelectorAll('.sn-tag').forEach(t => t.remove());
+  const input = document.getElementById('bsuSnInput');
+  const notFound = [];
+  bsuSns.forEach(sn => {
+    const found = data.find(d => d['S/N'] === sn);
+    const tag = document.createElement('span');
+    tag.className = 'sn-tag' + (found ? '' : ' dup');
+    tag.title = found ? sn : 'No encontrado en inventario';
+    tag.innerHTML = esc(sn) + '<span class="rm" onclick="removeBsuTag(\'' + sn + '\')">x</span>';
+    wrap.insertBefore(tag, input);
+    if(!found) notFound.push(sn);
+  });
+  const countEl = document.getElementById('bsuCount');
+  if(!bsuSns.length) { countEl.innerHTML = ''; return; }
+  const found = bsuSns.length - notFound.length;
+  countEl.innerHTML = '<span class="ok">' + found + ' encontrado(s)</span>' +
+    (notFound.length ? ' &nbsp; <span class="dup">' + notFound.length + ' no encontrado(s) — se omitirán</span>' : '');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('bsuSnInput');
+  if(!input) return;
+  input.addEventListener('keydown', function(e) {
+    if(e.key === 'Enter' || e.key === ',') {
+      e.preventDefault();
+      const val = this.value.trim().replace(/,/g,'');
+      if(val) { addBsuTag(val); this.value = ''; }
+    } else if(e.key === 'Backspace' && !this.value && bsuSns.length > 0) {
+      removeBsuTag(bsuSns[bsuSns.length-1]);
+    }
+  });
+  input.addEventListener('paste', function(e) {
+    e.preventDefault();
+    const pasted = (e.clipboardData || window.clipboardData).getData('text');
+    const sns = pasted.split(/[,\n\r\t]+/).map(s => s.trim()).filter(Boolean);
+    sns.forEach(sn => addBsuTag(sn));
+    this.value = '';
+  });
+  input.addEventListener('blur', function() {
+    const val = this.value.trim().replace(/,/g,'');
+    if(val) { addBsuTag(val); this.value = ''; }
+  });
+});
+
+async function saveBulkStatus() {
+  const newStatus = document.getElementById('bsuStatus').value;
+  const toUpdate = bsuSns.filter(sn => data.find(d => d['S/N'] === sn));
+  if(!toUpdate.length) { showToast('No hay S/N válidos para actualizar', 'error'); return; }
+
+  const btn = document.getElementById('bsuSaveBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner-sm"></span> Guardando...';
+  document.getElementById('bsuProgressWrap').style.display = 'block';
+  document.getElementById('bsuProgressBar').style.width = '30%';
+  document.getElementById('bsuProgressLabel').textContent = toUpdate.length + ' equipos...';
+
+  // Apply changes
+  const changed = [];
+  toUpdate.forEach(sn => {
+    const idx = data.findIndex(d => d['S/N'] === sn);
+    if(idx >= 0) {
+      const before = data[idx]['ESTATUS FISICO'];
+      if(before !== newStatus) {
+        data[idx]['ESTATUS FISICO'] = newStatus;
+        data[idx]['Status in Arturito'] = newStatus;
+        if(typeof recordChange === 'function') recordChange(sn, {'ESTATUS FISICO':newStatus,'Status in Arturito':newStatus,'_changedBy':currentUser,'_changedTs':new Date().toISOString()});
+        changed.push({sn, before, after:newStatus});
+      }
+    }
+  });
+
+  if(!changed.length) {
+    showToast('Todos los equipos ya tienen ese status', 'info');
+    btn.disabled = false;
+    btn.innerHTML = 'Actualizar Todos';
+    document.getElementById('bsuProgressWrap').style.display = 'none';
+    return;
+  }
+
+  document.getElementById('bsuProgressBar').style.width = '60%';
+  const saved = await saveToGitHub('[bulk-status] ' + changed.length + ' equipos -> ' + newStatus + ' por ' + currentUser);
+  document.getElementById('bsuProgressBar').style.width = '100%';
+
+  if(saved) {
+    // Notify Google Chat
+    const nl = '\n';
+    const sep = '========================';
+    let text = '[Bulk Status] Actualizacion masiva de status' + nl + sep + nl;
+    text += 'Actualizado por: ' + currentUser + nl;
+    text += 'Nuevo status: ' + newStatus + nl;
+    text += 'Equipos actualizados: ' + changed.length + nl + sep + nl;
+    changed.slice(0,10).forEach(c => { text += '- ' + c.sn + ' (' + c.before + ' -> ' + c.after + ')' + nl; });
+    if(changed.length > 10) text += '... y ' + (changed.length - 10) + ' mas' + nl;
+    try { await fetch(WEBHOOK, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({text})}); } catch(e){}
+
+    // Changelog
+    for(const c of changed) {
+      if(typeof addToChangelog === 'function')
+        await addToChangelog(c.sn, '', '', [{label:'Status (bulk)', before:c.before, after:c.after}], currentUser);
+    }
+
+    document.getElementById('bulkStatusOverlay').classList.remove('open');
+    applyFilters();
+    renderRepairTracker();
+    showToast(changed.length + ' equipos actualizados a "' + newStatus + '" ✓', 'success');
+  }
+
+  btn.disabled = false;
+  btn.innerHTML = 'Actualizar Todos';
+  document.getElementById('bsuProgressWrap').style.display = 'none';
 }
 
 </script>
