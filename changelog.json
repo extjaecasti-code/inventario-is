@@ -1,5 +1,33 @@
 [
   {
+    "sn": "24248524205148",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:02.938Z"
+  },
+  {
+    "sn": "24255524200516",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:02.436Z"
+  },
+  {
     "sn": "24249524203407",
     "device": "",
     "area": "",
@@ -5135,33 +5163,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-24T02:33:01.068Z"
-  },
-  {
-    "sn": "95FC6F3",
-    "device": "Laptop ?",
-    "area": "IDEA",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-24T02:32:45.631Z"
-  },
-  {
-    "sn": "PE4X6MVH",
-    "device": "Laptop ?",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-24T02:30:57.008Z"
   }
 ]
