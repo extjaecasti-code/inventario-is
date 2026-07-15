@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24324524208809",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:05:51.777Z"
+  },
+  {
     "sn": "24348524216735",
     "device": "",
     "area": "",
@@ -5149,19 +5163,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T16:17:49.199Z"
-  },
-  {
-    "sn": "CN02WDR5DES009406135A00",
-    "device": "Cargador DELL",
-    "area": "OB",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T16:17:11.716Z"
   }
 ]
