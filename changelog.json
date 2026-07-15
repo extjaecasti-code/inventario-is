@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24191524209158",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:18.973Z"
+  },
+  {
     "sn": "24248524204861",
     "device": "",
     "area": "",
@@ -5124,19 +5138,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-01T21:46:32.934Z"
-  },
-  {
-    "sn": "TH0HRR76CHG004870QKVA00",
-    "device": "Cargador DELL",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Esta con cinchos en la mesa"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-01T21:46:06.272Z"
   }
 ]
