@@ -56,5 +56,25 @@
     "Fullfiment": "",
     "Comentarios": "EXTL IRIS",
     "Status in Arturito": "In Stock"
+  },
+  "H1PC6F3": {
+    "S/N": "H1PC6F3",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "EXTL Iris Lucero Arriaga",
+    "Status in Arturito": "In Stock",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-15T20:35:40.145Z"
   }
 }
