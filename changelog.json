@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24192524210387",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:47.083Z"
+  },
+  {
     "sn": "24249524203247",
     "device": "",
     "area": "",
@@ -5079,19 +5093,5 @@
     ],
     "user": "Luis Eduardo Avalos Garcia",
     "ts": "2026-06-08T16:15:03.550Z"
-  },
-  {
-    "sn": "9B2348A09064",
-    "device": "UPS APC",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Asignación",
-        "before": "MDF - LI",
-        "after": "MDF"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-05T19:17:58.663Z"
   }
 ]
