@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24243524208282",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:05:48.442Z"
+  },
+  {
     "sn": "99J244704583",
     "device": "Impresora ZEBRA",
     "area": "ACTIVO FIJO",
@@ -5149,19 +5163,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-21T16:12:05.137Z"
-  },
-  {
-    "sn": "TH0HRR76CHG0047V0M5NA00",
-    "device": "Cargador DELL",
-    "area": "IB",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-21T16:11:40.855Z"
   }
 ]
