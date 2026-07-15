@@ -1,5 +1,33 @@
 [
   {
+    "sn": "24255524200526",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:09.111Z"
+  },
+  {
+    "sn": "24255524200550",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:08.681Z"
+  },
+  {
     "sn": "24320524202289",
     "device": "",
     "area": "",
@@ -5115,33 +5143,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-01T21:37:18.625Z"
-  },
-  {
-    "sn": "CN0WMDHRCJ3PU3TBDFTDA01",
-    "device": "Cargador DELL",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Categoría",
-        "before": "Notebook",
-        "after": "Accesorio"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-27T12:00:43.239Z"
-  },
-  {
-    "sn": "CN0VH2W4HKC0018JKTP3A00WFWV06",
-    "device": "Cargador DELL",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-27T12:00:33.614Z"
   }
 ]
