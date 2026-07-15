@@ -1,5 +1,33 @@
 [
   {
+    "sn": "24255524200413",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:15.046Z"
+  },
+  {
+    "sn": "24243524208347",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:14.322Z"
+  },
+  {
     "sn": "24255524200443",
     "device": "",
     "area": "",
@@ -5110,38 +5138,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-01T21:42:11.401Z"
-  },
-  {
-    "sn": "TH0HRR76CHG0047V0MC6A00",
-    "device": "Cargador DELL",
-    "area": "IB",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-01T21:41:44.965Z"
-  },
-  {
-    "sn": "TH0HRR76CHG004870QKGA00",
-    "device": "Cargador DELL",
-    "area": "IB",
-    "changes": [
-      {
-        "label": "Marca",
-        "before": "D",
-        "after": "DELL"
-      },
-      {
-        "label": "Modelo",
-        "before": "N",
-        "after": "NA"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-01T21:41:16.965Z"
   }
 ]
