@@ -1,5 +1,33 @@
 [
   {
+    "sn": "24248524205008",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:04.534Z"
+  },
+  {
+    "sn": "24255524200454",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:04.077Z"
+  },
+  {
     "sn": "24248524205148",
     "device": "",
     "area": "",
@@ -5130,38 +5158,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-05-26T10:59:24.397Z"
-  },
-  {
-    "sn": "8Y5ZRW3",
-    "device": "Laptop DELL",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "INBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF",
-        "after": "Daniel Alejandro Gallegos"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-24T02:33:44.314Z"
-  },
-  {
-    "sn": "TF3TPCZR",
-    "device": "Laptop ?",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "FALTA MARCA Y MODELO"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-05-24T02:33:01.068Z"
   }
 ]
