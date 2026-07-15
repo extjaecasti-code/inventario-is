@@ -1,5 +1,33 @@
 [
   {
+    "sn": "24320524202380",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:28.304Z"
+  },
+  {
+    "sn": "24192524210087",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:27.822Z"
+  },
+  {
     "sn": "24248524205140",
     "device": "",
     "area": "",
@@ -5100,43 +5128,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-01T22:03:02.161Z"
-  },
-  {
-    "sn": "TH0HRR76CHG0047V0M7AA00",
-    "device": "Cargador DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-01T21:53:04.320Z"
-  },
-  {
-    "sn": "TH0HRR76CHG0047V0C8SA00",
-    "device": "Cargador DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Modelo",
-        "before": "",
-        "after": "NA"
-      },
-      {
-        "label": "Área",
-        "before": "",
-        "after": "OUTBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "NA",
-        "after": "MESA 8"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-01T21:52:17.206Z"
   }
 ]
