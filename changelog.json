@@ -1,5 +1,33 @@
 [
   {
+    "sn": "24255524200439",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:41.953Z"
+  },
+  {
+    "sn": "24192524210214",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:06:41.332Z"
+  },
+  {
     "sn": "24321524207069",
     "device": "",
     "area": "",
@@ -5095,38 +5123,5 @@
     ],
     "user": "Luis Eduardo Avalos Garcia",
     "ts": "2026-06-02T06:55:38.617Z"
-  },
-  {
-    "sn": "PF5E8E0S",
-    "device": "Laptop LENOVO",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Marca",
-        "before": "?",
-        "after": "LENOVO"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-01T22:25:28.662Z"
-  },
-  {
-    "sn": "9KTQS2D3",
-    "device": "Laptop DELL",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Marca",
-        "before": "?",
-        "after": "DELL"
-      },
-      {
-        "label": "Modelo",
-        "before": "?",
-        "after": "7420"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-01T22:25:09.879Z"
   }
 ]
