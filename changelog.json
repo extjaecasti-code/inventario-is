@@ -1,5 +1,34 @@
 [
   {
+    "sn": "99J245100303",
+    "device": "Impresora ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "ACTIVO FIJO",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "ACTIVO FIJO",
+        "after": "Mesa PS2"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Esta en resguardo al lado de AF",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-15T02:11:30.710Z"
+  },
+  {
     "sn": "99J244704583",
     "device": "Impresora ZEBRA",
     "area": "ACTIVO FIJO",
@@ -1142,30 +1171,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-15T02:05:48.442Z"
-  },
-  {
-    "sn": "99J245100303",
-    "device": "Impresora ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Área",
-        "before": "ACTIVO FIJO",
-        "after": "OUTBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "ACTIVO FIJO",
-        "after": "Mesa PS2"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-15T01:39:21.496Z"
   },
   {
     "sn": "24312523020338",
