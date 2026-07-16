@@ -95,5 +95,25 @@
     "Fullfiment": "",
     "Comentarios": "EXTL VICTOR - SE LE PRESTA A USUARIO DE SHE: Marianny Carolina Torrealba",
     "Status in Arturito": "In Use"
+  },
+  "24255524200475": {
+    "S/N": "24255524200475",
+    "ESTATUS FISICO": "In repair",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "ZEBRA",
+    "MODELO": "TC520K",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "INBOUND",
+    "IP": "10.9.96.63",
+    "MAC": "88:BC:AC:13:FD:73",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "14.0.0",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In repair",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-16T03:13:32.691Z"
   }
 }
