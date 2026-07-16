@@ -7107,11 +7107,11 @@
   },
   {
     "S/N": "24255524200475",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In repair",
+    "Status in Arturito": "In repair",
     "AREA": "INBOUND",
     "ASIGNACIÓN": "INBOUND",
-    "Categoría": "HandHeld",
+    "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
@@ -7121,7 +7121,9 @@
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-16T03:13:32.691Z"
   },
   {
     "S/N": "24255524200437",
@@ -25393,9 +25395,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Esta en resguardo al lado de AF",
+    "Comentarios": "",
     "_changedBy": "André Jael Castillo Diaz",
-    "_changedTs": "2026-07-15T01:39:20.384Z"
+    "_changedTs": "2026-07-15T02:11:29.767Z"
   },
   {
     "S/N": "99J243803127",
@@ -25821,8 +25823,8 @@
   },
   {
     "S/N": "XXRBN220600049",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
     "Categoría": "Printer",
@@ -25835,12 +25837,14 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Se manda a garantia por problemas de sensor"
+    "Comentarios": "Se manda a garantia por problemas de sensor",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-16T03:14:35.264Z"
   },
   {
     "S/N": "XXRBN220600249",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
     "Categoría": "Printer",
@@ -25853,7 +25857,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-16T03:14:38.460Z"
   },
   {
     "S/N": "XXRBN244001780",
@@ -26955,7 +26961,7 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "_changedBy": "André Jael Castillo Diaz",
-    "_changedTs": "2026-07-15T01:39:46.469Z"
+    "_changedTs": "2026-07-15T02:10:49.969Z"
   },
   {
     "S/N": "82EA2A2A ",
@@ -35260,24 +35266,6 @@
     "Status in Arturito": "In Use"
   },
   {
-    "S/N": "H1RC6F3",
-    "ESTATUS FISICO": "In Use",
-    "Categoría": "Notebook",
-    "DISPOSITIVO": "Laptop",
-    "MARCA": "DELL",
-    "MODELO": "5450",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Iris Lucero Arriaga",
-    "IP": "10.9.69.35",
-    "MAC": "E8-C8-29-88-A1-CI",
-    "SSID": "",
-    "O.S.": "",
-    "DEPLOY": "",
-    "Fullfiment": "",
-    "Comentarios": "FALTA MARCA Y MODELO",
-    "Status in Arturito": "In Use"
-  },
-  {
     "S/N": "9KTQS2D3",
     "ESTATUS FISICO": "In Use",
     "Categoría": "Notebook",
@@ -36200,5 +36188,41 @@
     "Fullfiment": "",
     "Comentarios": "Equipo dado de baja en slack y en stock en arturito\nExTL: HERMINIO",
     "Status in Arturito": "In Stock"
+  },
+  {
+    "S/N": "H1PC6F3",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "EXTL IRIS",
+    "Status in Arturito": "In Stock"
+  },
+  {
+    "S/N": "G9KPSW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "7450",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "EXTL VICTOR - SE LE PRESTA A USUARIO DE SHE: Marianny Carolina Torrealba",
+    "Status in Arturito": "In Use"
   }
 ]
