@@ -1,5 +1,24 @@
 [
   {
+    "sn": "99J243804098",
+    "device": "Impresora ZEBRA",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "Bancada 3",
+        "after": "MDF"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-17T02:51:17.593Z"
+  },
+  {
     "sn": "99J243803135",
     "device": "Impresora ZEBRA",
     "area": "INTERNAL SYSTEM",
@@ -3373,20 +3392,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:17:04.053Z"
-  },
-  {
-    "sn": "99J243804098",
-    "device": "Impresora ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:17:00.773Z"
   },
   {
     "sn": "HKVCZH3",
