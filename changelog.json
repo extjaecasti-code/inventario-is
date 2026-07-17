@@ -1,5 +1,19 @@
 [
   {
+    "sn": "99J243804101",
+    "device": "Impresora ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "Meca M2",
+        "after": "Meca M3"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-17T02:22:29.202Z"
+  },
+  {
     "sn": "99J243804099",
     "device": "Impresora ZEBRA",
     "area": "OUTBOUND",
@@ -4944,19 +4958,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-24T15:39:31.974Z"
-  },
-  {
-    "sn": "0WXBTFQI24048091",
-    "device": "Meet Google Meet",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Comentarios",
-        "before": "prueba 1",
-        "after": "prueba 12"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-23T20:26:28.326Z"
   }
 ]
