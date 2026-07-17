@@ -18,5 +18,25 @@
     "Status in Arturito": "In Use",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-07-17T02:21:24.843Z"
+  },
+  "99J243804099": {
+    "S/N": "99J243804099",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZT411",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Meca M2",
+    "IP": "10.9.124.20",
+    "MAC": "8CD54A220506",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "MECANIZADA",
+    "Status in Arturito": "In Use",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-17T02:21:52.106Z"
   }
 }
