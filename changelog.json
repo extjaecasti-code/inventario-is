@@ -1,5 +1,19 @@
 [
   {
+    "sn": "99J243804099",
+    "device": "Impresora ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Asignación",
+        "before": "Meca M1",
+        "after": "Meca M2"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-17T02:21:53.030Z"
+  },
+  {
     "sn": "99J243803138",
     "device": "Impresora ZEBRA",
     "area": "OUTBOUND",
@@ -4944,24 +4958,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-23T20:26:28.326Z"
-  },
-  {
-    "sn": "24255524200420",
-    "device": "Handheld ZEBRA",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In repair",
-        "after": "In Use"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Se regresó a operación"
-      }
-    ],
-    "user": "Luis Eduardo Avalos Garcia",
-    "ts": "2026-06-23T03:35:34.835Z"
   }
 ]
