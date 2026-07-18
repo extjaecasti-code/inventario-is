@@ -269,8 +269,8 @@
     "addedBy": "André Jael Castillo Diaz",
     "addedTs": "2026-07-18T21:14:27.111Z",
     "prevCount": 0,
-    "step1": null,
-    "step1ts": null,
+    "step1": "18/07/26, 3:15 p.m.",
+    "step1ts": "2026-07-18T21:15:01.357Z",
     "step2": null,
     "step2ts": null,
     "step3": null,
@@ -278,6 +278,7 @@
     "step4": null,
     "step4ts": null,
     "step4b": null,
-    "step4bts": null
+    "step4bts": null,
+    "step1by": "André Jael Castillo Diaz"
   }
 ]
