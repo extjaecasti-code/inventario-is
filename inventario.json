@@ -15792,7 +15792,7 @@
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Meca M6",
+    "ASIGNACIÓN": "Meca M1",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -15803,7 +15803,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Se regresó de garantía"
+    "Comentarios": "Se regresó de garantía",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-17T02:21:24.843Z"
   },
   {
     "S/N": "GHCFSB4",
@@ -25271,8 +25273,8 @@
     "S/N": "99J243705984",
     "ESTATUS FISICO": "In Stock",
     "Status in Arturito": "In Stock",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Bancada 6",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25283,14 +25285,16 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-17T02:49:01.048Z"
   },
   {
     "S/N": "99J243803135",
     "ESTATUS FISICO": "In Stock",
     "Status in Arturito": "In Stock",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Bancada 7",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25301,7 +25305,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-17T02:49:40.985Z"
   },
   {
     "S/N": "99J243804130",
@@ -25552,7 +25558,7 @@
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Meca M2",
+    "ASIGNACIÓN": "Meca M3",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25563,7 +25569,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "MECANIZADA"
+    "Comentarios": "MECANIZADA",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-17T02:22:28.047Z"
   },
   {
     "S/N": "99J243705979",
@@ -25606,7 +25614,7 @@
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Meca M1",
+    "ASIGNACIÓN": "Meca M2",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25617,7 +25625,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "MECANIZADA"
+    "Comentarios": "MECANIZADA",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-17T02:21:52.106Z"
   },
   {
     "S/N": "99J245100302",
@@ -25641,8 +25651,8 @@
     "S/N": "99J243804098",
     "ESTATUS FISICO": "In Stock",
     "Status in Arturito": "In Stock",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Bancada 3",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25653,7 +25663,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-17T02:51:16.700Z"
   },
   {
     "S/N": "99J243803126",
