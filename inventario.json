@@ -22295,11 +22295,11 @@
   },
   {
     "S/N": "24320524202627",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In repair",
+    "Status in Arturito": "In repair",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
-    "Categoría": "HandHeld",
+    "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
@@ -22309,7 +22309,9 @@
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-19T02:13:52.957Z"
   },
   {
     "S/N": "24320524202683",
