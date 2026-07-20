@@ -1,1 +1,20 @@
-{}
+{
+  "__new__XXRBN212000077": {
+    "S/N": "XXRBN212000077",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZQ521",
+    "AREA": "INVENTARIOS",
+    "ASIGNACIÓN": "INVENTARIOS",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
+  }
+}
