@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24248524204878",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Comentarios",
+        "before": "In Use / In Stock MDF",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-21T02:54:16.960Z"
+  },
+  {
     "sn": "24248524204987",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
@@ -4984,19 +5008,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-25T18:07:29.840Z"
-  },
-  {
-    "sn": "24173010562857",
-    "device": "Scanner ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-24T17:27:38.628Z"
   }
 ]
