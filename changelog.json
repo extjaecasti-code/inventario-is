@@ -1,17 +1,22 @@
 [
   {
-    "sn": "24255524200593",
+    "sn": "24248524205101",
     "device": "Handheld ZEBRA",
-    "area": "INBOUND",
+    "area": "INTERNAL SYSTEMS",
     "changes": [
       {
-        "label": "Modelo",
-        "before": "TC53E",
-        "after": "TC520K"
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      },
+      {
+        "label": "Comentarios",
+        "before": "En stock dentro del MDF (Pichonera)",
+        "after": ""
       }
     ],
-    "user": "Erick Agustín Crisóstomo Sanchez",
-    "ts": "2026-07-21T22:41:20.254Z"
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-21T22:52:22.530Z"
   },
   {
     "sn": "99J244704583",
@@ -1640,20 +1645,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-15T02:06:13.307Z"
-  },
-  {
-    "sn": "24248524205101",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-15T02:06:12.342Z"
   },
   {
     "sn": "24320524202232",
@@ -4903,5 +4894,19 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-25T20:33:22.847Z"
+  },
+  {
+    "sn": "24248524205021",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-25T20:31:01.688Z"
   }
 ]
