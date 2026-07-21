@@ -25253,10 +25253,10 @@
   },
   {
     "S/N": "99J243803013",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
-    "AREA": "ACTIVO FIJO",
-    "ASIGNACIÓN": "ACTIVO FIJO",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Mesa PS",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25267,7 +25267,7 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Esta en resguardo al lado de AF",
+    "Comentarios": "",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-06-30T14:36:50.137Z"
   },
@@ -26959,8 +26959,8 @@
   },
   {
     "S/N": "99J244704583",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In repair",
+    "Status in Arturito": "In repair",
     "AREA": "ACTIVO FIJO",
     "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "Printer",
@@ -33694,8 +33694,8 @@
     "S/N": "25288524210923"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33712,8 +33712,8 @@
     "S/N": "25288524210759"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33730,8 +33730,8 @@
     "S/N": "25288524210783"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33748,8 +33748,8 @@
     "S/N": "25288524210775"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33766,8 +33766,8 @@
     "S/N": "25288524210883"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33784,8 +33784,8 @@
     "S/N": "25288524210809"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33802,8 +33802,8 @@
     "S/N": "25288524210785"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33820,8 +33820,8 @@
     "S/N": "25288524210790"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33838,8 +33838,8 @@
     "S/N": "25288524210780"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33856,8 +33856,8 @@
     "S/N": "25288524210761"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33874,8 +33874,8 @@
     "S/N": "25288524210815"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33892,8 +33892,8 @@
     "S/N": "25288524210731"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33910,8 +33910,8 @@
     "S/N": "25288524210769"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33928,8 +33928,8 @@
     "S/N": "25288524210807"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -33946,8 +33946,8 @@
     "S/N": "25288524210804"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34234,8 +34234,8 @@
     "S/N": "25288524211343"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34252,8 +34252,8 @@
     "S/N": "25282524202541"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34270,8 +34270,8 @@
     "S/N": "25282524202498"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34288,8 +34288,8 @@
     "S/N": "25282524202464"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34306,8 +34306,8 @@
     "S/N": "25282524202479"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34324,8 +34324,8 @@
     "S/N": "25280524206764"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34342,8 +34342,8 @@
     "S/N": "25280524206288"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34360,8 +34360,8 @@
     "S/N": "25280524206405"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34378,8 +34378,8 @@
     "S/N": "25288524209668"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34396,8 +34396,8 @@
     "S/N": "25288524209435"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34414,8 +34414,8 @@
     "S/N": "25288524209593"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34432,8 +34432,8 @@
     "S/N": "25288524209672"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34450,8 +34450,8 @@
     "S/N": "25288524209624"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34468,8 +34468,8 @@
     "S/N": "25288524211415"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -34486,8 +34486,8 @@
     "S/N": "25280524206310"
   },
   {
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
