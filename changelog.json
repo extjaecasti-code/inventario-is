@@ -1,5 +1,19 @@
 [
   {
+    "sn": "25288524209624",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-21T22:10:13.984Z"
+  },
+  {
     "sn": "25288524209593",
     "device": "",
     "area": "",
@@ -4929,19 +4943,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-25T20:14:39.270Z"
-  },
-  {
-    "sn": "9B2348A05084",
-    "device": "UPS APC",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In repair",
-        "after": "Retired"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T20:13:15.109Z"
   }
 ]
