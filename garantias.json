@@ -362,5 +362,25 @@
     "step4b": null,
     "step4bts": null,
     "step1by": "André Jael Castillo Diaz"
+  },
+  {
+    "id": 1784672294970,
+    "sn": "99J244704583",
+    "device": "Impresora ZEBRA ZT411",
+    "area": "ACTIVO FIJO",
+    "motivo": "deja de imprimir por desconexion de red",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-07-21T22:18:14.970Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null,
+    "step4b": null,
+    "step4bts": null
   }
 ]
