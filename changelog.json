@@ -5,18 +5,13 @@
     "area": "INBOUND",
     "changes": [
       {
-        "label": "Categoría",
-        "before": "HandHeld",
-        "after": "Handheld"
-      },
-      {
         "label": "Modelo",
-        "before": "TC520K",
-        "after": "TC53E"
+        "before": "TC53E",
+        "after": "TC520K"
       }
     ],
     "user": "Erick Agustín Crisóstomo Sanchez",
-    "ts": "2026-07-21T22:39:44.665Z"
+    "ts": "2026-07-21T22:41:20.254Z"
   },
   {
     "sn": "99J244704583",
