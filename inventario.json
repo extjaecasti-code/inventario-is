@@ -8745,17 +8745,19 @@
     "Status in Arturito": "In Use",
     "AREA": "INBOUND",
     "ASIGNACIÓN": "INBOUND",
-    "Categoría": "HandHeld",
+    "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
-    "MODELO": "TC520K",
+    "MODELO": "TC53E",
     "IP": "10.9.96.154",
     "MAC": "88:BC:AC:13:FC:0B",
     "SSID": "MELI-SHIPPING",
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "Erick Agustín Crisóstomo Sanchez",
+    "_changedTs": "2026-07-21T22:39:43.612Z"
   },
   {
     "S/N": "24255524200608",
@@ -10737,10 +10739,10 @@
   },
   {
     "S/N": "24248524204918",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
     "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "OUTBOUND",
+    "ASIGNACIÓN": "MDF",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -19003,7 +19005,7 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "",
     "_changedBy": "André Jael Castillo Diaz",
-    "_changedTs": "2026-07-15T02:05:47.068Z"
+    "_changedTs": "2026-07-21T22:52:21.346Z"
   },
   {
     "S/N": "24255524200489",
@@ -20779,7 +20781,9 @@
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "ESTA EN XEM 2"
+    "Comentarios": "ESTA EN XEM 2",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-21T22:54:25.232Z"
   },
   {
     "S/N": "24249524203426",
