@@ -8745,17 +8745,19 @@
     "Status in Arturito": "In Use",
     "AREA": "INBOUND",
     "ASIGNACIÓN": "INBOUND",
-    "Categoría": "HandHeld",
+    "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
-    "MODELO": "TC520K",
+    "MODELO": "TC53E",
     "IP": "10.9.96.154",
     "MAC": "88:BC:AC:13:FC:0B",
     "SSID": "MELI-SHIPPING",
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "Erick Agustín Crisóstomo Sanchez",
+    "_changedTs": "2026-07-21T22:39:43.612Z"
   },
   {
     "S/N": "24255524200608",
