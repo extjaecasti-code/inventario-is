@@ -1,1 +1,22 @@
-{}
+{
+  "24255524200593": {
+    "S/N": "24255524200593",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "ZEBRA",
+    "MODELO": "TC520K",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "INBOUND",
+    "IP": "10.9.96.154",
+    "MAC": "88:BC:AC:13:FC:0B",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "14.0.0",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use",
+    "_changedBy": "Erick Agustín Crisóstomo Sanchez",
+    "_changedTs": "2026-07-21T22:41:18.924Z"
+  }
+}
