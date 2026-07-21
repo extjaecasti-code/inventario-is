@@ -1,5 +1,24 @@
 [
   {
+    "sn": "24255524200593",
+    "device": "Handheld ZEBRA",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      },
+      {
+        "label": "Modelo",
+        "before": "TC520K",
+        "after": "TC53E"
+      }
+    ],
+    "user": "Erick Agustín Crisóstomo Sanchez",
+    "ts": "2026-07-21T22:39:44.665Z"
+  },
+  {
     "sn": "99J244704583",
     "device": "Impresora ZEBRA",
     "area": "ACTIVO FIJO",
@@ -4889,19 +4908,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-25T20:33:22.847Z"
-  },
-  {
-    "sn": "24248524205021",
-    "device": "Handheld ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In repair",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T20:31:01.688Z"
   }
 ]
