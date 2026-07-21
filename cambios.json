@@ -1,1 +1,22 @@
-{}
+{
+  "99J243803013": {
+    "S/N": "99J243803013",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZT411",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "Mesa PS",
+    "IP": "10.9.124.26",
+    "MAC": "48A493E19FFA",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-21T22:09:01.625Z"
+  }
+}
