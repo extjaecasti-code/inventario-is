@@ -10719,10 +10719,10 @@
   },
   {
     "S/N": "24248524204878",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "MDF",
+    "ASIGNACIÓN": "OUTBOUND",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -10733,7 +10733,7 @@
     "O.S.": "13.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "In Use / In Stock MDF"
+    "Comentarios": ""
   },
   {
     "S/N": "24248524204918",
@@ -10755,10 +10755,10 @@
   },
   {
     "S/N": "24248524204927",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "MDF",
+    "ASIGNACIÓN": "OUTBOUND",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -10769,15 +10769,15 @@
     "O.S.": "13.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "In Use / In Stock MDF"
+    "Comentarios": ""
   },
   {
     "S/N": "24248524204955",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "MDF",
-    "Categoría": "HandHeld",
+    "ASIGNACIÓN": "OUTBOUND",
+    "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
@@ -10787,14 +10787,14 @@
     "O.S.": "13.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "In Use / In Stock MDF"
+    "Comentarios": ""
   },
   {
     "S/N": "24248524204987",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "MDF",
+    "ASIGNACIÓN": "OUTBOUND",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -10805,7 +10805,7 @@
     "O.S.": "13.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "In Use / In Stock MDF"
+    "Comentarios": ""
   },
   {
     "S/N": "24248524205020",
@@ -10845,10 +10845,10 @@
   },
   {
     "S/N": "24248524205105",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "MDF",
+    "ASIGNACIÓN": "OUTBOUND",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
@@ -10859,7 +10859,7 @@
     "O.S.": "13.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "In Use / In Stock MDF"
+    "Comentarios": ""
   },
   {
     "S/N": "24250524206513",
@@ -20503,11 +20503,11 @@
   },
   {
     "S/N": "24249524203295",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In repair",
+    "Status in Arturito": "In repair",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
-    "Categoría": "HandHeld",
+    "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
@@ -36237,6 +36237,24 @@
     "DEPLOY": "",
     "Fullfiment": "",
     "Comentarios": "EXTL VICTOR - SE LE PRESTA A USUARIO DE SHE: Marianny Carolina Torrealba",
+    "Status in Arturito": "In Use"
+  },
+  {
+    "S/N": "XXRBN212000077",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZQ521",
+    "AREA": "INVENTARIOS",
+    "ASIGNACIÓN": "INVENTARIOS",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "",
     "Status in Arturito": "In Use"
   }
 ]
