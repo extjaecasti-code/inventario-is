@@ -1,5 +1,19 @@
 [
   {
+    "sn": "25288524210790",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-21T22:09:55.259Z"
+  },
+  {
     "sn": "25288524210783",
     "device": "",
     "area": "",
@@ -4969,24 +4983,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-25T18:12:12.362Z"
-  },
-  {
-    "sn": "XXRBN244003693",
-    "device": "Impresora Zebra",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "OUTBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF",
-        "after": "P2S"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-25T18:11:55.855Z"
   }
 ]
