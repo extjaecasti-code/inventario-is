@@ -5,13 +5,13 @@
     "area": "LI",
     "changes": [
       {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
+        "label": "Categoría",
+        "before": "Notebook",
+        "after": "Accesorio"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-22T18:40:14.114Z"
+    "ts": "2026-07-22T18:40:24.874Z"
   },
   {
     "sn": "24249524203247",
