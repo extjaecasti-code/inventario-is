@@ -1,5 +1,24 @@
 [
   {
+    "sn": "24248524204619",
+    "device": "Handheld ZEBRA",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "Missed"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      }
+    ],
+    "user": "Erick Avisai Núñez Loza",
+    "ts": "2026-07-22T21:57:49.963Z"
+  },
+  {
     "sn": "24255524200435",
     "device": "Handheld ZEBRA",
     "area": "INBOUND",
@@ -4969,24 +4988,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T15:11:42.249Z"
-  },
-  {
-    "sn": "9B2348A31168",
-    "device": "UPS APC",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "ICQA"
-      },
-      {
-        "label": "Asignación",
-        "before": "",
-        "after": "ICQA"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T15:11:13.129Z"
   }
 ]
