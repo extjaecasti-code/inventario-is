@@ -1,5 +1,44 @@
 [
   {
+    "sn": "JY5ZRW3",
+    "device": "Laptop DELL",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "LOA",
+        "after": "LI"
+      },
+      {
+        "label": "Asignación",
+        "before": "",
+        "after": "LOGISTICA I."
+      },
+      {
+        "label": "SSID",
+        "before": "SHIPPING-CORP",
+        "after": "MELI-SHIPPING"
+      },
+      {
+        "label": "Deploy",
+        "before": "PSGAC",
+        "after": "DRM"
+      },
+      {
+        "label": "Comentarios",
+        "before": "In Use In Use",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-22T14:09:12.226Z"
+  },
+  {
     "sn": "CN0T2D3",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEM",
@@ -4440,20 +4479,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:10:38.350Z"
-  },
-  {
-    "sn": "JY5ZRW3",
-    "device": "Laptop DELL",
-    "area": "LOA",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:10:13.737Z"
   },
   {
     "sn": "24362010556605",
