@@ -76,5 +76,25 @@
     "Fullfiment": "",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  "JY5ZRW3": {
+    "S/N": "JY5ZRW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "LI",
+    "ASIGNACIÓN": "LOGISTICA I.",
+    "IP": "10.9.112.42",
+    "MAC": "EC:4C:8C:59:B9:79",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "#N/A",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-22T14:09:10.856Z"
   }
 }
