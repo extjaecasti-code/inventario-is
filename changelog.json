@@ -5,13 +5,13 @@
     "area": "LI",
     "changes": [
       {
-        "label": "Categoría",
-        "before": "Notebook",
-        "after": "Accesorio"
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-22T18:40:24.874Z"
+    "ts": "2026-07-22T18:40:34.799Z"
   },
   {
     "sn": "24249524203247",
