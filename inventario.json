@@ -18657,11 +18657,11 @@
   },
   {
     "S/N": "24243524206818",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In repair",
+    "Status in Arturito": "In repair",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
-    "Categoría": "HandHeld",
+    "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
@@ -19550,8 +19550,8 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "En revision de equipo perdido",
-    "_changedBy": "André Jael Castillo Diaz",
-    "_changedTs": "2026-07-15T02:05:47.070Z"
+    "_changedBy": "Erick Avisai Núñez Loza",
+    "_changedTs": "2026-07-22T16:57:21.609Z"
   },
   {
     "S/N": "24255524200543",
@@ -36278,5 +36278,23 @@
     "Fullfiment": "",
     "Comentarios": "",
     "Status in Arturito": "In Use"
+  },
+  {
+    "S/N": "TH0HRR76CHG0047VOLZCA00",
+    "ESTATUS FISICO": "In repair",
+    "Categoría": "Accesorio",
+    "DISPOSITIVO": "Cargador",
+    "MARCA": "DELL",
+    "MODELO": "NA",
+    "AREA": "LI",
+    "ASIGNACIÓN": "KEVIN TAMAYO",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "",
+    "Status in Arturito": "In repair"
   }
 ]
