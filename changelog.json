@@ -1,5 +1,34 @@
 [
   {
+    "sn": "3RJZRW3",
+    "device": "Laptop DELL",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "SMX0",
+        "after": "LI"
+      },
+      {
+        "label": "Asignación",
+        "before": "Angeles Ramirez",
+        "after": "LOGISTICA I."
+      },
+      {
+        "label": "Comentarios",
+        "before": "Equipo prestado para SMX0",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-22T14:09:37.076Z"
+  },
+  {
     "sn": "JY5ZRW3",
     "device": "Laptop DELL",
     "area": "LI",
@@ -4227,20 +4256,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:16:17.254Z"
-  },
-  {
-    "sn": "3RJZRW3",
-    "device": "Laptop DELL",
-    "area": "SMX0",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:13:37.508Z"
   },
   {
     "sn": "24173010564245",
