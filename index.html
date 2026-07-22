@@ -1411,16 +1411,27 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
       <div class="bulk-preview-count" id="bsuCount"></div>
     </div>
 
-    <!-- NEW STATUS -->
-    <div class="form-group" style="margin-bottom:14px">
-      <label>Nuevo Status *</label>
-      <select id="bsuStatus">
-        <option value="In Use">In Use</option>
-        <option value="In Stock">In Stock</option>
-        <option value="In repair">In Repair</option>
-        <option value="Retired">Retired</option>
-        <option value="Missed">Missed</option>
-      </select>
+    <p style="font-size:11px;color:var(--text3);margin-bottom:12px">Solo llena los campos que quieras cambiar — los demás se mantienen igual.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <div class="form-group" style="flex:1;min-width:180px">
+        <label>Nuevo Status <span style="color:var(--text3);font-size:10px">(opcional)</span></label>
+        <select id="bsuStatus">
+          <option value="">— Sin cambio —</option>
+          <option value="In Use">In Use</option>
+          <option value="In Stock">In Stock</option>
+          <option value="In repair">In Repair</option>
+          <option value="Retired">Retired</option>
+          <option value="Missed">Missed</option>
+        </select>
+      </div>
+      <div class="form-group" style="flex:1;min-width:180px">
+        <label>Nueva Área <span style="color:var(--text3);font-size:10px">(opcional)</span></label>
+        <input id="bsuArea" placeholder="Ej: OUTBOUND, LI...">
+      </div>
+      <div class="form-group" style="flex:1;min-width:180px">
+        <label>Nueva Asignación <span style="color:var(--text3);font-size:10px">(opcional)</span></label>
+        <input id="bsuAsig" placeholder="Nombre del responsable">
+      </div>
     </div>
 
     <!-- PROGRESS -->
@@ -4035,7 +4046,9 @@ function renderHistorial() {
   warrantyHist.forEach(h => { snCount[h.sn] = (snCount[h.sn]||0)+1; });
 
   tbody.innerHTML = [...warrantyHist].reverse().map(h => {
-    const days = h.step2ts && h.step4ts ? daysBetween(h.step2ts, h.step4ts) : '—';
+    const finalTs = h.step4bts || h.step4ts;
+    const startTs = h.step2ts || h.addedTs;
+    const days = startTs && finalTs ? daysBetween(startTs, finalTs) : startTs ? daysBetween(startTs, new Date().toISOString()) + ' (en curso)' : '—';
     const veces = snCount[h.sn] || 1;
     const vecesBadge = veces > 1
       ? `<span class="prev-warranty-badge">${veces}x enviado</span>`
@@ -4371,7 +4384,9 @@ function openBulkStatusUpdate() {
   document.getElementById('bsuTagsWrap').querySelectorAll('.sn-tag').forEach(t => t.remove());
   document.getElementById('bsuCount').innerHTML = '';
   document.getElementById('bsuProgressWrap').style.display = 'none';
-  document.getElementById('bsuStatus').value = 'In Use';
+  document.getElementById('bsuStatus').value = '';
+  document.getElementById('bsuArea').value = '';
+  document.getElementById('bsuAsig').value = '';
   document.getElementById('bsuSaveBtn').disabled = false;
   document.getElementById('bsuSaveBtn').innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Actualizar Todos';
   document.getElementById('bulkStatusOverlay').classList.add('open');
@@ -4437,7 +4452,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 async function saveBulkStatus() {
-  const newStatus = document.getElementById('bsuStatus').value;
   const toUpdate = bsuSns.filter(sn => data.find(d => d['S/N'] === sn));
   if(!toUpdate.length) { showToast('No hay S/N válidos para actualizar', 'error'); return; }
 
@@ -4448,25 +4462,53 @@ async function saveBulkStatus() {
   document.getElementById('bsuProgressBar').style.width = '30%';
   document.getElementById('bsuProgressLabel').textContent = toUpdate.length + ' equipos...';
 
+  const newStatus = document.getElementById('bsuStatus').value;
+  const newArea   = document.getElementById('bsuArea').value.trim();
+  const newAsig   = document.getElementById('bsuAsig').value.trim();
+
+  if(!newStatus && !newArea && !newAsig) {
+    showToast('Debes cambiar al menos un campo', 'error');
+    btn.disabled = false; btn.innerHTML = 'Actualizar Todos';
+    document.getElementById('bsuProgressWrap').style.display = 'none';
+    return;
+  }
+
   // Apply changes
   const changed = [];
   toUpdate.forEach(sn => {
     const idx = data.findIndex(d => d['S/N'] === sn);
     if(idx >= 0) {
-      const before = data[idx]['ESTATUS FISICO'];
-      if(before !== newStatus) {
+      const fields = {};
+      const desc = [];
+      if(newStatus && data[idx]['ESTATUS FISICO'] !== newStatus) {
+        fields['ESTATUS FISICO'] = newStatus;
+        fields['Status in Arturito'] = newStatus;
+        desc.push('Status: ' + data[idx]['ESTATUS FISICO'] + ' -> ' + newStatus);
         data[idx]['ESTATUS FISICO'] = newStatus;
         data[idx]['Status in Arturito'] = newStatus;
-        if(typeof recordChange === 'function') recordChange(sn, {'ESTATUS FISICO':newStatus,'Status in Arturito':newStatus,'_changedBy':currentUser,'_changedTs':new Date().toISOString()});
-        changed.push({sn, before, after:newStatus});
+      }
+      if(newArea && data[idx]['AREA'] !== newArea) {
+        fields['AREA'] = newArea;
+        desc.push('Area: ' + (data[idx]['AREA']||'—') + ' -> ' + newArea);
+        data[idx]['AREA'] = newArea;
+      }
+      if(newAsig && data[idx]['ASIGNACIÓN'] !== newAsig) {
+        fields['ASIGNACIÓN'] = newAsig;
+        desc.push('Asig: ' + (data[idx]['ASIGNACIÓN']||'—') + ' -> ' + newAsig);
+        data[idx]['ASIGNACIÓN'] = newAsig;
+      }
+      if(Object.keys(fields).length > 0) {
+        fields['_changedBy'] = currentUser;
+        fields['_changedTs'] = new Date().toISOString();
+        if(typeof recordChange === 'function') recordChange(sn, fields);
+        changed.push({sn, desc: desc.join(', ')});
       }
     }
   });
 
   if(!changed.length) {
-    showToast('Todos los equipos ya tienen ese status', 'info');
-    btn.disabled = false;
-    btn.innerHTML = 'Actualizar Todos';
+    showToast('No hay cambios que aplicar', 'info');
+    btn.disabled = false; btn.innerHTML = 'Actualizar Todos';
     document.getElementById('bsuProgressWrap').style.display = 'none';
     return;
   }
@@ -4479,11 +4521,13 @@ async function saveBulkStatus() {
     // Notify Google Chat
     const nl = '\n';
     const sep = '========================';
-    let text = '[Bulk Status] Actualizacion masiva de status' + nl + sep + nl;
+    let text = '[Bulk Update] Actualizacion masiva' + nl + sep + nl;
     text += 'Actualizado por: ' + currentUser + nl;
-    text += 'Nuevo status: ' + newStatus + nl;
+    if(newStatus) text += 'Nuevo status: ' + newStatus + nl;
+    if(newArea)   text += 'Nueva area: '   + newArea   + nl;
+    if(newAsig)   text += 'Nueva asig: '   + newAsig   + nl;
     text += 'Equipos actualizados: ' + changed.length + nl + sep + nl;
-    changed.slice(0,10).forEach(c => { text += '- ' + c.sn + ' (' + c.before + ' -> ' + c.after + ')' + nl; });
+    changed.slice(0,10).forEach(c => { text += '- ' + c.sn + ' (' + c.desc + ')' + nl; });
     if(changed.length > 10) text += '... y ' + (changed.length - 10) + ' mas' + nl;
     try { await fetch(WEBHOOK, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({text})}); } catch(e){}
 
