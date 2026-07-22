@@ -19535,11 +19535,11 @@
   },
   {
     "S/N": "24249524203247",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "Missed",
+    "Status in Arturito": "Missed",
     "AREA": "INTERNAL SYSTEMS",
     "ASIGNACIÓN": "MDF",
-    "Categoría": "HandHeld",
+    "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
@@ -19549,7 +19549,7 @@
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "En stock dentro del MDF (Pichonera)",
+    "Comentarios": "En revision de equipo perdido",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-07-15T02:05:47.070Z"
   },
