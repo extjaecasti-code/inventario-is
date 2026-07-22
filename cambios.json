@@ -1,1 +1,22 @@
-{}
+{
+  "24255524200471": {
+    "S/N": "24255524200471",
+    "ESTATUS FISICO": "Missed",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "ZEBRA",
+    "MODELO": "TC520K",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "OUTBOUND",
+    "IP": "10.9.96.120",
+    "MAC": "88:BC:AC:13:FC:F2",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "14.0.0",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "Missed",
+    "_changedBy": "Erick Avisai Núñez Loza",
+    "_changedTs": "2026-07-22T21:58:56.802Z"
+  }
+}
