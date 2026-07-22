@@ -1,13 +1,13 @@
 {
   "CN0T2D3": {
     "S/N": "CN0T2D3",
-    "ESTATUS FISICO": "In Use",
+    "ESTATUS FISICO": "In Stock",
     "Categoría": "Notebook",
     "DISPOSITIVO": "Laptop",
     "MARCA": "DELL",
     "MODELO": "7420",
-    "AREA": "LI",
-    "ASIGNACIÓN": "LOGISTICA I.",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
     "IP": "10.9.69.75",
     "MAC": "A864F16DB97E",
     "SSID": "MELI-SHIPPING",
@@ -15,9 +15,9 @@
     "DEPLOY": "DRM",
     "Fullfiment": "MXCD11",
     "Comentarios": "",
-    "Status in Arturito": "In Use",
+    "Status in Arturito": "In Stock",
     "_changedBy": "André Jael Castillo Diaz",
-    "_changedTs": "2026-07-22T13:54:57.554Z"
+    "_changedTs": "2026-07-22T13:58:45.973Z"
   },
   "1J0R2D3": {
     "S/N": "1J0R2D3",
