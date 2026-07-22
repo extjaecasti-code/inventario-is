@@ -39,7 +39,7 @@
   },
   "TH0HRR76CHG0047VOLZCA00": {
     "S/N": "TH0HRR76CHG0047VOLZCA00",
-    "ESTATUS FISICO": "In Use",
+    "ESTATUS FISICO": "In repair",
     "Categoría": "Accesorio",
     "DISPOSITIVO": "Cargador",
     "MARCA": "DELL",
@@ -53,8 +53,8 @@
     "DEPLOY": "",
     "Fullfiment": "",
     "Comentarios": "",
-    "Status in Arturito": "In Use",
+    "Status in Arturito": "In repair",
     "_changedBy": "André Jael Castillo Diaz",
-    "_changedTs": "2026-07-22T18:40:23.921Z"
+    "_changedTs": "2026-07-22T18:40:33.825Z"
   }
 }
