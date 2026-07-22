@@ -1,5 +1,19 @@
 [
   {
+    "sn": "TH0HRR76CHG0047V0M4PA00",
+    "device": "Cargador DELL",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-22T13:57:01.276Z"
+  },
+  {
     "sn": "CN0RGF3FLOC00456C6MNA01",
     "device": "Cargador DELL",
     "area": "LI",
@@ -4934,29 +4948,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T15:09:21.731Z"
-  },
-  {
-    "sn": "9B2348A05090",
-    "device": "UPS APC",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "OUTBOUND"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF - LI",
-        "after": "DOCKAS"
-      },
-      {
-        "label": "Comentarios",
-        "before": "In Stock (Operational Backup)",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T15:08:43.535Z"
   }
 ]
