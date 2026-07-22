@@ -1,5 +1,29 @@
 [
   {
+    "sn": "1J0R2D3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "LI",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "LOGISTICA I.",
+        "after": "MDF"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-22T13:58:25.487Z"
+  },
+  {
     "sn": "TH0HRR76CHG0047V0M4PA00",
     "device": "Cargador DELL",
     "area": "LI",
@@ -31,30 +55,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-22T13:56:11.917Z"
-  },
-  {
-    "sn": "1J0R2D3",
-    "device": "Laptop DELL",
-    "area": "LI",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "LI"
-      },
-      {
-        "label": "Asignación",
-        "before": "",
-        "after": "LOGISTICA I."
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-22T13:55:28.700Z"
   },
   {
     "sn": "CN0T2D3",
