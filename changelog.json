@@ -1,5 +1,44 @@
 [
   {
+    "sn": "CN0T2D3",
+    "device": "Laptop DELL",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "PEOPLE",
+        "after": "LI"
+      },
+      {
+        "label": "Asignación",
+        "before": "Xibo Player",
+        "after": "LOGISTICA I."
+      },
+      {
+        "label": "SSID",
+        "before": "shipping-corp",
+        "after": "MELI-SHIPPING"
+      },
+      {
+        "label": "Deploy",
+        "before": "PSGAC",
+        "after": "DRM"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Se coloca en la pantalla de SHE",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-22T13:54:58.801Z"
+  },
+  {
     "sn": "24248524204918",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
@@ -3673,20 +3712,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:20:23.327Z"
-  },
-  {
-    "sn": "CN0T2D3",
-    "device": "Laptop DELL",
-    "area": "PEOPLE",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:20:06.323Z"
   },
   {
     "sn": "24173010562924",
