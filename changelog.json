@@ -1,36 +1,22 @@
 [
   {
-    "sn": "24243524206818",
+    "sn": "24248524205101",
     "device": "Handheld ZEBRA",
-    "area": "OUTBOUND",
+    "area": "INTERNAL SYSTEMS",
     "changes": [
       {
         "label": "Estatus Físico",
         "before": "In Use",
-        "after": "In repair"
+        "after": "Missed"
       },
       {
-        "label": "Categoría",
-        "before": "HandHeld",
-        "after": "Handheld"
+        "label": "Comentarios",
+        "before": "",
+        "after": "Perdida revisar se cambio status en arturito"
       }
     ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-22T18:41:01.942Z"
-  },
-  {
-    "sn": "TH0HRR76CHG0047VOLZCA00",
-    "device": "Cargador DELL",
-    "area": "LI",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In repair"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-22T18:40:34.799Z"
+    "user": "Erick Avisai Núñez Loza",
+    "ts": "2026-07-22T21:55:12.124Z"
   },
   {
     "sn": "24249524203247",
@@ -242,25 +228,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-21T22:54:26.435Z"
-  },
-  {
-    "sn": "24248524205101",
-    "device": "Handheld ZEBRA",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Categoría",
-        "before": "HandHeld",
-        "after": "Handheld"
-      },
-      {
-        "label": "Comentarios",
-        "before": "En stock dentro del MDF (Pichonera)",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-21T22:52:22.530Z"
   },
   {
     "sn": "99J244704583",
@@ -4978,5 +4945,43 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T15:11:42.249Z"
+  },
+  {
+    "sn": "9B2348A31168",
+    "device": "UPS APC",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "ICQA"
+      },
+      {
+        "label": "Asignación",
+        "before": "",
+        "after": "ICQA"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T15:11:13.129Z"
+  },
+  {
+    "sn": "9B2348A05088",
+    "device": "UPS APC",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF - LI",
+        "after": "DOCKAS"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-26T15:09:21.731Z"
   }
 ]
