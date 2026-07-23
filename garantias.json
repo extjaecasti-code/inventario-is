@@ -41,27 +41,6 @@
     "step2by": "Luis Eduardo Avalos Garcia"
   },
   {
-    "id": 1782579079219,
-    "sn": "24248524205021",
-    "device": "Handheld ZEBRA TC520K",
-    "area": "OUTBOUND",
-    "motivo": "",
-    "addedBy": "André Jael Castillo Diaz",
-    "addedTs": "2026-06-27T16:51:19.219Z",
-    "prevCount": 0,
-    "step1": "27/06/26, 10:55 a.m.",
-    "step1ts": "2026-06-27T16:55:37.207Z",
-    "step2": "09/07/26, 1:37 p.m.",
-    "step2ts": "2026-07-09T19:37:33.686Z",
-    "step3": "23/07/26, 1:27 p.m.",
-    "step3ts": "2026-07-23T19:27:08.630Z",
-    "step4": null,
-    "step4ts": null,
-    "step1by": "André Jael Castillo Diaz",
-    "step2by": "Luis Eduardo Avalos Garcia",
-    "step3by": "André Jael Castillo Diaz"
-  },
-  {
     "id": 1782579100392,
     "sn": "24160523022814",
     "device": "RING SCANER ZEBRA RSBT5",
