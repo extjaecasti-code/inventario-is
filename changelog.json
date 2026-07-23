@@ -1,5 +1,39 @@
 [
   {
+    "sn": "24191524209179",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "On Loan",
+        "after": "In Use"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      },
+      {
+        "label": "Área",
+        "before": "MXCD09",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Asignación",
+        "before": "MXCD09",
+        "after": "OUTBOUND"
+      },
+      {
+        "label": "Comentarios",
+        "before": "En stock dentro del MDF (Pichonera)",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T15:05:42.564Z"
+  },
+  {
     "sn": "24191524209171",
     "device": "Handheld ZEBRA",
     "area": "MXCD09",
@@ -603,18 +637,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-23T15:03:32.786Z"
-  },
-  {
-    "sn": "24191524209179",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-23T15:03:32.276Z"
   },
   {
     "sn": "24248524204588",
