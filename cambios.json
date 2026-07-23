@@ -8,12 +8,24 @@
     "_changedTs": "2026-07-23T15:03:29.345Z"
   },
   "24191524209179": {
-    "ESTATUS FISICO": "On Loan",
-    "Status in Arturito": "On Loan",
-    "AREA": "MXCD09",
-    "ASIGNACIÓN": "MXCD09",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "OUTBOUND",
     "_changedBy": "André Jael Castillo Diaz",
-    "_changedTs": "2026-07-23T15:03:29.345Z"
+    "_changedTs": "2026-07-23T15:05:41.466Z",
+    "S/N": "24191524209179",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "ZEBRA",
+    "MODELO": "TC520K",
+    "IP": "10.9.96.242",
+    "MAC": "C8:1C:FE:EA:FE:24",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "14.0.0",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": ""
   },
   "24191524208850": {
     "ESTATUS FISICO": "On Loan",
