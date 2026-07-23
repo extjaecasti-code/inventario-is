@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24243524206955",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T15:04:21.615Z"
+  },
+  {
+    "sn": "24191524208907",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T15:04:21.122Z"
+  },
+  {
     "sn": "24243524208239",
     "device": "",
     "area": "",
@@ -4721,33 +4745,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:17:07.127Z"
-  },
-  {
-    "sn": "XXRBN220600049",
-    "device": "Impresora ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:17:04.053Z"
-  },
-  {
-    "sn": "HKVCZH3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:16:48.792Z"
   }
 ]
