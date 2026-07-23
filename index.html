@@ -4618,7 +4618,7 @@ async function saveBulkStatus() {
 
 // ── SALIDA PDF ────────────────────────────────────────────────────────────
 function openSalidaModal() {
-  const step2Items = warranties.filter(w => w.step2 && !w.step4 && !w.step4b);
+  const step2Items = warranties.filter(w => w.step1 && !w.step2 && !w.step4 && !w.step4b);
   const list = document.getElementById('salidaEquiposList');
   const noEq = document.getElementById('salidaNoEquipos');
   document.getElementById('salidaReceiver').value = '';
@@ -4661,7 +4661,7 @@ function updateSalidaCount() {
 }
 
 function getSelectedSalidaItems() {
-  const step2Items = warranties.filter(w => w.step2 && !w.step4 && !w.step4b);
+  const step2Items = warranties.filter(w => w.step1 && !w.step2 && !w.step4 && !w.step4b);
   const selected = [];
   document.querySelectorAll('.salida-chk:checked').forEach(chk => {
     const idx = parseInt(chk.getAttribute('data-idx'));
