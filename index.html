@@ -4843,7 +4843,25 @@ async function generateSalidaPDF() {
   const fname = 'Salida_Dataware_' + now.toISOString().slice(0,10) + '.pdf';
   doc.save(fname);
   document.getElementById('salidaOverlay').classList.remove('open');
-  showToast('PDF generado: ' + fname, 'success');
+
+  // Auto-register step2 for selected items that don't have it yet
+  let registered = 0;
+  for(const w of step2Items) {
+    if(!w.step2) {
+      const ts = new Date().toISOString();
+      w.step2   = nowStr();
+      w.step2ts = ts;
+      w.step2by = currentUser;
+      registered++;
+    }
+  }
+  if(registered > 0) {
+    await saveWarranties();
+    renderGarantias();
+    showToast('PDF generado y paso 2 registrado para ' + registered + ' equipo(s) ✓', 'success');
+  } else {
+    showToast('PDF generado: ' + fname, 'success');
+  }
 }
 
 </script>
