@@ -1,5 +1,17 @@
 [
   {
+    "sn": "25288524209668",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T13:48:30.170Z"
+  },
+  {
     "sn": "25288524210783",
     "device": "",
     "area": "",
@@ -522,20 +534,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-21T22:10:09.072Z"
-  },
-  {
-    "sn": "25288524209668",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-21T22:10:07.577Z"
   },
   {
     "sn": "25280524206288",
