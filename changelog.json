@@ -1,5 +1,46 @@
 [
   {
+    "sn": "24191524209171",
+    "device": "Handheld ZEBRA",
+    "area": "MXCD09",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "On Loan"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      },
+      {
+        "label": "Área",
+        "before": "INBOUND",
+        "after": "MXCD09"
+      },
+      {
+        "label": "Asignación",
+        "before": "INBOUND",
+        "after": "MXCD09"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T15:05:18.969Z"
+  },
+  {
+    "sn": "24255524200535",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T15:04:22.802Z"
+  },
+  {
     "sn": "24243524206955",
     "device": "",
     "area": "",
@@ -4717,33 +4758,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:17:13.473Z"
-  },
-  {
-    "sn": "24072010559331",
-    "device": "Scanner ZEBRA",
-    "area": "LOSS PREVENTION",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:17:10.196Z"
-  },
-  {
-    "sn": "XXRBN220600249",
-    "device": "Impresora ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:17:07.127Z"
   }
 ]
