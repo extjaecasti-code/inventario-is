@@ -4774,15 +4774,34 @@ async function generateSalidaPDF() {
     cx = ML + 2;
     const vals = [tipo, marca, modelo, w.sn, w.motivo||'—'];
     const widths = [cols.tipo, cols.marca, cols.modelo, cols.sn, cols.falla];
+    let rowH = 7;
+    // Pre-calculate row height based on falla text wrapping
+    const fallaText = vals[4] || '';
+    const fallaLines = doc.splitTextToSize(fallaText, widths[4] - 3);
+    if(fallaLines.length > 1) rowH = 5 + fallaLines.length * 4.5;
+
+    // Redraw background with correct height
+    doc.setFillColor(...bg);
+    doc.rect(ML, y, tableW, rowH, 'F');
+    doc.setDrawColor(220,220,220); doc.setLineWidth(0.3);
+    doc.rect(ML, y, tableW, rowH);
+
+    doc.setTextColor(51,51,51);
+    cx = ML + 2;
     vals.forEach((v, i) => {
-      const maxW = widths[i] - 3;
-      const truncated = doc.getStringUnitWidth(v) * 8 / doc.internal.scaleFactor > maxW
-        ? v.slice(0, Math.floor(maxW * doc.internal.scaleFactor / (8/doc.internal.scaleFactor))) + '...'
-        : v;
-      doc.text(truncated, cx, y + 4.8);
+      if(i === 4) {
+        // Falla column - wrap text
+        const lines = doc.splitTextToSize(v, widths[i] - 3);
+        doc.text(lines, cx, y + 4.8, {lineHeightFactor: 1.2});
+      } else {
+        // Other columns - single line, truncate if needed
+        const maxW = widths[i] - 3;
+        const lines = doc.splitTextToSize(v, maxW);
+        doc.text(lines[0] || v, cx, y + 4.8);
+      }
       cx += widths[i];
     });
-    y += 7;
+    y += rowH;
   });
   y += 6;
 
