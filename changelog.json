@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24255524200477",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T15:04:03.453Z"
+  },
+  {
+    "sn": "24255524200519",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T15:04:03.009Z"
+  },
+  {
     "sn": "24255524200585",
     "device": "",
     "area": "",
@@ -4753,33 +4777,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:12:10.477Z"
-  },
-  {
-    "sn": "XXASB252200886",
-    "device": "Cargador Batería Zebra",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:12:07.193Z"
-  },
-  {
-    "sn": "XXASB252200885",
-    "device": "Cargador Batería Zebra",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:12:03.616Z"
   }
 ]
