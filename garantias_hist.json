@@ -142,5 +142,28 @@
     "step4bts": "2026-07-16T03:14:38.459Z",
     "step4bby": "André Jael Castillo Diaz",
     "finalStatus": "In Stock"
+  },
+  {
+    "id": 1782579057406,
+    "sn": "24249524203167",
+    "device": "Handheld ZEBRA TC520K",
+    "area": "OUTBOUND",
+    "motivo": "",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-06-27T16:50:57.406Z",
+    "prevCount": 0,
+    "step1": "27/06/26, 10:55 a.m.",
+    "step1ts": "2026-06-27T16:55:34.311Z",
+    "step2": "09/07/26, 1:37 p.m.",
+    "step2ts": "2026-07-09T19:37:13.874Z",
+    "step3": "23/07/26, 1:27 p.m.",
+    "step3ts": "2026-07-23T19:27:25.579Z",
+    "step4": "23/07/26, 4:59 p.m.",
+    "step4ts": "2026-07-23T22:59:36.455Z",
+    "step1by": "André Jael Castillo Diaz",
+    "step2by": "Luis Eduardo Avalos Garcia",
+    "step3by": "André Jael Castillo Diaz",
+    "step4by": "Luis Eduardo Avalos Garcia",
+    "finalStatus": "In Use"
   }
 ]
