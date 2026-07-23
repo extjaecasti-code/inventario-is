@@ -1,5 +1,41 @@
 [
   {
+    "sn": "24248524205094",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:49.421Z"
+  },
+  {
+    "sn": "24324524208809",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:48.773Z"
+  },
+  {
+    "sn": "24243524208282",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:48.251Z"
+  },
+  {
     "sn": "24248524204861",
     "device": "",
     "area": "",
@@ -1305,20 +1341,6 @@
     "ts": "2026-07-15T02:06:55.094Z"
   },
   {
-    "sn": "24248524205094",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-15T02:06:52.965Z"
-  },
-  {
     "sn": "24249524203305",
     "device": "",
     "area": "",
@@ -2145,20 +2167,6 @@
     "ts": "2026-07-15T02:05:52.977Z"
   },
   {
-    "sn": "24324524208809",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-15T02:05:51.777Z"
-  },
-  {
     "sn": "24348524216735",
     "device": "",
     "area": "",
@@ -2185,20 +2193,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-15T02:05:49.625Z"
-  },
-  {
-    "sn": "24243524208282",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-15T02:05:48.442Z"
   },
   {
     "sn": "24312523020338",
