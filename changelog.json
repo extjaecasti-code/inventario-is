@@ -1,5 +1,17 @@
 [
   {
+    "sn": "24249524203170",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T15:03:41.676Z"
+  },
+  {
     "sn": "24255524200589",
     "device": "",
     "area": "",
@@ -4809,19 +4821,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:03:40.208Z"
-  },
-  {
-    "sn": "24031523700824",
-    "device": "Cargador HH ZEBRA",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T15:38:31.850Z"
   }
 ]
