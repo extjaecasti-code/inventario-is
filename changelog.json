@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24255524200560",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T15:03:43.274Z"
+  },
+  {
+    "sn": "24320524202097",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T15:03:42.797Z"
+  },
+  {
     "sn": "24249524203170",
     "device": "",
     "area": "",
@@ -4793,33 +4817,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:04:18.819Z"
-  },
-  {
-    "sn": "24031523700842",
-    "device": "Cargador HH ZEBRA",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:04:02.248Z"
-  },
-  {
-    "sn": "24031523700834",
-    "device": "Cargador HH ZEBRA",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:03:40.208Z"
   }
 ]
