@@ -1,5 +1,17 @@
 [
   {
+    "sn": "24255524200486",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T15:04:09.335Z"
+  },
+  {
     "sn": "24255524200523",
     "device": "",
     "area": "",
@@ -4755,19 +4767,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:12:27.980Z"
-  },
-  {
-    "sn": "XXASB252201005",
-    "device": "Cargador Batería Zebra",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:12:24.701Z"
   }
 ]
