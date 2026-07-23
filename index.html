@@ -70,6 +70,7 @@ select{cursor:pointer;min-width:140px;}
 .stat-card.active-repair{border-color:var(--yellow-s);background:var(--yellow-bg);}
 .stat-card.active-retired{border-color:var(--red);background:var(--red-bg);}
 .stat-card.active-missed{border-color:var(--purple);background:var(--purple-bg);}
+.stat-card.active-onloan{border-color:#E91E8C;background:#FFE4F0;}
 .stat-label{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.8px;font-weight:600;}
 .stat-val{font-size:24px;font-weight:700;}
 .stat-val.blue{color:var(--ml-blue);}.stat-val.green{color:var(--green);}.stat-val.yellow{color:var(--yellow-s);}.stat-val.red{color:var(--red);}.stat-val.purple{color:var(--purple);}.stat-val.gray{color:var(--text2);}
@@ -345,6 +346,7 @@ tbody tr:hover .row-actions{opacity:1;}
 .chip.yes{background:var(--green-bg);color:var(--green);}
 .chip.no{background:var(--red-bg);color:var(--red);}
 .chip.pending{background:#F0F0F0;color:var(--text3);}
+.chip.on-loan,.badge.on-loan{background:#FFE4F0;color:#E91E8C;border-color:#F48FB1;}
 
 /* ── CHART ── */
 .chart-section{padding:0 24px 16px;}
@@ -561,6 +563,7 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
     <div class="stat-card" id="sc-repair" onclick="filterByStat('In repair')"><div class="stat-label">In Repair</div><div class="stat-val yellow" id="sRepair">—</div></div>
     <div class="stat-card" id="sc-retired" onclick="filterByStat('Retired')"><div class="stat-label">Retired</div><div class="stat-val red" id="sRetired">—</div></div>
     <div class="stat-card" id="sc-missed" onclick="filterByStat('Missed')"><div class="stat-label">Missed</div><div class="stat-val purple" id="sMissed">—</div></div>
+    <div class="stat-card" id="sc-onloan" onclick="filterByStat('On Loan')" style="border-top:3px solid #E91E8C"><div class="stat-label" style="color:#E91E8C">On Loan</div><div class="stat-val" id="sOnLoan" style="color:#E91E8C">—</div></div>
   </div>
   <div class="table-container">
     <div class="table-card">
@@ -1685,6 +1688,7 @@ function getStatusClass(s){
   if(l==='in repair')return'in-repair';
   if(l==='retired')return'retired';
   if(l==='missed')return'missed';
+  if(l==='on loan')return'on-loan';
   return'unknown';
 }
 function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
@@ -1722,6 +1726,7 @@ function updateStats(){
   document.getElementById('sRepair').textContent=data.filter(r=>r['ESTATUS FISICO']==='In repair').length.toLocaleString();
   document.getElementById('sRetired').textContent=data.filter(r=>r['ESTATUS FISICO']==='Retired').length.toLocaleString();
   document.getElementById('sMissed').textContent=data.filter(r=>r['ESTATUS FISICO']==='Missed').length.toLocaleString();
+  const olEl=document.getElementById('sOnLoan'); if(olEl) olEl.textContent=data.filter(r=>r['ESTATUS FISICO']==='On Loan').length.toLocaleString();
   document.getElementById('hTotal').textContent=data.length.toLocaleString();
   document.getElementById('hFiltered').textContent=filtered.length.toLocaleString();
 }
@@ -1948,13 +1953,13 @@ function filterByStat(status){
   // Update select
   document.getElementById('filterStatus').value = status;
   // Clear active states on all cards
-  ['sc-total','sc-inuse','sc-instock','sc-repair','sc-retired','sc-missed'].forEach(id=>{
+  ['sc-total','sc-inuse','sc-instock','sc-repair','sc-retired','sc-missed','sc-onloan'].forEach(id=>{
     const el=document.getElementById(id);
-    el.classList.remove('active','active-total','active-inuse','active-instock','active-repair','active-retired','active-missed');
+    el.classList.remove('active','active-total','active-inuse','active-instock','active-repair','active-retired','active-missed','active-onloan');
   });
   // Set active on clicked card
-  const map={'':'sc-total','In Use':'sc-inuse','In Stock':'sc-instock','In repair':'sc-repair','Retired':'sc-retired','Missed':'sc-missed'};
-  const activeClass={'':'active-total','In Use':'active-inuse','In Stock':'active-instock','In repair':'active-repair','Retired':'active-retired','Missed':'active-missed'};
+  const map={'':'sc-total','In Use':'sc-inuse','In Stock':'sc-instock','In repair':'sc-repair','Retired':'sc-retired','Missed':'sc-missed','On Loan':'sc-onloan'};
+  const activeClass={'':'active-total','In Use':'active-inuse','In Stock':'active-instock','In repair':'active-repair','Retired':'active-retired','Missed':'active-missed','On Loan':'active-onloan'};
   const card=document.getElementById(map[status]);
   if(card){card.classList.add('active',activeClass[status]);}
   // Apply filter
