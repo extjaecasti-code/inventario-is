@@ -1,26 +1,5 @@
 [
   {
-    "id": 1782579043183,
-    "sn": "24248524205164",
-    "device": "Handheld ZEBRA TC520K",
-    "area": "OUTBOUND",
-    "motivo": "",
-    "addedBy": "André Jael Castillo Diaz",
-    "addedTs": "2026-06-27T16:50:43.183Z",
-    "prevCount": 0,
-    "step1": "27/06/26, 10:55 a.m.",
-    "step1ts": "2026-06-27T16:55:32.098Z",
-    "step2": "09/07/26, 1:37 p.m.",
-    "step2ts": "2026-07-09T19:37:02.606Z",
-    "step3": "23/07/26, 1:27 p.m.",
-    "step3ts": "2026-07-23T19:27:18.721Z",
-    "step4": null,
-    "step4ts": null,
-    "step1by": "André Jael Castillo Diaz",
-    "step2by": "Luis Eduardo Avalos Garcia",
-    "step3by": "André Jael Castillo Diaz"
-  },
-  {
     "id": 1782579067083,
     "sn": "24248524205187",
     "device": "Handheld ZEBRA TC520K",
