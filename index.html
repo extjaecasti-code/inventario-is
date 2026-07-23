@@ -71,6 +71,12 @@ select{cursor:pointer;min-width:140px;}
 .stat-card.active-retired{border-color:var(--red);background:var(--red-bg);}
 .stat-card.active-missed{border-color:var(--purple);background:var(--purple-bg);}
 .stat-card.active-onloan{border-color:#E91E8C;background:#FFE4F0;}
+/* ── SALIDA PDF MODAL ── */
+.salida-equipo-item{display:flex;align-items:center;gap:8px;padding:7px 10px;background:var(--surface2);border-radius:6px;margin-bottom:5px;font-size:12px;}
+.salida-equipo-sn{font-family:monospace;font-weight:700;color:var(--ml-blue);min-width:160px;}
+.salida-equipo-dev{color:var(--text2);flex:1;}
+.salida-equipo-falla{color:var(--text3);font-style:italic;font-size:11px;}
+
 .stat-label{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.8px;font-weight:600;}
 .stat-val{font-size:24px;font-weight:700;}
 .stat-val.blue{color:var(--ml-blue);}.stat-val.green{color:var(--green);}.stat-val.yellow{color:var(--yellow-s);}.stat-val.red{color:var(--red);}.stat-val.purple{color:var(--purple);}.stat-val.gray{color:var(--text2);}
@@ -930,6 +936,10 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
         <h2 style="font-size:18px;font-weight:700;color:var(--text)">🛡️ Gestión de Garantías</h2>
         <p style="font-size:12px;color:var(--text3);margin-top:4px">Seguimiento del flujo completo de equipos en garantía</p>
       </div>
+      <button class="btn btn-ghost" onclick="openSalidaModal()" style="color:#E02020;border-color:rgba(224,32,32,.3)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Generar Salida PDF
+      </button>
       <button class="btn btn-primary" onclick="openAddWarranty()">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         Agregar Equipo
@@ -1452,6 +1462,55 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
       <button class="btn btn-primary" id="bsuSaveBtn" onclick="saveBulkStatus()">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
         Actualizar Todos
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- SALIDA PDF MODAL -->
+<div class="overlay" id="salidaOverlay" onclick="closeModal(event)">
+  <div class="modal" style="max-width:520px">
+    <div class="modal-header">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E02020" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <h2>Generar Formato de Salida — Dataware</h2>
+    </div>
+    <p style="font-size:12px;color:var(--text3);margin-bottom:14px">Selecciona los equipos a incluir y completa los datos del proveedor.</p>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <div class="form-group" style="flex:1;min-width:180px;margin-bottom:12px">
+        <label>Proveedor / Centro de Reparación *</label>
+        <input id="salidaProveedor" placeholder="Ej: Dataware, iService..." autocomplete="off">
+      </div>
+      <div class="form-group" style="flex:1;min-width:180px;margin-bottom:12px">
+        <label>Nombre de quien recibe *</label>
+        <input id="salidaReceiver" placeholder="Ej: Alfredo Gonzalez" autocomplete="off">
+      </div>
+    </div>
+    <div class="form-group" style="margin-bottom:14px">
+      <label>Motivo de salida</label>
+      <input id="salidaMotivo" value="Revisión técnica / Garantía">
+    </div>
+
+    <!-- Equipment checkboxes -->
+    <div style="margin-bottom:14px">
+      <div style="font-size:12px;font-weight:700;color:var(--text2);margin-bottom:6px;display:flex;align-items:center;justify-content:space-between">
+        <span>Selecciona los equipos a incluir:</span>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-ghost" style="font-size:11px;padding:3px 10px" onclick="salidaSelectAll(true)">Todos</button>
+          <button class="btn btn-ghost" style="font-size:11px;padding:3px 10px" onclick="salidaSelectAll(false)">Ninguno</button>
+        </div>
+      </div>
+      <div id="salidaEquiposList" style="max-height:220px;overflow-y:auto;border:1px solid var(--border);border-radius:8px;padding:6px"></div>
+      <div id="salidaNoEquipos" style="display:none;text-align:center;padding:16px;color:var(--text3);font-size:12px">No hay equipos en paso 2 (Se va a garantía)</div>
+      <div id="salidaSelectedCount" style="font-size:11px;color:var(--text3);margin-top:6px;text-align:right"></div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="document.getElementById('salidaOverlay').classList.remove('open')">Cancelar</button>
+      <button class="btn btn-primary" style="background:#E02020" onclick="generateSalidaPDF()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Generar PDF
       </button>
     </div>
   </div>
@@ -4555,6 +4614,236 @@ async function saveBulkStatus() {
   btn.disabled = false;
   btn.innerHTML = 'Actualizar Todos';
   document.getElementById('bsuProgressWrap').style.display = 'none';
+}
+
+// ── SALIDA PDF ────────────────────────────────────────────────────────────
+function openSalidaModal() {
+  const step2Items = warranties.filter(w => w.step2 && !w.step4 && !w.step4b);
+  const list = document.getElementById('salidaEquiposList');
+  const noEq = document.getElementById('salidaNoEquipos');
+  document.getElementById('salidaReceiver').value = '';
+  document.getElementById('salidaProveedor').value = '';
+  document.getElementById('salidaMotivo').value = 'Revisión técnica / Garantía';
+  document.getElementById('salidaSelectedCount').textContent = '';
+
+  if(!step2Items.length) {
+    list.innerHTML = '';
+    noEq.style.display = '';
+  } else {
+    noEq.style.display = 'none';
+    list.innerHTML = step2Items.map((w, i) =>
+      '<label style="display:flex;align-items:flex-start;gap:8px;padding:7px 8px;cursor:pointer;border-radius:5px">' +
+      '<input type="checkbox" class="salida-chk" data-idx="' + i + '" checked style="margin-top:2px;flex-shrink:0" onchange="updateSalidaCount()">' +
+      '<div style="flex:1;min-width:0">' +
+        '<div style="display:flex;align-items:center;gap:8px">' +
+          '<span class="salida-equipo-sn">' + esc(w.sn) + '</span>' +
+          '<span class="salida-equipo-dev">' + esc(w.device) + '</span>' +
+        '</div>' +
+        '<div class="salida-equipo-falla" style="margin-top:2px">' + esc(w.motivo||'Sin motivo registrado') + '</div>' +
+      '</div>' +
+      '</label>'
+    ).join('');
+    updateSalidaCount();
+  }
+
+  document.getElementById('salidaOverlay').classList.add('open');
+}
+
+function salidaSelectAll(val) {
+  document.querySelectorAll('.salida-chk').forEach(c => c.checked = val);
+  updateSalidaCount();
+}
+
+function updateSalidaCount() {
+  const total = document.querySelectorAll('.salida-chk').length;
+  const selected = document.querySelectorAll('.salida-chk:checked').length;
+  document.getElementById('salidaSelectedCount').textContent = selected + ' de ' + total + ' equipo(s) seleccionado(s)';
+}
+
+function getSelectedSalidaItems() {
+  const step2Items = warranties.filter(w => w.step2 && !w.step4 && !w.step4b);
+  const selected = [];
+  document.querySelectorAll('.salida-chk:checked').forEach(chk => {
+    const idx = parseInt(chk.getAttribute('data-idx'));
+    if(step2Items[idx]) selected.push(step2Items[idx]);
+  });
+  return selected;
+}
+
+async function generateSalidaPDF() {
+  const receiver   = document.getElementById('salidaReceiver').value.trim();
+  const proveedor  = document.getElementById('salidaProveedor').value.trim();
+  if(!receiver)  { showToast('Ingresa el nombre de quien recibe', 'error'); return; }
+  if(!proveedor) { showToast('Ingresa el nombre del proveedor', 'error'); return; }
+
+  const motivo = document.getElementById('salidaMotivo').value.trim() || 'Revisión técnica / Garantía';
+  const step2Items = getSelectedSalidaItems();
+
+  if(!step2Items.length) { showToast('Selecciona al menos un equipo', 'error'); return; }
+
+  const { jsPDF } = window.jspdf;
+  if(!jsPDF) { showToast('Librería PDF no disponible', 'error'); return; }
+
+  const now = new Date();
+  const fechaStr = now.toLocaleDateString('es-MX', {day:'numeric', month:'long', year:'numeric'});
+  const horaStr  = now.toLocaleTimeString('es-MX', {hour:'2-digit', minute:'2-digit'});
+
+  const doc = new jsPDF({orientation:'portrait', unit:'mm', format:'a4'});
+  const W = doc.internal.pageSize.getWidth();
+  const H = doc.internal.pageSize.getHeight();
+  const ML = 20, MR = 20, MT = 20;
+  let y = MT;
+
+  // ── Header ──
+  // Yellow bar
+  doc.setFillColor(255,230,0);
+  doc.rect(0, 0, W, 18, 'F');
+  doc.setFontSize(13); doc.setFont('helvetica','bold'); doc.setTextColor(52,131,250);
+  doc.text('MERCADO LIBRE — MXCD11', ML, 8);
+  doc.setFontSize(9); doc.setFont('helvetica','normal'); doc.setTextColor(80,80,80);
+  doc.text('Formato de Salida de Equipo', ML, 14);
+  doc.setFontSize(9); doc.setTextColor(80,80,80);
+  doc.text(fechaStr + ' ' + horaStr, W - MR, 14, {align:'right'});
+
+  y = 28;
+
+  // ── Section 1: Información General ──
+  doc.setFontSize(11); doc.setFont('helvetica','bold'); doc.setTextColor(51,51,51);
+  doc.text('1. Información General', ML, y); y += 5;
+  doc.setDrawColor(255,230,0); doc.setLineWidth(1.5);
+  doc.line(ML, y, W-MR, y); y += 6;
+
+  doc.setFontSize(9.5); doc.setFont('helvetica','normal'); doc.setTextColor(51,51,51);
+  doc.text('A continuación se detalla la salida de activos del site MXCD11 gestionada por el área de Internal System.', ML, y, {maxWidth: W-ML-MR}); y += 10;
+
+  const info = [
+    ['Fecha:', fechaStr],
+    ['Hora:', horaStr],
+    ['Área de Origen:', 'Internal System'],
+    ['Responsable de Entrega:', currentUser],
+  ];
+  info.forEach(([label, value]) => {
+    doc.setFont('helvetica','bold'); doc.setFontSize(9);
+    doc.text(label, ML, y);
+    doc.setFont('helvetica','normal');
+    doc.text(value, ML + 48, y);
+    y += 6;
+  });
+  y += 4;
+
+  // ── Section 2: Datos del Equipo ──
+  doc.setFontSize(11); doc.setFont('helvetica','bold'); doc.setTextColor(51,51,51);
+  doc.text('2. Datos del Equipo', ML, y); y += 5;
+  doc.setDrawColor(255,230,0); doc.setLineWidth(1.5);
+  doc.line(ML, y, W-MR, y); y += 6;
+
+  doc.setFontSize(9); doc.setFont('helvetica','normal'); doc.setTextColor(51,51,51);
+  doc.text('Se hace entrega formal de los siguientes equipos para su revisión técnica o gestión correspondiente:', ML, y, {maxWidth: W-ML-MR}); y += 8;
+
+  // Table header
+  const cols = {tipo:30, marca:30, modelo:30, sn:52, falla:0};
+  const tableW = W - ML - MR;
+  cols.falla = tableW - cols.tipo - cols.marca - cols.modelo - cols.sn;
+
+  doc.setFillColor(255,230,0);
+  doc.rect(ML, y, tableW, 7, 'F');
+  doc.setFont('helvetica','bold'); doc.setFontSize(8); doc.setTextColor(51,51,51);
+  let cx = ML + 2;
+  ['Tipo de Equipo','Marca','Modelo','Número de Serie','Falla Reportada'].forEach((h, i) => {
+    const w = [cols.tipo, cols.marca, cols.modelo, cols.sn, cols.falla][i];
+    doc.text(h, cx, y + 4.8);
+    cx += w;
+  });
+  y += 7;
+
+  // Table rows
+  doc.setFont('helvetica','normal'); doc.setFontSize(8);
+  step2Items.forEach((w, idx) => {
+    const devParts = w.device.split(' ');
+    const tipo   = devParts[0] || '—';
+    const marca  = devParts[1] || '—';
+    const modelo = devParts.slice(2).join(' ') || '—';
+
+    const bg = idx % 2 === 0 ? [247,247,247] : [255,255,255];
+    doc.setFillColor(...bg);
+    doc.rect(ML, y, tableW, 7, 'F');
+    doc.setDrawColor(220,220,220); doc.setLineWidth(0.3);
+    doc.rect(ML, y, tableW, 7);
+
+    doc.setTextColor(51,51,51);
+    cx = ML + 2;
+    const vals = [tipo, marca, modelo, w.sn, w.motivo||'—'];
+    const widths = [cols.tipo, cols.marca, cols.modelo, cols.sn, cols.falla];
+    vals.forEach((v, i) => {
+      const maxW = widths[i] - 3;
+      const truncated = doc.getStringUnitWidth(v) * 8 / doc.internal.scaleFactor > maxW
+        ? v.slice(0, Math.floor(maxW * doc.internal.scaleFactor / (8/doc.internal.scaleFactor))) + '...'
+        : v;
+      doc.text(truncated, cx, y + 4.8);
+      cx += widths[i];
+    });
+    y += 7;
+  });
+  y += 6;
+
+  if(y > H - 80) { doc.addPage(); y = MT; }
+
+  // ── Section 3: Destino ──
+  doc.setFontSize(11); doc.setFont('helvetica','bold'); doc.setTextColor(51,51,51);
+  doc.text('3. Destino de Envío', ML, y); y += 5;
+  doc.setDrawColor(255,230,0); doc.setLineWidth(1.5);
+  doc.line(ML, y, W-MR, y); y += 6;
+
+  doc.setFontSize(9); doc.setFont('helvetica','normal'); doc.setTextColor(51,51,51);
+  doc.text('El equipo mencionado anteriormente será entregado al proveedor de servicios para su procesamiento.', ML, y, {maxWidth: W-ML-MR}); y += 8;
+
+  [['Proveedor / Centro de Reparación:', proveedor], ['Contacto:', receiver], ['Motivo de Salida:', motivo]].forEach(([l,v]) => {
+    doc.setFont('helvetica','bold'); doc.text(l, ML, y);
+    doc.setFont('helvetica','normal'); doc.text(v, ML + 62, y);
+    y += 6;
+  });
+  y += 8;
+
+  if(y > H - 70) { doc.addPage(); y = MT; }
+
+  // ── Section 4: Responsables ──
+  doc.setFontSize(11); doc.setFont('helvetica','bold'); doc.setTextColor(51,51,51);
+  doc.text('4. Responsables', ML, y); y += 5;
+  doc.setDrawColor(255,230,0); doc.setLineWidth(1.5);
+  doc.line(ML, y, W-MR, y); y += 8;
+
+  const halfW = (W - ML - MR - 10) / 2;
+
+  // Boxes
+  doc.setDrawColor(200,200,200); doc.setLineWidth(0.5);
+  doc.rect(ML, y, halfW, 35);
+  doc.rect(ML + halfW + 10, y, halfW, 35);
+
+  doc.setFontSize(9); doc.setFont('helvetica','bold'); doc.setTextColor(51,51,51);
+  doc.text('Entrega (Internal System)', ML + 3, y + 6);
+  doc.text('Recibe (Mensajería / Proveedor)', ML + halfW + 13, y + 6);
+
+  doc.setFont('helvetica','normal'); doc.setFontSize(9);
+  doc.text('Nombre: ' + currentUser, ML + 3, y + 14);
+  doc.text('Nombre: ' + receiver, ML + halfW + 13, y + 14);
+
+  doc.text('Firma:', ML + 3, y + 22);
+  doc.setDrawColor(100,100,100); doc.setLineWidth(0.5);
+  doc.line(ML + 16, y + 22, ML + halfW - 5, y + 22);
+  doc.text('Firma:', ML + halfW + 13, y + 22);
+  doc.line(ML + halfW + 26, y + 22, ML + halfW*2 + 5, y + 22);
+
+  // Footer
+  doc.setFillColor(255,230,0);
+  doc.rect(0, H-10, W, 10, 'F');
+  doc.setFontSize(7); doc.setFont('helvetica','normal'); doc.setTextColor(100,100,100);
+  doc.text('Mercado Libre — Inventario IS MXCD11 — Confidencial', ML, H-5);
+  doc.text('Generado: ' + fechaStr + ' ' + horaStr, W-MR, H-5, {align:'right'});
+
+  const fname = 'Salida_Dataware_' + now.toISOString().slice(0,10) + '.pdf';
+  doc.save(fname);
+  document.getElementById('salidaOverlay').classList.remove('open');
+  showToast('PDF generado: ' + fname, 'success');
 }
 
 </script>
