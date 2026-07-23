@@ -1,5 +1,41 @@
 [
   {
+    "sn": "24255524200508",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:43.279Z"
+  },
+  {
+    "sn": "24249524203383",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:42.666Z"
+  },
+  {
+    "sn": "24255524200425",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:42.055Z"
+  },
+  {
     "sn": "24242524204741",
     "device": "",
     "area": "",
@@ -1219,20 +1255,6 @@
     "ts": "2026-07-15T02:06:57.690Z"
   },
   {
-    "sn": "24255524200425",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-15T02:06:56.640Z"
-  },
-  {
     "sn": "24249524203176",
     "device": "",
     "area": "",
@@ -1259,20 +1281,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-15T02:06:55.094Z"
-  },
-  {
-    "sn": "24249524203383",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-15T02:06:54.140Z"
   },
   {
     "sn": "24248524205094",
@@ -2127,20 +2135,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-15T02:05:54.954Z"
-  },
-  {
-    "sn": "24255524200508",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-15T02:05:53.967Z"
   },
   {
     "sn": "24250524206572",
