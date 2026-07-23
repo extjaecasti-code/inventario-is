@@ -165,5 +165,28 @@
     "step3by": "André Jael Castillo Diaz",
     "step4by": "Luis Eduardo Avalos Garcia",
     "finalStatus": "In Use"
+  },
+  {
+    "id": 1783462485701,
+    "sn": "24243524208307",
+    "device": "Handheld ZEBRA TC520K",
+    "area": "OUTBOUND",
+    "motivo": "Pantalla estrellada",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-07-07T22:14:45.701Z",
+    "prevCount": 0,
+    "step1": "07/07/26, 4:14 p.m.",
+    "step1ts": "2026-07-07T22:14:50.074Z",
+    "step2": "09/07/26, 1:38 p.m.",
+    "step2ts": "2026-07-09T19:38:58.301Z",
+    "step3": "23/07/26, 1:27 p.m.",
+    "step3ts": "2026-07-23T19:27:45.618Z",
+    "step4": "23/07/26, 4:59 p.m.",
+    "step4ts": "2026-07-23T22:59:54.590Z",
+    "step1by": "André Jael Castillo Diaz",
+    "step2by": "Luis Eduardo Avalos Garcia",
+    "step3by": "André Jael Castillo Diaz",
+    "step4by": "Luis Eduardo Avalos Garcia",
+    "finalStatus": "In Use"
   }
 ]
