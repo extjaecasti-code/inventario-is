@@ -234,5 +234,28 @@
     "step3by": "André Jael Castillo Diaz",
     "step4by": "Luis Eduardo Avalos Garcia",
     "finalStatus": "In Use"
+  },
+  {
+    "id": 1783434558947,
+    "sn": "XXRBN244003708",
+    "device": "Impresora Zebra ZQ521",
+    "area": "ACTIVO FIJO",
+    "motivo": "Display roto",
+    "addedBy": "Luis Eduardo Avalos Garcia",
+    "addedTs": "2026-07-07T14:29:18.948Z",
+    "prevCount": 0,
+    "step1": "07/07/26, 8:29 a.m.",
+    "step1ts": "2026-07-07T14:29:26.554Z",
+    "step2": "09/07/26, 1:38 p.m.",
+    "step2ts": "2026-07-09T19:38:43.777Z",
+    "step3": "23/07/26, 1:28 p.m.",
+    "step3ts": "2026-07-23T19:28:00.514Z",
+    "step4": "24/07/26, 9:27 a.m.",
+    "step4ts": "2026-07-24T15:27:40.865Z",
+    "step1by": "Luis Eduardo Avalos Garcia",
+    "step2by": "Luis Eduardo Avalos Garcia",
+    "step3by": "André Jael Castillo Diaz",
+    "step4by": "André Jael Castillo Diaz",
+    "finalStatus": "In Use"
   }
 ]
