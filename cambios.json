@@ -4,5 +4,23 @@
     "Status in Arturito": "In Use",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-07-24T15:38:00.371Z"
+  },
+  "__new__TH0HRR76CHG0047V0LZCA00": {
+    "S/N": "TH0HRR76CHG0047V0LZCA00",
+    "ESTATUS FISICO": "In repair",
+    "Categoría": "Accesorio",
+    "DISPOSITIVO": "Cargador",
+    "MARCA": "DELL",
+    "MODELO": "NA",
+    "AREA": "LI",
+    "ASIGNACIÓN": "LOGISTICA I.",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "",
+    "Status in Arturito": "In repair"
   }
 }
