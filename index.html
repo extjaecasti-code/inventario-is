@@ -3997,7 +3997,7 @@ async function saveAddWarranty() {
   if(idx >= 0) {
     data[idx]['ESTATUS FISICO'] = 'In repair';
     data[idx]['Status in Arturito'] = 'In repair';
-    if(typeof recordChange === 'function') recordChange(sn, {'ESTATUS FISICO':'In repair','Status in Arturito':'In repair'});
+    if(typeof recordChange === 'function') recordChange(sn, {'ESTATUS FISICO':'In repair','Status in Arturito':'In repair','_changedBy':currentUser,'_changedTs':new Date().toISOString()});
     await saveToGitHub('[warranty] ' + sn + ' -> In repair por ' + currentUser);
     applyFilters();
   }
@@ -4039,7 +4039,7 @@ async function pressWarrantyStep(id, step) {
     if(idx >= 0) {
       data[idx]['ESTATUS FISICO'] = finalStatus;
       data[idx]['Status in Arturito'] = finalStatus;
-      if(typeof recordChange === 'function') recordChange(w.sn, {'ESTATUS FISICO':finalStatus,'Status in Arturito':finalStatus});
+      if(typeof recordChange === 'function') recordChange(w.sn, {'ESTATUS FISICO':finalStatus,'Status in Arturito':finalStatus,'_changedBy':currentUser,'_changedTs':new Date().toISOString()});
       await saveToGitHub('[warranty-done] ' + w.sn + ' regresa a ' + finalStatus + ' por ' + currentUser);
       applyFilters();
     }
