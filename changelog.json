@@ -1,5 +1,24 @@
 [
   {
+    "sn": "1081397",
+    "device": "Home Teather Sony",
+    "area": "SALA DE ESTAR",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Categoría",
+        "before": "#N/A",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-24T15:42:49.789Z"
+  },
+  {
     "sn": "TH0HRR76CHG0047V0LZCA00",
     "device": "Cargador DELL",
     "area": "LI",
@@ -4765,19 +4784,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:17:34.770Z"
-  },
-  {
-    "sn": "24173010563042",
-    "device": "Scanner ZEBRA",
-    "area": "LOSS PREVENTION",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:17:31.494Z"
   }
 ]
