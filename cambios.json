@@ -1,8 +1,8 @@
 {
   "1081397": {
     "S/N": "1081397",
-    "ESTATUS FISICO": "In Stock",
-    "Categoría": "",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Otro",
     "DISPOSITIVO": "Home Teather",
     "MARCA": "Sony",
     "MODELO": "SA-WS20R",
@@ -15,9 +15,9 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "",
-    "Status in Arturito": "In Stock",
+    "Status in Arturito": "In Use",
     "_changedBy": "André Jael Castillo Diaz",
-    "_changedTs": "2026-07-24T15:42:48.700Z"
+    "_changedTs": "2026-07-24T15:43:30.561Z"
   },
   "24160523022814": {
     "ESTATUS FISICO": "In Use",
