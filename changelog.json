@@ -6,17 +6,17 @@
     "changes": [
       {
         "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
+        "before": "In Stock",
+        "after": "In Use"
       },
       {
         "label": "Categoría",
-        "before": "#N/A",
-        "after": ""
+        "before": "",
+        "after": "Otro"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-24T15:42:49.789Z"
+    "ts": "2026-07-24T15:43:31.748Z"
   },
   {
     "sn": "TH0HRR76CHG0047V0LZCA00",
