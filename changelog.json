@@ -1,5 +1,19 @@
 [
   {
+    "sn": "TH0HRR76CHG0047V0LZCA00",
+    "device": "Cargador DELL",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Accion",
+        "before": "",
+        "after": "Dispositivo agregado"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-24T15:42:19.144Z"
+  },
+  {
     "sn": "XXRBN253200510",
     "device": "",
     "area": "",
@@ -4765,19 +4779,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:17:31.494Z"
-  },
-  {
-    "sn": "24173010563022",
-    "device": "Scanner ZEBRA",
-    "area": "LOSS PREVENTION",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:17:23.097Z"
   }
 ]
