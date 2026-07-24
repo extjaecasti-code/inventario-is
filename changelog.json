@@ -1,5 +1,17 @@
 [
   {
+    "sn": "XXRBN253201029",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-07-24T00:01:30.155Z"
+  },
+  {
     "sn": "XXRBN244003708",
     "device": "",
     "area": "",
@@ -2953,20 +2965,6 @@
     ],
     "user": "Luis Eduardo Avalos Garcia",
     "ts": "2026-07-07T19:53:31.994Z"
-  },
-  {
-    "sn": "XXRBN253201029",
-    "device": "Impresora ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In repair"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-03T19:41:08.211Z"
   },
   {
     "sn": "24255524200533",
