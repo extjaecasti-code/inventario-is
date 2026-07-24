@@ -1003,6 +1003,7 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
               <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Regreso final</th>
               <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Destino</th>
               <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Días en garantía</th>
+              <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Tiempo libre</th>
               <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Veces enviado</th>
             </tr>
           </thead>
@@ -3872,7 +3873,20 @@ function nowStr() {
 }
 
 function daysBetween(isoA, isoB) {
-  return Math.round(Math.abs(new Date(isoB) - new Date(isoA)) / 86400000);
+  // Try parsing as ISO first, fallback to display format
+  function parseDate(s) {
+    if(!s) return null;
+    // ISO format
+    const d = new Date(s);
+    if(!isNaN(d.getTime())) return d;
+    // Display format: "27/06/26, 10:55 a.m." -> try to parse
+    const m = s.match(/(\d+)\/(\d+)\/(\d+)/);
+    if(m) return new Date(2000 + parseInt(m[3]), parseInt(m[2])-1, parseInt(m[1]));
+    return null;
+  }
+  const a = parseDate(isoA), b = parseDate(isoB);
+  if(!a || !b) return 0;
+  return Math.round(Math.abs(b - a) / 86400000);
 }
 
 // ── LOAD / SAVE ───────────────────────────────────────────────────────────
@@ -4113,6 +4127,9 @@ function renderHistorial() {
   const snCount = {};
   warrantyHist.forEach(h => { snCount[h.sn] = (snCount[h.sn]||0)+1; });
 
+  // Sort by addedTs to find previous entry per SN
+  const histSorted = [...warrantyHist].sort((a,b) => new Date(a.addedTs||0) - new Date(b.addedTs||0));
+
   tbody.innerHTML = [...warrantyHist].reverse().map(h => {
     const finalTs = h.step4bts || h.step4ts;
     const startTs = h.step2ts || h.addedTs;
@@ -4121,6 +4138,23 @@ function renderHistorial() {
     const vecesBadge = veces > 1
       ? `<span class="prev-warranty-badge">${veces}x enviado</span>`
       : '';
+
+    // Calculate "tiempo libre" — days from last return to operation until this entry
+    let tiempoLibre = '—';
+    if(veces > 1) {
+      // Find the previous entry for this SN (chronologically before this one)
+      const prevEntries = histSorted.filter(x => x.sn === h.sn && x.addedTs < h.addedTs);
+      if(prevEntries.length > 0) {
+        const prev = prevEntries[prevEntries.length - 1];
+        const prevFinalTs = prev.step4bts || prev.step4ts;
+        const thisStartTs = h.addedTs;
+        if(prevFinalTs && thisStartTs) {
+          const d = daysBetween(prevFinalTs, thisStartTs);
+          tiempoLibre = d + ' días libres';
+        }
+      }
+    }
+
     return `<tr style="border-bottom:1px solid var(--border)">
       <td style="padding:9px 12px;font-family:monospace;color:var(--ml-blue);font-weight:700">${esc(h.sn)} ${vecesBadge}</td>
       <td style="padding:9px 12px;font-size:12px">${esc(h.device)}</td>
@@ -4131,6 +4165,7 @@ function renderHistorial() {
       <td style="padding:9px 12px;font-size:12px">${esc(h.step4||h.step4b||'—')}</td>
       <td style="padding:9px 12px;font-size:12px"><span style="font-weight:700;color:${h.finalStatus==='In Stock'?'var(--ml-blue)':'var(--green)'}">${esc(h.finalStatus||'In Use')}</span></td>
       <td style="padding:9px 12px;font-size:12px;font-weight:700;color:var(--ml-blue)">${days} días</td>
+      <td style="padding:9px 12px;font-size:12px;color:${tiempoLibre==='—'?'var(--text3)':'var(--yellow-s)'};font-weight:${tiempoLibre==='—'?'400':'700'}">${tiempoLibre}</td>
       <td style="padding:9px 12px;font-size:12px">${veces}</td>
     </tr>`;
   }).join('');
