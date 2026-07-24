@@ -1657,8 +1657,8 @@
   },
   {
     "S/N": "24248524205164",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
     "Categoría": "Handheld",
@@ -1671,7 +1671,9 @@
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-23T23:00:10.528Z"
   },
   {
     "S/N": "24248524205019",
@@ -17493,8 +17495,8 @@
   },
   {
     "S/N": "24249524203167",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
     "Categoría": "Handheld",
@@ -17507,7 +17509,9 @@
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Se regresa de garantía, se entrega a AF"
+    "Comentarios": "Se regresa de garantía, se entrega a AF",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-23T22:59:36.457Z"
   },
   {
     "S/N": "24249524203174",
@@ -18507,8 +18511,8 @@
   },
   {
     "S/N": "24243524208307",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
     "Categoría": "Handheld",
@@ -18522,8 +18526,8 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "",
-    "_changedBy": "André Jael Castillo Diaz",
-    "_changedTs": "2026-07-07T22:14:45.701Z"
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-23T22:59:54.590Z"
   },
   {
     "S/N": "24243524208198",
@@ -19441,8 +19445,8 @@
   },
   {
     "S/N": "24248524205021",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
     "Categoría": "Handheld",
@@ -19455,7 +19459,9 @@
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "hola"
+    "Comentarios": "hola",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-23T23:00:01.390Z"
   },
   {
     "S/N": "24243524206971",
@@ -29509,8 +29515,8 @@
   },
   {
     "S/N": "XXRBN244003708",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "ACTIVO FIJO",
     "ASIGNACIÓN": "P2S",
     "Categoría": "Printer",
@@ -29524,8 +29530,8 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "",
-    "_changedBy": "Luis Eduardo Avalos Garcia",
-    "_changedTs": "2026-07-07T14:29:18.948Z"
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-24T15:27:40.897Z"
   },
   {
     "S/N": "XXRBN244003709",
@@ -29979,8 +29985,8 @@
   },
   {
     "S/N": "XXRBN253200510",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "P2S",
     "Categoría": "Printer",
@@ -29993,7 +29999,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "En Stock dentro de MDF"
+    "Comentarios": "En Stock dentro de MDF",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-24T15:28:12.043Z"
   },
   {
     "S/N": "XXRBN253200522",
@@ -30289,8 +30297,8 @@
   },
   {
     "S/N": "XXRBN253201029",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "ACTIVO FIJO",
     "ASIGNACIÓN": "P2S",
     "Categoría": "Printer",
@@ -30304,8 +30312,8 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "",
-    "_changedBy": "Luis Eduardo Avalos Garcia",
-    "_changedTs": "2026-07-07T14:27:51.993Z"
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-07-24T15:27:56.470Z"
   },
   {
     "S/N": "XXRBN253201051",
