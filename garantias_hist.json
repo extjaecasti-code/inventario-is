@@ -303,5 +303,28 @@
     "step3by": "André Jael Castillo Diaz",
     "step4by": "André Jael Castillo Diaz",
     "finalStatus": "In Use"
+  },
+  {
+    "id": 1782579100392,
+    "sn": "24160523022814",
+    "device": "RING SCANER ZEBRA RSBT5",
+    "area": "OUTBOUND",
+    "motivo": "",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-06-27T16:51:40.392Z",
+    "prevCount": 0,
+    "step1": "27/06/26, 10:55 a.m.",
+    "step1ts": "2026-06-27T16:55:45.728Z",
+    "step2": "09/07/26, 1:37 p.m.",
+    "step2ts": "2026-07-09T19:37:43.660Z",
+    "step3": "23/07/26, 1:20 p.m.",
+    "step3ts": "2026-07-23T19:20:45.981Z",
+    "step4": "24/07/26, 9:38 a.m.",
+    "step4ts": "2026-07-24T15:38:00.370Z",
+    "step1by": "André Jael Castillo Diaz",
+    "step2by": "Luis Eduardo Avalos Garcia",
+    "step3by": "André Jael Castillo Diaz",
+    "step4by": "André Jael Castillo Diaz",
+    "finalStatus": "In Use"
   }
 ]
