@@ -41,27 +41,6 @@
     "step3by": "André Jael Castillo Diaz"
   },
   {
-    "id": 1782579148462,
-    "sn": "XXRBN253200510",
-    "device": "Impresora ZEBRA ZQ521",
-    "area": "OUTBOUND",
-    "motivo": "",
-    "addedBy": "André Jael Castillo Diaz",
-    "addedTs": "2026-06-27T16:52:28.462Z",
-    "prevCount": 0,
-    "step1": "27/06/26, 10:55 a.m.",
-    "step1ts": "2026-06-27T16:55:49.200Z",
-    "step2": "09/07/26, 1:38 p.m.",
-    "step2ts": "2026-07-09T19:38:10.668Z",
-    "step3": "23/07/26, 1:28 p.m.",
-    "step3ts": "2026-07-23T19:28:26.229Z",
-    "step4": null,
-    "step4ts": null,
-    "step1by": "André Jael Castillo Diaz",
-    "step2by": "Luis Eduardo Avalos Garcia",
-    "step3by": "André Jael Castillo Diaz"
-  },
-  {
     "id": 1783436270919,
     "sn": "24255524200541",
     "device": "Handheld ZEBRA TC520K",
