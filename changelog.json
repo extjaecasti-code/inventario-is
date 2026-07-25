@@ -1,5 +1,17 @@
 [
   {
+    "sn": "XXRBN253100451",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-25T19:49:27.952Z"
+  },
+  {
     "sn": "XXRBN244003716",
     "device": "",
     "area": "",
@@ -4754,19 +4766,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:17:54.840Z"
-  },
-  {
-    "sn": "DPC25030115",
-    "device": "Dex manager DEX",
-    "area": "SALA DE ESTAR",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:17:52.181Z"
   }
 ]
