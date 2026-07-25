@@ -1,5 +1,17 @@
 [
   {
+    "sn": "XXRBN253200531",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-25T19:49:40.188Z"
+  },
+  {
     "sn": "XXRBN253201164",
     "device": "",
     "area": "",
@@ -4730,19 +4742,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:20:27.009Z"
-  },
-  {
-    "sn": "CN0WMDHRCJ3RE3TBDFTDA01",
-    "device": "Cargador DELL",
-    "area": "ICQA",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:20:23.327Z"
   }
 ]
