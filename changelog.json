@@ -1,5 +1,17 @@
 [
   {
+    "sn": "XXRBN253200533",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-25T19:49:44.137Z"
+  },
+  {
     "sn": "XXRBN253201183",
     "device": "",
     "area": "",
@@ -4712,29 +4724,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-27T16:03:36.465Z"
-  },
-  {
-    "sn": "JBCZRW3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Área",
-        "before": "SMX0",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "Angeles Ramirez",
-        "after": "MDF"
-      },
-      {
-        "label": "Comentarios",
-        "before": "Préstamo de laptop a SMX0",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T19:19:16.264Z"
   }
 ]
