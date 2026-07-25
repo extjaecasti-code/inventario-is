@@ -1,5 +1,17 @@
 [
   {
+    "sn": "XXRBN253201164",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-25T19:49:39.189Z"
+  },
+  {
     "sn": "XXRBN253201003",
     "device": "",
     "area": "",
@@ -4732,19 +4744,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-26T17:20:23.327Z"
-  },
-  {
-    "sn": "24173010562924",
-    "device": "Scanner ZEBRA",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Status (CSV sync)",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-26T17:20:03.047Z"
   }
 ]
