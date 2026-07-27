@@ -7185,11 +7185,11 @@
   },
   {
     "S/N": "24255524200656",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "INBOUND",
     "ASIGNACIÓN": "INBOUND",
-    "Categoría": "Handheld",
+    "Categoría": "HandHeld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
@@ -15945,10 +15945,10 @@
   },
   {
     "S/N": "PF3TW43N",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
-    "AREA": "INTERNAL SYSTEM",
-    "ASIGNACIÓN": "MDF",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "LOA",
+    "ASIGNACIÓN": "JUAN ANTONIO FLORES",
     "Categoría": "Notebook",
     "DISPOSITIVO": "Laptop",
     "MARCA": "LENOVO",
@@ -15959,7 +15959,7 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Regresa de prestamo"
+    "Comentarios": ""
   },
   {
     "S/N": "99N252100181",
@@ -28945,8 +28945,8 @@
   },
   {
     "S/N": "XXRBN220400032",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "P2S",
     "Categoría": "Printer",
@@ -28959,7 +28959,7 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "En Stock dentro de MDF"
   },
   {
     "S/N": "XXRBN220400321",
@@ -31233,7 +31233,7 @@
     "DISPOSITIVO": "DESKTOP",
     "MARCA": "DELL",
     "MODELO": "3680",
-    "IP": "",
+    "IP": "169.254.248.110",
     "MAC": "",
     "SSID": "MELI-SHIPPING",
     "O.S.": "",
@@ -35067,21 +35067,21 @@
   },
   {
     "S/N": "8SSA10R16922C2TJ41902KA",
-    "ESTATUS FISICO": "In Stock",
+    "ESTATUS FISICO": "In Use",
     "Categoría": "Accesorio",
     "DISPOSITIVO": "Cargador",
     "MARCA": "LENOVO",
     "MODELO": "NA",
-    "AREA": "INTERNAL SYSTEM",
-    "ASIGNACIÓN": "MDF",
+    "AREA": "OB",
+    "ASIGNACIÓN": "JUAN FLORES ",
     "IP": "",
     "MAC": "",
     "SSID": "",
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "",
-    "Comentarios": "Regresa de prestamo",
-    "Status in Arturito": "In Stock"
+    "Comentarios": "",
+    "Status in Arturito": "In Use"
   },
   {
     "S/N": "8SSA10R16922C2TJ3AE16FF",
