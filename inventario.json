@@ -13469,8 +13469,8 @@
   },
   {
     "S/N": "D92BL84",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
     "AREA": "ACTIVO FIJO",
     "ASIGNACIÓN": "Sauron OB",
     "Categoría": "Desktop",
@@ -13483,7 +13483,7 @@
     "O.S.": "",
     "DEPLOY": "DRM",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "ACTIVO FIJO"
   },
   {
     "S/N": "F92BL84",
