@@ -7185,11 +7185,11 @@
   },
   {
     "S/N": "24255524200656",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In repair",
+    "Status in Arturito": "In repair",
     "AREA": "INBOUND",
     "ASIGNACIÓN": "INBOUND",
-    "Categoría": "HandHeld",
+    "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
@@ -28945,8 +28945,8 @@
   },
   {
     "S/N": "XXRBN220400032",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In repair",
+    "Status in Arturito": "In repair",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "P2S",
     "Categoría": "Printer",
@@ -28959,7 +28959,7 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "En Stock dentro de MDF"
+    "Comentarios": ""
   },
   {
     "S/N": "XXRBN220400321",
