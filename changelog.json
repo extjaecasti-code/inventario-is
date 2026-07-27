@@ -1,99 +1,17 @@
 [
   {
-    "sn": "8SSA10R16922C2TJ41902KA",
-    "device": "Cargador LENOVO",
-    "area": "INTERNAL SYSTEM",
+    "sn": "JL92054",
+    "device": "DESKTOP DELL",
+    "area": "CCM",
     "changes": [
       {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OB",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "JUAN FLORES",
-        "after": "MDF"
-      },
-      {
-        "label": "Comentarios",
+        "label": "IP",
         "before": "",
-        "after": "Regresa de prestamo"
+        "after": "169.254.248.110"
       }
     ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T19:45:03.157Z"
-  },
-  {
-    "sn": "PF3TW43N",
-    "device": "Laptop LENOVO",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "LOA",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "JUAN ANTONIO FLORES",
-        "after": "MDF"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Regresa de prestamo"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T19:43:59.502Z"
-  },
-  {
-    "sn": "24255524200656",
-    "device": "Handheld ZEBRA",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In repair"
-      },
-      {
-        "label": "Categoría",
-        "before": "HandHeld",
-        "after": "Handheld"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T18:53:36.201Z"
-  },
-  {
-    "sn": "XXRBN220400032",
-    "device": "Impresora Zebra",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In repair"
-      },
-      {
-        "label": "Comentarios",
-        "before": "En Stock dentro de MDF",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T18:52:43.494Z"
+    "user": "Erick Avisai Núñez Loza",
+    "ts": "2026-07-27T20:00:59.653Z"
   },
   {
     "sn": "D92BL84",
@@ -4755,5 +4673,52 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-27T16:10:00.387Z"
+  },
+  {
+    "sn": "24248524204988",
+    "device": "Handheld ZEBRA",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-27T16:09:36.782Z"
+  },
+  {
+    "sn": "24249524203326",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-27T16:08:46.458Z"
+  },
+  {
+    "sn": "24243524207010",
+    "device": "Handheld ZEBRA",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "DATAWARE",
+        "after": "INBOUND"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-27T16:08:04.970Z"
   }
 ]
