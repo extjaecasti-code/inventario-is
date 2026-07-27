@@ -25555,8 +25555,8 @@
   },
   {
     "S/N": "99J245100299",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In repair",
+    "Status in Arturito": "In repair",
     "AREA": "LI",
     "ASIGNACIÓN": "MESA 3",
     "Categoría": "Printer",
@@ -25569,7 +25569,7 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Garantia"
   },
   {
     "S/N": "99J243804101",
