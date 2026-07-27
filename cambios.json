@@ -1,1 +1,22 @@
-{}
+{
+  "99J245100299": {
+    "S/N": "99J245100299",
+    "ESTATUS FISICO": "In repair",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZT411",
+    "AREA": "LI",
+    "ASIGNACIÓN": "MESA 3",
+    "IP": "10.9.124.66",
+    "MAC": "9075DE07A094",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "Garantia",
+    "Status in Arturito": "In repair",
+    "_changedBy": "Erick Avisai Núñez Loza",
+    "_changedTs": "2026-07-27T21:57:51.648Z"
+  }
+}
