@@ -357,5 +357,25 @@
     "step4ts": null,
     "step4b": null,
     "step4bts": null
+  },
+  {
+    "id": 1785178372613,
+    "sn": "XXRBN220400032",
+    "device": "Impresora Zebra ZQ521",
+    "area": "OUTBOUND",
+    "motivo": "No imprime correctamente",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-07-27T18:52:52.613Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null,
+    "step4b": null,
+    "step4bts": null
   }
 ]
