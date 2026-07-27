@@ -1,5 +1,24 @@
 [
   {
+    "sn": "24255524200656",
+    "device": "Handheld ZEBRA",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-27T18:53:36.201Z"
+  },
+  {
     "sn": "XXRBN220400032",
     "device": "Impresora Zebra",
     "area": "OUTBOUND",
@@ -4706,24 +4725,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-27T16:08:46.458Z"
-  },
-  {
-    "sn": "24243524207010",
-    "device": "Handheld ZEBRA",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Área",
-        "before": "DATAWARE",
-        "after": "INBOUND"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-27T16:08:04.970Z"
   }
 ]
