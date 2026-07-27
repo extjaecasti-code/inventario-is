@@ -1,5 +1,34 @@
 [
   {
+    "sn": "PF3TW43N",
+    "device": "Laptop LENOVO",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "LOA",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "JUAN ANTONIO FLORES",
+        "after": "MDF"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Regresa de prestamo"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-27T19:43:59.502Z"
+  },
+  {
     "sn": "24255524200656",
     "device": "Handheld ZEBRA",
     "area": "INBOUND",
@@ -4711,19 +4740,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-27T16:09:36.782Z"
-  },
-  {
-    "sn": "24249524203326",
-    "device": "Handheld ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-27T16:08:46.458Z"
   }
 ]
