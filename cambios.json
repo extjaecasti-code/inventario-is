@@ -1,1 +1,22 @@
-{}
+{
+  "HL92054": {
+    "S/N": "HL92054",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Desktop",
+    "DISPOSITIVO": "DESKTOP",
+    "MARCA": "DELL",
+    "MODELO": "3680",
+    "AREA": "CCM",
+    "ASIGNACIÓN": "CCM",
+    "IP": "169.254.143.143",
+    "MAC": "08:B4:D2:8A:28:CA",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "#N/A",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use",
+    "_changedBy": "Erick Avisai Núñez Loza",
+    "_changedTs": "2026-07-27T20:02:46.516Z"
+  }
+}
