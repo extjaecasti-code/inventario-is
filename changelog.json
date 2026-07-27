@@ -1,5 +1,41 @@
 [
   {
+    "sn": "99J245100299",
+    "device": "Impresora ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      },
+      {
+        "label": "Área",
+        "before": "LI",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Asignación",
+        "before": "MESA 3",
+        "after": "ACTIVO FIJO"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-27T16:31:58.659Z"
+  },
+  {
+    "sn": "24255524200550",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-27T16:02:46.629Z"
+  },
+  {
     "sn": "24248524204954",
     "device": "",
     "area": "",
@@ -1476,18 +1512,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-23T15:03:30.896Z"
-  },
-  {
-    "sn": "24255524200550",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-23T14:54:12.477Z"
   },
   {
     "sn": "24249524203417",
@@ -4706,19 +4730,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-27T16:07:08.115Z"
-  },
-  {
-    "sn": "24255524200659",
-    "device": "Handheld ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-27T16:06:23.864Z"
   }
 ]
