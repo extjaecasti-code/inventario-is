@@ -1,1 +1,22 @@
-{}
+{
+  "D92BL84": {
+    "S/N": "D92BL84",
+    "ESTATUS FISICO": "In Stock",
+    "Categoría": "Desktop",
+    "DISPOSITIVO": "DESKTOP",
+    "MARCA": "Dell",
+    "MODELO": "7420",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "Sauron OB",
+    "IP": "",
+    "MAC": "",
+    "SSID": "SHIPPING-CORP",
+    "O.S.": "",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "ACTIVO FIJO",
+    "Status in Arturito": "In Stock",
+    "_changedBy": "Erick Avisai Núñez Loza",
+    "_changedTs": "2026-07-27T16:40:49.592Z"
+  }
+}
