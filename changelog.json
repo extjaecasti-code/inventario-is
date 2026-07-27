@@ -1,5 +1,24 @@
 [
   {
+    "sn": "XXRBN220400032",
+    "device": "Impresora Zebra",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      },
+      {
+        "label": "Comentarios",
+        "before": "En Stock dentro de MDF",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-27T18:52:43.494Z"
+  },
+  {
     "sn": "D92BL84",
     "device": "DESKTOP Dell",
     "area": "ACTIVO FIJO",
@@ -4706,19 +4725,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-27T16:08:04.970Z"
-  },
-  {
-    "sn": "24248524205170",
-    "device": "Handheld ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-27T16:07:34.167Z"
   }
 ]
