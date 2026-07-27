@@ -1,5 +1,34 @@
 [
   {
+    "sn": "8SSA10R16922C2TJ41902KA",
+    "device": "Cargador LENOVO",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "OB",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "JUAN FLORES",
+        "after": "MDF"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Regresa de prestamo"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-27T19:45:03.157Z"
+  },
+  {
     "sn": "PF3TW43N",
     "device": "Laptop LENOVO",
     "area": "INTERNAL SYSTEM",
@@ -4726,19 +4755,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-27T16:10:00.387Z"
-  },
-  {
-    "sn": "24248524204988",
-    "device": "Handheld ZEBRA",
-    "area": "LI",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-27T16:09:36.782Z"
   }
 ]
