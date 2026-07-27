@@ -1,5 +1,17 @@
 [
   {
+    "sn": "24248524205016",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-27T16:02:39.708Z"
+  },
+  {
     "sn": "24255524200553",
     "device": "",
     "area": "",
@@ -1476,18 +1488,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-23T14:54:08.672Z"
-  },
-  {
-    "sn": "24248524205016",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-23T14:54:07.444Z"
   },
   {
     "sn": "24249524203417",
