@@ -8,15 +8,10 @@
         "label": "Estatus Físico",
         "before": "In Use",
         "after": "In repair"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Garantia"
       }
     ],
-    "user": "Erick Avisai Núñez Loza",
-    "ts": "2026-07-27T21:57:52.896Z"
+    "user": "Erick Agustín Crisóstomo Sanchez",
+    "ts": "2026-07-27T22:21:16.346Z"
   },
   {
     "sn": "DL92054",
