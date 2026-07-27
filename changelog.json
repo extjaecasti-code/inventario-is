@@ -1,5 +1,24 @@
 [
   {
+    "sn": "99J245100299",
+    "device": "Impresora ZEBRA",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Garantia"
+      }
+    ],
+    "user": "Erick Avisai Núñez Loza",
+    "ts": "2026-07-27T21:57:52.896Z"
+  },
+  {
     "sn": "DL92054",
     "device": "DESKTOP DELL",
     "area": "CCM",
@@ -4701,19 +4720,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-27T16:11:02.123Z"
-  },
-  {
-    "sn": "24255524200490",
-    "device": "Handheld ZEBRA",
-    "area": "INBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-27T16:10:38.338Z"
   }
 ]
