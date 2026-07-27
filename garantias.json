@@ -315,5 +315,25 @@
     "step4ts": null,
     "step4b": null,
     "step4bts": null
+  },
+  {
+    "id": 1785164550088,
+    "sn": "24192524210185",
+    "device": "Handheld ZEBRA TC520K",
+    "area": "OUTBOUND",
+    "motivo": "Falso en scanner",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-07-27T15:02:30.088Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null,
+    "step4b": null,
+    "step4bts": null
   }
 ]
