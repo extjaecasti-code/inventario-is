@@ -15945,10 +15945,10 @@
   },
   {
     "S/N": "PF3TW43N",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "LOA",
-    "ASIGNACIÓN": "JUAN ANTONIO FLORES",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
     "Categoría": "Notebook",
     "DISPOSITIVO": "Laptop",
     "MARCA": "LENOVO",
@@ -15959,7 +15959,7 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Regresa de prestamo"
   },
   {
     "S/N": "99N252100181",
@@ -35067,21 +35067,21 @@
   },
   {
     "S/N": "8SSA10R16922C2TJ41902KA",
-    "ESTATUS FISICO": "In Use",
+    "ESTATUS FISICO": "In Stock",
     "Categoría": "Accesorio",
     "DISPOSITIVO": "Cargador",
     "MARCA": "LENOVO",
     "MODELO": "NA",
-    "AREA": "OB",
-    "ASIGNACIÓN": "JUAN FLORES ",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
     "IP": "",
     "MAC": "",
     "SSID": "",
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "",
-    "Comentarios": "",
-    "Status in Arturito": "In Use"
+    "Comentarios": "Regresa de prestamo",
+    "Status in Arturito": "In Stock"
   },
   {
     "S/N": "8SSA10R16922C2TJ3AE16FF",
