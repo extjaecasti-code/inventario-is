@@ -1,5 +1,19 @@
 [
   {
+    "sn": "GL92054",
+    "device": "DESKTOP DELL",
+    "area": "CCM",
+    "changes": [
+      {
+        "label": "IP",
+        "before": "10.9.69.111",
+        "after": "169.254.145.38"
+      }
+    ],
+    "user": "Erick Avisai Núñez Loza",
+    "ts": "2026-07-27T20:05:11.054Z"
+  },
+  {
     "sn": "HL92054",
     "device": "DESKTOP DELL",
     "area": "CCM",
@@ -4701,19 +4715,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-27T16:09:36.782Z"
-  },
-  {
-    "sn": "24249524203326",
-    "device": "Handheld ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-27T16:08:46.458Z"
   }
 ]
