@@ -1,5 +1,24 @@
 [
   {
+    "sn": "D92BL84",
+    "device": "DESKTOP Dell",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "ACTIVO FIJO"
+      }
+    ],
+    "user": "Erick Avisai Núñez Loza",
+    "ts": "2026-07-27T16:40:50.725Z"
+  },
+  {
     "sn": "C92BL84",
     "device": "DESKTOP DELL",
     "area": "ACTIVO FIJO",
@@ -4701,29 +4720,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-27T16:07:34.167Z"
-  },
-  {
-    "sn": "24243524206924",
-    "device": "Handheld ZEBRA",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Categoría",
-        "before": "HandHeld",
-        "after": "Handheld"
-      },
-      {
-        "label": "Comentarios",
-        "before": "En stock dentro del MDF (Pichonera)",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-27T16:07:08.115Z"
   }
 ]
