@@ -1,5 +1,34 @@
 [
   {
+    "sn": "99J243803126",
+    "device": "Impresora ZEBRA",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "ACTIVO FIJO",
+        "after": "LI"
+      },
+      {
+        "label": "Asignación",
+        "before": "ACTIVO FIJO",
+        "after": "mesa 4"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Esta en resguardo al lado de AF",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-27T16:00:56.059Z"
+  },
+  {
     "sn": "24192524210185",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
@@ -4300,35 +4329,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T14:37:51.386Z"
-  },
-  {
-    "sn": "99J243803126",
-    "device": "Impresora ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Asignación",
-        "before": "Meca M5",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Esta en resguardo al lado de AF"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T14:37:14.009Z"
   },
   {
     "sn": "99J244704579",
