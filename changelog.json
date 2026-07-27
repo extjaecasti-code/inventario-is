@@ -1,416 +1,22 @@
 [
   {
-    "sn": "99J245100299",
-    "device": "Impresora ZEBRA",
+    "sn": "C92BL84",
+    "device": "DESKTOP DELL",
     "area": "ACTIVO FIJO",
     "changes": [
       {
         "label": "Estatus Físico",
         "before": "In Use",
-        "after": "In repair"
-      },
-      {
-        "label": "Área",
-        "before": "LI",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Asignación",
-        "before": "MESA 3",
-        "after": "ACTIVO FIJO"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:31:58.659Z"
-  },
-  {
-    "sn": "24255524200550",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:46.629Z"
-  },
-  {
-    "sn": "24248524204954",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:45.528Z"
-  },
-  {
-    "sn": "24348524216735",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:44.327Z"
-  },
-  {
-    "sn": "24255524200636",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:43.146Z"
-  },
-  {
-    "sn": "24248524205016",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:39.708Z"
-  },
-  {
-    "sn": "24255524200553",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:38.283Z"
-  },
-  {
-    "sn": "24249524203229",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:36.606Z"
-  },
-  {
-    "sn": "24249524203305",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:35.170Z"
-  },
-  {
-    "sn": "24249524203407",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:33.485Z"
-  },
-  {
-    "sn": "24192524210228",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:32.010Z"
-  },
-  {
-    "sn": "24320524202171",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:30.733Z"
-  },
-  {
-    "sn": "24249524203440",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:29.192Z"
-  },
-  {
-    "sn": "24248524205179",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:27.988Z"
-  },
-  {
-    "sn": "24243524206971",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:26.738Z"
-  },
-  {
-    "sn": "24248524205015",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:25.460Z"
-  },
-  {
-    "sn": "24320524202232",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:24.787Z"
-  },
-  {
-    "sn": "24249524203196",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:23.598Z"
-  },
-  {
-    "sn": "24255524200661",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:22.852Z"
-  },
-  {
-    "sn": "24249524203221",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:21.595Z"
-  },
-  {
-    "sn": "24243524208320",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:20.921Z"
-  },
-  {
-    "sn": "24248524205094",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:19.475Z"
-  },
-  {
-    "sn": "24324524208809",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:18.150Z"
-  },
-  {
-    "sn": "24243524208282",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:17.526Z"
-  },
-  {
-    "sn": "24248524204861",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:16.229Z"
-  },
-  {
-    "sn": "24255524200474",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:15.080Z"
-  },
-  {
-    "sn": "24255524200631",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:13.796Z"
-  },
-  {
-    "sn": "24255524200508",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:13.154Z"
-  },
-  {
-    "sn": "24249524203383",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:11.968Z"
-  },
-  {
-    "sn": "24255524200425",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:11.405Z"
-  },
-  {
-    "sn": "24242524204741",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:02:09.760Z"
-  },
-  {
-    "sn": "99J243803126",
-    "device": "Impresora ZEBRA",
-    "area": "LI",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Área",
-        "before": "ACTIVO FIJO",
-        "after": "LI"
-      },
-      {
-        "label": "Asignación",
-        "before": "ACTIVO FIJO",
-        "after": "mesa 4"
+        "after": "In Stock"
       },
       {
         "label": "Comentarios",
-        "before": "Esta en resguardo al lado de AF",
-        "after": ""
+        "before": "",
+        "after": "SAURON ACTIVO FIJO"
       }
     ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-27T16:00:56.059Z"
+    "user": "Erick Avisai Núñez Loza",
+    "ts": "2026-07-27T16:39:43.584Z"
   },
   {
     "sn": "24192524210185",
@@ -1512,6 +1118,366 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-23T15:03:30.896Z"
+  },
+  {
+    "sn": "24255524200550",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:54:12.477Z"
+  },
+  {
+    "sn": "24248524204954",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:54:11.028Z"
+  },
+  {
+    "sn": "24348524216735",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:54:09.729Z"
+  },
+  {
+    "sn": "24255524200636",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:54:08.672Z"
+  },
+  {
+    "sn": "24248524205016",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:54:07.444Z"
+  },
+  {
+    "sn": "24255524200553",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:54:06.315Z"
+  },
+  {
+    "sn": "24249524203229",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:54:05.190Z"
+  },
+  {
+    "sn": "24249524203305",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:54:03.615Z"
+  },
+  {
+    "sn": "24249524203407",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:54:02.345Z"
+  },
+  {
+    "sn": "24192524210228",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:54:01.099Z"
+  },
+  {
+    "sn": "24320524202171",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:59.824Z"
+  },
+  {
+    "sn": "24249524203440",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:58.657Z"
+  },
+  {
+    "sn": "24248524205179",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:57.491Z"
+  },
+  {
+    "sn": "24243524206971",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:57.021Z"
+  },
+  {
+    "sn": "24248524205015",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:55.875Z"
+  },
+  {
+    "sn": "24320524202232",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:54.654Z"
+  },
+  {
+    "sn": "24249524203196",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:53.419Z"
+  },
+  {
+    "sn": "24255524200661",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:52.209Z"
+  },
+  {
+    "sn": "24249524203221",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:51.118Z"
+  },
+  {
+    "sn": "24243524208320",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:50.652Z"
+  },
+  {
+    "sn": "24248524205094",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:49.421Z"
+  },
+  {
+    "sn": "24324524208809",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:48.773Z"
+  },
+  {
+    "sn": "24243524208282",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:48.251Z"
+  },
+  {
+    "sn": "24248524204861",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:47.171Z"
+  },
+  {
+    "sn": "24255524200474",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:45.913Z"
+  },
+  {
+    "sn": "24255524200631",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:44.509Z"
+  },
+  {
+    "sn": "24255524200508",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:43.279Z"
+  },
+  {
+    "sn": "24249524203383",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:42.666Z"
+  },
+  {
+    "sn": "24255524200425",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:42.055Z"
+  },
+  {
+    "sn": "24242524204741",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-23T14:53:40.579Z"
   },
   {
     "sn": "24249524203417",
@@ -4353,6 +4319,35 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T14:37:51.386Z"
+  },
+  {
+    "sn": "99J243803126",
+    "device": "Impresora ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Asignación",
+        "before": "Meca M5",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Esta en resguardo al lado de AF"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-06-30T14:37:14.009Z"
   },
   {
     "sn": "99J244704579",
