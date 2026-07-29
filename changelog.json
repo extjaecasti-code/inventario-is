@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24312523020338",
+    "device": "RING SCANER ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Use"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-07-29T21:22:15.305Z"
+  },
+  {
     "sn": "24320524202683",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
@@ -3405,20 +3419,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-15T02:05:52.977Z"
-  },
-  {
-    "sn": "24312523020338",
-    "device": "RING SCANER ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In repair"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-11T03:22:43.866Z"
   },
   {
     "sn": "XXRBN253200523",
