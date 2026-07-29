@@ -1,5 +1,34 @@
 [
   {
+    "sn": "8Y5ZRW3",
+    "device": "Laptop DELL",
+    "area": "INTERNAL SYSTEM",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In Stock"
+      },
+      {
+        "label": "Área",
+        "before": "INBOUND",
+        "after": "INTERNAL SYSTEM"
+      },
+      {
+        "label": "Asignación",
+        "before": "Daniel Alejandro Gallegos",
+        "after": "MDF"
+      },
+      {
+        "label": "Comentarios",
+        "before": "Se presto al TL, se resguarda en AF",
+        "after": "Se regresa a MDF"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-29T17:31:30.013Z"
+  },
+  {
     "sn": "99J245100299",
     "device": "Impresora ZEBRA",
     "area": "LI",
@@ -4701,19 +4730,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-27T16:11:19.920Z"
-  },
-  {
-    "sn": "24250524206432",
-    "device": "Handheld ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-27T16:11:02.123Z"
   }
 ]
