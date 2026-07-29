@@ -1,42 +1,22 @@
 {
-  "24320524202683": {
-    "S/N": "24320524202683",
-    "ESTATUS FISICO": "In Use",
+  "24248524205113": {
+    "S/N": "24248524205113",
+    "ESTATUS FISICO": "Missed",
     "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
-    "IP": "10.9.96.167",
-    "MAC": "88:BC:AC:1C:55:9E",
+    "IP": "10.26.170.134",
+    "MAC": "88:BC:AC:13:CB:F9",
     "SSID": "MELI-SHIPPING",
-    "O.S.": "14.0.0",
+    "O.S.": "13.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "",
-    "Status in Arturito": "In Use",
-    "_changedBy": "Luis Eduardo Avalos Garcia",
-    "_changedTs": "2026-07-29T21:20:48.052Z"
-  },
-  "24312523020338": {
-    "S/N": "24312523020338",
-    "ESTATUS FISICO": "In Use",
-    "Categoría": "Scanner",
-    "DISPOSITIVO": "RING SCANER",
-    "MARCA": "ZEBRA",
-    "MODELO": "RSBT5",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "OUTBOUND",
-    "IP": "#N/A",
-    "MAC": "#N/A",
-    "SSID": "",
-    "O.S.": "",
-    "DEPLOY": "",
-    "Fullfiment": "MXCD11",
-    "Comentarios": "",
-    "Status in Arturito": "In Use",
-    "_changedBy": "Luis Eduardo Avalos Garcia",
-    "_changedTs": "2026-07-29T21:22:14.089Z"
+    "Comentarios": "REVISAR",
+    "Status in Arturito": "Missed",
+    "_changedBy": "Erick Avisai Núñez Loza",
+    "_changedTs": "2026-07-29T21:45:56.311Z"
   }
 }
