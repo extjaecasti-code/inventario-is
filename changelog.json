@@ -1,5 +1,19 @@
 [
   {
+    "sn": "24320524202683",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Use"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-07-29T21:20:49.226Z"
+  },
+  {
     "sn": "8Y5ZRW3",
     "device": "Laptop DELL",
     "area": "INTERNAL SYSTEM",
@@ -3405,25 +3419,6 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-11T03:22:43.866Z"
-  },
-  {
-    "sn": "24320524202683",
-    "device": "Handheld ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In repair"
-      },
-      {
-        "label": "Categoría",
-        "before": "HandHeld",
-        "after": "Handheld"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-11T03:22:28.462Z"
   },
   {
     "sn": "XXRBN253200523",
