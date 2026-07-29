@@ -23781,10 +23781,10 @@
   },
   {
     "S/N": "8Y5ZRW3",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
-    "AREA": "INBOUND",
-    "ASIGNACIÓN": "Daniel Alejandro Gallegos",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
+    "AREA": "INTERNAL SYSTEM",
+    "ASIGNACIÓN": "MDF",
     "Categoría": "Notebook",
     "DISPOSITIVO": "Laptop",
     "MARCA": "DELL",
@@ -23795,7 +23795,7 @@
     "O.S.": "W11",
     "DEPLOY": "DRM",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Se presto al TL, se resguarda en AF"
+    "Comentarios": "Se regresa a MDF"
   },
   {
     "S/N": "DP0ZRW3",
