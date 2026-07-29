@@ -1,60 +1,22 @@
 [
   {
-    "sn": "24312523020338",
-    "device": "RING SCANER ZEBRA",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In repair",
-        "after": "In Use"
-      }
-    ],
-    "user": "Luis Eduardo Avalos Garcia",
-    "ts": "2026-07-29T21:22:15.305Z"
-  },
-  {
-    "sn": "24320524202683",
+    "sn": "24248524205113",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
     "changes": [
       {
         "label": "Estatus Físico",
-        "before": "In repair",
-        "after": "In Use"
-      }
-    ],
-    "user": "Luis Eduardo Avalos Garcia",
-    "ts": "2026-07-29T21:20:49.226Z"
-  },
-  {
-    "sn": "8Y5ZRW3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
         "before": "In Use",
-        "after": "In Stock"
+        "after": "Missed"
       },
       {
-        "label": "Área",
-        "before": "INBOUND",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "Daniel Alejandro Gallegos",
-        "after": "MDF"
-      },
-      {
-        "label": "Comentarios",
-        "before": "Se presto al TL, se resguarda en AF",
-        "after": "Se regresa a MDF"
+        "label": "Categoría",
+        "before": "",
+        "after": "Handheld"
       }
     ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-29T17:31:30.013Z"
+    "user": "Erick Avisai Núñez Loza",
+    "ts": "2026-07-29T21:45:57.502Z"
   },
   {
     "sn": "99J245100299",
@@ -3419,6 +3381,39 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-07-15T02:05:52.977Z"
+  },
+  {
+    "sn": "24312523020338",
+    "device": "RING SCANER ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-11T03:22:43.866Z"
+  },
+  {
+    "sn": "24320524202683",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-11T03:22:28.462Z"
   },
   {
     "sn": "XXRBN253200523",
