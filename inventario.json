@@ -19805,11 +19805,11 @@
   },
   {
     "S/N": "24248524205113",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "Missed",
+    "Status in Arturito": "Missed",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
-    "Categoría": "",
+    "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
@@ -23781,10 +23781,10 @@
   },
   {
     "S/N": "8Y5ZRW3",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
-    "AREA": "INTERNAL SYSTEM",
-    "ASIGNACIÓN": "MDF",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "INBOUND",
+    "ASIGNACIÓN": "Daniel Alejandro Gallegos",
     "Categoría": "Notebook",
     "DISPOSITIVO": "Laptop",
     "MARCA": "DELL",
@@ -23795,7 +23795,7 @@
     "O.S.": "W11",
     "DEPLOY": "DRM",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Se regresa a MDF"
+    "Comentarios": "Se presto al TL, se resguarda en AF"
   },
   {
     "S/N": "DP0ZRW3",
