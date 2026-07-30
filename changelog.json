@@ -1,5 +1,29 @@
 [
   {
+    "sn": "D4PLG54",
+    "device": "Monitor 24 DELL",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "ACTIVO FIJO"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-30T17:39:07.541Z"
+  },
+  {
     "sn": "C0PLG54",
     "device": "Monitor 24 DELL",
     "area": "ACTIVO FIJO",
@@ -4711,29 +4735,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-29T15:24:58.562Z"
-  },
-  {
-    "sn": "GHCFSB4",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "Meca M8",
-        "after": "MDF"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-29T15:24:38.273Z"
   }
 ]
