@@ -1,5 +1,19 @@
 [
   {
+    "sn": "23298520100841",
+    "device": "Scanner RFID Zebra",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Dispositivo",
+        "before": "Scanner RFDI",
+        "after": "Scanner RFID"
+      }
+    ],
+    "user": "Erick Agustín Crisóstomo Sanchez",
+    "ts": "2026-07-30T22:21:47.814Z"
+  },
+  {
     "sn": "25288524210807",
     "device": "Handheld ZEBRA",
     "area": "ACTIVO FIJO",
@@ -4713,29 +4727,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-29T15:26:04.792Z"
-  },
-  {
-    "sn": "B06ZRW3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "Meca M7",
-        "after": "MDF"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-29T15:24:58.562Z"
   }
 ]
