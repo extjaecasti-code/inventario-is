@@ -1,5 +1,34 @@
 [
   {
+    "sn": "C0PLG54",
+    "device": "Monitor 24 DELL",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Stock",
+        "after": "In Use"
+      },
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Comentarios",
+        "before": "In Stock-MDF",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-07-30T17:38:40.191Z"
+  },
+  {
     "sn": "24320524202445",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
@@ -4706,24 +4735,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-29T15:24:38.273Z"
-  },
-  {
-    "sn": "24255524200604",
-    "device": "Handheld ZEBRA",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Stock",
-        "after": "In Use"
-      },
-      {
-        "label": "Categoría",
-        "before": "HandHeld",
-        "after": "Handheld"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-27T16:11:41.134Z"
   }
 ]
