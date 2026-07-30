@@ -13197,10 +13197,10 @@
   },
   {
     "S/N": "C0PLG54",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
-    "AREA": "INTERNAL SYSTEMS",
-    "ASIGNACIÓN": "MDF",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "Display",
     "DISPOSITIVO": "Monitor 24",
     "MARCA": "DELL",
@@ -13211,7 +13211,7 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "In Stock-MDF"
+    "Comentarios": ""
   },
   {
     "S/N": "C1J231101534",
@@ -13451,10 +13451,10 @@
   },
   {
     "S/N": "D4PLG54",
-    "ESTATUS FISICO": "In Stock",
-    "Status in Arturito": "In Stock",
-    "AREA": "INTERNAL SYSTEMS",
-    "ASIGNACIÓN": "MDF",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
     "Categoría": "Display",
     "DISPOSITIVO": "Monitor 24",
     "MARCA": "DELL",
