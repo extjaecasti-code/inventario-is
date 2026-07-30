@@ -11086,11 +11086,11 @@
   {
     "S/N": "23298520100841",
     "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "-",
+    "Status in Arturito": "In Use",
     "AREA": "ICQA",
     "ASIGNACIÓN": "",
     "Categoría": "Scanner",
-    "DISPOSITIVO": "Scanner RFDI",
+    "DISPOSITIVO": "Scanner RFID",
     "MARCA": "Zebra",
     "MODELO": "RFD4031",
     "IP": "#N/A",
