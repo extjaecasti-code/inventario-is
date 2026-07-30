@@ -406,5 +406,25 @@
     "step4bts": null,
     "step1by": "André Jael Castillo Diaz",
     "step2by": "Luis Eduardo Avalos Garcia"
+  },
+  {
+    "id": 1785435059488,
+    "sn": "25288524210807",
+    "device": "Handheld ZEBRA TC53",
+    "area": "ACTIVO FIJO",
+    "motivo": "Display dañado",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-07-30T18:10:59.488Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null,
+    "step4b": null,
+    "step4bts": null
   }
 ]
