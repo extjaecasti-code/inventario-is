@@ -1,1 +1,22 @@
-{}
+{
+  "23298520100841": {
+    "S/N": "23298520100841",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Scanner",
+    "DISPOSITIVO": "Scanner RFID",
+    "MARCA": "Zebra",
+    "MODELO": "RFD4031",
+    "AREA": "ICQA",
+    "ASIGNACIÓN": "",
+    "IP": "#N/A",
+    "MAC": "#N/A",
+    "SSID": "",
+    "O.S.": "#N/A",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use",
+    "_changedBy": "Erick Agustín Crisóstomo Sanchez",
+    "_changedTs": "2026-07-30T22:21:46.526Z"
+  }
+}
