@@ -1,7 +1,7 @@
 {
   "XXRBN244003709": {
     "S/N": "XXRBN244003709",
-    "ESTATUS FISICO": "In Stock",
+    "ESTATUS FISICO": "In repair",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "Zebra",
@@ -15,8 +15,8 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "",
-    "Status in Arturito": "In Stock",
+    "Status in Arturito": "In repair",
     "_changedBy": "André Jael Castillo Diaz",
-    "_changedTs": "2026-07-31T12:08:01.941Z"
+    "_changedTs": "2026-07-31T12:08:19.232Z"
   }
 }
