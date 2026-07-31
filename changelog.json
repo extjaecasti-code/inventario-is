@@ -1,5 +1,17 @@
 [
   {
+    "sn": "XXRBJ221900516",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-07-31T22:38:22.471Z"
+  },
+  {
     "sn": "XXRBN244003709",
     "device": "Impresora Zebra",
     "area": "ACTIVO FIJO",
@@ -4715,29 +4727,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-29T15:26:04.792Z"
-  },
-  {
-    "sn": "B06ZRW3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "Meca M7",
-        "after": "MDF"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-29T15:24:58.562Z"
   }
 ]
