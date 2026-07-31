@@ -1,5 +1,29 @@
 [
   {
+    "sn": "XXRBN220400001",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-07-31T22:38:25.567Z"
+  },
+  {
+    "sn": "XXRBJ221900577",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-07-31T22:38:25.106Z"
+  },
+  {
     "sn": "XXRBJ221900565",
     "device": "",
     "area": "",
@@ -4657,58 +4681,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T14:33:42.088Z"
-  },
-  {
-    "sn": "2V5ZRW3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "Meca M3",
-        "after": "MDF"
-      },
-      {
-        "label": "Comentarios",
-        "before": "MECANIZADA",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-29T15:29:36.362Z"
-  },
-  {
-    "sn": "816ZRW3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "mesa training docka 53",
-        "after": "MDF"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-29T15:26:39.096Z"
   }
 ]
