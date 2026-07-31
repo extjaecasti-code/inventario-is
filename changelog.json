@@ -6,17 +6,12 @@
     "changes": [
       {
         "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Comentarios",
-        "before": "En Stock dentro de MDF",
-        "after": ""
+        "before": "In Stock",
+        "after": "In repair"
       }
     ],
     "user": "André Jael Castillo Diaz",
-    "ts": "2026-07-31T12:08:03.227Z"
+    "ts": "2026-07-31T12:08:20.265Z"
   },
   {
     "sn": "25288524210807",
