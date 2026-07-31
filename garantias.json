@@ -427,5 +427,25 @@
     "step4b": null,
     "step4bts": null,
     "step1by": "André Jael Castillo Diaz"
+  },
+  {
+    "id": 1785499708418,
+    "sn": "XXRBN244003709",
+    "device": "Impresora Zebra ZQ521",
+    "area": "ACTIVO FIJO",
+    "motivo": "Cabezal dañado",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-07-31T12:08:28.418Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null,
+    "step4b": null,
+    "step4bts": null
   }
 ]
