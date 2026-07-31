@@ -1,5 +1,17 @@
 [
   {
+    "sn": "XXRBJ221900565",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-07-31T22:38:23.838Z"
+  },
+  {
     "sn": "XXRBJ221900516",
     "device": "",
     "area": "",
@@ -4698,34 +4710,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-29T15:26:39.096Z"
-  },
-  {
-    "sn": "CY5ZRW3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "",
-        "after": "MDF"
-      },
-      {
-        "label": "Comentarios",
-        "before": "Ubicar en que bancada está",
-        "after": ""
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-29T15:26:04.792Z"
   }
 ]
