@@ -23783,19 +23783,21 @@
     "S/N": "8Y5ZRW3",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "INBOUND",
-    "ASIGNACIÓN": "Daniel Alejandro Gallegos",
+    "AREA": "LP",
+    "ASIGNACIÓN": "Caseta Panorama",
     "Categoría": "Notebook",
     "DISPOSITIVO": "Laptop",
     "MARCA": "DELL",
     "MODELO": "5450",
     "IP": "10.9.112.9",
     "MAC": "",
-    "SSID": "SHIPPING-CORP",
+    "SSID": "MELI-SHIPPING",
     "O.S.": "W11",
     "DEPLOY": "DRM",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Se presto al TL, se resguarda en AF"
+    "Comentarios": "Se presta a Caseta Panorama mientras su equipo está en reparación.",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-08-02T02:58:16.325Z"
   },
   {
     "S/N": "DP0ZRW3",
@@ -31355,10 +31357,10 @@
   },
   {
     "S/N": "XXRBJ221900516",
-    "ESTATUS FISICO": "Missed",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "Z - Sin Area",
-    "ASIGNACIÓN": "",
+    "AREA": "MXCD06",
+    "ASIGNACIÓN": "MXCD06",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -31369,7 +31371,9 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MX_FBM_Ciudad de México 06",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-31T22:38:20.774Z"
   },
   {
     "S/N": "XXRBJ221900529",
@@ -31899,10 +31903,10 @@
   },
   {
     "S/N": "XXRBJ221900565",
-    "ESTATUS FISICO": "Missed",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "Z - Sin Area",
-    "ASIGNACIÓN": "",
+    "AREA": "MXCD06",
+    "ASIGNACIÓN": "MXCD06",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -31913,7 +31917,9 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MX_FBM_Ciudad de México 06",
-    "Comentarios": "MX_FBM_Ciudad de México 06"
+    "Comentarios": "MX_FBM_Ciudad de México 06",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-31T22:38:20.774Z"
   },
   {
     "S/N": "FKHOMJU",
@@ -31989,10 +31995,10 @@
   },
   {
     "S/N": "XXRBJ221900577",
-    "ESTATUS FISICO": "Missed",
+    "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "Z - Sin Area",
-    "ASIGNACIÓN": "",
+    "AREA": "MXCD06",
+    "ASIGNACIÓN": "MXCD06",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -32003,7 +32009,9 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MX_FBM_Ciudad de México 07",
-    "Comentarios": "MX_FBM_Ciudad de México 07"
+    "Comentarios": "MX_FBM_Ciudad de México 07",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-31T22:38:20.774Z"
   },
   {
     "S/N": "PF3SRWT8",
@@ -32097,10 +32105,10 @@
   },
   {
     "S/N": "XXRBN220400001",
-    "ESTATUS FISICO": "Missed",
-    "Status in Arturito": "Missed",
-    "AREA": "Z - Sin Area",
-    "ASIGNACIÓN": "",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "MXCD06",
+    "ASIGNACIÓN": "MXCD06",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -32111,14 +32119,16 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Missed Untraceable"
+    "Comentarios": "Missed Untraceable",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-31T22:38:20.774Z"
   },
   {
     "S/N": "XXRBN220400006",
-    "ESTATUS FISICO": "Missed",
-    "Status in Arturito": "Missed",
-    "AREA": "Z - Sin Area",
-    "ASIGNACIÓN": "",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "MXCD06",
+    "ASIGNACIÓN": "MXCD06",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -32129,7 +32139,9 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Missed Untraceable"
+    "Comentarios": "Missed Untraceable",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-31T22:38:20.774Z"
   },
   {
     "S/N": "6VY66F3",
@@ -32205,10 +32217,10 @@
   },
   {
     "S/N": "XXRBN220400278",
-    "ESTATUS FISICO": "Missed",
-    "Status in Arturito": "Missed",
-    "AREA": "Z - Sin Area",
-    "ASIGNACIÓN": "",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "MXCD06",
+    "ASIGNACIÓN": "MXCD06",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -32219,7 +32231,9 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Missed Untraceable"
+    "Comentarios": "Missed Untraceable",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-31T22:38:20.774Z"
   },
   {
     "S/N": "9B2348A33181",
@@ -32531,10 +32545,10 @@
   },
   {
     "S/N": "XXRBN220400291",
-    "ESTATUS FISICO": "Missed",
-    "Status in Arturito": "Missed",
-    "AREA": "Z - Sin Area",
-    "ASIGNACIÓN": "",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "MXCD06",
+    "ASIGNACIÓN": "MXCD06",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -32545,14 +32559,16 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Missed Untraceable"
+    "Comentarios": "Missed Untraceable",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-31T22:38:20.774Z"
   },
   {
     "S/N": "XXRBN220400302",
-    "ESTATUS FISICO": "Missed",
-    "Status in Arturito": "Missed",
-    "AREA": "Z - Sin Area",
-    "ASIGNACIÓN": "",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "MXCD06",
+    "ASIGNACIÓN": "MXCD06",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -32563,14 +32579,16 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Missed Untraceable"
+    "Comentarios": "Missed Untraceable",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-31T22:38:20.774Z"
   },
   {
     "S/N": "XXRBN220400310",
-    "ESTATUS FISICO": "Missed",
-    "Status in Arturito": "Missed",
-    "AREA": "Z - Sin Area",
-    "ASIGNACIÓN": "",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "MXCD06",
+    "ASIGNACIÓN": "MXCD06",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -32581,14 +32599,16 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Missed Untraceable"
+    "Comentarios": "Missed Untraceable",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-31T22:38:20.774Z"
   },
   {
     "S/N": "XXRBN220400326",
-    "ESTATUS FISICO": "Missed",
-    "Status in Arturito": "Missed",
-    "AREA": "Z - Sin Area",
-    "ASIGNACIÓN": "",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "MXCD06",
+    "ASIGNACIÓN": "MXCD06",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -32599,14 +32619,16 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Missed Untraceable"
+    "Comentarios": "Missed Untraceable",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-31T22:38:20.774Z"
   },
   {
     "S/N": "XXRBN220400328",
-    "ESTATUS FISICO": "Missed",
-    "Status in Arturito": "Missed",
-    "AREA": "Z - Sin Area",
-    "ASIGNACIÓN": "",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "MXCD06",
+    "ASIGNACIÓN": "MXCD06",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -32617,14 +32639,16 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Missed Untraceable"
+    "Comentarios": "Missed Untraceable",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-31T22:38:20.774Z"
   },
   {
     "S/N": "XXRBN220400365",
-    "ESTATUS FISICO": "Missed",
-    "Status in Arturito": "Missed",
-    "AREA": "Z - Sin Area",
-    "ASIGNACIÓN": "",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "MXCD06",
+    "ASIGNACIÓN": "MXCD06",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -32635,14 +32659,16 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Missed Untraceable"
+    "Comentarios": "Missed Untraceable",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-31T22:38:20.774Z"
   },
   {
     "S/N": "XXRBN220400474",
-    "ESTATUS FISICO": "Missed",
-    "Status in Arturito": "Missed",
-    "AREA": "Z - Sin Area",
-    "ASIGNACIÓN": "",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
+    "AREA": "MXCD06",
+    "ASIGNACIÓN": "MXCD06",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -32653,7 +32679,9 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Missed Untraceable"
+    "Comentarios": "Missed Untraceable",
+    "_changedBy": "Luis Eduardo Avalos Garcia",
+    "_changedTs": "2026-07-31T22:38:20.774Z"
   },
   {
     "S/N": "AS2436291416",
