@@ -1,5 +1,41 @@
 [
   {
+    "sn": "XXRBN220400328",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-03T20:48:12.765Z"
+  },
+  {
+    "sn": "XXRBN220400326",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-03T20:48:12.326Z"
+  },
+  {
+    "sn": "XXRBN220400310",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-03T20:48:11.881Z"
+  },
+  {
     "sn": "XXRBN220400302",
     "device": "",
     "area": "",
@@ -147,42 +183,6 @@
     ],
     "user": "Luis Eduardo Avalos Garcia",
     "ts": "2026-07-31T22:38:31.758Z"
-  },
-  {
-    "sn": "XXRBN220400328",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "Luis Eduardo Avalos Garcia",
-    "ts": "2026-07-31T22:38:31.343Z"
-  },
-  {
-    "sn": "XXRBN220400326",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "Luis Eduardo Avalos Garcia",
-    "ts": "2026-07-31T22:38:30.183Z"
-  },
-  {
-    "sn": "XXRBN220400310",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "Luis Eduardo Avalos Garcia",
-    "ts": "2026-07-31T22:38:29.660Z"
   },
   {
     "sn": "XXRBN244003709",
