@@ -1,5 +1,17 @@
 [
   {
+    "sn": "XXRBN220400001",
+    "device": "",
+    "area": "",
+    "changes": [
+      {
+        "label": "Status (bulk)"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-03T20:48:07.418Z"
+  },
+  {
     "sn": "XXRBJ221900577",
     "device": "",
     "area": "",
@@ -171,18 +183,6 @@
     ],
     "user": "Luis Eduardo Avalos Garcia",
     "ts": "2026-07-31T22:38:26.798Z"
-  },
-  {
-    "sn": "XXRBN220400001",
-    "device": "",
-    "area": "",
-    "changes": [
-      {
-        "label": "Status (bulk)"
-      }
-    ],
-    "user": "Luis Eduardo Avalos Garcia",
-    "ts": "2026-07-31T22:38:25.567Z"
   },
   {
     "sn": "XXRBN244003709",
