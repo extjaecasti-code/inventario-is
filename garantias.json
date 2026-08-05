@@ -32,12 +32,13 @@
     "step1ts": "2026-07-07T14:57:55.566Z",
     "step2": "09/07/26, 1:38 p.m.",
     "step2ts": "2026-07-09T19:38:52.561Z",
-    "step3": null,
-    "step3ts": null,
+    "step3": "05/08/26, 4:31 p.m.",
+    "step3ts": "2026-08-05T22:31:44.064Z",
     "step4": null,
     "step4ts": null,
     "step1by": "Luis Eduardo Avalos Garcia",
-    "step2by": "Luis Eduardo Avalos Garcia"
+    "step2by": "Luis Eduardo Avalos Garcia",
+    "step3by": "André Jael Castillo Diaz"
   },
   {
     "id": 1783740180027,
