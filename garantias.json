@@ -332,15 +332,16 @@
     "prevCount": 0,
     "step1": "27/07/26, 12:54 p.m.",
     "step1ts": "2026-07-27T18:54:49.324Z",
-    "step2": null,
-    "step2ts": null,
+    "step2": "05/08/26, 4:26 p.m.",
+    "step2ts": "2026-08-05T22:26:13.575Z",
     "step3": null,
     "step3ts": null,
     "step4": null,
     "step4ts": null,
     "step4b": null,
     "step4bts": null,
-    "step1by": "André Jael Castillo Diaz"
+    "step1by": "André Jael Castillo Diaz",
+    "step2by": "André Jael Castillo Diaz"
   },
   {
     "id": 1785178372613,
@@ -397,15 +398,16 @@
     "prevCount": 0,
     "step1": "30/07/26, 12:11 p.m.",
     "step1ts": "2026-07-30T18:11:55.078Z",
-    "step2": null,
-    "step2ts": null,
+    "step2": "05/08/26, 4:26 p.m.",
+    "step2ts": "2026-08-05T22:26:13.576Z",
     "step3": null,
     "step3ts": null,
     "step4": null,
     "step4ts": null,
     "step4b": null,
     "step4bts": null,
-    "step1by": "André Jael Castillo Diaz"
+    "step1by": "André Jael Castillo Diaz",
+    "step2by": "André Jael Castillo Diaz"
   },
   {
     "id": 1785499708418,
@@ -418,14 +420,15 @@
     "prevCount": 0,
     "step1": "31/07/26, 4:25 p.m.",
     "step1ts": "2026-07-31T22:25:49.623Z",
-    "step2": null,
-    "step2ts": null,
+    "step2": "05/08/26, 4:26 p.m.",
+    "step2ts": "2026-08-05T22:26:13.576Z",
     "step3": null,
     "step3ts": null,
     "step4": null,
     "step4ts": null,
     "step4b": null,
     "step4bts": null,
-    "step1by": "Luis Eduardo Avalos Garcia"
+    "step1by": "Luis Eduardo Avalos Garcia",
+    "step2by": "André Jael Castillo Diaz"
   }
 ]
