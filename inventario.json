@@ -19219,11 +19219,11 @@
   },
   {
     "S/N": "24255524200541",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Use",
+    "Status in Arturito": "In Use",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
-    "Categoría": "HandHeld",
+    "Categoría": "",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
@@ -19233,7 +19233,7 @@
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "Se regresa a operacion",
+    "Comentarios": "HH ya regresó de garantía, se entrega a AF",
     "_changedBy": "Luis Eduardo Avalos Garcia",
     "_changedTs": "2026-07-07T14:57:50.919Z"
   },
