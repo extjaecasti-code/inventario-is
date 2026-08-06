@@ -1,5 +1,29 @@
 [
   {
+    "sn": "24255524200541",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In repair",
+        "after": "In Use"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": ""
+      },
+      {
+        "label": "Comentarios",
+        "before": "Se regresa a operacion",
+        "after": "HH ya regresó de garantía, se entrega a AF"
+      }
+    ],
+    "user": "Luis Eduardo Avalos Garcia",
+    "ts": "2026-08-06T20:04:19.408Z"
+  },
+  {
     "sn": "24320524202683",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
@@ -4514,29 +4538,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T14:46:18.581Z"
-  },
-  {
-    "sn": "9B2348A09046",
-    "device": "UPS APC",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Área",
-        "before": "INTERNAL SYSTEMS",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Asignación",
-        "before": "MDF - LI",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Comentarios",
-        "before": "In Stock (Operational Backup)",
-        "after": "Esta en resguardo al lado de AF\nse encuentra en buen estado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T14:45:49.597Z"
   }
 ]
