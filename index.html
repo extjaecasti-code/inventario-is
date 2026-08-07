@@ -2346,16 +2346,17 @@ function renderAuditTab() {
   const elTotal = document.getElementById('auditTotal');
   const elPending = document.getElementById('auditPending');
   if(elTotal) elTotal.textContent = grandTotal;
+  if(elPending) elPending.textContent = grandTotal - done;
   const areaGrid = document.getElementById('areaProgressGrid');
+  const mainAreaNames = AUDIT_AREAS_BASE.filter(a => a.name !== 'LOA / PEOPLE / OTRAS').map(a => a.name);
   areaGrid.innerHTML = AREAS.map(a => {
     const aDone = thisMonth.filter(au => {
       const dev = data.find(d => d['S/N'] === au.sn);
-      const devArea = dev ? (dev['AREA'] || '') : au.area;
-      if (a.name === 'LI/ICQA/OTRAS') {
-        const mainAreas = ['INTERNAL SYSTEMS','OUTBOUND','ACTIVO FIJO','INBOUND','LOSS PREVENTION','TRAINING'];
-        return !mainAreas.includes(devArea);
+      const devArea = (dev ? (dev['AREA'] || '') : (au.area || '')).toUpperCase().trim();
+      if (a.name === 'LOA / PEOPLE / OTRAS') {
+        return !mainAreaNames.includes(devArea);
       }
-      return devArea === a.name;
+      return devArea === a.name.toUpperCase().trim();
     }).length;
     const aPct = Math.round(aDone / a.total * 100);
     const cls = aPct >= 66 ? '' : aPct >= 33 ? ' mid' : ' low';
