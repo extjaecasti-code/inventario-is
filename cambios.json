@@ -38,5 +38,25 @@
     "Status in Arturito": "In Use",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-08-07T21:39:41.218Z"
+  },
+  "CQJZRW3": {
+    "S/N": "CQJZRW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "LI",
+    "ASIGNACIÓN": "TRIAGE 1",
+    "IP": "10.9.112.68",
+    "MAC": "EC:4C:8C:5A:25:DA",
+    "SSID": "MELI-SHIPPING",
+    "O.S.": "Chrome Flex",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-08-07T21:40:56.352Z"
   }
 }
