@@ -1228,5 +1228,20 @@
     "fecha": "7 ago 2026, 5:08 p.m.",
     "ts": "2026-08-07T23:08:14.167Z",
     "week": 2
+  },
+  {
+    "id": 1786144106255,
+    "sn": "59CZRW3",
+    "device": "Laptop DELL 5450",
+    "area": "INBOUND",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "7 ago 2026, 5:08 p.m.",
+    "ts": "2026-08-07T23:08:26.254Z",
+    "week": 2
   }
 ]
