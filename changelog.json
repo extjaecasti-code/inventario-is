@@ -1,5 +1,24 @@
 [
   {
+    "sn": "24248524205095",
+    "device": "Handheld ZEBRA",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      },
+      {
+        "label": "Comentarios",
+        "before": "",
+        "after": "Esta en RC03"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-07T19:55:29.859Z"
+  },
+  {
     "sn": "24255524200541",
     "device": "Handheld ZEBRA",
     "area": "OUTBOUND",
@@ -4509,34 +4528,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T14:47:03.535Z"
-  },
-  {
-    "sn": "9B2348A05082",
-    "device": "UPS APC",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Asignación",
-        "before": "Bancada 7",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Esta en resguardo al lado de AF\nse encuentra en buen estado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T14:46:18.581Z"
   }
 ]
