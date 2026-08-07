@@ -58,5 +58,25 @@
     "Status in Arturito": "In Use",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-08-07T21:40:56.352Z"
+  },
+  "9B2348A09070": {
+    "S/N": "9B2348A09070",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "UPS",
+    "DISPOSITIVO": "UPS",
+    "MARCA": "APC",
+    "MODELO": "BV1000",
+    "AREA": "LI",
+    "ASIGNACIÓN": "TRIAGE 2",
+    "IP": "#N/A",
+    "MAC": "#N/A",
+    "SSID": "",
+    "O.S.": "#N/A",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In Use",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-08-07T21:47:32.430Z"
   }
 }
