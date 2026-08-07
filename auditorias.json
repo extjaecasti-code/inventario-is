@@ -883,5 +883,20 @@
     "fecha": "7 ago 2026, 3:57 p.m.",
     "ts": "2026-08-07T21:57:13.593Z",
     "week": 2
+  },
+  {
+    "id": 1786139868933,
+    "sn": "24362010556549",
+    "device": "Scanner ZEBRA DS8178",
+    "area": "LI",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "7 ago 2026, 3:57 p.m.",
+    "ts": "2026-08-07T21:57:48.933Z",
+    "week": 2
   }
 ]
