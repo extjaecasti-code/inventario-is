@@ -1288,5 +1288,20 @@
     "fecha": "7 ago 2026, 5:13 p.m.",
     "ts": "2026-08-07T23:13:54.710Z",
     "week": 2
+  },
+  {
+    "id": 1786144543438,
+    "sn": "JFZR4D3",
+    "device": "Laptop DELL 7420",
+    "area": "INBOUND",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "7 ago 2026, 5:15 p.m.",
+    "ts": "2026-08-07T23:15:43.438Z",
+    "week": 2
   }
 ]
