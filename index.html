@@ -158,6 +158,18 @@ tbody tr:hover .row-actions{opacity:1;}
 .tri-source.spider{background:#FFF3E0;color:#E65100;}
 .tri-source.excel{background:#E8F5E9;color:#2E7D32;}
 .spider-stat{transition:box-shadow .15s;}.spider-stat:hover{box-shadow:0 0 0 2px var(--ml-blue);}
+
+/* ── AUDIT SUBTABS ── */
+.audit-subtabs{display:flex;gap:4px;padding:0 24px;margin-top:14px;border-bottom:2px solid var(--border);}
+.audit-subtab{padding:8px 18px;font-size:13px;font-weight:600;color:var(--text3);cursor:pointer;border-radius:6px 6px 0 0;border:1px solid transparent;border-bottom:none;transition:all .15s;}
+.audit-subtab.active{color:var(--ml-blue);background:var(--surface);border-color:var(--border);border-bottom:2px solid var(--surface);margin-bottom:-2px;}
+.audit-subtab:hover:not(.active){color:var(--text2);background:var(--surface2);}
+.audit-subpanel{display:none;padding:16px 24px 80px;}
+.audit-subpanel.active{display:block;}
+.hist-month-badge{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:16px;background:var(--ml-blue-light);color:var(--ml-blue);font-size:12px;font-weight:700;cursor:pointer;border:2px solid transparent;transition:all .15s;}
+.hist-month-badge.selected{background:var(--ml-blue);color:#fff;border-color:var(--ml-blue);}
+.hist-month-badge:hover:not(.selected){border-color:var(--ml-blue);}
+
 /* ── IN REPAIR TRACKER ── */
 .repair-banner{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin:0 24px 16px;box-shadow:0 1px 4px rgba(0,0,0,.06);}
 .repair-banner-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
@@ -612,6 +624,12 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
         </button>
       </div>
     </div>
+    <!-- AUDIT SUBTABS -->
+    <div class="audit-subtabs">
+      <div class="audit-subtab active" id="audit-stab-actual" onclick="switchAuditSubTab('actual')">📊 Mes Actual</div>
+      <div class="audit-subtab" id="audit-stab-hist" onclick="switchAuditSubTab('hist')">📋 Historial</div>
+    </div>
+    <div class="audit-subpanel active" id="audit-subpanel-actual">
     <!-- CATEGORIAS INFO -->
     <div style="padding:12px 24px 0">
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;box-shadow:0 1px 4px rgba(0,0,0,0.06)">
@@ -721,6 +739,22 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
         </div>
       </div>
     </div>
+  </div><!-- /audit-subpanel-actual -->
+
+  <!-- HISTORIAL AUDITORIAS SUBPANEL -->
+  <div class="audit-subpanel" id="audit-subpanel-hist">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+      <div style="font-size:13px;font-weight:700;color:var(--text2)">Filtrar por mes:</div>
+      <div id="auditHistMonths" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+    </div>
+    <div id="auditHistContent">
+      <div style="text-align:center;padding:40px;color:var(--text3)">
+        <div style="font-size:32px;margin-bottom:8px">📋</div>
+        <p>Selecciona un mes para ver las auditorías</p>
+      </div>
+    </div>
+  </div><!-- /audit-subpanel-hist -->
+
   </div><!-- /panel-audit -->
   <!-- SPIDER PANEL -->
   <div class="tab-panel" id="panel-spider">
@@ -4916,6 +4950,130 @@ async function generateSalidaPDF() {
   } else {
     showToast('PDF generado: ' + fname, 'success');
   }
+}
+
+// ── AUDIT HISTORY ─────────────────────────────────────────────────────────
+function switchAuditSubTab(tab) {
+  document.querySelectorAll('.audit-subtab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.audit-subpanel').forEach(p => p.classList.remove('active'));
+  document.getElementById('audit-stab-' + tab).classList.add('active');
+  document.getElementById('audit-subpanel-' + tab).classList.add('active');
+  if(tab === 'hist') renderAuditHistory();
+}
+
+function getMonthKey(ts) {
+  const d = new Date(ts);
+  if(isNaN(d)) return null;
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0');
+}
+
+function monthLabel(key) {
+  const [y, m] = key.split('-');
+  const months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  return months[parseInt(m)-1] + ' ' + y;
+}
+
+let selectedAuditMonth = null;
+
+function renderAuditHistory() {
+  // Group audits by month (exclude current month)
+  const now = new Date();
+  const currentKey = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0');
+
+  const byMonth = {};
+  audits.forEach(a => {
+    const key = getMonthKey(a.ts);
+    if(!key || key === currentKey) return; // skip current month
+    if(!byMonth[key]) byMonth[key] = [];
+    byMonth[key].push(a);
+  });
+
+  const months = Object.keys(byMonth).sort().reverse();
+  const monthsWrap = document.getElementById('auditHistMonths');
+
+  if(!months.length) {
+    monthsWrap.innerHTML = '';
+    document.getElementById('auditHistContent').innerHTML =
+      '<div style="text-align:center;padding:40px;color:var(--text3)"><div style="font-size:32px;margin-bottom:8px">📋</div><p>No hay auditorías de meses anteriores</p></div>';
+    return;
+  }
+
+  // Render month badges
+  monthsWrap.innerHTML = months.map(k =>
+    '<div class="hist-month-badge' + (selectedAuditMonth===k?' selected':'') + '" data-key="' + k + '" onclick="selectAuditMonth(this.getAttribute(\'data-key\'))">' +
+    monthLabel(k) + ' <span style="opacity:.7">(' + byMonth[k].length + ')</span></div>'
+  ).join('');
+
+  // Auto-select first month if none selected or selected not in list
+  if(!selectedAuditMonth || !byMonth[selectedAuditMonth]) {
+    selectedAuditMonth = months[0];
+    monthsWrap.querySelectorAll('.hist-month-badge')[0]?.classList.add('selected');
+  }
+
+  renderAuditHistMonth(byMonth[selectedAuditMonth] || []);
+}
+
+function selectAuditMonth(key) {
+  selectedAuditMonth = key;
+  renderAuditHistory();
+}
+
+function renderAuditHistMonth(items) {
+  const content = document.getElementById('auditHistContent');
+  if(!items.length) {
+    content.innerHTML = '<div style="text-align:center;padding:24px;color:var(--text3)">No hay auditorías este mes</div>';
+    return;
+  }
+
+  // Stats
+  const auditors = {};
+  items.forEach(a => { auditors[a.auditor] = (auditors[a.auditor]||0)+1; });
+  const statsHtml = '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px">' +
+    '<div style="background:var(--surface2);border-radius:8px;padding:10px 16px;text-align:center">' +
+      '<div style="font-size:20px;font-weight:700;color:var(--ml-blue)">' + items.length + '</div>' +
+      '<div style="font-size:11px;color:var(--text3)">Total auditados</div>' +
+    '</div>' +
+    Object.entries(auditors).map(([name, count]) =>
+      '<div style="background:var(--surface2);border-radius:8px;padding:10px 16px;text-align:center">' +
+        '<div style="font-size:20px;font-weight:700;color:var(--green)">' + count + '</div>' +
+        '<div style="font-size:11px;color:var(--text3)">' + esc(name.split(' ')[0]) + '</div>' +
+      '</div>'
+    ).join('') +
+  '</div>';
+
+  // Table
+  const sorted = [...items].sort((a,b) => new Date(b.ts) - new Date(a.ts));
+  const tableHtml = '<div style="border:1px solid var(--border);border-radius:8px;overflow:auto">' +
+    '<table style="width:100%;border-collapse:collapse;font-size:12px">' +
+    '<thead><tr style="background:var(--surface2)">' +
+      '<th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">S/N</th>' +
+      '<th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Dispositivo</th>' +
+      '<th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Área</th>' +
+      '<th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Estado Físico</th>' +
+      '<th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Limpieza</th>' +
+      '<th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Funcionamiento</th>' +
+      '<th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Comentario</th>' +
+      '<th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Auditor</th>' +
+      '<th style="padding:9px 12px;text-align:left;font-size:11px;font-weight:700;color:var(--text2);border-bottom:2px solid var(--border)">Fecha/Hora</th>' +
+    '</tr></thead><tbody>' +
+    sorted.map(a => {
+      const funcMap={'Pasó':'active','Falló':'repair','Pendiente':'pending'};
+      const statusMap={'Bueno':'active','Regular':'pending','Malo':'repair'};
+      return '<tr style="border-bottom:1px solid var(--border)">' +
+        '<td style="padding:9px 12px;font-family:monospace;color:var(--ml-blue);font-weight:700">' + esc(a.sn) + '</td>' +
+        '<td style="padding:9px 12px;font-size:12px;font-weight:700">' + esc(a.device) + '</td>' +
+        '<td style="padding:9px 12px;font-size:12px">' + esc(a.area||'—') + '</td>' +
+        '<td style="padding:9px 12px"><span class="chip ' + (statusMap[a.status]||'pending') + '">' + esc(a.status) + '</span></td>' +
+        '<td style="padding:9px 12px;font-size:12px">' + (a.clean==='Si'?'<span style="color:var(--green)">✓ Sí</span>':'<span style="color:var(--red)">✗ No</span>') + '</td>' +
+        '<td style="padding:9px 12px"><span class="chip ' + (funcMap[a.func]||'pending') + '">' + esc(a.func) + '</span></td>' +
+        '<td style="padding:9px 12px;font-size:11px;color:var(--text3);max-width:150px">' + esc(a.comment||'—') + '</td>' +
+        '<td style="padding:9px 12px;font-size:12px">' + esc(a.auditor) + '</td>' +
+        '<td style="padding:9px 12px;font-size:12px;color:var(--text3)">' + esc(a.ts ? new Date(a.ts).toLocaleString('es-MX',{dateStyle:'short',timeStyle:'short'}) : '—') + '</td>' +
+      '</tr>';
+    }).join('') +
+    '</tbody></table></div>';
+
+  content.innerHTML = statsHtml + tableHtml;
 }
 
 </script>
