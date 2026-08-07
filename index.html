@@ -654,11 +654,27 @@ body.dark .dark-toggle:hover{background:rgba(255,255,255,0.2);}
               <div style="font-size:10px;color:var(--text3)">In Use + In Stock</div>
             </div>
           </div>
-          <div style="display:flex;align-items:center;gap:8px;background:var(--yellow-bg);border:1px solid rgba(245,166,35,.2);border-radius:8px;padding:8px 14px">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="1"/><path d="M8 21h8m-4-4v4"/></svg>
+          <div style="display:flex;align-items:center;gap:8px;background:#FFF3E0;border:1px solid rgba(230,81,0,.2);border-radius:8px;padding:8px 14px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E65100" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             <div>
-              <div style="font-size:12px;font-weight:700;color:var(--yellow-s)">Desktop</div>
-              <div style="font-size:11px;color:var(--text3)">15 equipos</div>
+              <div style="font-size:12px;font-weight:700;color:#E65100">Scanner</div>
+              <div style="font-size:11px;color:var(--text3)" id="catCountScanner">— equipos</div>
+              <div style="font-size:10px;color:var(--text3)">In Use + In Stock</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;background:#F3E8FF;border:1px solid rgba(155,81,224,.2);border-radius:8px;padding:8px 14px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9B51E0" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            <div>
+              <div style="font-size:12px;font-weight:700;color:#9B51E0">UPS</div>
+              <div style="font-size:11px;color:var(--text3)" id="catCountUps">— equipos</div>
+              <div style="font-size:10px;color:var(--text3)">In Use + In Stock</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;background:#E8F5E9;border:1px solid rgba(46,125,50,.2);border-radius:8px;padding:8px 14px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+            <div>
+              <div style="font-size:12px;font-weight:700;color:#2E7D32">Desktop</div>
+              <div style="font-size:11px;color:var(--text3)" id="catCountDesktop">— equipos</div>
               <div style="font-size:10px;color:var(--text3)">In Use + In Stock</div>
             </div>
           </div>
@@ -2344,7 +2360,7 @@ function renderAuditTab() {
   const statuses2 = ['in use','in stock'];
   const notebookCount = data.filter(d => (d['Categoría']||'').toLowerCase()==='notebook' && statuses2.includes((d['ESTATUS FISICO']||'').toLowerCase().trim())).length;
   const printerCount  = data.filter(d => (d['Categoría']||'').toLowerCase()==='printer'  && statuses2.includes((d['ESTATUS FISICO']||'').toLowerCase().trim())).length;
-  const scannerCount  = data.filter(d => ['scanner','handheld'].includes((d['Categoría']||'').toLowerCase().trim()) && statuses2.includes((d['ESTATUS FISICO']||'').toLowerCase().trim())).length;
+  const scannerCount  = data.filter(d => (d['Categoría']||'').toLowerCase().trim() === 'scanner' && statuses2.includes((d['ESTATUS FISICO']||'').toLowerCase().trim())).length;
   const desktopCount  = data.filter(d => (d['Categoría']||'').toLowerCase()==='desktop' && statuses2.includes((d['ESTATUS FISICO']||'').toLowerCase().trim())).length;
   const upsCount      = data.filter(d => (d['Categoría']||'').toLowerCase()==='ups'      && statuses2.includes((d['ESTATUS FISICO']||'').toLowerCase().trim())).length;
   if(document.getElementById('catCountNotebook')) document.getElementById('catCountNotebook').textContent = notebookCount + ' equipos';
@@ -2801,7 +2817,6 @@ const AUDIT_AREAS_BASE = [
   {name:'LOSS PREVENTION'},
   {name:'ICQA'},
   {name:'TRAINING'},
-  {name:'EXT'},
   {name:'CCM'},
   {name:'LOA / PEOPLE / OTRAS'},
   {name:'INTERNAL SYSTEMS'},
@@ -2810,7 +2825,7 @@ const AUDIT_AREAS_BASE = [
 function isAuditCategory(cat) {
   const c = (cat||'').toLowerCase().trim();
   return c === 'notebook' || c === 'printer' || c === 'scanner' ||
-         c === 'handheld' || c === 'ups' || c === 'desktop';
+         c === 'ups' || c === 'desktop';
 }
 
 function getAreaTotal(areaName) {
