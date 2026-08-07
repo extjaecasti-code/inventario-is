@@ -98,5 +98,25 @@
     "Status in Arturito": "In Stock",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-08-07T21:55:06.488Z"
+  },
+  "TH0HRR76CHG0047V0M4PA00": {
+    "S/N": "TH0HRR76CHG0047V0M4PA00",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Accesorio",
+    "DISPOSITIVO": "Cargador",
+    "MARCA": "DELL",
+    "MODELO": "na",
+    "AREA": "LI",
+    "ASIGNACIÓN": "LOGISTICA I.",
+    "IP": "",
+    "MAC": "",
+    "SSID": "",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "",
+    "Comentarios": "",
+    "Status in Arturito": "In Use",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-08-07T22:31:52.048Z"
   }
 }
