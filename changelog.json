@@ -1,5 +1,19 @@
 [
   {
+    "sn": "CQJZRW3",
+    "device": "Laptop DELL",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "LI"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-07T21:40:57.443Z"
+  },
+  {
     "sn": "99J243803127",
     "device": "Impresora ZEBRA",
     "area": "LI",
@@ -4479,34 +4493,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T14:49:21.984Z"
-  },
-  {
-    "sn": "9B2348A09035",
-    "device": "UPS APC",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Asignación",
-        "before": "Bancada 1",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Esta en resguardo al lado de AF\nse encuentra en buen estado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T14:48:30.887Z"
   }
 ]
