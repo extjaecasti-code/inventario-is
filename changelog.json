@@ -1,5 +1,19 @@
 [
   {
+    "sn": "JT5ZRW3",
+    "device": "Laptop DELL",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "ICQA"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-07T22:55:29.422Z"
+  },
+  {
     "sn": "TH0HRR76CHG0047V0CJGA00",
     "device": "Cargador DELL",
     "area": "LI",
@@ -4454,24 +4468,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T14:52:25.547Z"
-  },
-  {
-    "sn": "9B2348A09063",
-    "device": "UPS APC",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Esta en resguardo al lado de AF\nse encuentra en buen estado (en caja)"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T14:51:18.010Z"
   }
 ]
