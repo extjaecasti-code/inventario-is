@@ -1,5 +1,24 @@
 [
   {
+    "sn": "99J243803126",
+    "device": "Impresora ZEBRA",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "ACTIVO FIJO",
+        "after": "LI"
+      },
+      {
+        "label": "Asignación",
+        "before": "ACTIVO FIJO",
+        "after": "Mesa 2"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-07T21:55:07.624Z"
+  },
+  {
     "sn": "9B2348A09070",
     "device": "UPS APC",
     "area": "LI",
@@ -4469,19 +4488,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T14:50:35.200Z"
-  },
-  {
-    "sn": "9B2348A33184",
-    "device": "UPS APC",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T14:50:12.671Z"
   }
 ]
