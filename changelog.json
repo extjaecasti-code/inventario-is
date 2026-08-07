@@ -1,5 +1,24 @@
 [
   {
+    "sn": "9B2348A09056",
+    "device": "UPS APC",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "LI"
+      },
+      {
+        "label": "Asignación",
+        "before": "mesa 21 exp",
+        "after": "TRIAGE 2"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-07T21:37:58.274Z"
+  },
+  {
     "sn": "24248524205095",
     "device": "Handheld ZEBRA",
     "area": "INBOUND",
@@ -4499,34 +4518,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T14:47:39.181Z"
-  },
-  {
-    "sn": "9B2348A09038",
-    "device": "UPS APC",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "Retired"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Asignación",
-        "before": "",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Esta en resguardo al lado de AF\nse encuentra dañado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T14:47:03.535Z"
   }
 ]
