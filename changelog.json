@@ -1,5 +1,24 @@
 [
   {
+    "sn": "9B2348A09070",
+    "device": "UPS APC",
+    "area": "LI",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "OUTBOUND",
+        "after": "LI"
+      },
+      {
+        "label": "Asignación",
+        "before": "",
+        "after": "TRIAGE 2"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-07T21:47:33.558Z"
+  },
+  {
     "sn": "CQJZRW3",
     "device": "Laptop DELL",
     "area": "LI",
@@ -4464,34 +4483,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T14:50:12.671Z"
-  },
-  {
-    "sn": "9B2348A09036",
-    "device": "UPS APC",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Asignación",
-        "before": "Bancada 6",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Esta en resguardo al lado de AF\nse encuentra en buen estado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T14:49:21.984Z"
   }
 ]
