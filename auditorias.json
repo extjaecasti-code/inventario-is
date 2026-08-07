@@ -748,5 +748,20 @@
     "fecha": "7 ago 2026, 3:52 p.m.",
     "ts": "2026-08-07T21:52:06.870Z",
     "week": 2
+  },
+  {
+    "id": 1786139540572,
+    "sn": "G2TDGK3",
+    "device": "Laptop DELL 7420",
+    "area": "LI",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "7 ago 2026, 3:52 p.m.",
+    "ts": "2026-08-07T21:52:20.571Z",
+    "week": 2
   }
 ]
