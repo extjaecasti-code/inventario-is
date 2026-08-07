@@ -1273,5 +1273,20 @@
     "fecha": "7 ago 2026, 5:12 p.m.",
     "ts": "2026-08-07T23:12:32.696Z",
     "week": 2
+  },
+  {
+    "id": 1786144434710,
+    "sn": "2QJZRW3",
+    "device": "Laptop DELL 5450",
+    "area": "ICQA",
+    "estado": "Regular",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "Marcas de uso por desgaste",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "7 ago 2026, 5:13 p.m.",
+    "ts": "2026-08-07T23:13:54.710Z",
+    "week": 2
   }
 ]
