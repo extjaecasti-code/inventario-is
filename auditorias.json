@@ -538,5 +538,20 @@
     "fecha": "3 jul 2026, 8:26 a.m.",
     "ts": "2026-07-03T14:26:42.380Z",
     "week": 1
+  },
+  {
+    "id": 1786138621148,
+    "sn": "1LT5301726",
+    "device": "Impresora Kyocera MA4000",
+    "area": "LI",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "7 ago 2026, 3:37 p.m.",
+    "ts": "2026-08-07T21:37:01.148Z",
+    "week": 2
   }
 ]
