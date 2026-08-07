@@ -2169,7 +2169,7 @@
     "Status in Arturito": "In Use",
     "AREA": "INBOUND",
     "ASIGNACIÓN": "INBOUND",
-    "Categoría": "HandHeld",
+    "Categoría": "Handheld",
     "DISPOSITIVO": "Handheld",
     "MARCA": "ZEBRA",
     "MODELO": "TC520K",
@@ -2179,7 +2179,9 @@
     "O.S.": "14.0.0",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "Esta en RC03",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-08-07T19:55:29.032Z"
   },
   {
     "S/N": "24248524205141",
@@ -19234,8 +19236,8 @@
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
     "Comentarios": "HH ya regresó de garantía, se entrega a AF",
-    "_changedBy": "Luis Eduardo Avalos Garcia",
-    "_changedTs": "2026-07-07T14:57:50.919Z"
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-08-07T19:50:39.092Z"
   },
   {
     "S/N": "24255524200501",
