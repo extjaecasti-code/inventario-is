@@ -1033,5 +1033,20 @@
     "fecha": "7 ago 2026, 4:08 p.m.",
     "ts": "2026-08-07T22:08:19.371Z",
     "week": 2
+  },
+  {
+    "id": 1786140513584,
+    "sn": "XXRBN244001904",
+    "device": "Impresora Zebra ZQ521",
+    "area": "LI",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "7 ago 2026, 4:08 p.m.",
+    "ts": "2026-08-07T22:08:33.584Z",
+    "week": 2
   }
 ]
