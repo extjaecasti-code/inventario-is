@@ -898,5 +898,20 @@
     "fecha": "7 ago 2026, 3:57 p.m.",
     "ts": "2026-08-07T21:57:48.933Z",
     "week": 2
+  },
+  {
+    "id": 1786139900296,
+    "sn": "9B2404A06802",
+    "device": "UPS APC BV1000",
+    "area": "LI",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "7 ago 2026, 3:58 p.m.",
+    "ts": "2026-08-07T21:58:20.296Z",
+    "week": 2
   }
 ]
