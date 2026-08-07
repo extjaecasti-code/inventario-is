@@ -1123,5 +1123,20 @@
     "fecha": "7 ago 2026, 5:01 p.m.",
     "ts": "2026-08-07T23:01:16.057Z",
     "week": 2
+  },
+  {
+    "id": 1786143712391,
+    "sn": "CN0ZRW3",
+    "device": "Laptop DELL 5450",
+    "area": "LOSS PREVENTION",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "7 ago 2026, 5:01 p.m.",
+    "ts": "2026-08-07T23:01:52.391Z",
+    "week": 2
   }
 ]
