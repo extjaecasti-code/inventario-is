@@ -20,27 +20,6 @@
     "step2by": "Luis Eduardo Avalos Garcia"
   },
   {
-    "id": 1783436270919,
-    "sn": "24255524200541",
-    "device": "Handheld ZEBRA TC520K",
-    "area": "OUTBOUND",
-    "motivo": "Display roto",
-    "addedBy": "Luis Eduardo Avalos Garcia",
-    "addedTs": "2026-07-07T14:57:50.919Z",
-    "prevCount": 0,
-    "step1": "07/07/26, 8:57 a.m.",
-    "step1ts": "2026-07-07T14:57:55.566Z",
-    "step2": "09/07/26, 1:38 p.m.",
-    "step2ts": "2026-07-09T19:38:52.561Z",
-    "step3": "05/08/26, 4:31 p.m.",
-    "step3ts": "2026-08-05T22:31:44.064Z",
-    "step4": null,
-    "step4ts": null,
-    "step1by": "Luis Eduardo Avalos Garcia",
-    "step2by": "Luis Eduardo Avalos Garcia",
-    "step3by": "André Jael Castillo Diaz"
-  },
-  {
     "id": 1783740180027,
     "sn": "24312523020338",
     "device": "RING SCANER ZEBRA RSBT5",
