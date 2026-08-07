@@ -928,5 +928,20 @@
     "fecha": "7 ago 2026, 3:59 p.m.",
     "ts": "2026-08-07T21:59:56.013Z",
     "week": 2
+  },
+  {
+    "id": 1786140030866,
+    "sn": "99J244704580",
+    "device": "Impresora ZEBRA ZT411",
+    "area": "LI",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Pasó",
+    "comment": "",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "7 ago 2026, 4:00 p.m.",
+    "ts": "2026-08-07T22:00:30.866Z",
+    "week": 2
   }
 ]
