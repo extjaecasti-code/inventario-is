@@ -1,5 +1,24 @@
 [
   {
+    "sn": "HTWZRW3",
+    "device": "Laptop DELL",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "LOA",
+        "after": "ICQA"
+      },
+      {
+        "label": "Asignación",
+        "before": "Jesus Matias",
+        "after": "PS"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-08T00:05:04.552Z"
+  },
+  {
     "sn": "JT5ZRW3",
     "device": "Laptop DELL",
     "area": "ICQA",
@@ -4439,34 +4458,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T17:35:59.642Z"
-  },
-  {
-    "sn": "99J243803113",
-    "device": "Impresora ZEBRA",
-    "area": "ACTIVO FIJO",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Asignación",
-        "before": "Meca M4",
-        "after": "ACTIVO FIJO"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Esta en resguardo al lado de AF"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T14:52:25.547Z"
   }
 ]
