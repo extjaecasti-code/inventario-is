@@ -13781,8 +13781,8 @@
     "S/N": "9B2348A09056",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "mesa 21 exp",
+    "AREA": "LI",
+    "ASIGNACIÓN": "TRIAGE 2",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -13793,7 +13793,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-08-07T21:37:57.276Z"
   },
   {
     "S/N": "S24213523702261",
@@ -13871,8 +13873,8 @@
     "S/N": "9B2348A09070",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "",
+    "AREA": "LI",
+    "ASIGNACIÓN": "TRIAGE 2",
     "Categoría": "UPS",
     "DISPOSITIVO": "UPS",
     "MARCA": "APC",
@@ -13883,7 +13885,9 @@
     "O.S.": "#N/A",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-08-07T21:47:32.430Z"
   },
   {
     "S/N": "SZA2417020524",
@@ -14143,8 +14147,8 @@
     "S/N": "HTWZRW3",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "LOA",
-    "ASIGNACIÓN": "Jesus Matias",
+    "AREA": "ICQA",
+    "ASIGNACIÓN": "PS",
     "Categoría": "Notebook",
     "DISPOSITIVO": "Laptop",
     "MARCA": "DELL",
@@ -23695,7 +23699,7 @@
     "S/N": "JT5ZRW3",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
+    "AREA": "ICQA",
     "ASIGNACIÓN": "PROBLEM SOLVER",
     "Categoría": "Notebook",
     "DISPOSITIVO": "Laptop",
@@ -24005,7 +24009,7 @@
     "S/N": "CQJZRW3",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
+    "AREA": "LI",
     "ASIGNACIÓN": "TRIAGE 1",
     "Categoría": "Notebook",
     "DISPOSITIVO": "Laptop",
@@ -24017,7 +24021,9 @@
     "O.S.": "Chrome Flex",
     "DEPLOY": "DRM",
     "Fullfiment": "MXCD11",
-    "Comentarios": ""
+    "Comentarios": "",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-08-07T21:40:56.352Z"
   },
   {
     "S/N": "99N253401401",
@@ -25431,8 +25437,8 @@
     "S/N": "99J243803127",
     "ESTATUS FISICO": "In Use",
     "Status in Arturito": "In Use",
-    "AREA": "OUTBOUND",
-    "ASIGNACIÓN": "Bancada 4",
+    "AREA": "LI",
+    "ASIGNACIÓN": "TRIAGE ",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25443,7 +25449,9 @@
     "O.S.": "",
     "DEPLOY": "",
     "Fullfiment": "MXCD11",
-    "Comentarios": "MECANIZADA"
+    "Comentarios": "MECANIZADA",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-08-07T21:39:41.218Z"
   },
   {
     "S/N": "99J243804067",
@@ -25695,8 +25703,8 @@
     "S/N": "99J243803126",
     "ESTATUS FISICO": "In Stock",
     "Status in Arturito": "In Stock",
-    "AREA": "ACTIVO FIJO",
-    "ASIGNACIÓN": "ACTIVO FIJO",
+    "AREA": "LI",
+    "ASIGNACIÓN": "Mesa 2",
     "Categoría": "Printer",
     "DISPOSITIVO": "Impresora",
     "MARCA": "ZEBRA",
@@ -25709,7 +25717,7 @@
     "Fullfiment": "MXCD11",
     "Comentarios": "Esta en resguardo al lado de AF",
     "_changedBy": "André Jael Castillo Diaz",
-    "_changedTs": "2026-06-30T14:37:12.979Z"
+    "_changedTs": "2026-08-07T21:55:06.488Z"
   },
   {
     "S/N": "99J243804093",
@@ -36002,7 +36010,7 @@
   {
     "S/N": "TH0HRR76CHG0047V0CJGA00",
     "ESTATUS FISICO": "In Stock",
-    "Categoría": "Notebook",
+    "Categoría": "Accesorio",
     "DISPOSITIVO": "Cargador",
     "MARCA": "DELL",
     "MODELO": "NA",
@@ -36314,7 +36322,7 @@
   {
     "S/N": "TH0HRR76CHG0047V0M4PA00",
     "ESTATUS FISICO": "In Use",
-    "Categoría": "Notebook",
+    "Categoría": "Accesorio",
     "DISPOSITIVO": "Cargador",
     "MARCA": "DELL",
     "MODELO": "na",
