@@ -158,5 +158,25 @@
     "Status in Arturito": "In Use",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-08-07T22:55:28.454Z"
+  },
+  "HTWZRW3": {
+    "S/N": "HTWZRW3",
+    "ESTATUS FISICO": "In Use",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "ICQA",
+    "ASIGNACIÓN": "PS",
+    "IP": "10.9.69.163",
+    "MAC": "",
+    "SSID": "SHIPPING-CORP",
+    "O.S.": "",
+    "DEPLOY": "PSGAC",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "In Use In Use",
+    "Status in Arturito": "In Use",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-08-08T00:05:02.963Z"
   }
 }
