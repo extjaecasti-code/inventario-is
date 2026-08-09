@@ -1,5 +1,24 @@
 [
   {
+    "sn": "24255524200669",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-09T01:48:23.079Z"
+  },
+  {
     "sn": "24255524200661",
     "device": "Handheld ZEBRA",
     "area": "ACTIVO FIJO",
@@ -4431,19 +4450,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T18:31:47.100Z"
-  },
-  {
-    "sn": "PF3TN6P4",
-    "device": "Laptop LENOVO",
-    "area": "INTERNAL SYSTEMS",
-    "changes": [
-      {
-        "label": "Modelo",
-        "before": "THINK PAD",
-        "after": "T14"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T18:28:51.296Z"
   }
 ]
