@@ -1,5 +1,19 @@
 [
   {
+    "sn": "4TH2ZD3",
+    "device": "Laptop DELL",
+    "area": "LOSS PREVENTION",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-09T01:43:57.598Z"
+  },
+  {
     "sn": "FT5ZRW3",
     "device": "Laptop DELL",
     "area": "ICQA",
@@ -4454,19 +4468,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T17:43:43.634Z"
-  },
-  {
-    "sn": "PF4T15FA",
-    "device": "Laptop LENOVO",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Comentarios",
-        "before": "Equipo dado de baja en slack y en stock en arturito",
-        "after": "Equipo dado de baja en slack y en stock en arturito\nExTL: Diego Armando Flores"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T17:39:22.860Z"
   }
 ]
