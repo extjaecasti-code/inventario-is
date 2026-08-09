@@ -399,5 +399,30 @@
     "step4bts": "2026-08-09T01:51:12.592Z",
     "step4bby": "André Jael Castillo Diaz",
     "finalStatus": "In Stock"
+  },
+  {
+    "id": 1785178372613,
+    "sn": "XXRBN220400032",
+    "device": "Impresora Zebra ZQ521",
+    "area": "OUTBOUND",
+    "motivo": "No imprime correctamente",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-07-27T18:52:52.613Z",
+    "prevCount": 0,
+    "step1": "27/07/26, 12:54 p.m.",
+    "step1ts": "2026-07-27T18:54:51.399Z",
+    "step2": "28/07/26, 4:57 p.m.",
+    "step2ts": "2026-07-28T22:57:28.874Z",
+    "step3": "05/08/26, 4:31 p.m.",
+    "step3ts": "2026-08-05T22:31:36.413Z",
+    "step4": null,
+    "step4ts": null,
+    "step4b": "08/08/26, 7:51 p.m.",
+    "step4bts": "2026-08-09T01:51:32.022Z",
+    "step1by": "André Jael Castillo Diaz",
+    "step2by": "Luis Eduardo Avalos Garcia",
+    "step3by": "André Jael Castillo Diaz",
+    "step4bby": "André Jael Castillo Diaz",
+    "finalStatus": "In Stock"
   }
 ]
