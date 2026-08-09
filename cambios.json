@@ -158,5 +158,25 @@
     "Status in Arturito": "In repair",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-08-09T01:47:32.633Z"
+  },
+  "24255524200661": {
+    "S/N": "24255524200661",
+    "ESTATUS FISICO": "In repair",
+    "Categoría": "Handheld",
+    "DISPOSITIVO": "Handheld",
+    "MARCA": "ZEBRA",
+    "MODELO": "TC520K",
+    "AREA": "ACTIVO FIJO",
+    "ASIGNACIÓN": "ACTIVO FIJO",
+    "IP": "10.9.96.23",
+    "MAC": "88:BC:AC:13:FD:42",
+    "SSID": "",
+    "O.S.": "14.0.0",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In repair",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-08-09T01:47:58.407Z"
   }
 }
