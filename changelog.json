@@ -1,5 +1,19 @@
 [
   {
+    "sn": "FT5ZRW3",
+    "device": "Laptop DELL",
+    "area": "ICQA",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-09T01:43:29.420Z"
+  },
+  {
     "sn": "XXRBN253101396",
     "device": "Impresora ZEBRA",
     "area": "ACTIVO FIJO",
@@ -4454,19 +4468,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T17:39:22.860Z"
-  },
-  {
-    "sn": "FJCFSB4",
-    "device": "Laptop DELL",
-    "area": "OUTBOUND",
-    "changes": [
-      {
-        "label": "Asignación",
-        "before": "Fabían Ramirez",
-        "after": "FABIAN RAMIREZ"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T17:36:16.342Z"
   }
 ]
