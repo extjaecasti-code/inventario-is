@@ -2175,8 +2175,21 @@ function auditSnSearch(val) {
   // Exact match
   const exact = data.find(d => d['S/N'] && d['S/N'].toLowerCase() === val.toLowerCase());
   if(exact) {
-    hint.textContent = '✓ ' + (exact['DISPOSITIVO']||'') + ' ' + (exact['MARCA']||'') + ' — ' + (exact['AREA']||'');
-    hint.style.color = 'var(--green)';
+    const now = new Date();
+    const alreadyAudited = audits.filter(a => {
+      if(a.sn !== exact['S/N']) return false;
+      const d = new Date(a.ts);
+      return d.getFullYear() === now.getFullYear() && d.getMonth() === now.getMonth();
+    });
+    if(alreadyAudited.length > 0) {
+      const last = alreadyAudited[alreadyAudited.length-1];
+      const lastDate = new Date(last.ts).toLocaleString('es-MX',{dateStyle:'short',timeStyle:'short'});
+      hint.innerHTML = '⚠️ Ya auditado este mes el <strong>' + lastDate + '</strong> por <strong>' + esc(last.auditor) + '</strong>';
+      hint.style.color = 'var(--yellow-s)';
+    } else {
+      hint.textContent = '✓ ' + (exact['DISPOSITIVO']||'') + ' ' + (exact['MARCA']||'') + ' — ' + (exact['AREA']||'');
+      hint.style.color = 'var(--green)';
+    }
     drop.style.display = 'none';
     return;
   }
@@ -2209,8 +2222,22 @@ function selectAuditSN(sn) {
   const found = data.find(d => d['S/N'] === sn);
   const hint = document.getElementById('a_sn_hint');
   if(found) {
-    hint.textContent = '✓ ' + (found['DISPOSITIVO']||'') + ' ' + (found['MARCA']||'') + ' — ' + (found['AREA']||'');
-    hint.style.color = 'var(--green)';
+    // Check if already audited this month
+    const now = new Date();
+    const alreadyAudited = audits.filter(a => {
+      if(a.sn !== sn) return false;
+      const d = new Date(a.ts);
+      return d.getFullYear() === now.getFullYear() && d.getMonth() === now.getMonth();
+    });
+    if(alreadyAudited.length > 0) {
+      const last = alreadyAudited[alreadyAudited.length-1];
+      const lastDate = new Date(last.ts).toLocaleString('es-MX',{dateStyle:'short',timeStyle:'short'});
+      hint.innerHTML = '⚠️ Este equipo ya fue auditado este mes el <strong>' + lastDate + '</strong> por <strong>' + esc(last.auditor) + '</strong>';
+      hint.style.color = 'var(--yellow-s)';
+    } else {
+      hint.textContent = '✓ ' + (found['DISPOSITIVO']||'') + ' ' + (found['MARCA']||'') + ' — ' + (found['AREA']||'');
+      hint.style.color = 'var(--green)';
+    }
   }
 }
 
