@@ -18,5 +18,25 @@
     "Status in Arturito": "In Use",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-08-09T00:56:21.670Z"
+  },
+  "FT5ZRW3": {
+    "S/N": "FT5ZRW3",
+    "ESTATUS FISICO": "In repair",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "5450",
+    "AREA": "ICQA",
+    "ASIGNACIÓN": "JOSE LUIS ROSALES LOVERA",
+    "IP": "10.9.112.27",
+    "MAC": "EC:4C:8C:5A:26:11",
+    "SSID": "SHIPPING-CORP",
+    "O.S.": "W11",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In repair",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-08-09T01:43:28.384Z"
   }
 }
