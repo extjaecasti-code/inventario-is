@@ -431,5 +431,25 @@
     "step4ts": null,
     "step4b": null,
     "step4bts": null
+  },
+  {
+    "id": 1786239843644,
+    "sn": "4TH2ZD3",
+    "device": "Laptop DELL 7450",
+    "area": "LOSS PREVENTION",
+    "motivo": "Bateria dañada",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-08-09T01:44:03.644Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null,
+    "step4b": null,
+    "step4bts": null
   }
 ]
