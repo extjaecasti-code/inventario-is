@@ -571,5 +571,25 @@
     "step4ts": null,
     "step4b": null,
     "step4bts": null
+  },
+  {
+    "id": 1786240115073,
+    "sn": "24255524200669",
+    "device": "Handheld ZEBRA TC520K",
+    "area": "OUTBOUND",
+    "motivo": "Botones de scanner fallando",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-08-09T01:48:35.073Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null,
+    "step4b": null,
+    "step4bts": null
   }
 ]
