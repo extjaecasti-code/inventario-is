@@ -1,5 +1,19 @@
 [
   {
+    "sn": "XXRBN253201187",
+    "device": "Impresora ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-09T01:44:29.939Z"
+  },
+  {
     "sn": "4TH2ZD3",
     "device": "Laptop DELL",
     "area": "LOSS PREVENTION",
@@ -4434,39 +4448,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T17:45:35.335Z"
-  },
-  {
-    "sn": "PF5E3YJ9",
-    "device": "Laptop Lenovo",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Estatus Físico",
-        "before": "In Use",
-        "after": "In Stock"
-      },
-      {
-        "label": "Modelo",
-        "before": "THINK PAD",
-        "after": "T14"
-      },
-      {
-        "label": "Área",
-        "before": "PEOPLE",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "CRISTIAN MONTAÑEZ",
-        "after": "MDF"
-      },
-      {
-        "label": "Comentarios",
-        "before": "Pendiente de devolución MX_Oficina_Melitlan",
-        "after": "Equipo dado de baja en slack y en stock en arturito\nExTL: Cristian Montanez"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T17:43:43.634Z"
   }
 ]
