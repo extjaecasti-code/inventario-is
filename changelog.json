@@ -1,5 +1,19 @@
 [
   {
+    "sn": "XXRBN244001845",
+    "device": "Impresora ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-09T01:44:56.447Z"
+  },
+  {
     "sn": "XXRBN253201187",
     "device": "Impresora ZEBRA",
     "area": "OUTBOUND",
@@ -4434,19 +4448,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T17:47:49.018Z"
-  },
-  {
-    "sn": "PF5T5KL8",
-    "device": "Laptop LENOVO",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T17:45:35.335Z"
   }
 ]
