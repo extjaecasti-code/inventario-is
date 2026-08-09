@@ -471,5 +471,25 @@
     "step4ts": null,
     "step4b": null,
     "step4bts": null
+  },
+  {
+    "id": 1786239904974,
+    "sn": "XXRBN244001845",
+    "device": "Impresora ZEBRA ZQ521",
+    "area": "OUTBOUND",
+    "motivo": "sensor dañado",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-08-09T01:45:04.974Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null,
+    "step4b": null,
+    "step4bts": null
   }
 ]
