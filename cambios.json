@@ -58,5 +58,25 @@
     "Status in Arturito": "In repair",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-08-09T01:43:56.620Z"
+  },
+  "XXRBN253201187": {
+    "S/N": "XXRBN253201187",
+    "ESTATUS FISICO": "In repair",
+    "Categoría": "Printer",
+    "DISPOSITIVO": "Impresora",
+    "MARCA": "ZEBRA",
+    "MODELO": "ZQ521",
+    "AREA": "OUTBOUND",
+    "ASIGNACIÓN": "P2S",
+    "IP": "10.9.124.175",
+    "MAC": "9075DE133A60",
+    "SSID": "MELI-IOT",
+    "O.S.": "",
+    "DEPLOY": "",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In repair",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-08-09T01:44:29.141Z"
   }
 }
