@@ -1,5 +1,24 @@
 [
   {
+    "sn": "24255524200422",
+    "device": "Handheld ZEBRA",
+    "area": "OUTBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      },
+      {
+        "label": "Categoría",
+        "before": "HandHeld",
+        "after": "Handheld"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-09T01:46:59.339Z"
+  },
+  {
     "sn": "XXRBN244001909",
     "device": "Impresora ZEBRA",
     "area": "INBOUND",
@@ -4409,29 +4428,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T17:53:28.387Z"
-  },
-  {
-    "sn": "7ZLC6F3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "dpolovaldez",
-        "after": "MDF"
-      },
-      {
-        "label": "Comentarios",
-        "before": "Se entrega laptop a LOA Polo \nlaptop de EX TL",
-        "after": "Equipo dado de baja en slack y en stock en arturito\nExTL: Marco Antonio Flores"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T17:51:37.826Z"
   }
 ]
