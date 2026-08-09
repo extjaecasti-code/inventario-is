@@ -1,5 +1,19 @@
 [
   {
+    "sn": "XXRBN244001909",
+    "device": "Impresora ZEBRA",
+    "area": "INBOUND",
+    "changes": [
+      {
+        "label": "Estatus Físico",
+        "before": "In Use",
+        "after": "In repair"
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-09T01:45:36.916Z"
+  },
+  {
     "sn": "XXRBN244001845",
     "device": "Impresora ZEBRA",
     "area": "OUTBOUND",
@@ -4419,34 +4433,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T17:51:37.826Z"
-  },
-  {
-    "sn": "PF4RYGNP",
-    "device": "Laptop LENOVO",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Modelo",
-        "before": "THINK PAD",
-        "after": "T14"
-      },
-      {
-        "label": "Área",
-        "before": "OUTBOUND",
-        "after": "INTERNAL SYSTEM"
-      },
-      {
-        "label": "Asignación",
-        "before": "ADRIANA CORTES",
-        "after": "MDF"
-      },
-      {
-        "label": "Comentarios",
-        "before": "",
-        "after": "Equipo dado de baja en slack y en stock en arturito\nExTL: Adriana Cortes Miguel"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T17:47:49.018Z"
   }
 ]
