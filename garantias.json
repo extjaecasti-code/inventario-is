@@ -411,5 +411,25 @@
     "step4bts": null,
     "step1by": "Luis Eduardo Avalos Garcia",
     "step2by": "André Jael Castillo Diaz"
+  },
+  {
+    "id": 1786239816533,
+    "sn": "FT5ZRW3",
+    "device": "Laptop DELL 5450",
+    "area": "ICQA",
+    "motivo": "Equipo sin tecla",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-08-09T01:43:36.533Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null,
+    "step4b": null,
+    "step4bts": null
   }
 ]
