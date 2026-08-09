@@ -551,5 +551,25 @@
     "step4ts": null,
     "step4b": null,
     "step4bts": null
+  },
+  {
+    "id": 1786240084850,
+    "sn": "24255524200661",
+    "device": "Handheld ZEBRA TC520K",
+    "area": "ACTIVO FIJO",
+    "motivo": "Pantalla rota",
+    "addedBy": "André Jael Castillo Diaz",
+    "addedTs": "2026-08-09T01:48:04.850Z",
+    "prevCount": 0,
+    "step1": null,
+    "step1ts": null,
+    "step2": null,
+    "step2ts": null,
+    "step3": null,
+    "step3ts": null,
+    "step4": null,
+    "step4ts": null,
+    "step4b": null,
+    "step4bts": null
   }
 ]
