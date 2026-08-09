@@ -1633,5 +1633,20 @@
     "fecha": "8 ago 2026, 7:11 p.m.",
     "ts": "2026-08-09T01:11:55.170Z",
     "week": 2
+  },
+  {
+    "id": 1786238108763,
+    "sn": "XXRBN253201187",
+    "device": "Impresora ZEBRA ZQ521",
+    "area": "OUTBOUND",
+    "estado": "Bueno",
+    "limpieza": "Sí",
+    "func": "Falló",
+    "comment": "Problemas con sensor, se manda a garantia",
+    "photo": "",
+    "auditor": "André Jael Castillo Diaz",
+    "fecha": "8 ago 2026, 7:15 p.m.",
+    "ts": "2026-08-09T01:15:08.762Z",
+    "week": 2
   }
 ]
