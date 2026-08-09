@@ -1,5 +1,29 @@
 [
   {
+    "sn": "XXRBN253101396",
+    "device": "Impresora ZEBRA",
+    "area": "ACTIVO FIJO",
+    "changes": [
+      {
+        "label": "Área",
+        "before": "INTERNAL SYSTEMS",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Asignación",
+        "before": "MDF",
+        "after": "ACTIVO FIJO"
+      },
+      {
+        "label": "Comentarios",
+        "before": "En Stock dentro de MDF",
+        "after": ""
+      }
+    ],
+    "user": "André Jael Castillo Diaz",
+    "ts": "2026-08-09T00:56:22.651Z"
+  },
+  {
     "sn": "HTWZRW3",
     "device": "Laptop DELL",
     "area": "ICQA",
@@ -4444,19 +4468,5 @@
     ],
     "user": "André Jael Castillo Diaz",
     "ts": "2026-06-30T17:36:16.342Z"
-  },
-  {
-    "sn": "BJWTQW3",
-    "device": "Laptop DELL",
-    "area": "INTERNAL SYSTEM",
-    "changes": [
-      {
-        "label": "Accion",
-        "before": "",
-        "after": "Dispositivo agregado"
-      }
-    ],
-    "user": "André Jael Castillo Diaz",
-    "ts": "2026-06-30T17:35:59.642Z"
   }
 ]
