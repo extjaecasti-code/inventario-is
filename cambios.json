@@ -38,5 +38,25 @@
     "Status in Arturito": "In repair",
     "_changedBy": "André Jael Castillo Diaz",
     "_changedTs": "2026-08-09T01:43:28.384Z"
+  },
+  "4TH2ZD3": {
+    "S/N": "4TH2ZD3",
+    "ESTATUS FISICO": "In repair",
+    "Categoría": "Notebook",
+    "DISPOSITIVO": "Laptop",
+    "MARCA": "DELL",
+    "MODELO": "7450",
+    "AREA": "LOSS PREVENTION",
+    "ASIGNACIÓN": "",
+    "IP": "#N/A",
+    "MAC": "#N/A",
+    "SSID": "SHIPPING-CORP",
+    "O.S.": "#N/A",
+    "DEPLOY": "DRM",
+    "Fullfiment": "MXCD11",
+    "Comentarios": "",
+    "Status in Arturito": "In repair",
+    "_changedBy": "André Jael Castillo Diaz",
+    "_changedTs": "2026-08-09T01:43:56.620Z"
   }
 }
