@@ -22115,8 +22115,8 @@
   },
   {
     "S/N": "24312523020338",
-    "ESTATUS FISICO": "In repair",
-    "Status in Arturito": "In repair",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "OUTBOUND",
     "Categoría": "Scanner",
@@ -28963,8 +28963,8 @@
   },
   {
     "S/N": "XXRBN220400032",
-    "ESTATUS FISICO": "In Use",
-    "Status in Arturito": "In Use",
+    "ESTATUS FISICO": "In Stock",
+    "Status in Arturito": "In Stock",
     "AREA": "OUTBOUND",
     "ASIGNACIÓN": "P2S",
     "Categoría": "Printer",
